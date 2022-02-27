@@ -1,0 +1,8 @@
+.slider .p-slider-horizontal,
+.slider .p-inputtext {
+  width: 14rem;
+}
+
+.slider .p-slider-vertical {
+  height: 14rem;
+}
