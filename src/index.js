@@ -13,13 +13,16 @@ import LearningJournalTimeline from './components/timelines/LearningJournalTimel
 import ResumeTimeline from './components/timelines/ResumeTimeline';
 import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
+import LandingPage from './components/home/LandingPage';
+import Home from './components/home/Home';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<App />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />

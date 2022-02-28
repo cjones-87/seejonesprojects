@@ -110,6 +110,7 @@ export default class LearningJournalTimeline extends Component {
 
     return (
       <div className="timeline-demo">
+        <h2 style={{ textAlign: 'center' }}>Resume</h2>
         <div className="card">
           <Timeline
             value={this.events1}

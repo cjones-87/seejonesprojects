@@ -1,0 +1,70 @@
+#landingPage {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  color: indigo;
+  /* background-image: url('https://i.imgur.com/xNRiK7S.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+#showcase {
+  background-image: url('https://i.imgur.com/xNRiK7S.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1;
+}
+
+#sectionA {
+  padding: 20px;
+  background: gray;
+  text-align: center;
+}
+#sectionB {
+  padding: 20px;
+  background: pink;
+  text-align: center;
+}
+
+#sectionC {
+  display: flex;
+  flex-direction: row;
+}
+
+#sectionC div {
+  padding: 20px;
+  width: 100%;
+}
+
+.sectionC1,
+.sectionC3 {
+  background: gray;
+  text-align: center;
+}
+
+.sectionC2 {
+  background: pink;
+  text-align: center;
+}
