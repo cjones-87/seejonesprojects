@@ -3,6 +3,8 @@ import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
+import Pdf from './CJsTechResume.pdf';
+
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
@@ -74,7 +76,10 @@ export default class Navbar extends React.Component {
     const end = <InputText placeholder="Search" type="text" />;
 
     return (
-      <div>
+      <div
+        className="sticky top-0"
+        style={{ position: 'sticky', zIndex: 1000 }}
+      >
         <div className="card">
           <Menubar
             model={this.items}

@@ -14,49 +14,89 @@ export default class LearningJournalTimeline extends Component {
 
     this.events1 = [
       {
-        id: 6,
+        id: 8,
         status: 'See Jones Engineer',
         date: '2/2022',
-        icon: 'pi pi-star',
-        color: '#FF9800',
-        image:
-          'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-      },
-      {
-        id: 5,
-        status: 'Computer love',
-        date: '01/2022',
-        icon: 'pi pi-star',
-        color: '#607D8B',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-      },
-      {
-        id: 4,
-        status: 'Hypnotiq',
-        date: '01/2022',
         icon: 'pi pi-star',
         color: '#9C27B0',
         image:
           'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Frontend Personal Portfolio Web App',
+        techStack: 'React, CSS, PrimeReact UI',
+        moreInfo: '',
       },
       {
-        id: 3,
-        status: 'Graduated Fullstack Academy',
-        date: '12/2021',
+        id: 7,
+        status: 'Computer love',
+        date: '01/2022',
         icon: 'pi pi-star',
         color: '#673AB7',
         image:
           'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Full Stack Expo Mobile App',
+        techStack:
+          'React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT',
+        moreInfo: '',
       },
       {
-        id: 2,
-        status: 'Boundz eCommerce',
-        date: '12/2021',
+        id: 6,
+        status: 'Hypnotiq',
+        date: '01/2022',
         icon: 'pi pi-star',
         color: '#FF9800',
         image:
           'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Frontend Mobile App',
+        techStack: 'React Native Expo',
+        moreInfo: '',
+      },
+      {
+        id: 5,
+        status: 'Graduated Fullstack Academy',
+        date: '12/2021',
+        icon: 'pi pi-star',
+        color: '#607D8B',
+        image:
+          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Graduated Coding Bootcamp',
+        moreInfo: '',
+      },
+      {
+        id: 4,
+        status: 'Boundz eCommerce',
+        date: '12/2021',
+        icon: 'pi pi-star',
+        color: '#9C27B0',
+        image:
+          'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Full Stack Secure eCommerce',
+        techStack:
+          'Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT',
+        moreInfo: '',
+      },
+      {
+        id: 3,
+        status: 'Idle Clicker',
+        date: '10/2021',
+        icon: 'pi pi-star',
+        color: '#673AB7',
+        image:
+          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Idle click and accrue game.',
+        techStack: 'Vanilla JS, HTML, CSS',
+        moreInfo: '',
+      },
+      {
+        id: 2,
+        status: 'Guessing Game',
+        date: '09/2021',
+        icon: 'pi pi-star',
+        color: '#FF9800',
+        image:
+          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Guess the number in 5 guesses or less.',
+        techStack: 'Vanilla JS, HTML, CSS',
+        moreInfo: '',
       },
       {
         id: 1,
@@ -66,6 +106,8 @@ export default class LearningJournalTimeline extends Component {
         color: '#607D8B',
         image:
           'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        description: 'Enrolled Coding Bootcamp',
+        moreInfo: '',
       },
     ];
   }
@@ -97,19 +139,15 @@ export default class LearningJournalTimeline extends Component {
               className="p-shadow-2"
             />
           )}
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
-            sed consequuntur error repudiandae numquam deserunt quisquam
-            repellat libero asperiores earum nam nobis, culpa ratione quam
-            perferendis esse, cupiditate neque quas!
-          </p>
+          <p>{item.description}</p>
+          <p>{item.techStack}</p>
           <Button label="Read more" className="p-button-text"></Button>
         </Card>
       );
     };
 
     return (
-      <div className="timeline-demo">
+      <div className="timeline-demo bg-black-alpha-90">
         <h2 style={{ textAlign: 'center' }}>Learning Journal</h2>
         <div className="card">
           <Timeline

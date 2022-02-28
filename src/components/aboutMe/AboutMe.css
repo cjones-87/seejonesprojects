@@ -1,11 +1,10 @@
 .aboutMeParent {
-  border: 1px solid purple;
   margin: 1rem;
-  padding: 2rem 2rem;
+
   text-align: center;
 }
 .aboutMeChild {
   display: inline-block;
   padding: 1rem 1rem;
-  vertical-align: middle;
+  vertical-align: top;
 }
