@@ -355,7 +355,8 @@ export default class ContactForm extends React.Component {
     };
 
     return (
-      <div>
+      <div style={{ paddingLeft: 10 }}>
+        <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
         <div className="card" style={{ paddingTop: 10 }}>
           <span className="p-float-label p-input-icon-right">
             <i className="pi pi-id-card" />

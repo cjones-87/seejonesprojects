@@ -13,15 +13,13 @@ export default class AboutMe extends React.Component {
       <img
         alt="Card"
         src="images/usercard.png"
-        onError={(e) =>
-          (e.target.src =
-            'https://res.cloudinary.com/practicaldev/image/fetch/s--DiNb_ZuM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/656554/bbe6fd60-857e-475b-b6dc-3901e1638f62.jpeg')
-        }
+        onError={(e) => (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg')}
       />
     );
 
     return (
       <div className="aboutMeParent">
+        <h2>About Me</h2>
         <div className="aboutMeChild">
           <Card
             title="Past"

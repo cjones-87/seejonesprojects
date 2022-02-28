@@ -9,6 +9,7 @@ import { Column } from 'primereact/column';
 import { ProjectFunctions } from './ProjectFunctions';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
+import ProjectGallery from './ProjectGallery';
 
 export default class AllProjects extends React.Component {
   constructor(props) {
@@ -105,6 +106,9 @@ export default class AllProjects extends React.Component {
 
     return (
       <div className="datatable-project">
+        <div>
+          <ProjectGallery />
+        </div>
         <div className="card">
           <DataTable
             value={this.state.projects}
