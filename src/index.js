@@ -10,7 +10,7 @@ import SidePanelMenu from './components/menu/SidePanelMenu';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllProjects from './components/projects/AllProjects';
 import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
-import ResumeTimeline from './components/timelines/ResumeTimeline';
+import Resume from './components/timelines/Resume';
 import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
 import LandingPage from './components/home/LandingPage';
@@ -26,7 +26,7 @@ ReactDOM.render(
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />
-        <Route path="/resume" element={<ResumeTimeline />} />
+        <Route exact path="/resume" element={<Resume />} />
         <Route path="/contactme" element={<ContactForm />} />
       </Routes>
     </BrowserRouter>

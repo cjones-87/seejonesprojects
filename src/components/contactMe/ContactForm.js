@@ -355,7 +355,12 @@ export default class ContactForm extends React.Component {
     };
 
     return (
-      <div style={{ paddingLeft: 10 }}>
+      <div
+        className="bg-black-alpha-90"
+        style={{
+          paddingLeft: 10,
+        }}
+      >
         <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
         <div className="card" style={{ paddingTop: 10 }}>
           <span className="p-float-label p-input-icon-right">
@@ -389,9 +394,15 @@ export default class ContactForm extends React.Component {
             </label>
           </span>
 
-          <div className="card" style={{ paddingTop: 10 }}></div>
+          <div
+            className="card"
+            style={{ paddingTop: 10, textAlign: 'center' }}
+          ></div>
 
-          <span className="p-float-label p-input-icon-right">
+          <span
+            className="p-float-label p-input-icon-right"
+            style={{ justifyContent: 'center' }}
+          >
             <i className="pi pi-envelope" />
             <InputText
               id="email"

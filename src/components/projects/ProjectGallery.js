@@ -1,5 +1,10 @@
 import { Carousel } from 'react-carousel-minimal';
 
+import computerLove from './computerLove.gif';
+import BoundzBookstore from './BoundzBookstore.png';
+import Hypnotiq from './Hypnotiq.gif';
+import SeeJonesEngineer from './SeeJonesEngineer.png';
+
 export default function ProjectGallery() {
   const data = [
     {
@@ -13,23 +18,19 @@ export default function ProjectGallery() {
       caption: 'Idle Clicker',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1645995575875-ea6511c9d127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+      image: BoundzBookstore,
       caption: 'Boundz Bookstore',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1645979728657-6f7b080ea386?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+      image: Hypnotiq,
       caption: 'Hypnotiq',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1645389686591-b9ea0124375c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+      image: computerLove,
       caption: 'Computer Love',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1645995575868-62b51eab75af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+      image: SeeJonesEngineer,
       caption: 'See Jones Engineer',
     },
   ];
@@ -43,7 +44,7 @@ export default function ProjectGallery() {
     fontWeight: 'bold',
   };
   return (
-    <div className="App" style={{ paddingBottom: 175 }}>
+    <div className="App bg-black-alpha-90" style={{ paddingBottom: 175 }}>
       <h2 style={{ textAlign: 'center' }}>Projects</h2>
       <div style={{ textAlign: 'center' }}>
         <div
