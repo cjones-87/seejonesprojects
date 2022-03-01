@@ -3,8 +3,6 @@ import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
-import Pdf from './CJsTechResume.pdf';
-
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
@@ -42,7 +40,13 @@ export default class Navbar extends React.Component {
           window.location.href = '/projects';
         },
       },
-
+      {
+        label: 'Interactive Games',
+        icon: 'pi pi-fw pi-play',
+        command: (event) => {
+          window.location.href = '/playgames';
+        },
+      },
       {
         label: 'Resume',
         icon: 'pi pi-fw pi-file',

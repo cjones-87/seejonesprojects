@@ -15,6 +15,7 @@ import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
 import LandingPage from './components/home/LandingPage';
 import Home from './components/home/Home';
+import PlayGames from './components/games/PlayGames';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />
+        <Route exact path="/playgames" element={<PlayGames />} />
         <Route exact path="/resume" element={<Resume />} />
         <Route path="/contactme" element={<ContactForm />} />
       </Routes>

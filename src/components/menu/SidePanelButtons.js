@@ -42,39 +42,80 @@ export default class SidePanelButtons extends React.Component {
             className="template"
             style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <Button className="google p-0">
-              <i className="pi pi-google px-2"></i>
-              <a href="https://www.imgur.com">
-                <span className="px-3">Google</span>
+            <Button className="linkedin p-0">
+              <i className="pi pi-linkedin px-2"></i>
+              <a href="https://www.linkedin.com/in/cjones1827/">
+                <span className="px-3">LinkedIn</span>
               </a>
             </Button>
+
             <Button className="youtube p-0">
               <i className="pi pi-youtube px-2"></i>
-              <span className="px-3">Youtube</span>
+              <a href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw">
+                <span className="px-3">Youtube</span>
+              </a>
             </Button>
-            <Button className="vimeo p-0">
-              <i className="pi pi-vimeo px-2"></i>
-              <span className="px-3">Vimeo</span>
+
+            <Button className="instagram p-0">
+              <i className="pi pi-instagram px-2"></i>
+              <a href="https://www.instagram.com/seejonesengineer/">
+                <span className="px-3">Instagram</span>
+              </a>
             </Button>
+
             <Button className="facebook p-0">
               <i className="pi pi-facebook px-2"></i>
-              <span className="px-3">Facebook</span>
+              <a href="https://www.facebook.com/seejonesengineer">
+                <span className="px-3">Facebook</span>
+              </a>
             </Button>
-            <Button className="twitter p-0">
-              <i className="pi pi-twitter px-2"></i>
-              <span className="px-3">Twitter</span>
-            </Button>
+
             <Button className="slack p-0">
               <i className="pi pi-slack px-2"></i>
               <span className="px-3">Slack</span>
             </Button>
-            <Button className="amazon p-0">
-              <i className="pi pi-amazon px-2"></i>
-              <span className="px-3">Amazon</span>
+
+            <Button className="google p-0">
+              <i className="pi pi-google px-2"></i>
+              <a href="https://www.google.com">
+                <span className="px-3">Google</span>
+              </a>
             </Button>
-            <Button className="discord p-0">
-              <i className="pi pi-discord px-2"></i>
-              <span className="px-3">Discord</span>
+
+            <Button className="whatsapp p-0">
+              <i className="pi pi-whatsapp px-2"></i>
+              <span className="px-3">WhatsApp</span>
+            </Button>
+
+            <Button className="twitter p-0">
+              <i className="pi pi-twitter px-2"></i>
+              <a href="https://twitter.com/cjonesengineer1">
+                <span className="px-3">Twitter</span>
+              </a>
+            </Button>
+
+            <Button className="github p-0">
+              <i className="pi pi-github px-2"></i>
+              <a href="https://github.com/cjones-87">
+                <span className="px-3">Github</span>
+              </a>
+            </Button>
+
+            <Button className="vimeo p-0">
+              <i className="pi pi-vimeo px-2"></i>
+              <span className="px-3">Vimeo</span>
+            </Button>
+
+            <Button className="paypal p-0 bg-black-alpha-20">
+              <i className="pi pi-paypal px-2"></i>
+              <span className="px-3">Paypal</span>
+            </Button>
+
+            <Button className="money-bill p-0">
+              <i className="pi pi-money-bill px-2"></i>
+              <a href="https://www.buymeacoffee.com/cjonesengineer">
+                <span className="px-3">Buy Me A Coffee</span>
+              </a>
             </Button>
           </div>
         </div>
