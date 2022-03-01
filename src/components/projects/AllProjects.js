@@ -11,6 +11,14 @@ import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
 import ProjectGallery from './ProjectGallery';
 
+import IdleClicker from './IdleClicker.png';
+import GuessingGame from './GuessingGame.png';
+import computerLove from './computerLove.gif';
+import BoundzBookstore from './BoundzBookstore.png';
+import Hypnotiq from './Hypnotiq.gif';
+import SeeJonesEngineer from './SeeJonesEngineer.png';
+import imageNotFound from './imageNotFound.jpeg';
+
 export default class AllProjects extends React.Component {
   constructor(props) {
     super(props);
@@ -19,34 +27,44 @@ export default class AllProjects extends React.Component {
       projects: [
         {
           name: 'See Jones Engineer',
-          image:
-            'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+          image: SeeJonesEngineer,
           category: 'React Web App',
-          difficulty: 9,
+          difficulty: 8,
           status: 'complete',
         },
         {
           name: 'Computer Love',
-          image:
-            'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-          category: 'Mobile App',
+          image: computerLove,
+          category: 'React Native Mobile App',
           difficulty: 10,
           status: 'complete',
         },
         {
           name: 'Hypnotiq',
-          image:
-            'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
-          category: 'Mobile App',
+          image: Hypnotiq,
+          category: 'React Native Mobile App',
           difficulty: 7,
           status: 'complete',
         },
         {
           name: 'Boundz Bookstore',
-          image:
-            'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+          image: BoundzBookstore,
           category: 'React Web App',
           difficulty: 10,
+          status: 'complete',
+        },
+        {
+          name: 'Idle Clicker',
+          image: IdleClicker,
+          category: 'Vanilla JS, HTML, CSS',
+          difficulty: 6,
+          status: 'complete',
+        },
+        {
+          name: 'Guessing Game',
+          image: GuessingGame,
+          category: 'Vanilla JS, HTML, CSS',
+          difficulty: 3,
           status: 'complete',
         },
       ],
@@ -67,11 +85,8 @@ export default class AllProjects extends React.Component {
   imageBodyTemplate(rowData) {
     return (
       <img
-        src={`images/project/${rowData.image}`}
-        onError={(e) =>
-          (e.target.src =
-            'https://images.unsplash.com/photo-1611890798517-07b0fcb4a811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
-        }
+        src={rowData.image}
+        onError={(e) => (e.target.src = imageNotFound)}
         alt={rowData.image}
         className="project-image"
       />
@@ -88,7 +103,7 @@ export default class AllProjects extends React.Component {
     const isCompleted = false;
     return (
       <span className={isCompleted ? 'completed' : 'false'}>
-        long-term/in-progress
+        {rowData.status}
       </span>
     );
   }
@@ -121,7 +136,7 @@ export default class AllProjects extends React.Component {
             <Column field="category" header="Category"></Column>
             <Column
               field="rating"
-              header="Difficulty Level"
+              header="Difficulty Level (current)"
               body={this.ratingBodyTemplate}
             ></Column>
             <Column
