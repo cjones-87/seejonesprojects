@@ -8,6 +8,16 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import './Timeline.css';
 
+import IdleClicker from '../projects/IdleClicker.png';
+import GuessingGame from '../projects/GuessingGame.png';
+import FullstackLogo from '../projects/FullstackLogo.png';
+import BootcampDiploma from '../projects/BootcampDiploma.jpg';
+import computerLove from '../projects/computerLove.gif';
+import BoundzBookstore from '../projects/BoundzBookstore.png';
+import Hypnotiq from '../projects/Hypnotiq.gif';
+import SeeJonesEngineer from '../projects/SeeJonesEngineer.png';
+import imageNotFound from '../projects/imageNotFound.jpeg';
+
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
     super(props);
@@ -19,8 +29,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2/2022',
         icon: 'pi pi-star',
         color: '#9C27B0',
-        image:
-          'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: SeeJonesEngineer,
         description: 'Frontend Personal Portfolio Web App',
         techStack: 'React, CSS, PrimeReact UI',
         moreInfo: '',
@@ -31,8 +40,7 @@ export default class LearningJournalTimeline extends Component {
         date: '01/2022',
         icon: 'pi pi-star',
         color: '#673AB7',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: computerLove,
         description: 'Full Stack Expo Mobile App',
         techStack:
           'React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT',
@@ -44,8 +52,7 @@ export default class LearningJournalTimeline extends Component {
         date: '01/2022',
         icon: 'pi pi-star',
         color: '#FF9800',
-        image:
-          'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: Hypnotiq,
         description: 'Frontend Mobile App',
         techStack: 'React Native Expo',
         moreInfo: '',
@@ -56,8 +63,7 @@ export default class LearningJournalTimeline extends Component {
         date: '12/2021',
         icon: 'pi pi-star',
         color: '#607D8B',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: BootcampDiploma,
         description: 'Graduated Coding Bootcamp',
         moreInfo: '',
       },
@@ -67,8 +73,7 @@ export default class LearningJournalTimeline extends Component {
         date: '12/2021',
         icon: 'pi pi-star',
         color: '#9C27B0',
-        image:
-          'https://image.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: BoundzBookstore,
         description: 'Full Stack Secure eCommerce',
         techStack:
           'Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT',
@@ -80,8 +85,7 @@ export default class LearningJournalTimeline extends Component {
         date: '10/2021',
         icon: 'pi pi-star',
         color: '#673AB7',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: IdleClicker,
         description: 'Idle click and accrue game.',
         techStack: 'Vanilla JS, HTML, CSS',
         moreInfo: '',
@@ -92,8 +96,7 @@ export default class LearningJournalTimeline extends Component {
         date: '09/2021',
         icon: 'pi pi-star',
         color: '#FF9800',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: GuessingGame,
         description: 'Guess the number in 5 guesses or less.',
         techStack: 'Vanilla JS, HTML, CSS',
         moreInfo: '',
@@ -104,8 +107,7 @@ export default class LearningJournalTimeline extends Component {
         date: '06/2021',
         icon: 'pi pi-star',
         color: '#607D8B',
-        image:
-          'https://images.unsplash.com/photo-1608999383953-d61f5d9c1ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80',
+        image: FullstackLogo,
         description: 'Enrolled Coding Bootcamp',
         moreInfo: '',
       },

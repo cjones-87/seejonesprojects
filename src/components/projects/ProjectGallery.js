@@ -1,20 +1,21 @@
 import { Carousel } from 'react-carousel-minimal';
 
+import IdleClicker from './IdleClicker.png';
+import GuessingGame from './GuessingGame.png';
 import computerLove from './computerLove.gif';
 import BoundzBookstore from './BoundzBookstore.png';
 import Hypnotiq from './Hypnotiq.gif';
 import SeeJonesEngineer from './SeeJonesEngineer.png';
+import imageNotFound from './imageNotFound.jpeg';
 
 export default function ProjectGallery() {
   const data = [
     {
-      image:
-        'https://images.unsplash.com/photo-1645978118126-8d1613fa4088?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2Mnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+      image: GuessingGame,
       caption: 'Guessing Game',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1645815426981-e62313bcc718?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+      image: IdleClicker,
       caption: 'Idle Clicker',
     },
     {
