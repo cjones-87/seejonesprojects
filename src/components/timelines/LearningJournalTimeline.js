@@ -132,10 +132,7 @@ export default class LearningJournalTimeline extends Component {
           {item.image && (
             <img
               src={item.image}
-              onError={(e) =>
-                (e.target.src =
-                  'https://images.unsplash.com/photo-1611890798517-07b0fcb4a811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80')
-              }
+              onError={(e) => (e.target.src = imageNotFound)}
               alt={item.name}
               width={200}
               className="p-shadow-2"
