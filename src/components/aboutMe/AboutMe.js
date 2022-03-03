@@ -19,7 +19,7 @@ export default class AboutMe extends React.Component {
 
     return (
       <div className="aboutMeParent bg-black-alpha-90">
-        <h2>About Me</h2>
+        <h2 style={{ color: 'rebeccapurple' }}>About Me</h2>
         <div className="aboutMeChild">
           <Card
             title="Past"

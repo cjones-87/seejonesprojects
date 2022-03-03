@@ -9,8 +9,6 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
-import { RadioButton } from 'primereact/radiobutton';
-import { Slider } from 'primereact/slider';
 
 import { Toast } from 'primereact/toast';
 import { FileUpload } from 'primereact/fileupload';
@@ -18,8 +16,6 @@ import { ProgressBar } from 'primereact/progressbar';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import { Tag } from 'primereact/tag';
-
-import './Slider.css';
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -50,8 +46,8 @@ export default class ContactForm extends React.Component {
       additionalInfo: '',
       availability: '',
       preferredResponseDate: '',
-      budget: [0, 100],
-      selectedCategory: this.categories[0],
+      budget: '',
+      preferredContactMethod: '',
       totalSize: 0,
       loading: false,
     };
@@ -362,10 +358,12 @@ export default class ContactForm extends React.Component {
         <div
           className="bg-black-alpha-90"
           style={{
-            paddingLeft: 10,
+            textAlign: 'center',
           }}
         >
-          <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
+          <h2 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+            Contact Me
+          </h2>
           <div className="card" style={{ paddingTop: 10 }}>
             <span className="p-float-label p-input-icon-right">
               <i className="pi pi-id-card" />
@@ -378,7 +376,10 @@ export default class ContactForm extends React.Component {
                   this.setState({ firstName: event.target.value })
                 }
               />
-              <label htmlFor="firstName" style={{ color: 'silver' }}>
+              <label
+                htmlFor="firstName"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
                 First Name
               </label>
             </span>
@@ -395,7 +396,10 @@ export default class ContactForm extends React.Component {
                   this.setState({ lastName: event.target.value })
                 }
               />
-              <label htmlFor="lastName" style={{ color: 'silver' }}>
+              <label
+                htmlFor="lastName"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
                 Last Name
               </label>
             </span>
@@ -419,7 +423,10 @@ export default class ContactForm extends React.Component {
                   this.setState({ email: event.target.value })
                 }
               />
-              <label htmlFor="email" style={{ color: 'silver' }}>
+              <label
+                htmlFor="email"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
                 Email
               </label>
             </span>
@@ -459,17 +466,73 @@ export default class ContactForm extends React.Component {
                 cols={30}
                 autoResize
               />
-              <label htmlFor="additionalInfo" style={{ color: 'silver' }}>
+              <label
+                htmlFor="additionalInfo"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
                 Additional Info
+              </label>
+            </span>
+
+            <div className="card" style={{ paddingTop: 10 }}></div>
+
+            <span className="p-float-label p-input-icon-right">
+              <i className="pi pi-at" />
+              <InputText
+                id="preferredContactMethod"
+                name="preferredContactMethod"
+                value={this.state.preferredContactMethod}
+                onChange={(event) =>
+                  this.setState({ preferredContactMethod: event.target.value })
+                }
+              />
+              <label
+                htmlFor="preferredContactMethod"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
+                Preferred Contact Method
+              </label>
+            </span>
+
+            <div className="card" style={{ paddingTop: 10 }}></div>
+
+            <span className="p-float-label p-input-icon-right">
+              <i className="pi pi-dollar" />
+              <InputText
+                id="budget"
+                name="budget"
+                value={this.state.budget}
+                onChange={(event) =>
+                  this.setState({ budget: event.target.value })
+                }
+              />
+              <label
+                htmlFor="budget"
+                style={{ color: 'silver', fontSize: '.9em' }}
+              >
+                Budget - USD
               </label>
             </span>
 
             <div className="card"></div>
 
             <div style={{ color: 'lightgrey' }}>
-              <div className="p-fluid grid formgrid">
+              <div
+                className="p-fluid grid formgrid"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                }}
+              >
+                <div></div>
                 <div className="field col-12 md:col-4">
-                  <label htmlFor="datesAvailableToSpeak">Availability</label>
+                  <label
+                    htmlFor="datesAvailableToSpeak"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Availability To Speak
+                  </label>
                   <Calendar
                     id="datesAvailableToSpeak"
                     name="datesAvailableToSpeak"
@@ -478,14 +541,15 @@ export default class ContactForm extends React.Component {
                       this.setState({ availability: event.value })
                     }
                     selectionMode="multiple"
-                    readOnlyInput
                     showIcon
                     touchUI
                   />
-
-                  <div className="card"></div>
-
-                  <label htmlFor="responseDate">
+                </div>
+                <div className="field col-12 md:col-4">
+                  <label
+                    htmlFor="responseDate"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
                     Date Response Requested By
                   </label>
                   <Calendar
@@ -499,48 +563,6 @@ export default class ContactForm extends React.Component {
                     showIcon
                   />
                 </div>
-              </div>
-            </div>
-
-            <div className="card"></div>
-
-            <div className="card" style={{ color: 'silver' }}>
-              <h5 style={{ fontSize: '1em' }}>Preferred Contact Method</h5>
-              {this.categories.map((category) => {
-                return (
-                  <div key={category.key} className="field-radiobutton">
-                    <RadioButton
-                      inputId={category.key}
-                      id="category"
-                      name="category"
-                      value={category.name}
-                      onChange={(event) =>
-                        this.setState({ selectedCategory: event.value })
-                      }
-                      checked={this.state.selectedCategory.key === category.key}
-                      disabled={category.key === 'R'}
-                    />
-                    <label htmlFor={category.key}>{category.name}</label>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="card"></div>
-
-            <div className="slider" style={{ color: 'silver' }}>
-              <div className="card">
-                <h5 style={{ fontSize: '1em' }}>
-                  Budget Range(increments of 5k): [{this.state.budget[0]},{' '}
-                  {this.state.budget[1]}]
-                </h5>
-                <Slider
-                  id="budget"
-                  name="budget"
-                  value={this.state.budget}
-                  onChange={(e) => this.setState({ budget: e.value })}
-                  range
-                />
               </div>
             </div>
 
@@ -571,7 +593,7 @@ export default class ContactForm extends React.Component {
 
               <div className="card">
                 <h5 style={{ fontSize: '1em', color: 'silver' }}>
-                  Proposal &/or Offer Letter
+                  Proposal/Offer Letter
                 </h5>
                 <FileUpload
                   ref={(el) => (this.fileUploadRef = el)}

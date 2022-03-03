@@ -10,7 +10,7 @@ export default function Resume() {
     <body className="bg-black-alpha-90" id="resumeBody">
       <div className="App" id="resumeDiv">
         <a href={Pdf} target="_blank" rel="noreferrer" id="resumeLink">
-          <h1>View My Resume</h1>
+          <h1 style={{ color: 'rebeccapurple' }}>View My Resume</h1>
         </a>
       </div>
     </body>
