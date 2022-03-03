@@ -50,7 +50,7 @@ export default class ContactForm extends React.Component {
       additionalInfo: '',
       availability: '',
       preferredResponseDate: '',
-      budgetOrSalary: [0, 100],
+      budget: [0, 100],
       selectedCategory: this.categories[0],
       totalSize: 0,
       loading: false,
@@ -355,236 +355,264 @@ export default class ContactForm extends React.Component {
     };
 
     return (
-      <div
-        className="bg-black-alpha-90"
-        style={{
-          paddingLeft: 10,
-        }}
+      <form
+        action="https://formsubmit.co/cj@seejonesengineer.com"
+        method="POST"
       >
-        <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
-        <div className="card" style={{ paddingTop: 10 }}>
-          <span className="p-float-label p-input-icon-right">
-            <i className="pi pi-id-card" />
+        <div
+          className="bg-black-alpha-90"
+          style={{
+            paddingLeft: 10,
+          }}
+        >
+          <h2 style={{ textAlign: 'center' }}>Contact Me</h2>
+          <div className="card" style={{ paddingTop: 10 }}>
+            <span className="p-float-label p-input-icon-right">
+              <i className="pi pi-id-card" />
 
-            <InputText
-              id="firstName"
-              value={this.state.firstName}
-              onChange={(event) =>
-                this.setState({ firstName: event.target.value })
-              }
-            />
-            <label htmlFor="firstName" style={{ color: 'silver' }}>
-              First Name
-            </label>
-          </span>
+              <InputText
+                id="firstName"
+                name="firstName"
+                value={this.state.firstName}
+                onChange={(event) =>
+                  this.setState({ firstName: event.target.value })
+                }
+              />
+              <label htmlFor="firstName" style={{ color: 'silver' }}>
+                First Name
+              </label>
+            </span>
 
-          <div className="card" style={{ paddingTop: 10 }}></div>
+            <div className="card" style={{ paddingTop: 10 }}></div>
 
-          <span className="p-float-label p-input-icon-right">
-            <i className="pi pi-id-card" />
-            <InputText
-              id="lastName"
-              value={this.state.lastName}
-              onChange={(event) =>
-                this.setState({ lastName: event.target.value })
-              }
-            />
-            <label htmlFor="lastName" style={{ color: 'silver' }}>
-              Last Name
-            </label>
-          </span>
+            <span className="p-float-label p-input-icon-right">
+              <i className="pi pi-id-card" />
+              <InputText
+                id="lastName"
+                name="lastName"
+                value={this.state.lastName}
+                onChange={(event) =>
+                  this.setState({ lastName: event.target.value })
+                }
+              />
+              <label htmlFor="lastName" style={{ color: 'silver' }}>
+                Last Name
+              </label>
+            </span>
 
-          <div
-            className="card"
-            style={{ paddingTop: 10, textAlign: 'center' }}
-          ></div>
+            <div
+              className="card"
+              style={{ paddingTop: 10, textAlign: 'center' }}
+            ></div>
 
-          <span
-            className="p-float-label p-input-icon-right"
-            style={{ justifyContent: 'center' }}
-          >
-            <i className="pi pi-envelope" />
-            <InputText
-              id="email"
-              value={this.state.email}
-              onChange={(event) => this.setState({ email: event.target.value })}
-            />
-            <label htmlFor="email" style={{ color: 'silver' }}>
-              Email
-            </label>
-          </span>
+            <span
+              className="p-float-label p-input-icon-right"
+              style={{ justifyContent: 'center' }}
+            >
+              <i className="pi pi-envelope" />
+              <InputText
+                id="email"
+                name="email"
+                type="email"
+                value={this.state.email}
+                onChange={(event) =>
+                  this.setState({ email: event.target.value })
+                }
+              />
+              <label htmlFor="email" style={{ color: 'silver' }}>
+                Email
+              </label>
+            </span>
 
-          <div className="card" style={{ paddingTop: 10 }}></div>
+            <div className="card" style={{ paddingTop: 10 }}></div>
 
-          <span
-            className="p-float-label p-input-icon-right"
-            style={{ colorScheme: 'red' }}
-          >
-            <i className="pi pi-phone" />
-            {/* <label htmlFor="phone">Phone</label> */}
-            <InputMask
-              id="phone"
-              mask="(999) 999-9999"
-              value={this.state.phoneNumber}
-              placeholder="(999) 999-9999"
-              onChange={(event) => this.setState({ phoneNumber: event.value })}
-            />
-          </span>
+            <span
+              className="p-float-label p-input-icon-right"
+              style={{ colorScheme: 'red' }}
+            >
+              <i className="pi pi-phone" />
+              {/* <label htmlFor="phone">Phone</label> */}
+              <InputMask
+                id="phone"
+                name="phoneNumber"
+                mask="(999) 999-9999"
+                value={this.state.phoneNumber}
+                placeholder="(999) 999-9999"
+                onChange={(event) =>
+                  this.setState({ phoneNumber: event.value })
+                }
+              />
+            </span>
 
-          <div className="card" style={{ paddingTop: 10 }}></div>
+            <div className="card" style={{ paddingTop: 10 }}></div>
 
-          <span className="p-float-label p-input-icon-right">
-            <i className="pi pi-info-circle" />
-            <InputTextarea
-              value={this.state.additionalInfo}
-              onChange={(event) =>
-                this.setState({ additionalInfo: event.target.value })
-              }
-              rows={5}
-              cols={30}
-              autoResize
-            />
-            <label htmlFor="additionalInfo" style={{ color: 'silver' }}>
-              Additional Info
-            </label>
-          </span>
+            <span className="p-float-label p-input-icon-right">
+              <i className="pi pi-info-circle" />
+              <InputTextarea
+                id="additionalInfo"
+                name="additionalInfo"
+                value={this.state.additionalInfo}
+                onChange={(event) =>
+                  this.setState({ additionalInfo: event.target.value })
+                }
+                rows={5}
+                cols={30}
+                autoResize
+              />
+              <label htmlFor="additionalInfo" style={{ color: 'silver' }}>
+                Additional Info
+              </label>
+            </span>
 
-          <div className="card"></div>
+            <div className="card"></div>
 
-          <div style={{ color: 'lightgrey' }}>
-            <div className="p-fluid grid formgrid">
-              <div className="field col-12 md:col-4">
-                <label htmlFor="datesAvailableToSpeak">Availability</label>
-                <Calendar
-                  id="datesAvailableToSpeak"
-                  value={this.state.availability}
-                  onChange={(event) =>
-                    this.setState({ availability: event.value })
-                  }
-                  selectionMode="multiple"
-                  readOnlyInput
-                  showIcon
-                  touchUI
-                />
+            <div style={{ color: 'lightgrey' }}>
+              <div className="p-fluid grid formgrid">
+                <div className="field col-12 md:col-4">
+                  <label htmlFor="datesAvailableToSpeak">Availability</label>
+                  <Calendar
+                    id="datesAvailableToSpeak"
+                    name="datesAvailableToSpeak"
+                    value={this.state.availability}
+                    onChange={(event) =>
+                      this.setState({ availability: event.value })
+                    }
+                    selectionMode="multiple"
+                    readOnlyInput
+                    showIcon
+                    touchUI
+                  />
 
-                <div className="card"></div>
+                  <div className="card"></div>
 
-                <label htmlFor="responseDate">Date Response Requested By</label>
-                <Calendar
-                  id="touchUI"
-                  value={this.state.preferredResponseDate}
-                  onChange={(event) =>
-                    this.setState({ preferredResponseDate: event.value })
-                  }
-                  touchUI
-                  showIcon
+                  <label htmlFor="responseDate">
+                    Date Response Requested By
+                  </label>
+                  <Calendar
+                    id="preferredResponseDate"
+                    name="preferredResponseDate"
+                    value={this.state.preferredResponseDate}
+                    onChange={(event) =>
+                      this.setState({ preferredResponseDate: event.value })
+                    }
+                    touchUI
+                    showIcon
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="card"></div>
+
+            <div className="card" style={{ color: 'silver' }}>
+              <h5 style={{ fontSize: '1em' }}>Preferred Contact Method</h5>
+              {this.categories.map((category) => {
+                return (
+                  <div key={category.key} className="field-radiobutton">
+                    <RadioButton
+                      inputId={category.key}
+                      id="category"
+                      name="category"
+                      value={category}
+                      onChange={(event) =>
+                        this.setState({ selectedCategory: event.value })
+                      }
+                      checked={this.state.selectedCategory.key === category.key}
+                      disabled={category.key === 'R'}
+                    />
+                    <label htmlFor={category.key}>{category.name}</label>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="card"></div>
+
+            <div className="slider" style={{ color: 'silver' }}>
+              <div className="card">
+                <h5 style={{ fontSize: '1em' }}>
+                  Budget Range(increments of 5k): [{this.state.budget[0]},{' '}
+                  {this.state.budget[1]}]
+                </h5>
+                <Slider
+                  id="budget"
+                  name="budget"
+                  value={this.state.budget}
+                  onChange={(e) => this.setState({ budget: e.value })}
+                  range
                 />
               </div>
             </div>
-          </div>
 
-          <div className="card"></div>
+            <div className="card"></div>
 
-          <div className="card" style={{ color: 'silver' }}>
-            <h5 style={{ fontSize: '1em' }}>Preferred Contact Method</h5>
-            {this.categories.map((category) => {
-              return (
-                <div key={category.key} className="field-radiobutton">
-                  <RadioButton
-                    inputId={category.key}
-                    name="category"
-                    value={category}
-                    onChange={(event) =>
-                      this.setState({ selectedCategory: event.value })
-                    }
-                    checked={this.state.selectedCategory.key === category.key}
-                    disabled={category.key === 'R'}
-                  />
-                  <label htmlFor={category.key}>{category.name}</label>
-                </div>
-              );
-            })}
-          </div>
+            <div>
+              <Toast
+                ref={(el) => {
+                  this.toast = el;
+                }}
+              ></Toast>
 
-          <div className="card"></div>
+              <Tooltip
+                target=".custom-choose-btn"
+                content="Choose"
+                position="bottom"
+              />
+              <Tooltip
+                target=".custom-upload-btn"
+                content="Upload"
+                position="bottom"
+              />
+              <Tooltip
+                target=".custom-cancel-btn"
+                content="Clear"
+                position="bottom"
+              />
 
-          <div className="slider" style={{ color: 'silver' }}>
-            <div className="card">
-              <h5 style={{ fontSize: '1em' }}>
-                Budget/Salary Range(increments of 5k): [
-                {this.state.budgetOrSalary[0]}, {this.state.budgetOrSalary[1]}]
-              </h5>
-              <Slider
-                value={this.state.budgetOrSalary}
-                onChange={(e) => this.setState({ budgetOrSalary: e.value })}
-                range
+              <div className="card">
+                <h5 style={{ fontSize: '1em', color: 'silver' }}>
+                  Proposal &/or Offer Letter
+                </h5>
+                <FileUpload
+                  ref={(el) => (this.fileUploadRef = el)}
+                  name="dragAndDrop"
+                  url="https://primefaces.org/primereact/showcase/upload.php"
+                  multiple
+                  accept="image/*"
+                  maxFileSize={10000000}
+                  onUpload={this.onTemplateUpload}
+                  onSelect={this.onTemplateSelect}
+                  onError={this.onTemplateClear}
+                  onClear={this.onTemplateClear}
+                  headerTemplate={this.headerTemplate}
+                  itemTemplate={this.itemTemplate}
+                  emptyTemplate={this.emptyTemplate}
+                  chooseOptions={chooseOptions}
+                  uploadOptions={uploadOptions}
+                  cancelOptions={cancelOptions}
+                />
+              </div>
+            </div>
+
+            <div className="card"></div>
+
+            <div style={{ textAlign: 'center' }}>
+              <Button
+                label="Submit"
+                loading={this.state.loading}
+                onClick={[
+                  () => 'https://formsubmit.co/cj@seejonesengineer.com',
+                  this.onLoadingClick,
+                ]}
+                action="https://formsubmit.co/cj@seejonesengineer.com"
+                method="POST"
               />
             </div>
+
+            <div className="card"></div>
           </div>
-
-          <div className="card"></div>
-
-          <div>
-            <Toast
-              ref={(el) => {
-                this.toast = el;
-              }}
-            ></Toast>
-
-            <Tooltip
-              target=".custom-choose-btn"
-              content="Choose"
-              position="bottom"
-            />
-            <Tooltip
-              target=".custom-upload-btn"
-              content="Upload"
-              position="bottom"
-            />
-            <Tooltip
-              target=".custom-cancel-btn"
-              content="Clear"
-              position="bottom"
-            />
-
-            <div className="card">
-              <h5 style={{ fontSize: '1em', color: 'silver' }}>
-                Proposal &/or Offer Letter
-              </h5>
-              <FileUpload
-                ref={(el) => (this.fileUploadRef = el)}
-                name="dragAndDrop"
-                url="https://primefaces.org/primereact/showcase/upload.php"
-                multiple
-                accept="image/*"
-                maxFileSize={10000000}
-                onUpload={this.onTemplateUpload}
-                onSelect={this.onTemplateSelect}
-                onError={this.onTemplateClear}
-                onClear={this.onTemplateClear}
-                headerTemplate={this.headerTemplate}
-                itemTemplate={this.itemTemplate}
-                emptyTemplate={this.emptyTemplate}
-                chooseOptions={chooseOptions}
-                uploadOptions={uploadOptions}
-                cancelOptions={cancelOptions}
-              />
-            </div>
-          </div>
-
-          <div className="card"></div>
-
-          <div style={{ textAlign: 'center' }}>
-            <Button
-              label="Submit"
-              loading={this.state.loading}
-              onClick={this.onLoadingClick}
-            />
-          </div>
-
-          <div className="card"></div>
         </div>
-      </div>
+      </form>
     );
   }
 }

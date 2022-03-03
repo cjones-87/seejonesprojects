@@ -63,7 +63,7 @@ export default class LearningJournalTimeline extends Component {
         date: '12/2021',
         icon: 'pi pi-star',
         color: '#607D8B',
-        image: BootcampDiploma,
+        image: FullstackLogo,
         description: 'Graduated Coding Bootcamp',
         moreInfo: '',
       },
