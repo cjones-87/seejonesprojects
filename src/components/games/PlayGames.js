@@ -5,7 +5,6 @@ import Iframe from 'react-iframe';
 export default function PlayGames() {
   return (
     <div>
-      PlayGames
       <div
         className="bg-black-alpha-90"
         style={{
@@ -17,7 +16,7 @@ export default function PlayGames() {
       >
         <div>
           <a href="https://guessing-game-blue.vercel.app/">
-            <h3>Guessing Game</h3>
+            <h3 style={{ color: 'rebeccapurple' }}>Guessing Game</h3>
           </a>
           <Iframe
             url="https://guessing-game-blue.vercel.app/"
@@ -31,7 +30,7 @@ export default function PlayGames() {
         </div>
         <div>
           <a href="https://mugnificent-coffee-clicker.vercel.app/">
-            <h3>Idle Clicker</h3>
+            <h3 style={{ color: 'rebeccapurple' }}>Idle Clicker</h3>
           </a>
           <Iframe
             url="https://mugnificent-coffee-clicker.vercel.app/"

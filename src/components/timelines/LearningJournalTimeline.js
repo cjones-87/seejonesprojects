@@ -147,7 +147,9 @@ export default class LearningJournalTimeline extends Component {
 
     return (
       <div className="timeline-demo bg-black-alpha-90">
-        <h2 style={{ textAlign: 'center' }}>Learning Journal</h2>
+        <h2 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+          Learning Journal
+        </h2>
         <div className="card">
           <Timeline
             value={this.events1}
