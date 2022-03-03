@@ -513,7 +513,7 @@ export default class ContactForm extends React.Component {
                       inputId={category.key}
                       id="category"
                       name="category"
-                      value={this.selectedCategory}
+                      value={category.name}
                       onChange={(event) =>
                         this.setState({ selectedCategory: event.value })
                       }
