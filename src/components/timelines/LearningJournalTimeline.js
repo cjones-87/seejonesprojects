@@ -11,7 +11,7 @@ import './Timeline.css';
 import IdleClicker from '../projects/IdleClicker.png';
 import GuessingGame from '../projects/GuessingGame.png';
 import FullstackLogo from '../projects/FullstackLogo.png';
-import BootcampDiploma from '../projects/BootcampDiploma.jpg';
+// import BootcampDiploma from '../projects/BootcampDiploma.jpg';
 import computerLove from '../projects/computerLove.gif';
 import BoundzBookstore from '../projects/BoundzBookstore.png';
 import Hypnotiq from '../projects/Hypnotiq.gif';
