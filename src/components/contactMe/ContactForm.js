@@ -45,7 +45,7 @@ export default class ContactForm extends React.Component {
       phoneNumber: '',
       additionalInfo: '',
       availability: '',
-      preferredResponseDate: '',
+      dragAndDrop: [],
       budget: '',
       preferredContactMethod: '',
       totalSize: 0,
@@ -514,7 +514,7 @@ export default class ContactForm extends React.Component {
               </label>
             </span>
 
-            <div className="card"></div>
+            <div className="card" style={{ paddingTop: 10 }}></div>
 
             <div style={{ color: 'lightgrey' }}>
               <div
@@ -525,7 +525,8 @@ export default class ContactForm extends React.Component {
                   justifyContent: 'center',
                 }}
               >
-                <div></div>
+                <div className="card" style={{ paddingTop: 10 }}></div>
+
                 <div className="field col-12 md:col-4">
                   <label
                     htmlFor="datesAvailableToSpeak"
@@ -541,26 +542,9 @@ export default class ContactForm extends React.Component {
                       this.setState({ availability: event.value })
                     }
                     selectionMode="multiple"
+                    disabledDays={[0, 1, 5, 6]}
                     showIcon
                     touchUI
-                  />
-                </div>
-                <div className="field col-12 md:col-4">
-                  <label
-                    htmlFor="responseDate"
-                    style={{ color: 'silver', fontSize: '.9em' }}
-                  >
-                    Date Response Requested By
-                  </label>
-                  <Calendar
-                    id="preferredResponseDate"
-                    name="preferredResponseDate"
-                    value={this.state.preferredResponseDate}
-                    onChange={(event) =>
-                      this.setState({ preferredResponseDate: event.value })
-                    }
-                    touchUI
-                    showIcon
                   />
                 </div>
               </div>
@@ -598,8 +582,9 @@ export default class ContactForm extends React.Component {
                 <FileUpload
                   ref={(el) => (this.fileUploadRef = el)}
                   name="dragAndDrop"
-                  url="https://primefaces.org/primereact/showcase/upload.php"
+                  url="cj@seejonesengineer.com"
                   multiple
+                  value={this.state.dragAndDrop}
                   accept="image/*"
                   maxFileSize={10000000}
                   onUpload={this.onTemplateUpload}
@@ -623,10 +608,11 @@ export default class ContactForm extends React.Component {
                 label="Submit"
                 loading={this.state.loading}
                 onClick={[
-                  () => 'https://formsubmit.co/cj@seejonesengineer.com',
+                  () =>
+                    'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957',
                   this.onLoadingClick,
                 ]}
-                action="https://formsubmit.co/cj@seejonesengineer.com"
+                action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
                 method="POST"
               />
             </div>

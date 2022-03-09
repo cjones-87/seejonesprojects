@@ -6,7 +6,7 @@ import computerLove from './computerLove.gif';
 import BoundzBookstore from './BoundzBookstore.png';
 import Hypnotiq from './Hypnotiq.gif';
 import SeeJonesEngineer from './SeeJonesEngineer.png';
-import imageNotFound from './imageNotFound.jpeg';
+// import imageNotFound from './imageNotFound.jpeg';
 
 export default function ProjectGallery() {
   const data = [
