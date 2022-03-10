@@ -4,8 +4,11 @@ import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
 import React from 'react';
+
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
+
+import SidePanelMenu from './components/menu/SidePanelMenu';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -68,16 +71,18 @@ export default class Navbar extends React.Component {
     const start = (
       <img
         alt="logo"
-        src="https://i.imgur.com/xNRiK7S.jpg"
+        src="https://i.imgur.com/zUk8geK.png"
         onError={(e) =>
           (e.target.src =
             'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png')
         }
         height="40"
         className="mr-2"
+        style={{ borderRadius: '50%' }}
       ></img>
     );
-    const end = <InputText placeholder="Search" type="text" />;
+    const end = <SidePanelMenu />;
+    // const end = <InputText placeholder="Search" type="text" />;
 
     return (
       <div

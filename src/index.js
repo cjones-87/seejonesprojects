@@ -4,8 +4,6 @@ import './index.css';
 import Navbar from './Navbar';
 import reportWebVitals from './reportWebVitals';
 
-import SidePanelMenu from './components/menu/SidePanelMenu';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllProjects from './components/projects/AllProjects';
 import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
@@ -31,7 +29,6 @@ ReactDOM.render(
         <Route path="/contactme" element={<ContactForm />} />
       </Routes>
     </BrowserRouter>
-    <SidePanelMenu />
   </React.StrictMode>,
   document.getElementById('root')
 );
