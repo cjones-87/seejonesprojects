@@ -35,9 +35,9 @@ export default class SidePanelButtons extends React.Component {
 
   render() {
     return (
-      <div className="button">
-        <div className="card">
-          <h5>Related Pages</h5>
+      <div className="button bg-black-alpha-90">
+        <div className="card bg-black-alpha-90">
+          <h5 style={{ textAlign: 'center', paddingTop: 10 }}>Related Pages</h5>
           <div
             className="template"
             style={{ display: 'flex', flexDirection: 'column' }}

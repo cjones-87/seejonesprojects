@@ -47,25 +47,26 @@ export default class SidePanelMenu extends React.Component {
               justifyContent: 'space-evenly',
             }}
           >
-            <div style={{ alignSelf: 'center' }}>
+            {/* <div style={{ alignSelf: 'center' }}>
               <Button
                 icon="pi pi-star"
                 onClick={() => this.setState({ visibleCustomToolbar: true })}
               />
-            </div>
+            </div> */}
 
-            <div style={{ alignSelf: 'center' }}>
+            {/* <div style={{ alignSelf: 'center' }}>
               <a href="https://www.buymeacoffee.com/cjonesengineer">
                 <img
                   src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cjonesengineer&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
                   alt=""
                 />
               </a>
-            </div>
+            </div> */}
 
-            <div style={{ alignSelf: 'center' }}>
+            <div style={{ textAlign: 'center' }}>
               <Button
-                icon="pi pi-star"
+                icon="pi pi-comments"
+                label="Network With Me"
                 onClick={() => this.setState({ visibleCustomToolbar: true })}
               />
             </div>
