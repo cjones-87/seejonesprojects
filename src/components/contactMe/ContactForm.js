@@ -43,7 +43,7 @@ export default class ContactForm extends React.Component {
       lastName: '',
       email: '',
       phoneNumber: '',
-      additionalInfo: '',
+      jobDetails: '',
       availability: '',
       dragAndDrop: [],
       budget: '',
@@ -456,21 +456,21 @@ export default class ContactForm extends React.Component {
             <span className="p-float-label p-input-icon-right">
               <i className="pi pi-info-circle" />
               <InputTextarea
-                id="additionalInfo"
-                name="additionalInfo"
-                value={this.state.additionalInfo}
+                id="jobDetails"
+                name="jobDetails"
+                value={this.state.jobDetails}
                 onChange={(event) =>
-                  this.setState({ additionalInfo: event.target.value })
+                  this.setState({ jobDetails: event.target.value })
                 }
                 rows={5}
                 cols={30}
                 autoResize
               />
               <label
-                htmlFor="additionalInfo"
+                htmlFor="jobDetails"
                 style={{ color: 'silver', fontSize: '.9em' }}
               >
-                Additional Info
+                Job Details
               </label>
             </span>
 
@@ -597,6 +597,9 @@ export default class ContactForm extends React.Component {
                   chooseOptions={chooseOptions}
                   uploadOptions={uploadOptions}
                   cancelOptions={cancelOptions}
+                  onChange={(data) =>
+                    this.setState({ dragAndDrop: data.value })
+                  }
                 />
               </div>
             </div>

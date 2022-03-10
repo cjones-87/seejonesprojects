@@ -9,11 +9,57 @@ import { Card } from 'primereact/card';
 
 export default class AboutMe extends React.Component {
   render() {
-    const header = (
+    const handleError = (e) =>
+      (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg');
+
+    //
+    const header1 = (
       <img
         alt="Card"
-        src="images/usercard.png"
-        onError={(e) => (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg')}
+        src="https://i.imgur.com/rntgx2i.jpg"
+        onError={handleError}
+        style={{ width: '400px' }}
+      />
+    );
+    const header2 = (
+      <img
+        alt="Card"
+        src="https://i.imgur.com/ErQMMMG.jpg"
+        onError={handleError}
+        style={{ width: '400px' }}
+      />
+    );
+    const header3 = (
+      <img
+        alt="Card"
+        src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnV0dXJpc3RpYyUyMHJvYm90fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        onError={handleError}
+        style={{ width: '400px' }}
+      />
+    );
+    //
+    const footer1 = (
+      <img
+        alt="Card"
+        src="https://images.unsplash.com/photo-1633265486501-0cf524a07213?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGFzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+        onError={handleError}
+        style={{ width: '300px' }}
+      />
+    );
+    const footer2 = (
+      <img
+        alt="Card"
+        src="https://images.unsplash.com/photo-1609643242182-7e85dfad9037?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+        onError={handleError}
+        style={{ width: '300px' }}
+      />
+    );
+    const footer3 = (
+      <img
+        alt="Card"
+        src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnV0dXJpc3RpYyUyMHJvYm90fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        onError={handleError}
+        style={{ width: '300px' }}
       />
     );
 
@@ -25,7 +71,8 @@ export default class AboutMe extends React.Component {
             title="Past"
             subTitle="Office Manager/Butcher"
             style={{ width: '25em' }}
-            header={header}
+            header={header1}
+            footer={footer1}
           >
             <p className="m-0" style={{ lineHeight: '1.5' }}>
               Hello, my name is CJ & I’m a Fullstack Engineer. Before enrolling
@@ -48,7 +95,8 @@ export default class AboutMe extends React.Component {
             title="Present"
             subTitle="Fullstack Academy"
             style={{ width: '25em' }}
-            header={header}
+            header={header2}
+            footer={footer2}
           >
             <p className="m-0" style={{ lineHeight: '1.5' }}>
               I JUMPED AT THE OPPORTUNITY when I heard about FSA’s Future Code
@@ -65,7 +113,8 @@ export default class AboutMe extends React.Component {
             title="Future"
             subTitle="Here & Now"
             style={{ width: '25em' }}
-            header={header}
+            header={header3}
+            footer={footer3}
           >
             <p className="m-0" style={{ lineHeight: '1.5' }}>
               One of my long-term goals is to write a custom library or language

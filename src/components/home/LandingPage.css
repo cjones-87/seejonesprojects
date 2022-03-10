@@ -2,7 +2,7 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
-  color: indigo;
+  color: white;
   /* background-image: url('https://i.imgur.com/xNRiK7S.jpg');
   background-size: cover;
   background-position: center;
@@ -23,15 +23,15 @@ h2 {
 }
 
 #showcase {
-  background-image: url('https://images.unsplash.com/photo-1542393545-10f5cde2c810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  background-image: url('https://images.unsplash.com/photo-1495954222046-2c427ecb546d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3864&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   text-align: center;
   padding: 0 20px;
   line-height: 1;
@@ -44,7 +44,7 @@ h2 {
 }
 #sectionB {
   padding: 20px;
-  background: pink;
+  background: rebeccapurple;
   text-align: center;
 }
 
@@ -65,6 +65,6 @@ h2 {
 }
 
 .sectionC2 {
-  background: pink;
+  background: rebeccapurple;
   text-align: center;
 }
