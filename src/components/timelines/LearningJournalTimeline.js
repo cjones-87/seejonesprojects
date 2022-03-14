@@ -146,10 +146,19 @@ export default class LearningJournalTimeline extends Component {
     };
 
     return (
-      <div className="timeline-demo bg-black-alpha-90">
-        <h2 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+      <div
+        className="timeline-demo bg-black-alpha-90"
+        style={{ paddingTop: '1rem' }}
+      >
+        <h1
+          style={{
+            textAlign: 'center',
+            color: 'rebeccapurple',
+            paddingBottom: '1rem',
+          }}
+        >
           Learning Journal
-        </h2>
+        </h1>
         <div className="card">
           <Timeline
             value={this.events1}

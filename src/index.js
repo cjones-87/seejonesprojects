@@ -26,7 +26,7 @@ ReactDOM.render(
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />
         <Route exact path="/playgames" element={<PlayGames />} />
         <Route exact path="/resume" element={<Resume />} />
-        <Route path="/contactme" element={<ContactForm />} />
+        <Route path="/hireme" element={<ContactForm />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

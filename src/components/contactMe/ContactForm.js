@@ -45,7 +45,7 @@ export default class ContactForm extends React.Component {
       phoneNumber: '',
       jobDetails: '',
       availability: '',
-      dragAndDrop: [],
+      dragAndDrop: '',
       budget: '',
       preferredContactMethod: '',
       totalSize: 0,
@@ -359,11 +359,18 @@ export default class ContactForm extends React.Component {
           className="bg-black-alpha-90"
           style={{
             textAlign: 'center',
+            paddingTop: '1rem',
           }}
         >
-          <h2 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
-            Contact Me
-          </h2>
+          <h1
+            style={{
+              textAlign: 'center',
+              color: 'rebeccapurple',
+              paddingBottom: '1rem',
+            }}
+          >
+            Hire Me
+          </h1>
           <div className="card" style={{ paddingTop: 10 }}>
             <span className="p-float-label p-input-icon-right">
               <i className="pi pi-id-card" />
@@ -545,6 +552,7 @@ export default class ContactForm extends React.Component {
                     disabledDays={[0, 1, 5, 6]}
                     showIcon
                     touchUI
+                    showTime
                   />
                 </div>
               </div>
@@ -608,7 +616,7 @@ export default class ContactForm extends React.Component {
 
             <div style={{ textAlign: 'center' }}>
               <Button
-                label="Submit"
+                label="Hire Me"
                 loading={this.state.loading}
                 onClick={[
                   () =>
