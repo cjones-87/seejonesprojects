@@ -12,11 +12,14 @@ export default function PlayGames() {
           flexDirection: 'row',
           justifyContent: 'space-evenly',
           textAlign: 'center',
+          paddingTop: '1rem',
         }}
       >
         <div>
           <a href="https://guessing-game-blue.vercel.app/">
-            <h3 style={{ color: 'rebeccapurple' }}>Guessing Game</h3>
+            <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+              Guessing Game
+            </h1>
           </a>
           <Iframe
             url="https://guessing-game-blue.vercel.app/"
@@ -30,7 +33,9 @@ export default function PlayGames() {
         </div>
         <div>
           <a href="https://mugnificent-coffee-clicker.vercel.app/">
-            <h3 style={{ color: 'rebeccapurple' }}>Idle Clicker</h3>
+            <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+              Idle Clicker
+            </h1>
           </a>
           <Iframe
             url="https://mugnificent-coffee-clicker.vercel.app/"

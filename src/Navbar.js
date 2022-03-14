@@ -58,10 +58,10 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Contact Me',
+        label: 'Hire Me',
         icon: 'pi pi-fw pi-phone',
         command: (event) => {
-          window.location.href = '/contactme';
+          window.location.href = '/hireme';
         },
       },
     ];
@@ -81,7 +81,11 @@ export default class Navbar extends React.Component {
         style={{ borderRadius: '50%' }}
       ></img>
     );
-    const end = <SidePanelMenu />;
+    const end = (
+      <div style={{ paddingTop: '1.5rem' }}>
+        <SidePanelMenu />
+      </div>
+    );
     // const end = <InputText placeholder="Search" type="text" />;
 
     return (

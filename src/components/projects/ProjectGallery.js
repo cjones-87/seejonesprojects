@@ -45,8 +45,11 @@ export default function ProjectGallery() {
     fontWeight: 'bold',
   };
   return (
-    <div className="App bg-black-alpha-90" style={{ paddingBottom: 175 }}>
-      <h2 style={{ textAlign: 'center', color: 'rebeccapurple' }}>Projects</h2>
+    <div
+      className="App bg-black-alpha-90"
+      style={{ paddingBottom: 175, paddingTop: '1rem' }}
+    >
+      <h1 style={{ textAlign: 'center', color: 'rebeccapurple' }}>Projects</h1>
       <div style={{ textAlign: 'center' }}>
         <div
           style={{

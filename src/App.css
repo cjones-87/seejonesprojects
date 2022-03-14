@@ -23,23 +23,6 @@ body {
   justify-content: space-evenly;
 }
 
-#homeLogo {
-  /* background-image: url('https://i.imgur.com/OIdld69.png');
-  background-size: stretch;
-  background-position: left;
-  background-repeat: no-repeat; */
-  /* height: 100vh; */
-  /* float: left; */
-}
-
-#homeCJ {
-  /* background-image: url('https://i.imgur.com/xNRiK7S.jpg');
-  background-size: stretch;
-  background-position: right;
-  background-repeat: no-repeat; */
-  /* float: right; */
-  /* height: 100vh; */
-}
 h1,
 h2,
 h3,
