@@ -11,17 +11,17 @@ export default function Home() {
         <div id="homeLogo">
           <img
             alt="Card"
-            src="https://i.imgur.com/yTMf10x.jpg"
+            src="https://i.imgur.com/zUk8geK.png"
             onError={handleError}
-            style={{ width: '400px', height: '400px', borderRadius: '50%' }}
+            style={{ width: '300px', height: '300px', borderRadius: '50%' }}
           />
         </div>
         <div id="homeCJ">
           <img
             alt="Card"
-            src="https://i.imgur.com/zUk8geK.png"
+            src="https://i.imgur.com/YvqyfW5.png"
             onError={handleError}
-            style={{ width: '400px', height: '400px', borderRadius: '50%' }}
+            style={{ width: '300px', height: '300px', borderRadius: '50%' }}
           />
         </div>
       </div>
