@@ -6,7 +6,6 @@ import 'primeflex/primeflex.css';
 import React from 'react';
 
 import { Menubar } from 'primereact/menubar';
-import { InputText } from 'primereact/inputtext';
 
 import SidePanelMenu from './components/menu/SidePanelMenu';
 
@@ -86,7 +85,6 @@ export default class Navbar extends React.Component {
         <SidePanelMenu />
       </div>
     );
-    // const end = <InputText placeholder="Search" type="text" />;
 
     return (
       <div className="sticky top-0" id="navbar">
