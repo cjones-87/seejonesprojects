@@ -89,17 +89,9 @@ export default class Navbar extends React.Component {
     // const end = <InputText placeholder="Search" type="text" />;
 
     return (
-      <div
-        className="sticky top-0"
-        style={{ position: 'sticky', zIndex: 1000 }}
-      >
+      <div className="sticky top-0" id="navbar">
         <div className="card">
-          <Menubar
-            model={this.items}
-            start={start}
-            end={end}
-            style={{ position: 'sticky' }}
-          />
+          <Menubar model={this.items} start={start} end={end} />
         </div>
       </div>
     );

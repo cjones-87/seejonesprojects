@@ -154,7 +154,7 @@ export default class LearningJournalTimeline extends Component {
           style={{
             textAlign: 'center',
             color: 'rebeccapurple',
-            paddingBottom: '1rem',
+            paddingBottom: '1.5rem',
           }}
         >
           Learning Journal

@@ -14,10 +14,11 @@ body {
   margin-bottom: 50px;
 }
 
+#navbar {
+  z-index: 1000;
+}
+
 #homeFlex {
-  /* background-image: url('https://i.imgur.com/OIdld69.png');
-  background-repeat: no-repeat;
-  background-size: contain; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
