@@ -34,7 +34,7 @@ export default class AboutMe extends React.Component {
     const header3 = (
       <img
         alt="Card"
-        src="https://images.unsplash.com/photo-1595670322505-4de61b9cdf47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+        src="https://i.imgur.com/Rj1BcqV.jpg"
         onError={handleError}
         style={{ width: '300px', paddingTop: '1.5rem' }}
       />
@@ -51,7 +51,7 @@ export default class AboutMe extends React.Component {
     const footer2 = (
       <img
         alt="Card"
-        src="https://images.unsplash.com/photo-1609643242182-7e85dfad9037?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+        src="https://i.imgur.com/OUcoUxV.jpg"
         onError={handleError}
         style={{ width: '300px' }}
       />
@@ -59,7 +59,7 @@ export default class AboutMe extends React.Component {
     const footer3 = (
       <img
         alt="Card"
-        src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnV0dXJpc3RpYyUyMHJvYm90fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+        src="https://i.imgur.com/rygSJT0.jpg"
         onError={handleError}
         style={{ width: '300px' }}
       />
