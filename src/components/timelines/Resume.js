@@ -3,7 +3,7 @@ import 'primereact/resources/themes/md-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
 import React from 'react';
-import Pdf from '../../CJsTechResume.pdf';
+import Pdf from '../../CJsTechPortfolioWebsiteResume.pdf';
 import './Resume.css';
 export default function Resume() {
   return (
