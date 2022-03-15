@@ -37,7 +37,15 @@ export default class SidePanelButtons extends React.Component {
     return (
       <div className="button bg-black-alpha-90">
         <div className="card bg-black-alpha-90">
-          <h5 style={{ textAlign: 'center', paddingTop: 10 }}>Related Pages</h5>
+          <h5
+            style={{
+              textAlign: 'center',
+              paddingTop: 10,
+              color: 'rebeccapurple',
+            }}
+          >
+            Keep connected with my work by following me on:
+          </h5>
           <div
             className="template"
             style={{ display: 'flex', flexDirection: 'column' }}

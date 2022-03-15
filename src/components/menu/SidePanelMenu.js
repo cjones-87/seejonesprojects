@@ -36,7 +36,9 @@ export default class SidePanelMenu extends React.Component {
             onHide={() => this.setState({ visibleCustomToolbar: false })}
             icons={customIcons}
           >
-            <h3>See Jones Engineer</h3>
+            <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+              See Jones Engineer
+            </h3>
             <SidePanelButtons />
           </Sidebar>
 
