@@ -46,11 +46,13 @@ h2 {
   padding: 20px;
   background: rebeccapurple;
   text-align: center;
+  flex-grow: 1;
 }
 
 #sectionC {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 
 #sectionC div {
