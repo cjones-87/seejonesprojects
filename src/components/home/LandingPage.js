@@ -15,7 +15,7 @@ export default function LandingPage() {
           <div>
             <h2>Hello!</h2>
             <h1>My Name is CJ</h1>
-            <p>Full Stack Software Engineer & Front End Developer</p>
+            <p>Frontend Software Engineer & Fullstack Developer</p>
             <p>
               <small>Specializing in</small> <big>React Native Expo</big>{' '}
               <small>for mobile development & &nbsp;</small>
@@ -34,8 +34,8 @@ export default function LandingPage() {
           <div id="sectionB">
             To date, I have worked with the following
             languages/frameworks/libraries: React, React Native Expo, NodeJS,
-            PostgreSQL, Sequelize, Redux, Express, MUI, PrimeReact UI, Chakra
-            UI, Semantic UI
+            PostgreSQL, Sequelize, Redux, Express, MUI, PrimeReact UI, Chakra UI
+            {/* , Semantic UI */}
           </div>
           <div id="sectionC">
             <div className="sectionC1">React & React/Redux - Web Apps</div>
