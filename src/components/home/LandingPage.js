@@ -26,20 +26,22 @@ export default function LandingPage() {
             </a>
           </div>
         </header>
-        <div id="sectionA">
-          I am a FullStack Academy graduate, committed to learning and
-          continuing my career as a developer.
-        </div>
-        <div id="sectionB">
-          To date, I have worked with the following
-          languages/frameworks/libraries: React, React Native Expo, NodeJS,
-          PostgreSQL, Sequelize, Redux, Express, MUI, PrimeReact UI, Chakra UI,
-          Semantic UI
-        </div>
-        <div id="sectionC">
-          <div className="sectionC1">React & React/Redux - Web Apps</div>
-          <div className="sectionC2">React Native Expo - Mobile Apps</div>
-          <div className="sectionC3">JS, HTML, CSS - Basic Web Pages</div>
+        <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+          <div id="sectionA">
+            I am a FullStack Academy graduate, committed to learning and
+            continuing my career as a developer.
+          </div>
+          <div id="sectionB">
+            To date, I have worked with the following
+            languages/frameworks/libraries: React, React Native Expo, NodeJS,
+            PostgreSQL, Sequelize, Redux, Express, MUI, PrimeReact UI, Chakra
+            UI, Semantic UI
+          </div>
+          <div id="sectionC">
+            <div className="sectionC1">React & React/Redux - Web Apps</div>
+            <div className="sectionC2">React Native Expo - Mobile Apps</div>
+            <div className="sectionC3">JS, HTML, CSS - Basic Web Pages</div>
+          </div>
         </div>
       </div>
     </body>

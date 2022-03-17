@@ -80,7 +80,9 @@ export default class SidePanelButtons extends React.Component {
 
             <Button className="slack p-0">
               <i className="pi pi-slack px-2"></i>
-              <span className="px-3">Slack</span>
+              <a href="https://seejonesengineer.slack.com/archives/D037H4J82TU">
+                <span className="px-3">Slack</span>
+              </a>
             </Button>
 
             <Button className="google p-0">
@@ -92,7 +94,9 @@ export default class SidePanelButtons extends React.Component {
 
             <Button className="whatsapp p-0">
               <i className="pi pi-whatsapp px-2"></i>
-              <span className="px-3">WhatsApp</span>
+              <a href="https://wa.me/3473918511">
+                <span className="px-3">WhatsApp</span>
+              </a>
             </Button>
 
             <Button className="twitter p-0">
@@ -109,15 +113,15 @@ export default class SidePanelButtons extends React.Component {
               </a>
             </Button>
 
-            <Button className="vimeo p-0">
+            {/* <Button className="vimeo p-0">
               <i className="pi pi-vimeo px-2"></i>
               <span className="px-3">Vimeo</span>
-            </Button>
+            </Button> */}
 
-            <Button className="paypal p-0 bg-black-alpha-20">
+            {/* <Button className="paypal p-0 bg-black-alpha-20">
               <i className="pi pi-paypal px-2"></i>
               <span className="px-3">Paypal</span>
-            </Button>
+            </Button> */}
 
             <Button className="money-bill p-0">
               <i className="pi pi-money-bill px-2"></i>
