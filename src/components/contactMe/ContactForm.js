@@ -45,7 +45,7 @@ export default class ContactForm extends React.Component {
       phoneNumber: '',
       jobDetails: '',
       availability: '',
-      dragAndDrop: '',
+      dragAndDrop: {},
       budget: '',
       preferredContactMethod: '',
       totalSize: 0,
@@ -608,6 +608,8 @@ export default class ContactForm extends React.Component {
                   onChange={(data) =>
                     this.setState({ dragAndDrop: data.value })
                   }
+                  action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
+                  method="POST"
                 />
               </div>
             </div>

@@ -44,7 +44,7 @@ export default class SidePanelButtons extends React.Component {
               color: 'rebeccapurple',
             }}
           >
-            Keep connected with my work by following me on:
+            Stay connected with me & my work by following me on:
           </h5>
           <div
             className="template"
@@ -112,11 +112,6 @@ export default class SidePanelButtons extends React.Component {
                 <span className="px-3">Github</span>
               </a>
             </Button>
-
-            {/* <Button className="vimeo p-0">
-              <i className="pi pi-vimeo px-2"></i>
-              <span className="px-3">Vimeo</span>
-            </Button> */}
 
             {/* <Button className="paypal p-0 bg-black-alpha-20">
               <i className="pi pi-paypal px-2"></i>
