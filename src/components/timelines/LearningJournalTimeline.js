@@ -18,13 +18,13 @@ import Hypnotiq from '../projects/Hypnotiq.gif';
 import SeeJonesEngineer from '../projects/SeeJonesEngineer.png';
 import imageNotFound from '../projects/imageNotFound.jpeg';
 
-import RoaringTiger from '../../sounds/RoaringTiger.mp3';
+import BeggingForMore from '../../sounds/BeggingForMore.mp3';
 
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
     super(props);
 
-    const audio = new Audio(RoaringTiger);
+    const audio = new Audio(BeggingForMore);
 
     this.events1 = [
       {
@@ -40,7 +40,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = '/projects/seejonesengineer'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -62,7 +62,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = '/projects/computerlove'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -81,7 +81,7 @@ export default class LearningJournalTimeline extends Component {
         techStack: 'React Native Expo',
         moreInfo: '',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 4000);
+          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 1200);
           let playAudio = (event) => {
             audio.play();
           };
@@ -100,7 +100,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = 'https://www.fullstackacademy.com/'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -122,7 +122,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = '/projects/boundzbookstore'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -143,7 +143,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = '/projects/idleclicker'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -164,7 +164,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = '/projects/guessinggame'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
@@ -184,7 +184,7 @@ export default class LearningJournalTimeline extends Component {
         command: (event) => {
           setTimeout(
             () => (window.location.href = 'https://www.fullstackacademy.com/'),
-            4000
+            1200
           );
           let playAudio = (event) => {
             audio.play();
