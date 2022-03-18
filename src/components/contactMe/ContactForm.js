@@ -591,7 +591,7 @@ export default class ContactForm extends React.Component {
                 <FileUpload
                   ref={(el) => (this.fileUploadRef = el)}
                   name="dragAndDrop"
-                  url="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
+                  url="./upload"
                   multiple
                   value={this.state.dragAndDrop}
                   accept="image/*"
@@ -609,8 +609,6 @@ export default class ContactForm extends React.Component {
                   onChange={(data) =>
                     this.setState({ dragAndDrop: data.value })
                   }
-                  action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-                  method="POST"
                 />
               </div>
             </div>
