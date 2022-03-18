@@ -27,6 +27,7 @@ ReactDOM.render(
         <Route exact path="/playgames" element={<PlayGames />} />
         <Route exact path="/resume" element={<Resume />} />
         <Route path="/hireme" element={<ContactForm />} />
+        <Route path="/.upload" />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
