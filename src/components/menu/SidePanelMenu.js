@@ -8,13 +8,34 @@ import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 import SidePanelButtons from './SidePanelButtons';
 
+import TheLittleDwarf from '../../sounds/TheLittleDwarf.mp3';
+import PowerDown from '../../sounds/PowerDown.mp3';
+
 export default class SidePanelMenu extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       visibleCustomToolbar: false,
     };
+
+    this.onClick = this.onClick.bind(this);
+    this.onHide = this.onHide.bind(this);
   }
+
+  onClick = (event) => {
+    const audio = new Audio(TheLittleDwarf);
+    this.setState({ visibleCustomToolbar: true });
+    let playAudio = (event) => audio.play();
+    playAudio();
+  };
+
+  onHide = (event) => {
+    const audio = new Audio(PowerDown);
+    this.setState({ visibleCustomToolbar: false });
+    let playAudio = (event) => audio.play();
+    playAudio();
+  };
 
   render() {
     const customIcons = (
@@ -33,7 +54,7 @@ export default class SidePanelMenu extends React.Component {
         <div className="card">
           <Sidebar
             visible={this.state.visibleCustomToolbar}
-            onHide={() => this.setState({ visibleCustomToolbar: false })}
+            onHide={this.onHide}
             icons={customIcons}
           >
             <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
@@ -47,7 +68,7 @@ export default class SidePanelMenu extends React.Component {
               <Button
                 icon="pi pi-comments"
                 label="Network With Me"
-                onClick={() => this.setState({ visibleCustomToolbar: true })}
+                onClick={this.onClick}
               />
             </div>
           </div>

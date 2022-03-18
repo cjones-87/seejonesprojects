@@ -9,58 +9,94 @@ import { Menubar } from 'primereact/menubar';
 
 import SidePanelMenu from './components/menu/SidePanelMenu';
 
+import MartianGun from './sounds/MartianGun.mp3';
+import Quest from './sounds/Quest.mp3';
+import Coins from './sounds/Coins.mp3';
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
+
+    const mainAudio = new Audio(MartianGun);
+    const gameAudio = new Audio(Quest);
+    const hireAudio = new Audio(Coins);
 
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-fw pi-home',
         command: (event) => {
-          window.location.href = '/home';
+          setTimeout(() => (window.location.href = '/home'), 1600);
+          let playAudio = (event) => {
+            mainAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'About Me',
         icon: 'pi pi-fw pi-info-circle',
         command: (event) => {
-          window.location.href = '/aboutme';
+          setTimeout(() => (window.location.href = '/aboutme'), 1600);
+          let playAudio = (event) => {
+            mainAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'Learning Journal',
         icon: 'pi pi-fw pi-history',
         command: (event) => {
-          window.location.href = '/learningjournal';
+          setTimeout(() => (window.location.href = '/learningjournal'), 1600);
+          let playAudio = (event) => {
+            mainAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'Projects',
         icon: 'pi pi-fw pi-images',
         command: (event) => {
-          window.location.href = '/projects';
+          setTimeout(() => (window.location.href = '/projects'), 1600);
+          let playAudio = (event) => {
+            mainAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'Interactive Games',
         icon: 'pi pi-fw pi-play',
         command: (event) => {
-          window.location.href = '/playgames';
+          setTimeout(() => (window.location.href = '/playgames'), 2000);
+          let playAudio = (event) => {
+            gameAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'Resume',
         icon: 'pi pi-fw pi-file',
         command: (event) => {
-          window.location.href = '/resume';
+          setTimeout(() => (window.location.href = '/resume'), 1600);
+          let playAudio = (event) => {
+            mainAudio.play();
+          };
+          playAudio();
         },
       },
       {
         label: 'Hire Me',
-        icon: 'pi pi-fw pi-phone',
+        icon: 'pi pi-fw pi-dollar',
         command: (event) => {
-          window.location.href = '/hireme';
+          setTimeout(() => (window.location.href = '/hireme'), 250);
+          let playAudio = (event) => {
+            hireAudio.play();
+          };
+          playAudio();
         },
       },
     ];
@@ -71,10 +107,7 @@ export default class Navbar extends React.Component {
       <img
         alt="logo"
         src="https://i.imgur.com/zUk8geK.png"
-        onError={(e) =>
-          (e.target.src =
-            'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png')
-        }
+        onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
         height="40"
         className="mr-2"
         style={{ borderRadius: '50%' }}

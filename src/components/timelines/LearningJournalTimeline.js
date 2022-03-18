@@ -18,9 +18,13 @@ import Hypnotiq from '../projects/Hypnotiq.gif';
 import SeeJonesEngineer from '../projects/SeeJonesEngineer.png';
 import imageNotFound from '../projects/imageNotFound.jpeg';
 
+import BeggingForMore from '../../sounds/BeggingForMore.mp3';
+
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
     super(props);
+
+    const audio = new Audio(BeggingForMore);
 
     this.events1 = [
       {
@@ -33,6 +37,16 @@ export default class LearningJournalTimeline extends Component {
         description: 'Frontend Personal Portfolio Web App',
         techStack: 'React, CSS, PrimeReact UI',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = '/projects/seejonesengineer'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 7,
@@ -45,6 +59,16 @@ export default class LearningJournalTimeline extends Component {
         techStack:
           'React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = '/projects/computerlove'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 6,
@@ -56,6 +80,13 @@ export default class LearningJournalTimeline extends Component {
         description: 'Frontend Mobile App',
         techStack: 'React Native Expo',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 1200);
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 5,
@@ -66,6 +97,16 @@ export default class LearningJournalTimeline extends Component {
         image: FullstackLogo,
         description: 'Graduated Coding Bootcamp',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = 'https://www.fullstackacademy.com/'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 4,
@@ -78,6 +119,16 @@ export default class LearningJournalTimeline extends Component {
         techStack:
           'Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = '/projects/boundzbookstore'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 3,
@@ -89,6 +140,16 @@ export default class LearningJournalTimeline extends Component {
         description: 'Idle click and accrue game.',
         techStack: 'Vanilla JS, HTML, CSS',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = '/projects/idleclicker'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 2,
@@ -100,6 +161,16 @@ export default class LearningJournalTimeline extends Component {
         description: 'Guess the number in 5 guesses or less.',
         techStack: 'Vanilla JS, HTML, CSS',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = '/projects/guessinggame'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
       {
         id: 1,
@@ -110,6 +181,16 @@ export default class LearningJournalTimeline extends Component {
         image: FullstackLogo,
         description: 'Enrolled Coding Bootcamp',
         moreInfo: '',
+        command: (event) => {
+          setTimeout(
+            () => (window.location.href = 'https://www.fullstackacademy.com/'),
+            1200
+          );
+          let playAudio = (event) => {
+            audio.play();
+          };
+          playAudio();
+        },
       },
     ];
   }
@@ -140,7 +221,11 @@ export default class LearningJournalTimeline extends Component {
           )}
           <p>{item.description}</p>
           <p>{item.techStack}</p>
-          <Button label="Read more" className="p-button-text"></Button>
+          <Button
+            label="Read more"
+            className="p-button-text"
+            onClick={item.command}
+          />
         </Card>
       );
     };
