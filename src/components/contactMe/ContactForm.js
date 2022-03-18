@@ -10,12 +10,13 @@ import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
 
-import { Toast } from 'primereact/toast';
-import { FileUpload } from 'primereact/fileupload';
-import { ProgressBar } from 'primereact/progressbar';
 import { Button } from 'primereact/button';
-import { Tooltip } from 'primereact/tooltip';
-import { Tag } from 'primereact/tag';
+
+// import { Toast } from 'primereact/toast';
+// import { FileUpload } from 'primereact/fileupload';
+// import { ProgressBar } from 'primereact/progressbar';
+// import { Tooltip } from 'primereact/tooltip';
+// import { Tag } from 'primereact/tag';
 
 export default class ContactForm extends React.Component {
   constructor(props) {
@@ -45,10 +46,10 @@ export default class ContactForm extends React.Component {
       phoneNumber: '',
       jobDetails: '',
       availability: '',
-      dragAndDrop: {},
+      // dragAndDrop: {},
       budget: '',
       preferredContactMethod: '',
-      totalSize: 0,
+      // totalSize: 0,
       loading: false,
     };
 
@@ -117,16 +118,16 @@ export default class ContactForm extends React.Component {
     });
 
     //drag and drop
-    this.onUpload = this.onUpload.bind(this);
-    this.onTemplateUpload = this.onTemplateUpload.bind(this);
-    this.onTemplateSelect = this.onTemplateSelect.bind(this);
-    this.onTemplateRemove = this.onTemplateRemove.bind(this);
-    this.onTemplateClear = this.onTemplateClear.bind(this);
-    this.onBasicUpload = this.onBasicUpload.bind(this);
-    this.onBasicUploadAuto = this.onBasicUploadAuto.bind(this);
-    this.headerTemplate = this.headerTemplate.bind(this);
-    this.itemTemplate = this.itemTemplate.bind(this);
-    this.emptyTemplate = this.emptyTemplate.bind(this);
+    // this.onUpload = this.onUpload.bind(this);
+    // this.onTemplateUpload = this.onTemplateUpload.bind(this);
+    // this.onTemplateSelect = this.onTemplateSelect.bind(this);
+    // this.onTemplateRemove = this.onTemplateRemove.bind(this);
+    // this.onTemplateClear = this.onTemplateClear.bind(this);
+    // this.onBasicUpload = this.onBasicUpload.bind(this);
+    // this.onBasicUploadAuto = this.onBasicUploadAuto.bind(this);
+    // this.headerTemplate = this.headerTemplate.bind(this);
+    // this.itemTemplate = this.itemTemplate.bind(this);
+    // this.emptyTemplate = this.emptyTemplate.bind(this);
   }
 
   //calendar touch ui
@@ -173,154 +174,154 @@ export default class ContactForm extends React.Component {
   }
 
   //drag and drop
-  onUpload() {
-    this.toast.show({
-      severity: 'info',
-      summary: 'Success',
-      detail: 'File Uploaded',
-    });
-  }
+  // onUpload() {
+  //   this.toast.show({
+  //     severity: 'info',
+  //     summary: 'Success',
+  //     detail: 'File Uploaded',
+  //   });
+  // }
 
-  onTemplateSelect(e) {
-    let totalSize = this.state.totalSize;
-    e.files.forEach((file) => {
-      totalSize += file.size;
-    });
+  // onTemplateSelect(e) {
+  //   let totalSize = this.state.totalSize;
+  //   e.files.forEach((file) => {
+  //     totalSize += file.size;
+  //   });
 
-    this.setState({
-      totalSize,
-    });
-  }
+  //   this.setState({
+  //     totalSize,
+  //   });
+  // }
 
-  onTemplateUpload(e) {
-    let totalSize = 0;
-    e.files.forEach((file) => {
-      totalSize += file.size || 0;
-    });
+  // onTemplateUpload(e) {
+  //   let totalSize = 0;
+  //   e.files.forEach((file) => {
+  //     totalSize += file.size || 0;
+  //   });
 
-    this.setState(
-      {
-        totalSize,
-      },
-      () => {
-        this.toast.show({
-          severity: 'info',
-          summary: 'Success',
-          detail: 'File Uploaded',
-        });
-      }
-    );
-  }
+  //   this.setState(
+  //     {
+  //       totalSize,
+  //     },
+  //     () => {
+  //       this.toast.show({
+  //         severity: 'info',
+  //         summary: 'Success',
+  //         detail: 'File Uploaded',
+  //       });
+  //     }
+  //   );
+  // }
 
-  onTemplateRemove(file, callback) {
-    this.setState(
-      (prevState) => ({
-        totalSize: prevState.totalSize - file.size,
-      }),
-      callback
-    );
-  }
+  // onTemplateRemove(file, callback) {
+  //   this.setState(
+  //     (prevState) => ({
+  //       totalSize: prevState.totalSize - file.size,
+  //     }),
+  //     callback
+  //   );
+  // }
 
-  onTemplateClear() {
-    this.setState({ totalSize: 0 });
-  }
+  // onTemplateClear() {
+  //   this.setState({ totalSize: 0 });
+  // }
 
-  onBasicUpload() {
-    this.toast.show({
-      severity: 'info',
-      summary: 'Success',
-      detail: 'File Uploaded with Basic Mode',
-    });
-  }
+  // onBasicUpload() {
+  //   this.toast.show({
+  //     severity: 'info',
+  //     summary: 'Success',
+  //     detail: 'File Uploaded with Basic Mode',
+  //   });
+  // }
 
-  onBasicUploadAuto() {
-    this.toast.show({
-      severity: 'info',
-      summary: 'Success',
-      detail: 'File Uploaded with Auto Mode',
-    });
-  }
+  // onBasicUploadAuto() {
+  //   this.toast.show({
+  //     severity: 'info',
+  //     summary: 'Success',
+  //     detail: 'File Uploaded with Auto Mode',
+  //   });
+  // }
 
-  headerTemplate(options) {
-    const { className, chooseButton, uploadButton, cancelButton } = options;
-    const value = this.state.totalSize / 10000;
-    const formatedValue = this.fileUploadRef
-      ? this.fileUploadRef.formatSize(this.state.totalSize)
-      : '0 B';
+  // headerTemplate(options) {
+  //   const { className, chooseButton, uploadButton, cancelButton } = options;
+  //   const value = this.state.totalSize / 10000;
+  //   const formatedValue = this.fileUploadRef
+  //     ? this.fileUploadRef.formatSize(this.state.totalSize)
+  //     : '0 B';
 
-    return (
-      <div
-        className={className}
-        style={{
-          backgroundColor: 'transparent',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        {chooseButton}
-        {uploadButton}
-        {cancelButton}
-        <ProgressBar
-          value={value}
-          displayValueTemplate={() => `${formatedValue} / 10 MB`}
-          style={{ width: '300px', height: '20px', marginLeft: 'auto' }}
-        ></ProgressBar>
-      </div>
-    );
-  }
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         backgroundColor: 'transparent',
+  //         display: 'flex',
+  //         alignItems: 'center',
+  //       }}
+  //     >
+  //       {chooseButton}
+  //       {uploadButton}
+  //       {cancelButton}
+  //       <ProgressBar
+  //         value={value}
+  //         displayValueTemplate={() => `${formatedValue} / 10 MB`}
+  //         style={{ width: '300px', height: '20px', marginLeft: 'auto' }}
+  //       ></ProgressBar>
+  //     </div>
+  //   );
+  // }
 
-  itemTemplate(file, props) {
-    return (
-      <div className="flex align-items-center flex-wrap">
-        <div className="flex align-items-center" style={{ width: '40%' }}>
-          <img
-            alt={file.name}
-            role="presentation"
-            value={this.state.dragAndDrop}
-            src={file.objectURL}
-            width={100}
-          />
-          <span className="flex flex-column text-left ml-3">
-            {file.name}
-            <small>{new Date().toLocaleDateString()}</small>
-          </span>
-        </div>
-        <Tag
-          value={props.formatSize}
-          severity="warning"
-          className="px-3 py-2"
-        />
-        <Button
-          type="button"
-          icon="pi pi-times"
-          className="p-button-outlined p-button-rounded p-button-danger ml-auto"
-          onClick={() => this.onTemplateRemove(file, props.onRemove)}
-        />
-      </div>
-    );
-  }
+  // itemTemplate(file, props) {
+  //   return (
+  //     <div className="flex align-items-center flex-wrap">
+  //       <div className="flex align-items-center" style={{ width: '40%' }}>
+  //         <img
+  //           alt={file.name}
+  //           role="presentation"
+  //           value={this.state.dragAndDrop}
+  //           src={file.objectURL}
+  //           width={100}
+  //         />
+  //         <span className="flex flex-column text-left ml-3">
+  //           {file.name}
+  //           <small>{new Date().toLocaleDateString()}</small>
+  //         </span>
+  //       </div>
+  //       <Tag
+  //         value={props.formatSize}
+  //         severity="warning"
+  //         className="px-3 py-2"
+  //       />
+  //       <Button
+  //         type="button"
+  //         icon="pi pi-times"
+  //         className="p-button-outlined p-button-rounded p-button-danger ml-auto"
+  //         onClick={() => this.onTemplateRemove(file, props.onRemove)}
+  //       />
+  //     </div>
+  //   );
+  // }
 
-  emptyTemplate() {
-    return (
-      <div className="flex align-items-center flex-column">
-        <i
-          className="pi pi-image mt-3 p-5"
-          style={{
-            fontSize: '5em',
-            borderRadius: '50%',
-            backgroundColor: 'var(--surface-b)',
-            color: 'var(--surface-d)',
-          }}
-        ></i>
-        <span
-          style={{ fontSize: '1.2em', color: 'var(--text-color-secondary)' }}
-          className="my-5"
-        >
-          Drag and Drop Image Here
-        </span>
-      </div>
-    );
-  }
+  // emptyTemplate() {
+  //   return (
+  //     <div className="flex align-items-center flex-column">
+  //       <i
+  //         className="pi pi-image mt-3 p-5"
+  //         style={{
+  //           fontSize: '5em',
+  //           borderRadius: '50%',
+  //           backgroundColor: 'var(--surface-b)',
+  //           color: 'var(--surface-d)',
+  //         }}
+  //       ></i>
+  //       <span
+  //         style={{ fontSize: '1.2em', color: 'var(--text-color-secondary)' }}
+  //         className="my-5"
+  //       >
+  //         Drag and Drop Image Here
+  //       </span>
+  //     </div>
+  //   );
+  // }
 
   //submit loading
   onLoadingClick() {
@@ -333,23 +334,23 @@ export default class ContactForm extends React.Component {
   //form render
 
   render() {
-    const chooseOptions = {
-      icon: 'pi pi-fw pi-images',
-      iconOnly: true,
-      className: 'custom-choose-btn p-button-rounded p-button-outlined',
-    };
-    const uploadOptions = {
-      icon: 'pi pi-fw pi-cloud-upload',
-      iconOnly: true,
-      className:
-        'custom-upload-btn p-button-success p-button-rounded p-button-outlined',
-    };
-    const cancelOptions = {
-      icon: 'pi pi-fw pi-times',
-      iconOnly: true,
-      className:
-        'custom-cancel-btn p-button-danger p-button-rounded p-button-outlined',
-    };
+    // const chooseOptions = {
+    //   icon: 'pi pi-fw pi-images',
+    //   iconOnly: true,
+    //   className: 'custom-choose-btn p-button-rounded p-button-outlined',
+    // };
+    // const uploadOptions = {
+    //   icon: 'pi pi-fw pi-cloud-upload',
+    //   iconOnly: true,
+    //   className:
+    //     'custom-upload-btn p-button-success p-button-rounded p-button-outlined',
+    // };
+    // const cancelOptions = {
+    //   icon: 'pi pi-fw pi-times',
+    //   iconOnly: true,
+    //   className:
+    //     'custom-cancel-btn p-button-danger p-button-rounded p-button-outlined',
+    // };
 
     return (
       <form
@@ -561,7 +562,7 @@ export default class ContactForm extends React.Component {
 
             <div className="card"></div>
 
-            <div>
+            {/* <div>
               <Toast
                 ref={(el) => {
                   this.toast = el;
@@ -582,16 +583,16 @@ export default class ContactForm extends React.Component {
                 target=".custom-cancel-btn"
                 content="Clear"
                 position="bottom"
-              />
+              /> */}
 
-              <div className="card">
+            {/* <div className="card">
                 <h5 style={{ fontSize: '1em', color: 'silver' }}>
                   Proposal/Offer Letter
                 </h5>
                 <FileUpload
                   ref={(el) => (this.fileUploadRef = el)}
                   name="dragAndDrop"
-                  url="./upload"
+                  url="/upload"
                   multiple
                   value={this.state.dragAndDrop}
                   accept="image/*"
@@ -610,8 +611,8 @@ export default class ContactForm extends React.Component {
                     this.setState({ dragAndDrop: data.value })
                   }
                 />
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
 
             <div className="card"></div>
 
