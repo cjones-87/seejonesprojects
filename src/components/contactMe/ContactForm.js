@@ -9,7 +9,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
-
+import { Tooltip } from 'primereact/tooltip';
 import { Button } from 'primereact/button';
 
 export default class ContactForm extends React.Component {
@@ -206,7 +206,10 @@ export default class ContactForm extends React.Component {
                   this.setState({ firstName: event.target.value })
                 }
                 required
+                tooltip="Please enter your first name"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
+
               <label
                 htmlFor="firstName"
                 style={{ color: 'silver', fontSize: '.9em' }}
@@ -227,6 +230,8 @@ export default class ContactForm extends React.Component {
                   this.setState({ lastName: event.target.value })
                 }
                 required
+                tooltip="Please enter your last name"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
               <label
                 htmlFor="lastName"
@@ -255,6 +260,8 @@ export default class ContactForm extends React.Component {
                   this.setState({ email: event.target.value })
                 }
                 required
+                tooltip="Please enter your email address"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
               <label
                 htmlFor="email"
@@ -281,6 +288,8 @@ export default class ContactForm extends React.Component {
                   this.setState({ phoneNumber: event.value })
                 }
                 required
+                tooltip="Please enter your phone number"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
             </span>
 
@@ -299,6 +308,8 @@ export default class ContactForm extends React.Component {
                 cols={30}
                 autoResize
                 required
+                tooltip="Please enter additional info, if applicable"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
               <label
                 htmlFor="jobDetails"
@@ -320,6 +331,8 @@ export default class ContactForm extends React.Component {
                   this.setState({ preferredContactMethod: event.target.value })
                 }
                 required
+                tooltip="What's the best way to reach you?"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
               <label
                 htmlFor="preferredContactMethod"
@@ -341,6 +354,8 @@ export default class ContactForm extends React.Component {
                   this.setState({ budget: event.target.value })
                 }
                 required
+                tooltip="Please enter available budget"
+                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
               />
               <label
                 htmlFor="budget"
@@ -368,7 +383,7 @@ export default class ContactForm extends React.Component {
                     htmlFor="datesAvailableToSpeak"
                     style={{ color: 'silver', fontSize: '.9em' }}
                   >
-                    Availability To Speak
+                    Schedule A Chat
                   </label>
                   <Calendar
                     id="datesAvailableToSpeak"
@@ -383,6 +398,8 @@ export default class ContactForm extends React.Component {
                     touchUI
                     showTime
                     required
+                    tooltip="When possible, 72 hours prior notice is preferred"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
                   />
                 </div>
               </div>
