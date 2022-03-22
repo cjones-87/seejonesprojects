@@ -7,8 +7,26 @@ import './LandingPage.css';
 
 import { Button } from 'primereact/button';
 
-import OpenUp from '../../sounds/OpenUp.mp3';
-import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
+import { FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
+
+import { ImHtmlFive } from "react-icons/im";
+
+import { DiJavascript1 } from "react-icons/di";
+
+import {
+  SiChakraui,
+  SiCss3,
+  SiExpo,
+  SiExpress,
+  SiMaterialui,
+  SiPostgresql,
+  SiRedux,
+  SiSemanticuireact,
+  SiSequelize,
+} from "react-icons/si";
+
+import OpenUp from "../../sounds/OpenUp.mp3";
+import AccessGrantedComputerVoice from "../../sounds/AccessGrantedComputerVoice.mp3";
 
 export default class LandingPage extends React.Component {
   constructor() {
@@ -18,7 +36,7 @@ export default class LandingPage extends React.Component {
   }
 
   onClick = (event) => {
-    setTimeout(() => (window.location.href = '/home'), 2000);
+    setTimeout(() => (window.location.href = "/home"), 2000);
     const audio = new Audio(OpenUp);
     const audio2 = new Audio(AccessGrantedComputerVoice);
     let playAudio = (event) => {
@@ -33,39 +51,63 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <body id="landingPage">
-        <div>
+        <div style={{ color: "white", textShadow: "2px 2px 2px #01020E" }}>
           <header id="showcase">
             <div>
               <h2>Hello!</h2>
               <h1>My Name is CJ</h1>
               <p>Frontend Software Engineer & Fullstack Developer</p>
               <p>
-                <small>Specializing in</small> <big>React Native Expo</big>{' '}
+                <small>Specializing in</small>{" "}
+                <big>
+                  <FaReact /> <FaMobileAlt /> <SiExpo />
+                </big>
+                &nbsp;
                 <small>for mobile development & &nbsp;</small>
-                <big>React JS</big> <small>for web development</small>
+                <big>
+                  <FaReact /> <DiJavascript1 />
+                </big>{" "}
+                <small>for web development</small>
               </p>
 
               <Button label="See Jones Engineer" onClick={this.onClick} />
             </div>
           </header>
           <div
-            style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+            style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
           >
             <div id="sectionA">
               I am a FullStack Academy graduate, committed to learning and
               continuing my career as a developer.
             </div>
             <div id="sectionB">
-              To date, I have worked with the following
-              languages/frameworks/libraries: React, React Native Expo, NodeJS,
-              PostgreSQL, Sequelize, Redux, Express, MUI, PrimeReact UI, Chakra
-              UI
-              {/* , Semantic UI */}
+              To date, I have worked with the following technologies:&nbsp;
+              <FaReact />
+              &nbsp;&nbsp;
+              <SiExpo />
+              &nbsp;&nbsp;
+              <FaNodeJs />
+              &nbsp;&nbsp; <SiPostgresql />
+              &nbsp;&nbsp; <SiSequelize />
+              &nbsp;&nbsp; <SiRedux />
+              &nbsp;&nbsp;
+              <SiExpress />
+              &nbsp;&nbsp; <SiMaterialui />
+              &nbsp;&nbsp;
+              <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+              &nbsp;&nbsp; <SiChakraui />
+              &nbsp;&nbsp; <SiSemanticuireact />
             </div>
             <div id="sectionC">
-              <div className="sectionC1">React & React/Redux - Web Apps</div>
-              <div className="sectionC2">React Native Expo - Mobile Apps</div>
-              <div className="sectionC3">JS, HTML, CSS - Basic Web Pages</div>
+              <div className="sectionC1">
+                <FaReact /> & <FaReact />+<SiRedux /> Web Apps
+              </div>
+              <div className="sectionC2">
+                <FaReact /> <FaMobileAlt /> <SiExpo /> Mobile Apps
+              </div>
+              <div className="sectionC3">
+                <FaNodeJs />, <ImHtmlFive />, <SiCss3 /> - Basic Web Pages
+              </div>
             </div>
           </div>
         </div>

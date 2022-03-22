@@ -20,6 +20,24 @@ import imageNotFound from '../projects/imageNotFound.jpeg';
 
 import BeggingForMore from '../../sounds/BeggingForMore.mp3';
 
+import { FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
+
+import { ImHtmlFive } from "react-icons/im";
+
+import { DiJavascript1 } from "react-icons/di";
+
+import {
+  SiChakraui,
+  SiCss3,
+  SiExpo,
+  SiExpress,
+  SiMaterialui,
+  SiPostgresql,
+  SiRedux,
+  SiSemanticuireact,
+  SiSequelize,
+} from "react-icons/si";
+
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
     super(props);
@@ -29,17 +47,25 @@ export default class LearningJournalTimeline extends Component {
     this.events1 = [
       {
         id: 8,
-        status: 'See Jones Engineer',
-        date: '2/2022',
-        icon: 'pi pi-star',
-        color: '#9C27B0',
+        status: "See Jones Engineer",
+        date: "2/2022",
+        icon: "pi pi-star",
+        color: "#9C27B0",
         image: SeeJonesEngineer,
-        description: 'Frontend Personal Portfolio Web App',
-        techStack: 'React, CSS, PrimeReact UI',
-        moreInfo: '',
+        description: "Frontend Personal Portfolio Web App",
+        techStack: (
+          <span>
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+          </span>
+        ),
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = '/projects/seejonesengineer'),
+            () => (window.location.href = "/projects/seejonesengineer"),
             1200
           );
           let playAudio = (event) => {
@@ -50,18 +76,18 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 7,
-        status: 'Computer love',
-        date: '01/2022',
-        icon: 'pi pi-star',
-        color: '#673AB7',
+        status: "Computer love",
+        date: "01/2022",
+        icon: "pi pi-star",
+        color: "#673AB7",
         image: computerLove,
-        description: 'Full Stack Expo Mobile App',
+        description: "Full Stack Expo Mobile App",
         techStack:
-          'React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT',
-        moreInfo: '',
+          "React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT",
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = '/projects/computerlove'),
+            () => (window.location.href = "/projects/computerlove"),
             1200
           );
           let playAudio = (event) => {
@@ -72,16 +98,16 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 6,
-        status: 'Hypnotiq',
-        date: '01/2022',
-        icon: 'pi pi-star',
-        color: '#FF9800',
+        status: "Hypnotiq",
+        date: "01/2022",
+        icon: "pi pi-star",
+        color: "#FF9800",
         image: Hypnotiq,
-        description: 'Frontend Mobile App',
-        techStack: 'React Native Expo',
-        moreInfo: '',
+        description: "Frontend Mobile App",
+        techStack: "React Native Expo",
+        moreInfo: "",
         command: (event) => {
-          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 1200);
+          setTimeout(() => (window.location.href = "/projects/hypnotiq"), 1200);
           let playAudio = (event) => {
             audio.play();
           };
@@ -90,16 +116,16 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 5,
-        status: 'Graduated Fullstack Academy',
-        date: '12/2021',
-        icon: 'pi pi-star',
-        color: '#607D8B',
+        status: "Graduated Fullstack Academy",
+        date: "12/2021",
+        icon: "pi pi-star",
+        color: "#607D8B",
         image: FullstackLogo,
-        description: 'Graduated Coding Bootcamp',
-        moreInfo: '',
+        description: "Graduated Coding Bootcamp",
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = 'https://www.fullstackacademy.com/'),
+            () => (window.location.href = "https://www.fullstackacademy.com/"),
             1200
           );
           let playAudio = (event) => {
@@ -110,18 +136,18 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 4,
-        status: 'Boundz eCommerce',
-        date: '12/2021',
-        icon: 'pi pi-star',
-        color: '#9C27B0',
+        status: "Boundz eCommerce",
+        date: "12/2021",
+        icon: "pi pi-star",
+        color: "#9C27B0",
         image: BoundzBookstore,
-        description: 'Full Stack Secure eCommerce',
+        description: "Full Stack Secure eCommerce",
         techStack:
-          'Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT',
-        moreInfo: '',
+          "Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT",
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = '/projects/boundzbookstore'),
+            () => (window.location.href = "/projects/boundzbookstore"),
             1200
           );
           let playAudio = (event) => {
@@ -132,17 +158,25 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 3,
-        status: 'Idle Clicker',
-        date: '10/2021',
-        icon: 'pi pi-star',
-        color: '#673AB7',
+        status: "Idle Clicker",
+        date: "10/2021",
+        icon: "pi pi-star",
+        color: "#673AB7",
         image: IdleClicker,
-        description: 'Idle click and accrue game.',
-        techStack: 'Vanilla JS, HTML, CSS',
-        moreInfo: '',
+        description: "Idle click and accrue game.",
+        techStack: (
+          <span>
+            <FaNodeJs />
+            &nbsp;&nbsp;&nbsp;
+            <ImHtmlFive />
+            &nbsp; &nbsp;&nbsp;
+            <SiCss3 />
+          </span>
+        ),
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = '/projects/idleclicker'),
+            () => (window.location.href = "/projects/idleclicker"),
             1200
           );
           let playAudio = (event) => {
@@ -153,17 +187,25 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 2,
-        status: 'Guessing Game',
-        date: '09/2021',
-        icon: 'pi pi-star',
-        color: '#FF9800',
+        status: "Guessing Game",
+        date: "09/2021",
+        icon: "pi pi-star",
+        color: "#FF9800",
         image: GuessingGame,
-        description: 'Guess the number in 5 guesses or less.',
-        techStack: 'Vanilla JS, HTML, CSS',
-        moreInfo: '',
+        description: "Guess the number in 5 guesses or less.",
+        techStack: (
+          <span>
+            <FaNodeJs />
+            &nbsp;&nbsp;&nbsp;
+            <ImHtmlFive />
+            &nbsp; &nbsp;&nbsp;
+            <SiCss3 />
+          </span>
+        ),
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = '/projects/guessinggame'),
+            () => (window.location.href = "/projects/guessinggame"),
             1200
           );
           let playAudio = (event) => {
@@ -174,16 +216,16 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 1,
-        status: 'Enrolled Fullstack Academy',
-        date: '06/2021',
-        icon: 'pi pi-star',
-        color: '#607D8B',
+        status: "Enrolled Fullstack Academy",
+        date: "06/2021",
+        icon: "pi pi-star",
+        color: "#607D8B",
         image: FullstackLogo,
-        description: 'Enrolled Coding Bootcamp',
-        moreInfo: '',
+        description: "Enrolled Coding Bootcamp",
+        moreInfo: "",
         command: (event) => {
           setTimeout(
-            () => (window.location.href = 'https://www.fullstackacademy.com/'),
+            () => (window.location.href = "https://www.fullstackacademy.com/"),
             1200
           );
           let playAudio = (event) => {
@@ -233,13 +275,17 @@ export default class LearningJournalTimeline extends Component {
     return (
       <div
         className="timeline-demo bg-black-alpha-90"
-        style={{ paddingTop: '1rem' }}
+        style={{
+          color: "white",
+          textShadow: "2px 2px 2px #01020E",
+          paddingTop: "1rem",
+        }}
       >
         <h1
           style={{
-            textAlign: 'center',
-            color: 'rebeccapurple',
-            paddingBottom: '1.5rem',
+            textAlign: "center",
+            color: "rebeccapurple",
+            paddingBottom: "1.5rem",
           }}
         >
           Learning Journal
