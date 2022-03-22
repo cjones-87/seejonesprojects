@@ -47,7 +47,12 @@ export default function ProjectGallery() {
   return (
     <div
       className="App bg-black-alpha-90"
-      style={{ paddingBottom: 175, paddingTop: '1rem' }}
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+        paddingTop: '1rem',
+        paddingBottom: 175,
+      }}
     >
       <h1 style={{ textAlign: 'center', color: 'rebeccapurple' }}>Projects</h1>
       <div style={{ textAlign: 'center' }}>
@@ -79,6 +84,8 @@ export default function ProjectGallery() {
               maxWidth: '50vw',
               maxHeight: '50vh',
               margin: '40px  auto',
+              color: 'white',
+              textShadow: '2px 2px 2px #01020E',
             }}
           />
         </div>

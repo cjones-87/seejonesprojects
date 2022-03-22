@@ -120,7 +120,14 @@ export default class Navbar extends React.Component {
     );
 
     return (
-      <div className="sticky top-0" id="navbar">
+      <div
+        className="sticky top-0"
+        id="navbar"
+        style={{
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+        }}
+      >
         <div className="card">
           <Menubar model={this.items} start={start} end={end} />
         </div>

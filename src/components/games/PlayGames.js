@@ -4,7 +4,13 @@ import Iframe from 'react-iframe';
 
 export default function PlayGames() {
   return (
-    <div>
+    <div
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+        paddingTop: '1rem',
+      }}
+    >
       <div
         className="bg-black-alpha-90"
         style={{
