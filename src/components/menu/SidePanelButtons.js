@@ -35,7 +35,13 @@ export default class SidePanelButtons extends React.Component {
 
   render() {
     return (
-      <div className="button bg-black-alpha-90">
+      <div
+        className="button bg-black-alpha-90"
+        style={{
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+        }}
+      >
         <div className="card bg-black-alpha-90">
           <h5
             style={{

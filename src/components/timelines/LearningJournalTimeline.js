@@ -20,23 +20,24 @@ import imageNotFound from '../projects/imageNotFound.jpeg';
 
 import BeggingForMore from '../../sounds/BeggingForMore.mp3';
 
-import { FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from 'react-icons/im';
 
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from 'react-icons/di';
 
 import {
   SiChakraui,
   SiCss3,
   SiExpo,
   SiExpress,
+  SiHeroku,
   SiMaterialui,
   SiPostgresql,
   SiRedux,
   SiSemanticuireact,
   SiSequelize,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
@@ -47,25 +48,25 @@ export default class LearningJournalTimeline extends Component {
     this.events1 = [
       {
         id: 8,
-        status: "See Jones Engineer",
-        date: "2/2022",
-        icon: "pi pi-star",
-        color: "#9C27B0",
+        status: 'See Jones Engineer',
+        date: '2/2022',
+        icon: 'pi pi-star',
+        color: '#9C27B0',
         image: SeeJonesEngineer,
-        description: "Frontend Personal Portfolio Web App",
+        description: 'Frontend Personal Portfolio Web App',
         techStack: (
           <span>
             <FaReact />
             &nbsp;&nbsp;&nbsp;
             <SiCss3 />
             &nbsp;&nbsp;&nbsp;
-            <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+            <i className="pi pi-prime" style={{ fontSize: '1em' }} />
           </span>
         ),
-        moreInfo: "",
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "/projects/seejonesengineer"),
+            () => (window.location.href = '/projects/seejonesengineer'),
             1200
           );
           let playAudio = (event) => {
@@ -76,18 +77,42 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 7,
-        status: "Computer love",
-        date: "01/2022",
-        icon: "pi pi-star",
-        color: "#673AB7",
+        status: 'Computer love',
+        date: '01/2022',
+        icon: 'pi pi-star',
+        color: '#673AB7',
         image: computerLove,
-        description: "Full Stack Expo Mobile App",
-        techStack:
-          "React Native Expo, Javascript, Node.js, PostgreSQL, Sequelize, Redux, Heroku, Bcrypt, JWT",
-        moreInfo: "",
+        description: 'Full Stack Expo Mobile App',
+
+        techStack: (
+          <span>
+            {' '}
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <FaMobileAlt />
+            &nbsp;&nbsp;&nbsp;
+            <SiExpo />
+            &nbsp;&nbsp;&nbsp;
+            <DiJavascript1 />
+            &nbsp;&nbsp;&nbsp;
+            <FaNodeJs />
+            &nbsp;&nbsp;&nbsp;
+            <SiPostgresql />
+            &nbsp;&nbsp;&nbsp;
+            <SiSequelize />
+            &nbsp;&nbsp;&nbsp;
+            <SiRedux />
+            &nbsp;&nbsp;&nbsp;
+            <SiExpress />
+            &nbsp;&nbsp;&nbsp;
+            <SiHeroku />
+            &nbsp;&nbsp;&nbsp; Bcrypt&nbsp;&nbsp;&nbsp;JWT
+          </span>
+        ),
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "/projects/computerlove"),
+            () => (window.location.href = '/projects/computerlove'),
             1200
           );
           let playAudio = (event) => {
@@ -98,16 +123,24 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 6,
-        status: "Hypnotiq",
-        date: "01/2022",
-        icon: "pi pi-star",
-        color: "#FF9800",
+        status: 'Hypnotiq',
+        date: '01/2022',
+        icon: 'pi pi-star',
+        color: '#FF9800',
         image: Hypnotiq,
-        description: "Frontend Mobile App",
-        techStack: "React Native Expo",
-        moreInfo: "",
+        description: 'Frontend Mobile App',
+        techStack: (
+          <span>
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <FaMobileAlt />
+            &nbsp;&nbsp;&nbsp;
+            <SiExpo />
+          </span>
+        ),
+        moreInfo: '',
         command: (event) => {
-          setTimeout(() => (window.location.href = "/projects/hypnotiq"), 1200);
+          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 1200);
           let playAudio = (event) => {
             audio.play();
           };
@@ -116,16 +149,16 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 5,
-        status: "Graduated Fullstack Academy",
-        date: "12/2021",
-        icon: "pi pi-star",
-        color: "#607D8B",
+        status: 'Graduated Fullstack Academy',
+        date: '12/2021',
+        icon: 'pi pi-star',
+        color: '#607D8B',
         image: FullstackLogo,
-        description: "Graduated Coding Bootcamp",
-        moreInfo: "",
+        description: 'Graduated Coding Bootcamp',
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "https://www.fullstackacademy.com/"),
+            () => (window.location.href = 'https://www.fullstackacademy.com/'),
             1200
           );
           let playAudio = (event) => {
@@ -136,18 +169,38 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 4,
-        status: "Boundz eCommerce",
-        date: "12/2021",
-        icon: "pi pi-star",
-        color: "#9C27B0",
+        status: 'Boundz eCommerce',
+        date: '12/2021',
+        icon: 'pi pi-star',
+        color: '#9C27B0',
         image: BoundzBookstore,
-        description: "Full Stack Secure eCommerce",
-        techStack:
-          "Node.js, Javascript, React, Redux, MUI, Heroku, Bcrypt, JWT",
-        moreInfo: "",
+        description: 'Full Stack Secure eCommerce',
+        techStack: (
+          <span>
+            <DiJavascript1 />
+            &nbsp;&nbsp;&nbsp;
+            <FaNodeJs />
+            &nbsp;&nbsp;&nbsp;
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <SiRedux />
+            &nbsp;&nbsp;&nbsp;
+            <SiPostgresql />
+            &nbsp;&nbsp;&nbsp;
+            <SiSequelize />
+            &nbsp;&nbsp;&nbsp;
+            <SiMaterialui />
+            &nbsp;&nbsp;&nbsp;
+            <SiExpress />
+            &nbsp;&nbsp;&nbsp;
+            <SiHeroku />
+            &nbsp;&nbsp;&nbsp;Bcrypt&nbsp;&nbsp;&nbsp;JWT
+          </span>
+        ),
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "/projects/boundzbookstore"),
+            () => (window.location.href = '/projects/boundzbookstore'),
             1200
           );
           let playAudio = (event) => {
@@ -158,12 +211,12 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 3,
-        status: "Idle Clicker",
-        date: "10/2021",
-        icon: "pi pi-star",
-        color: "#673AB7",
+        status: 'Idle Clicker',
+        date: '10/2021',
+        icon: 'pi pi-star',
+        color: '#673AB7',
         image: IdleClicker,
-        description: "Idle click and accrue game.",
+        description: 'Idle click and accrue game.',
         techStack: (
           <span>
             <FaNodeJs />
@@ -173,10 +226,10 @@ export default class LearningJournalTimeline extends Component {
             <SiCss3 />
           </span>
         ),
-        moreInfo: "",
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "/projects/idleclicker"),
+            () => (window.location.href = '/projects/idleclicker'),
             1200
           );
           let playAudio = (event) => {
@@ -187,12 +240,12 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 2,
-        status: "Guessing Game",
-        date: "09/2021",
-        icon: "pi pi-star",
-        color: "#FF9800",
+        status: 'Guessing Game',
+        date: '09/2021',
+        icon: 'pi pi-star',
+        color: '#FF9800',
         image: GuessingGame,
-        description: "Guess the number in 5 guesses or less.",
+        description: 'Guess the number in 5 guesses or less.',
         techStack: (
           <span>
             <FaNodeJs />
@@ -202,10 +255,10 @@ export default class LearningJournalTimeline extends Component {
             <SiCss3 />
           </span>
         ),
-        moreInfo: "",
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "/projects/guessinggame"),
+            () => (window.location.href = '/projects/guessinggame'),
             1200
           );
           let playAudio = (event) => {
@@ -216,16 +269,16 @@ export default class LearningJournalTimeline extends Component {
       },
       {
         id: 1,
-        status: "Enrolled Fullstack Academy",
-        date: "06/2021",
-        icon: "pi pi-star",
-        color: "#607D8B",
+        status: 'Enrolled Fullstack Academy',
+        date: '06/2021',
+        icon: 'pi pi-star',
+        color: '#607D8B',
         image: FullstackLogo,
-        description: "Enrolled Coding Bootcamp",
-        moreInfo: "",
+        description: 'Enrolled Coding Bootcamp',
+        moreInfo: '',
         command: (event) => {
           setTimeout(
-            () => (window.location.href = "https://www.fullstackacademy.com/"),
+            () => (window.location.href = 'https://www.fullstackacademy.com/'),
             1200
           );
           let playAudio = (event) => {
@@ -276,16 +329,16 @@ export default class LearningJournalTimeline extends Component {
       <div
         className="timeline-demo bg-black-alpha-90"
         style={{
-          color: "white",
-          textShadow: "2px 2px 2px #01020E",
-          paddingTop: "1rem",
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+          paddingTop: '1rem',
         }}
       >
         <h1
           style={{
-            textAlign: "center",
-            color: "rebeccapurple",
-            paddingBottom: "1.5rem",
+            textAlign: 'center',
+            color: 'rebeccapurple',
+            paddingBottom: '1.5rem',
           }}
         >
           Learning Journal

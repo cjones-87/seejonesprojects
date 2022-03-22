@@ -50,7 +50,13 @@ export default class SidePanelMenu extends React.Component {
     );
 
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div
+        style={{
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+          textAlign: 'center',
+        }}
+      >
         <div className="card">
           <Sidebar
             visible={this.state.visibleCustomToolbar}

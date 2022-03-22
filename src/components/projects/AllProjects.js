@@ -120,7 +120,14 @@ export default class AllProjects extends React.Component {
     } projects.`;
 
     return (
-      <div className="datatable-project">
+      <div
+        className="datatable-project"
+        style={{
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+          paddingTop: '1rem',
+        }}
+      >
         <div>
           <ProjectGallery />
         </div>

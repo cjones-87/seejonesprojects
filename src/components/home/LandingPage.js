@@ -7,11 +7,11 @@ import './LandingPage.css';
 
 import { Button } from 'primereact/button';
 
-import { FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from 'react-icons/im';
 
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from 'react-icons/di';
 
 import {
   SiChakraui,
@@ -23,10 +23,10 @@ import {
   SiRedux,
   SiSemanticuireact,
   SiSequelize,
-} from "react-icons/si";
+} from 'react-icons/si';
 
-import OpenUp from "../../sounds/OpenUp.mp3";
-import AccessGrantedComputerVoice from "../../sounds/AccessGrantedComputerVoice.mp3";
+import OpenUp from '../../sounds/OpenUp.mp3';
+import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 
 export default class LandingPage extends React.Component {
   constructor() {
@@ -36,7 +36,7 @@ export default class LandingPage extends React.Component {
   }
 
   onClick = (event) => {
-    setTimeout(() => (window.location.href = "/home"), 2000);
+    setTimeout(() => (window.location.href = '/home'), 2000);
     const audio = new Audio(OpenUp);
     const audio2 = new Audio(AccessGrantedComputerVoice);
     let playAudio = (event) => {
@@ -51,14 +51,14 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <body id="landingPage">
-        <div style={{ color: "white", textShadow: "2px 2px 2px #01020E" }}>
+        <div style={{ color: 'white', textShadow: '2px 2px 2px #01020E' }}>
           <header id="showcase">
             <div>
               <h2>Hello!</h2>
               <h1>My Name is CJ</h1>
               <p>Frontend Software Engineer & Fullstack Developer</p>
               <p>
-                <small>Specializing in</small>{" "}
+                <small>Specializing in</small>&nbsp;
                 <big>
                   <FaReact /> <FaMobileAlt /> <SiExpo />
                 </big>
@@ -66,7 +66,8 @@ export default class LandingPage extends React.Component {
                 <small>for mobile development & &nbsp;</small>
                 <big>
                   <FaReact /> <DiJavascript1 />
-                </big>{" "}
+                </big>
+                &nbsp;
                 <small>for web development</small>
               </p>
 
@@ -74,7 +75,7 @@ export default class LandingPage extends React.Component {
             </div>
           </header>
           <div
-            style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+            style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
           >
             <div id="sectionA">
               I am a FullStack Academy graduate, committed to learning and
@@ -94,7 +95,7 @@ export default class LandingPage extends React.Component {
               <SiExpress />
               &nbsp;&nbsp; <SiMaterialui />
               &nbsp;&nbsp;
-              <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+              <i className="pi pi-prime" style={{ fontSize: '1em' }} />
               &nbsp;&nbsp; <SiChakraui />
               &nbsp;&nbsp; <SiSemanticuireact />
             </div>
