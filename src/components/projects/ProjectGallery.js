@@ -11,28 +11,24 @@ import SeeJonesEngineer from './SeeJonesEngineer.png';
 export default function ProjectGallery() {
   const data = [
     {
-      image: GuessingGame,
-      caption: 'Guessing Game',
-    },
-    {
-      image: IdleClicker,
-      caption: 'Idle Clicker',
-    },
-    {
-      image: BoundzBookstore,
-      caption: 'Boundz Bookstore',
+      image: computerLove,
+      caption: 'Computer Love',
     },
     {
       image: Hypnotiq,
       caption: 'Hypnotiq',
     },
     {
-      image: computerLove,
-      caption: 'Computer Love',
+      image: BoundzBookstore,
+      caption: 'Boundz Bookstore',
     },
     {
-      image: SeeJonesEngineer,
-      caption: 'See Jones Engineer',
+      image: IdleClicker,
+      caption: 'Idle Clicker',
+    },
+    {
+      image: GuessingGame,
+      caption: 'Guessing Game',
     },
   ];
 

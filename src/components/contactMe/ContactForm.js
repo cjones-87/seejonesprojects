@@ -160,16 +160,6 @@ export default class ContactForm extends React.Component {
     }, 2000);
   }
 
-  // onSubmitEvent() {
-  //   this.onLoadingClick();
-  //   const audio = new Audio(SlotMachineJackpot);
-  //   const formSubmit = () =>
-  //     'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957';
-  //   let playAudio = () => audio.play();
-  //   playAudio();
-  //   formSubmit();
-  // }
-
   //form render
 
   render() {
@@ -195,179 +185,204 @@ export default class ContactForm extends React.Component {
             Hire Me
           </h1>
           <div className="card" style={{ paddingTop: 10 }}>
-            <span className="p-float-label p-input-icon-right">
-              <i className="pi pi-id-card" />
-
-              <InputText
-                id="firstName"
-                name="firstName"
-                value={this.state.firstName}
-                onChange={(event) =>
-                  this.setState({ firstName: event.target.value })
-                }
-                required
-                tooltip="Please enter your first name"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-
-              <label
-                htmlFor="firstName"
-                style={{ color: 'silver', fontSize: '.9em' }}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+              }}
+            >
+              <div
+                style={{
+                  paddingRight: 25,
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
               >
-                First Name
-              </label>
-            </span>
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ paddingBlockEnd: 5 }}
+                >
+                  <i className="pi pi-id-card" />
 
-            <div className="card" style={{ paddingTop: 10 }}></div>
+                  <InputText
+                    id="firstName"
+                    name="firstName"
+                    value={this.state.firstName}
+                    onChange={(event) =>
+                      this.setState({ firstName: event.target.value })
+                    }
+                    required
+                    autoResize
+                    autofocus
+                    tooltip="Please enter your first name"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
 
-            <span className="p-float-label p-input-icon-right">
-              <i className="pi pi-id-card" />
-              <InputText
-                id="lastName"
-                name="lastName"
-                value={this.state.lastName}
-                onChange={(event) =>
-                  this.setState({ lastName: event.target.value })
-                }
-                required
-                tooltip="Please enter your last name"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-              <label
-                htmlFor="lastName"
-                style={{ color: 'silver', fontSize: '.9em' }}
-              >
-                Last Name
-              </label>
-            </span>
+                  <label
+                    htmlFor="firstName"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    First Name
+                  </label>
+                </span>
+
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ paddingBlockEnd: 5 }}
+                >
+                  <i className="pi pi-id-card" />
+                  <InputText
+                    id="lastName"
+                    name="lastName"
+                    value={this.state.lastName}
+                    onChange={(event) =>
+                      this.setState({ lastName: event.target.value })
+                    }
+                    required
+                    autoResize
+                    tooltip="Please enter your last name"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                  <label
+                    htmlFor="lastName"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Last Name
+                  </label>
+                </span>
+
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ paddingBlockEnd: 5 }}
+                >
+                  <i className="pi pi-envelope" />
+                  <InputText
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={this.state.email}
+                    onChange={(event) =>
+                      this.setState({ email: event.target.value })
+                    }
+                    required
+                    autoResize
+                    tooltip="Please enter your email address"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                  <label
+                    htmlFor="email"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Email
+                  </label>
+                </span>
+
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ colorScheme: 'red' }}
+                >
+                  <i className="pi pi-phone" />
+                  <InputMask
+                    id="phone"
+                    name="phoneNumber"
+                    mask="(999) 999-9999"
+                    value={this.state.phoneNumber}
+                    placeholder="(999) 999-9999"
+                    onChange={(event) =>
+                      this.setState({ phoneNumber: event.value })
+                    }
+                    required
+                    autoResize
+                    tooltip="Please enter your phone number"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                </span>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ paddingBlockEnd: 5.5 }}
+                >
+                  <i className="pi pi-info-circle" />
+                  <InputTextarea
+                    id="jobDetails"
+                    name="jobDetails"
+                    value={this.state.jobDetails}
+                    onChange={(event) =>
+                      this.setState({ jobDetails: event.target.value })
+                    }
+                    rows={4}
+                    cols={19}
+                    required
+                    autoResize
+                    tooltip="Please enter additional info, if applicable"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                  <label
+                    htmlFor="jobDetails"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Job Details
+                  </label>
+                </span>
+                <span
+                  className="p-float-label p-input-icon-right"
+                  style={{ paddingBlockEnd: 5.5 }}
+                >
+                  <i className="pi pi-at" />
+                  <InputText
+                    id="preferredContactMethod"
+                    name="preferredContactMethod"
+                    value={this.state.preferredContactMethod}
+                    onChange={(event) =>
+                      this.setState({
+                        preferredContactMethod: event.target.value,
+                      })
+                    }
+                    required
+                    autoResize
+                    tooltip="What's the best way to reach you?"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                  <label
+                    htmlFor="preferredContactMethod"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Preferred Contact Method
+                  </label>
+                </span>
+                <span className="p-float-label p-input-icon-right">
+                  <i className="pi pi-dollar" />
+                  <InputText
+                    id="budget"
+                    name="budget"
+                    value={this.state.budget}
+                    onChange={(event) =>
+                      this.setState({ budget: event.target.value })
+                    }
+                    required
+                    autoResize
+                    tooltip="Please enter available budget"
+                    tooltipOptions={{ position: 'bottom', mouseTrack: true }}
+                  />
+                  <label
+                    htmlFor="budget"
+                    style={{ color: 'silver', fontSize: '.9em' }}
+                  >
+                    Budget - USD
+                  </label>
+                </span>
+              </div>
+            </div>
 
             <div
-              className="card"
-              style={{ paddingTop: 10, textAlign: 'center' }}
-            ></div>
-
-            <span
-              className="p-float-label p-input-icon-right"
-              style={{ justifyContent: 'center' }}
+              style={{
+                color: 'silver',
+                paddingBlockStart: 5.5,
+              }}
             >
-              <i className="pi pi-envelope" />
-              <InputText
-                id="email"
-                name="email"
-                type="email"
-                value={this.state.email}
-                onChange={(event) =>
-                  this.setState({ email: event.target.value })
-                }
-                required
-                tooltip="Please enter your email address"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-              <label
-                htmlFor="email"
-                style={{ color: 'silver', fontSize: '.9em' }}
-              >
-                Email
-              </label>
-            </span>
-
-            <div className="card" style={{ paddingTop: 10 }}></div>
-
-            <span
-              className="p-float-label p-input-icon-right"
-              style={{ colorScheme: 'red' }}
-            >
-              <i className="pi pi-phone" />
-              <InputMask
-                id="phone"
-                name="phoneNumber"
-                mask="(999) 999-9999"
-                value={this.state.phoneNumber}
-                placeholder="(999) 999-9999"
-                onChange={(event) =>
-                  this.setState({ phoneNumber: event.value })
-                }
-                required
-                tooltip="Please enter your phone number"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-            </span>
-
-            <div className="card" style={{ paddingTop: 10 }}></div>
-
-            <span className="p-float-label p-input-icon-right">
-              <i className="pi pi-info-circle" />
-              <InputTextarea
-                id="jobDetails"
-                name="jobDetails"
-                value={this.state.jobDetails}
-                onChange={(event) =>
-                  this.setState({ jobDetails: event.target.value })
-                }
-                rows={5}
-                cols={30}
-                autoResize
-                required
-                tooltip="Please enter additional info, if applicable"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-              <label
-                htmlFor="jobDetails"
-                style={{ color: 'silver', fontSize: '.9em' }}
-              >
-                Job Details
-              </label>
-            </span>
-
-            <div className="card" style={{ paddingTop: 10 }}></div>
-
-            <span className="p-float-label p-input-icon-right">
-              <i className="pi pi-at" />
-              <InputText
-                id="preferredContactMethod"
-                name="preferredContactMethod"
-                value={this.state.preferredContactMethod}
-                onChange={(event) =>
-                  this.setState({ preferredContactMethod: event.target.value })
-                }
-                required
-                tooltip="What's the best way to reach you?"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-              <label
-                htmlFor="preferredContactMethod"
-                style={{ color: 'silver', fontSize: '.9em' }}
-              >
-                Preferred Contact Method
-              </label>
-            </span>
-
-            <div className="card" style={{ paddingTop: 10 }}></div>
-
-            <span className="p-float-label p-input-icon-right">
-              <i className="pi pi-dollar" />
-              <InputText
-                id="budget"
-                name="budget"
-                value={this.state.budget}
-                onChange={(event) =>
-                  this.setState({ budget: event.target.value })
-                }
-                required
-                tooltip="Please enter available budget"
-                tooltipOptions={{ position: 'bottom', mouseTrack: true }}
-              />
-              <label
-                htmlFor="budget"
-                style={{ color: 'silver', fontSize: '.9em' }}
-              >
-                Budget - USD
-              </label>
-            </span>
-
-            <div className="card" style={{ paddingTop: 10 }}></div>
-
-            <div style={{ color: 'lightgrey' }}>
               <div
                 className="p-fluid grid formgrid"
                 style={{
@@ -376,8 +391,6 @@ export default class ContactForm extends React.Component {
                   justifyContent: 'center',
                 }}
               >
-                <div className="card" style={{ paddingTop: 10 }}></div>
-
                 <div className="field col-12 md:col-4">
                   <label
                     htmlFor="datesAvailableToSpeak"
@@ -398,6 +411,7 @@ export default class ContactForm extends React.Component {
                     touchUI
                     showTime
                     required
+                    autoResize
                     tooltip="When possible, 72 hours prior notice is preferred"
                     tooltipOptions={{ position: 'bottom', mouseTrack: true }}
                   />
@@ -407,11 +421,10 @@ export default class ContactForm extends React.Component {
 
             <div className="card"></div>
 
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center', paddingBlockEnd: 10 }}>
               <Button
                 label="Hire Me"
                 loading={this.state.loading}
-                // onClick={this.onSubmitEvent}
                 onClick={() =>
                   'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957'
                 }
