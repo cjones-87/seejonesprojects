@@ -27,15 +27,14 @@ import { ImHtmlFive } from 'react-icons/im';
 import { DiJavascript1 } from 'react-icons/di';
 
 import {
-  SiChakraui,
   SiCss3,
   SiExpo,
   SiExpress,
   SiHeroku,
   SiMaterialui,
+  SiNetlify,
   SiPostgresql,
   SiRedux,
-  SiSemanticuireact,
   SiSequelize,
 } from 'react-icons/si';
 
@@ -58,9 +57,13 @@ export default class LearningJournalTimeline extends Component {
           <span>
             <FaReact />
             &nbsp;&nbsp;&nbsp;
+            <ImHtmlFive />
+            &nbsp;&nbsp;&nbsp;
             <SiCss3 />
             &nbsp;&nbsp;&nbsp;
-            <i className="pi pi-prime" style={{ fontSize: '1em' }} />
+            <i className="pi pi-prime" style={{ fontSize: '1em' }} />{' '}
+            &nbsp;&nbsp;&nbsp;
+            <SiNetlify />
           </span>
         ),
         moreInfo: '',
@@ -106,6 +109,8 @@ export default class LearningJournalTimeline extends Component {
             <SiExpress />
             &nbsp;&nbsp;&nbsp;
             <SiHeroku />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
             &nbsp;&nbsp;&nbsp; Bcrypt&nbsp;&nbsp;&nbsp;JWT
           </span>
         ),
@@ -136,6 +141,10 @@ export default class LearningJournalTimeline extends Component {
             <FaMobileAlt />
             &nbsp;&nbsp;&nbsp;
             <SiExpo />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <SiHeroku />
           </span>
         ),
         moreInfo: '',
@@ -194,6 +203,10 @@ export default class LearningJournalTimeline extends Component {
             <SiExpress />
             &nbsp;&nbsp;&nbsp;
             <SiHeroku />
+            &nbsp;&nbsp;&nbsp;
+            <ImHtmlFive />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
             &nbsp;&nbsp;&nbsp;Bcrypt&nbsp;&nbsp;&nbsp;JWT
           </span>
         ),
@@ -251,7 +264,7 @@ export default class LearningJournalTimeline extends Component {
             <FaNodeJs />
             &nbsp;&nbsp;&nbsp;
             <ImHtmlFive />
-            &nbsp; &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             <SiCss3 />
           </span>
         ),
