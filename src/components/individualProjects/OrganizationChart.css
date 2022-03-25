@@ -1,0 +1,40 @@
+.info,
+.moreInfo {
+  padding: 0;
+  border: 0 none;
+}
+
+.node-header,
+.node-content {
+  padding: 0.5em 0.7rem;
+}
+
+.node-header {
+  background-color: rebeccapurple;
+  border-radius: 35%;
+}
+
+.node-content {
+  text-align: center;
+  border: 1px solid rebeccapurple;
+  border-radius: 25%;
+}
+
+.node-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.node-header,
+.info {
+  color: white;
+  text-shadow: 2px 2px 2px #01020e;
+}
+
+.node-content,
+.info {
+  color: white;
+  text-shadow: 2px 2px 2px #01020e;
+}
