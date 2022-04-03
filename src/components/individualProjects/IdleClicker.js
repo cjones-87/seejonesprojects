@@ -199,7 +199,7 @@ export default class IdleClicker extends React.Component {
                   avatar: IdleClickerPic,
                   info: (
                     <div>
-                      <p>This project was challenging</p>
+                      <p></p>
                     </div>
                   ),
                 },
