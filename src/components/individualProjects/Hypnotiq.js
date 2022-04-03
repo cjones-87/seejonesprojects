@@ -25,61 +25,47 @@ export default class Hypnotiq extends React.Component {
 
     this.orgChart = [
       {
-        label: 'Hypnotiq',
-        className: 'title',
-        type: 'title',
+        label: "Hypnotiq",
+        className: "title",
+        type: "title",
         expanded: true,
         data: { name: this.label, avatar: HypnotiqPic },
         children: [
           {
-            label: 'MVP Goal',
-            className: 'info',
-            type: 'info',
+            label: "MVP Goal",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: 'Minimum Viable Product',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Minimum Viable Product",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                       {' '}
-                      </p>{' '}
-                      <p>
-                        
-                      </p>{' '}
-                      <p>
-                       
-                      </p>
+                      <p> </p> <p></p> <p></p>
                     </div>
                   ),
                 },
               },
               {
-                label: 'Stretch Goals',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Stretch Goals",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        
-                      </p>
-                      <p>
-                       
-                      </p>
-                      <p>
-                        
-                      </p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
                     </div>
                   ),
                 },
@@ -87,39 +73,34 @@ export default class Hypnotiq extends React.Component {
             ],
           },
           {
-            label: 'Tech Stack',
-            className: 'info',
-            type: 'info',
+            label: "Tech Stack",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: 'Technologies',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Technologies",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
-                  info: (
-                    <span>
-                      
-                    </span>
-                  ),
+                  info: <span></span>,
                 },
               },
               {
-                label: 'Integration',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Integration",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        Hypnotiq was constructed & designed using
+                      <p>Hypnotiq was constructed & designed using </p>
                     </div>
                   ),
                 },
@@ -127,34 +108,31 @@ export default class Hypnotiq extends React.Component {
             ],
           },
           {
-            label: 'Implementations',
-            className: 'info',
-            type: 'info',
+            label: "Implementations",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: 'Contributions',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Contributions",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        {' '}
-                        {' '}
-                      </p>
+                      <p> </p>
                     </div>
                   ),
                 },
               },
               {
-                label: 'Challenges',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Challenges",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
