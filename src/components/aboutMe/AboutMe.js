@@ -100,31 +100,26 @@ export default class AboutMe extends React.Component {
     return (
       <div
         className="aboutMeParent bg-black-alpha-90"
-        style={{
-          color: "white",
-          textShadow: "2px 2px 2px #01020E",
-          paddingTop: "1rem",
-        }}
+        style={{ paddingTop: '1rem' }}
       >
-        <h1 style={{ color: "rebeccapurple", paddingBottom: "1rem" }}>
+        <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
           About Me
         </h1>
-        <div className="aboutMeChild">
+        {/* <div className="aboutMeChild">
           <Card
             title="Previous Work"
             subTitle="Butcher/FishMonger"
-            style={{ width: "25em" }}
+            style={{ width: '25em' }}
             header={header1}
             footer={footer1}
           >
-            <p className="m-0" style={{ lineHeight: "1.5" }}>
+            <p className="m-0" style={{ lineHeight: '1.5' }}>
               In the past, I have worked as a butcher & fishmonger for a gourmet
               supermarket brand. Working as a butcher & fishmonger taught me a
               lot about customer experience. It illuminated the importance &
               necessity of striking & meaningful visuals to garner customer
               interest. Through developing relationships with my clients and
-              management, I also learned the value of consistantly offering
-              quality products, in concert with stellar customer service.
+              management, I also learned the value of consistantly offering quality products, in concert with stellar customer service.
             </p>
           </Card>
         </div>
@@ -133,11 +128,11 @@ export default class AboutMe extends React.Component {
           <Card
             title="Previous Work"
             subTitle="Office Manager"
-            style={{ width: "25em" }}
+            style={{ width: '25em' }}
             header={header2}
             footer={footer2}
           >
-            <p className="m-0" style={{ lineHeight: "1.5" }}>
+            <p className="m-0" style={{ lineHeight: '1.5' }}>
               My time as an office manager for a wildlife company, taught me
               that a strong team is needed, each member with their own strengths
               and weaknesses to compliment each other, as well as solid
@@ -160,11 +155,11 @@ export default class AboutMe extends React.Component {
           <Card
             title="Tech Journey Begins"
             subTitle="Fullstack Academy"
-            style={{ width: "25em" }}
+            style={{ width: '25em' }}
             header={header3}
             footer={footer3}
           >
-            <p className="m-0" style={{ lineHeight: "1.5" }}>
+            <p className="m-0" style={{ lineHeight: '1.5' }}>
               <big>FINALLY!</big> A chance to break into an industry I had been
               struggling to study and understand.&nbsp;
               <big>I JUMPED AT THE OPPORTUNITY</big>&nbsp; when I heard about
@@ -187,11 +182,11 @@ export default class AboutMe extends React.Component {
           <Card
             title="Since Graduation"
             subTitle="Here & Now"
-            style={{ width: "25em" }}
+            style={{ width: '25em' }}
             header={header4}
             footer={footer4}
           >
-            <p className="m-0" style={{ lineHeight: "1.5" }}>
+            <p className="m-0" style={{ lineHeight: '1.5' }}>
               Presently, I’m looking to find a well balanced team, where I can
               apply my understanding and also learn. My ideal position would
               allow for progressive growth and a healthy work-life balance. When
@@ -206,20 +201,20 @@ export default class AboutMe extends React.Component {
           <Card
             title="Future"
             subTitle="Tomorrowland"
-            style={{ width: "25em" }}
+            style={{ width: '25em' }}
             header={header5}
             footer={footer5}
           >
-            <p className="m-0" style={{ lineHeight: "1.5" }}>
+            <p className="m-0" style={{ lineHeight: '1.5' }}>
               Though some may consider my future goals to be lofty, I truly
               endeavor to leave a legacy. I love both mentoring curious minds
               looking to enter this field, & working within a company to
               continuously improve and expand upon my knowledge and
-              skillset;&nbsp; my goal is to truly{" "}
+              skillset;&nbsp; my goal is to truly{' '}
               <big>‘leave it better than I found it.’</big>
             </p>
           </Card>
-        </div>
+        </div> */}
       </div>
     );
   }
