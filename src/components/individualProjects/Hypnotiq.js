@@ -48,15 +48,7 @@ export default class Hypnotiq extends React.Component {
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                       {' '}
-                      </p>{' '}
-                      <p>
-                        
-                      </p>{' '}
-                      <p>
-                       
-                      </p>
+                      <p> </p> <p></p> <p></p>
                     </div>
                   ),
                 },
@@ -71,15 +63,9 @@ export default class Hypnotiq extends React.Component {
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        
-                      </p>
-                      <p>
-                       
-                      </p>
-                      <p>
-                        
-                      </p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
                     </div>
                   ),
                 },
@@ -101,11 +87,7 @@ export default class Hypnotiq extends React.Component {
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
-                  info: (
-                    <span>
-                      
-                    </span>
-                  ),
+                  info: <span></span>,
                 },
               },
               {
@@ -118,8 +100,7 @@ export default class Hypnotiq extends React.Component {
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        Hypnotiq was constructed & designed using
+                      <p>Hypnotiq was constructed & designed using </p>
                     </div>
                   ),
                 },
@@ -143,10 +124,7 @@ export default class Hypnotiq extends React.Component {
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>
-                        {' '}
-                        {' '}
-                      </p>
+                      <p> </p>
                     </div>
                   ),
                 },

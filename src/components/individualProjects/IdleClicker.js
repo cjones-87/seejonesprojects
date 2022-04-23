@@ -177,9 +177,8 @@ export default class IdleClicker extends React.Component {
                       <p>
                         {' '}
                         This idle clicker game was completed solely by me. It
-                        was completed during my time as a student at Fullstack
-                        Academy during the early days of understanding of DOM
-                        manipulation. This project provided an excellent
+                        was completed during the early days of understanding of
+                        DOM manipulation. This project provided an excellent
                         understanding of how to make a website dynamic. It was
                         an enlightening endeavor, that I'm glad I undertook, as
                         it paved the way for truly understanding some of the
