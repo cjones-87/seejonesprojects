@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Iframe from 'react-iframe';
+
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -175,13 +177,27 @@ export default class Hypnotiq extends React.Component {
 
   render() {
     return (
-      <OrganizationChart
-        value={this.orgChart}
-        nodeTemplate={this.nodeTemplate}
-        selection={this.state.selection}
-        selectionMode="multiple"
-        onSelectionChange={(event) => this.setState({ selection: event.data })}
-      />
+      <div style={{ textAlign: 'center' }}>
+        <Iframe
+          url="https://www.youtube.com/embed/uiMUlbcUJeU"
+          width="800px"
+          height="800px"
+          id="myId"
+          className="myClassname"
+          display="initial"
+          position="relative"
+          allowFullScreen
+        />
+        <OrganizationChart
+          value={this.orgChart}
+          nodeTemplate={this.nodeTemplate}
+          selection={this.state.selection}
+          selectionMode="multiple"
+          onSelectionChange={(event) =>
+            this.setState({ selection: event.data })
+          }
+        />
+      </div>
     );
   }
 }

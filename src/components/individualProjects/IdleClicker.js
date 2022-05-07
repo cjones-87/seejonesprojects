@@ -65,11 +65,7 @@ export default class IdleClicker extends React.Component {
                         their buck’.
                       </p>{' '}
                       <p>
-                        The player will be able to see: current coffee count,
-                        how many of each producer they possess, the current
-                        price of each producer, the CPS (coffee per second) of
-                        each producer, and the total CPS for all producers,
-                        combined. All producers won't be shown at the start of
+                        The player will be able to see: current coffee count, y
                         the game. Producers will only be unlocked successively
                         as the player accumulates more coffee.
                       </p>
