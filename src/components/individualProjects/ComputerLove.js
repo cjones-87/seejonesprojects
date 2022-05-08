@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import Iframe from 'react-iframe';
+import Iframe from "react-iframe";
 
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
+import "primereact/resources/primereact.css";
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
 
-import { OrganizationChart } from 'primereact/organizationchart';
-import ComputerLovePic from './photos/computerLove.gif';
+import { OrganizationChart } from "primereact/organizationchart";
+import ComputerLovePic from "./photos/computerLove.gif";
 
-import { FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaNodeJs, FaReact } from "react-icons/fa";
 
-import { ImHtmlFive } from 'react-icons/im';
+import { ImHtmlFive } from "react-icons/im";
 
-import { SiCss3 } from 'react-icons/si';
+import { SiCss3 } from "react-icons/si";
 
-import { DiJavascript1 } from 'react-icons/di';
+import { DiJavascript1 } from "react-icons/di";
 
 export default class ComputerLove extends React.Component {
   constructor() {
@@ -27,47 +27,76 @@ export default class ComputerLove extends React.Component {
 
     this.orgChart = [
       {
-        label: 'Computer Love',
-        className: 'title',
-        type: 'title',
+        label: "Computer Love",
+        className: "title",
+        type: "title",
         expanded: true,
         data: { name: this.label, avatar: ComputerLovePic },
         children: [
           {
-            label: 'MVP Goal',
-            className: 'info',
-            type: 'info',
+            label: "MVP Goal",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: 'Minimum Viable Product',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Minimum Viable Product",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: ComputerLovePic,
                   info: (
                     <div>
-                      <p></p> <p></p> <p></p>
+                      <p>
+                        Computer Love is a platform for users to be able to
+                        register/login for dating/networking, and view profiles
+                        of other users. A user would be able to swipe yes or no
+                        to dating/networking based on their preference
+                      </p>{" "}
+                      <p>
+                        This app was designed for users in the tech industry. A
+                        lot of times we spend so much time stuck behind our
+                        computers and phones that it can be hard to meet others
+                        to date or network. Computer Love is designed to make it
+                        as easy as swiping your screen.
+                      </p>
                     </div>
                   ),
                 },
               },
               {
-                label: 'Stretch Goals',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Stretch Goals",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
                   avatar: ComputerLovePic,
                   info: (
                     <div>
-                      <p></p>
-                      <p></p>
-                      <p></p>
+                      <p>
+                        Future plans for Computer Love include users being able
+                        to deactivate/reactivate their account at their leisure,
+                        as well as report other users for inappropriate
+                        behavior.
+                      </p>
+                      <p>
+                        More future plans would include users being able to add
+                        multiple photos and matching other users based on
+                        location.
+                      </p>
+                      <p>
+                        {/* user should be able to see
+                        their view count and match count A user should be able to
+                        send/receive messages A user should be able to receive
+                        push notifications This includes sign up notifications A
+                        user should be able to view an Activity Feed The
+                        activity feed includes users who have liked him/her,
+                        users who have viewed his/her profile */}
+                      </p>
                     </div>
                   ),
                 },
@@ -75,16 +104,16 @@ export default class ComputerLove extends React.Component {
             ],
           },
           {
-            label: 'Tech Stack',
-            className: 'info',
-            type: 'info',
+            label: "Tech Stack",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: 'Technologies',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Technologies",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
@@ -93,16 +122,16 @@ export default class ComputerLove extends React.Component {
                     <span>
                       <FaNodeJs />
                       &nbsp;&nbsp;&nbsp;
-                      {''} &nbsp; &nbsp;&nbsp;
+                      {""} &nbsp; &nbsp;&nbsp;
                       <SiCss3 />
                     </span>
                   ),
                 },
               },
               {
-                label: 'Integration',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Integration",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
@@ -117,16 +146,16 @@ export default class ComputerLove extends React.Component {
             ],
           },
           {
-            label: 'Implementations',
-            className: 'info',
-            type: 'info',
+            label: "Implementations",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: 'Contributions',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Contributions",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
@@ -139,16 +168,38 @@ export default class ComputerLove extends React.Component {
                 },
               },
               {
-                label: 'Challenges',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Challenges",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
                   avatar: ComputerLovePic,
                   info: (
                     <div>
-                      <p></p>
+                      <p>
+                        This mobile app was a collaborative group project
+                        completed by myself and three other software engineers.
+                        One of my contributions was to build and construct the
+                        React Native Expo PERN we used. Using the design
+                        template my team cape up with, I built the inital
+                        back-end & front-end as separate repos.
+                      </p>
+                      <p>
+                        Another major feature I contributed, was the user
+                        matching/swiping logic & implementation. This part was
+                        not as intuitive as I would have liked for it to be. It
+                        took extensive research to understand that I needed more
+                        of a rotational Axis approach. I had a lot of fun
+                        figuring out how to manipulate user profiles and data in
+                        a more 3 dimensional way.
+                      </p>
+                      <p>
+                        I was also responsible for the setup and configuration
+                        of a users app flow. I used a combination of stack and
+                        custom tab navigation to employ smooth transitions for
+                        ease of navigation.
+                      </p>
                     </div>
                   ),
                 },
@@ -173,9 +224,9 @@ export default class ComputerLove extends React.Component {
               alt={node.data.avatar}
               src={ComputerLovePic}
               onError={(event) => (event.target.src = { ComputerLovePic })}
-              style={{ width: '100px' }}
+              style={{ width: "100px" }}
             />
-            <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
+            <div style={{ color: "rebeccapurple" }}>{node.data.info}</div>
           </div>
         </div>
       );
@@ -184,7 +235,7 @@ export default class ComputerLove extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: "center" }}>
         <Iframe
           url="https://www.youtube.com/embed/fmAzDaepIsM"
           width="800px"
