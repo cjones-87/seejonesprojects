@@ -270,7 +270,7 @@ export default class Hypnotiq extends React.Component {
     return (
       <div style={{ textAlign: 'center', justifyContent: 'center' }}>
         <Iframe
-          url="https://www.youtube.com/embed/uiMUlbcUJeU"
+          url="https://www.youtube.com/embed/JAFO_AROg34"
           width="800px"
           height="800px"
           id="myId"
