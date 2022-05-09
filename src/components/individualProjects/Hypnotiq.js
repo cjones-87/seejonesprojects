@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-import Iframe from "react-iframe";
+import Iframe from 'react-iframe';
 
-import "primereact/resources/primereact.css";
-import "primeflex/primeflex.css";
-import "primeicons/primeicons.css";
+import 'primereact/resources/primereact.css';
+import 'primeflex/primeflex.css';
+import 'primeicons/primeicons.css';
 
-import { OrganizationChart } from "primereact/organizationchart";
-import HypnotiqPic from "./photos/Hypnotiq.gif";
+import { OrganizationChart } from 'primereact/organizationchart';
+import HypnotiqPic from './photos/Hypnotiq.gif';
 
-import { FaNodeJs, FaReact } from "react-icons/fa";
+import { FaMobileAlt, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from 'react-icons/im';
 
-import { SiCss3 } from "react-icons/si";
+import { SiCss3, SiExpo, SiHeroku } from 'react-icons/si';
 
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from 'react-icons/di';
 
 export default class Hypnotiq extends React.Component {
   constructor() {
@@ -27,23 +27,23 @@ export default class Hypnotiq extends React.Component {
 
     this.orgChart = [
       {
-        label: "Hypnotiq",
-        className: "title",
-        type: "title",
+        label: 'Hypnotiq',
+        className: 'title',
+        type: 'title',
         expanded: true,
         data: { name: this.label, avatar: HypnotiqPic },
         children: [
           {
-            label: "MVP Goal",
-            className: "info",
-            type: "info",
+            label: 'MVP Goal',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: "Minimum Viable Product",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Minimum Viable Product',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -56,12 +56,12 @@ export default class Hypnotiq extends React.Component {
                         category. Once within a category they are able to make a
                         selection from different options within that sound
                         profile.
-                      </p>{" "}
+                      </p>{' '}
                       <p>
                         For each category users are also able to see a list of
                         facts: 5 related to each of the 5 senses, and an
                         additional random fact.
-                      </p>{" "}
+                      </p>{' '}
                       <p>
                         The idea behind Hypnotiq is to allow the user to be able
                         to play sounds of their choice to facilitate with their
@@ -72,9 +72,9 @@ export default class Hypnotiq extends React.Component {
                 },
               },
               {
-                label: "Stretch Goals",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Stretch Goals',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -105,27 +105,41 @@ export default class Hypnotiq extends React.Component {
             ],
           },
           {
-            label: "Tech Stack",
-            className: "info",
-            type: "info",
+            label: 'Tech Stack',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: "Technologies",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Technologies',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: HypnotiqPic,
-                  info: <span></span>,
+                  info: (
+                    <span>
+                      <span>
+                        <FaReact />
+                        &nbsp;&nbsp;&nbsp;
+                        <FaMobileAlt />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiExpo />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiCss3 />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiHeroku />
+                      </span>
+                    </span>
+                  ),
                 },
               },
               {
-                label: "Integration",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Integration',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -140,16 +154,16 @@ export default class Hypnotiq extends React.Component {
             ],
           },
           {
-            label: "Implementations",
-            className: "info",
-            type: "info",
+            label: 'Implementations',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: HypnotiqPic },
             children: [
               {
-                label: "Contributions",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Contributions',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -177,9 +191,9 @@ export default class Hypnotiq extends React.Component {
                 },
               },
               {
-                label: "Challenges",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Challenges',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -187,7 +201,7 @@ export default class Hypnotiq extends React.Component {
                   info: (
                     <div>
                       <p>
-                        {" "}
+                        {' '}
                         One of the biggest challenges completing Hypnotiq was
                         not having had any prior experience building mobile apps
                         or working with React Native Expo.I didn't always
@@ -220,9 +234,9 @@ export default class Hypnotiq extends React.Component {
               alt={node.data.avatar}
               src={HypnotiqPic}
               onError={(event) => (event.target.src = { HypnotiqPic })}
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
             />
-            <div style={{ color: "rebeccapurple" }}>{node.data.info}</div>
+            <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
           </div>
         </div>
       );
@@ -231,7 +245,7 @@ export default class Hypnotiq extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: 'center' }}>
         <Iframe
           url="https://www.youtube.com/embed/uiMUlbcUJeU"
           width="800px"
