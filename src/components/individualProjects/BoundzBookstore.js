@@ -89,11 +89,28 @@ export default class BoundzBookstore extends React.Component {
                   avatar: BoundzBookstorePic,
                   info: (
                     <span>
+                      <DiJavascript1 />
+                      &nbsp;&nbsp;&nbsp;
                       <FaNodeJs />
                       &nbsp;&nbsp;&nbsp;
+                      <FaReact />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiRedux />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiPostgresql />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiSequelize />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiMaterialui />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiExpress />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiHeroku />
+                      &nbsp;&nbsp;&nbsp;
                       <ImHtmlFive />
-                      &nbsp; &nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;
                       <SiCss3 />
+                      &nbsp;&nbsp;&nbsp;Bcrypt&nbsp;&nbsp;&nbsp;JWT
                     </span>
                   ),
                 },

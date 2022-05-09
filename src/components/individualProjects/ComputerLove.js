@@ -1,21 +1,29 @@
-import React from "react";
+import React from 'react';
 
-import Iframe from "react-iframe";
+import Iframe from 'react-iframe';
 
-import "primereact/resources/primereact.css";
-import "primeflex/primeflex.css";
-import "primeicons/primeicons.css";
+import 'primereact/resources/primereact.css';
+import 'primeflex/primeflex.css';
+import 'primeicons/primeicons.css';
 
-import { OrganizationChart } from "primereact/organizationchart";
-import ComputerLovePic from "./photos/computerLove.gif";
+import { OrganizationChart } from 'primereact/organizationchart';
+import ComputerLovePic from './photos/computerLove.gif';
 
-import { FaNodeJs, FaReact } from "react-icons/fa";
+import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from 'react-icons/im';
 
-import { SiCss3 } from "react-icons/si";
+import {
+  SiCss3,
+  SiExpo,
+  SiExpress,
+  SiHeroku,
+  SiPostgresql,
+  SiSequelize,
+  SiRedux,
+} from 'react-icons/si';
 
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from 'react-icons/di';
 
 export default class ComputerLove extends React.Component {
   constructor() {
@@ -27,23 +35,23 @@ export default class ComputerLove extends React.Component {
 
     this.orgChart = [
       {
-        label: "Computer Love",
-        className: "title",
-        type: "title",
+        label: 'Computer Love',
+        className: 'title',
+        type: 'title',
         expanded: true,
         data: { name: this.label, avatar: ComputerLovePic },
         children: [
           {
-            label: "MVP Goal",
-            className: "info",
-            type: "info",
+            label: 'MVP Goal',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: "Minimum Viable Product",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Minimum Viable Product',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -55,7 +63,7 @@ export default class ComputerLove extends React.Component {
                         register/login for dating/networking, and view profiles
                         of other users. A user would be able to swipe yes or no
                         to dating/networking based on their preference
-                      </p>{" "}
+                      </p>{' '}
                       <p>
                         This app was designed for users in the tech industry. A
                         lot of times we spend so much time stuck behind our
@@ -68,9 +76,9 @@ export default class ComputerLove extends React.Component {
                 },
               },
               {
-                label: "Stretch Goals",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Stretch Goals',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -104,34 +112,52 @@ export default class ComputerLove extends React.Component {
             ],
           },
           {
-            label: "Tech Stack",
-            className: "info",
-            type: "info",
+            label: 'Tech Stack',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: "Technologies",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Technologies',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
                   avatar: ComputerLovePic,
                   info: (
                     <span>
+                      <FaReact />
+                      &nbsp;&nbsp;&nbsp;
+                      <FaMobileAlt />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiExpo />
+                      &nbsp;&nbsp;&nbsp;
+                      <DiJavascript1 />
+                      &nbsp;&nbsp;&nbsp;
                       <FaNodeJs />
                       &nbsp;&nbsp;&nbsp;
-                      {""} &nbsp; &nbsp;&nbsp;
+                      <SiPostgresql />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiSequelize />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiRedux />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiExpress />
+                      &nbsp;&nbsp;&nbsp;
+                      <SiHeroku />
+                      &nbsp;&nbsp;&nbsp;
                       <SiCss3 />
+                      &nbsp;&nbsp;&nbsp; Bcrypt&nbsp;&nbsp;&nbsp;JWT
                     </span>
                   ),
                 },
               },
               {
-                label: "Integration",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Integration',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -146,16 +172,16 @@ export default class ComputerLove extends React.Component {
             ],
           },
           {
-            label: "Implementations",
-            className: "info",
-            type: "info",
+            label: 'Implementations',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: ComputerLovePic },
             children: [
               {
-                label: "Contributions",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Contributions',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -168,9 +194,9 @@ export default class ComputerLove extends React.Component {
                 },
               },
               {
-                label: "Challenges",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Challenges',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -224,9 +250,9 @@ export default class ComputerLove extends React.Component {
               alt={node.data.avatar}
               src={ComputerLovePic}
               onError={(event) => (event.target.src = { ComputerLovePic })}
-              style={{ width: "100px" }}
+              style={{ width: '100px' }}
             />
-            <div style={{ color: "rebeccapurple" }}>{node.data.info}</div>
+            <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
           </div>
         </div>
       );
@@ -235,7 +261,7 @@ export default class ComputerLove extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: 'center' }}>
         <Iframe
           url="https://www.youtube.com/embed/fmAzDaepIsM"
           width="800px"
