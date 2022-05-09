@@ -164,7 +164,25 @@ export default class ComputerLove extends React.Component {
                   avatar: ComputerLovePic,
                   info: (
                     <div>
-                      <p>Computer Love was constructed & designed using </p>
+                      <p>
+                        Computer Love was constructed & designed using{' '}
+                        <FaReact />
+                        &nbsp;&nbsp;&nbsp;
+                        <FaMobileAlt />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiExpo />
+                        &nbsp;&nbsp;&nbsp;for the front-end &&nbsp;&nbsp;&nbsp;
+                        <FaNodeJs />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiPostgresql />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiSequelize />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiRedux />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiExpress />
+                        &nbsp;&nbsp;&nbsp;for the back-end.
+                      </p>
                     </div>
                   ),
                 },

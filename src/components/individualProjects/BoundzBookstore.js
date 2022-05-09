@@ -11,7 +11,15 @@ import { FaNodeJs, FaReact } from 'react-icons/fa';
 
 import { ImHtmlFive } from 'react-icons/im';
 
-import { SiCss3 } from 'react-icons/si';
+import {
+  SiCss3,
+  SiExpress,
+  SiHeroku,
+  SiMaterialui,
+  SiPostgresql,
+  SiRedux,
+  SiSequelize,
+} from 'react-icons/si';
 
 import { DiJavascript1 } from 'react-icons/di';
 

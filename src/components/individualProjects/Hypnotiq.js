@@ -146,7 +146,16 @@ export default class Hypnotiq extends React.Component {
                   avatar: HypnotiqPic,
                   info: (
                     <div>
-                      <p>Hypnotiq was constructed & designed using </p>
+                      <p>
+                        Hypnotiq was constructed & designed
+                        using&nbsp;&nbsp;&nbsp;
+                        <FaReact />
+                        &nbsp;&nbsp;&nbsp;
+                        <FaMobileAlt />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiExpo />
+                        &nbsp;&nbsp;&nbsp;for the front-end.
+                      </p>
                     </div>
                   ),
                 },
