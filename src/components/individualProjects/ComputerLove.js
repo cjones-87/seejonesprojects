@@ -206,21 +206,6 @@ export default class ComputerLove extends React.Component {
                   avatar: ComputerLovePic,
                   info: (
                     <div>
-                      <p> </p>
-                    </div>
-                  ),
-                },
-              },
-              {
-                label: 'Challenges',
-                className: 'moreInfo',
-                type: 'moreInfo',
-                expanded: true,
-                data: {
-                  name: this.label,
-                  avatar: ComputerLovePic,
-                  info: (
-                    <div>
                       <p>
                         This mobile app was a collaborative group project
                         completed by myself and three other software engineers.
@@ -243,6 +228,29 @@ export default class ComputerLove extends React.Component {
                         of a users app flow. I used a combination of stack and
                         custom tab navigation to employ smooth transitions for
                         ease of navigation.
+                      </p>
+                    </div>
+                  ),
+                },
+              },
+              {
+                label: 'Challenges',
+                className: 'moreInfo',
+                type: 'moreInfo',
+                expanded: true,
+                data: {
+                  name: this.label,
+                  avatar: ComputerLovePic,
+                  info: (
+                    <div>
+                      <p>
+                        One of my biggest challenges was understanding &
+                        applying the logic necessary for swiping through users.
+                        I struggled a bit with this at first because i was
+                        thinking of the swipes in a two dimensional sense. After
+                        thorough research I realized i needed to think of the
+                        swiping motions as rotational interpolation in a three
+                        dimensional sense.{' '}
                       </p>
                     </div>
                   ),
