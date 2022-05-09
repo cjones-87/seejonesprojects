@@ -7,7 +7,21 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
-import HypnotiqPic from './photos/Hypnotiq.gif';
+
+import HypnotiqPic from './photos/Hypnotiq/Hypnotiq.gif';
+import BabyJams from './photos/Hypnotiq/BabyJams.jpg';
+import BabyFacts from './photos/Hypnotiq/BabyFacts.jpg';
+import ClassicalJams from './photos/Hypnotiq/ClassicalJams.jpg';
+import ClassicalFacts from './photos/Hypnotiq/ClassicFacts.jpg';
+import JazzJams from './photos/Hypnotiq/JazzJams.jpg';
+import JazzFacts from './photos/Hypnotiq/JazzFacts.jpg';
+import WhiteNoise from './photos/Hypnotiq/WhiteNoise.jpg';
+import WhiteFacts from './photos/Hypnotiq/WhiteFacts.jpg';
+import BrownNoise from './photos/Hypnotiq/BrownNoise.jpg';
+import BrownFacts from './photos/Hypnotiq/BrownFacts.jpg';
+import MainMenu from './photos/Hypnotiq/MainMenu.png';
+import PinkNoise from './photos/Hypnotiq/PinkNoise.jpg';
+import BlackNoise from './photos/Hypnotiq/BlackNoise.jpg';
 
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
 
@@ -38,7 +52,7 @@ export default class Hypnotiq extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: HypnotiqPic },
+            data: { name: this.label, avatar: MainMenu },
             children: [
               {
                 label: 'Minimum Viable Product',
@@ -47,7 +61,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: false,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: JazzJams,
                   info: (
                     <div>
                       <p>
@@ -78,7 +92,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: true,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: JazzFacts,
                   info: (
                     <div>
                       <p>
@@ -109,7 +123,7 @@ export default class Hypnotiq extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: HypnotiqPic },
+            data: { name: this.label, avatar: BabyJams },
             children: [
               {
                 label: 'Technologies',
@@ -118,7 +132,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: false,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: BrownNoise,
                   info: (
                     <span>
                       <span>
@@ -143,7 +157,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: true,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: BrownFacts,
                   info: (
                     <div>
                       <p>
@@ -167,7 +181,7 @@ export default class Hypnotiq extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: HypnotiqPic },
+            data: { name: this.label, avatar: BabyFacts },
             children: [
               {
                 label: 'Contributions',
@@ -176,7 +190,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: false,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: ClassicalJams,
                   info: (
                     <div>
                       <p>
@@ -206,7 +220,7 @@ export default class Hypnotiq extends React.Component {
                 expanded: true,
                 data: {
                   name: this.label,
-                  avatar: HypnotiqPic,
+                  avatar: ClassicalFacts,
                   info: (
                     <div>
                       <p>
@@ -241,7 +255,7 @@ export default class Hypnotiq extends React.Component {
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
-              src={HypnotiqPic}
+              src={node.data.avatar}
               onError={(event) => (event.target.src = { HypnotiqPic })}
               style={{ width: '100px' }}
             />
@@ -254,7 +268,7 @@ export default class Hypnotiq extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', justifyContent: 'center' }}>
         <Iframe
           url="https://www.youtube.com/embed/uiMUlbcUJeU"
           width="800px"
