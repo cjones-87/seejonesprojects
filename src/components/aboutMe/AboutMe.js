@@ -9,10 +9,14 @@ import { Card } from 'primereact/card';
 
 import FullstackLogo from '../projects/FullstackLogo.png';
 
+import { SiExpo } from "react-icons/si";
+import { DiJavascript1 } from "react-icons/di";
+import { FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
+
 export default class AboutMe extends React.Component {
   render() {
     const handleError = (e) =>
-      (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg');
+      (e.target.src = "https://i.imgur.com/xNRiK7S.jpg");
 
     //
     const header1 = (
@@ -20,7 +24,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/rntgx2i.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px', paddingTop: '1.5rem' }}
+        style={{ width: "300px", height: "500px", paddingTop: "1.5rem" }}
       />
     );
     const header2 = (
@@ -28,7 +32,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/CloCABI.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px', paddingTop: '1.5rem' }}
+        style={{ width: "300px", height: "500px", paddingTop: "1.5rem" }}
       />
     );
     const header3 = (
@@ -36,7 +40,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src={FullstackLogo}
         onError={handleError}
-        style={{ width: '300px', height: '500px', paddingTop: '1.5rem' }}
+        style={{ width: "300px", height: "500px", paddingTop: "1.5rem" }}
       />
     );
     const header4 = (
@@ -44,7 +48,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/Rj1BcqV.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px', paddingTop: '1.5rem' }}
+        style={{ width: "300px", height: "500px", paddingTop: "1.5rem" }}
       />
     );
     const header5 = (
@@ -52,7 +56,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/UljMe8v.png"
         onError={handleError}
-        style={{ width: '300px', height: '500px', paddingTop: '1.5rem' }}
+        style={{ width: "300px", height: "500px", paddingTop: "1.5rem" }}
       />
     );
     //
@@ -61,7 +65,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/3YrHNiX.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px' }}
+        style={{ width: "300px", height: "500px" }}
       />
     );
     const footer2 = (
@@ -69,7 +73,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/gJX3MCz.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px' }}
+        style={{ width: "300px", height: "500px" }}
       />
     );
     const footer3 = (
@@ -77,7 +81,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src={FullstackLogo}
         onError={handleError}
-        style={{ width: '300px', height: '500px' }}
+        style={{ width: "300px", height: "500px" }}
       />
     );
     const footer4 = (
@@ -85,7 +89,7 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/EAlVmrf.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px' }}
+        style={{ width: "300px", height: "500px" }}
       />
     );
     const footer5 = (
@@ -93,18 +97,64 @@ export default class AboutMe extends React.Component {
         alt="Card"
         src="https://i.imgur.com/OUcoUxV.jpg"
         onError={handleError}
-        style={{ width: '300px', height: '500px' }}
+        style={{ width: "300px", height: "500px" }}
       />
     );
 
     return (
       <div
         className="aboutMeParent bg-black-alpha-90"
-        style={{ paddingTop: '1rem' }}
+        style={{
+          color: "white",
+          textShadow: "2px 2px 2px #01020E",
+          paddingTop: "1rem",
+        }}
       >
-        <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+        <h1 style={{ color: "rebeccapurple", paddingBottom: "1rem" }}>
           About Me
         </h1>
+        <div>
+          <div id="homeLogo" style={{ paddingBottom: "1.5rem" }}>
+            <img
+              alt="Card"
+              src="https://i.imgur.com/YvqyfW5.png"
+              onError={handleError}
+              style={{ width: "300px", height: "300px", borderRadius: "50%" }}
+            />
+          </div>
+        </div>
+        <div>
+          <p>
+            I, CJ Jones, am a software engineer living in NYC. I have
+            successfully graduated from an immersive full-time software
+            engineering program offered by Fullstack Academy. Currently, I
+            freelance for individuals and brands across multiple industries.
+          </p>
+          <p>
+            I have a passion for using technology to create intuitive & visually
+            stimulating UI for enhanced user experiences. This, coupled with a
+            penchant for furthering my knowledge and SWE skillset, gives me a
+            love of combining existing best practices with innovative solutions
+            to solve client & company needs.
+          </p>
+          <p>
+            <small>I specialize in</small>&nbsp;
+            <big>
+              <FaReact /> <FaMobileAlt /> <SiExpo /> <FaNodeJs />
+            </big>
+            &nbsp;
+            <small>for mobile development & &nbsp;</small>
+            <big>
+              <FaReact /> <DiJavascript1 /> <FaNodeJs />
+            </big>
+            &nbsp;
+            <small>for web development</small>
+          </p>
+          <p>
+            {/* My love for tech started at an early age, when my mother bought our
+            first desktop pc. */}
+          </p>
+        </div>
         {/* <div className="aboutMeChild">
           <Card
             title="Previous Work"

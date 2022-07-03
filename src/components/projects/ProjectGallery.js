@@ -12,49 +12,49 @@ export default function ProjectGallery() {
   const data = [
     {
       image: computerLove,
-      caption: 'Computer Love',
+      caption: "Computer Love",
     },
     {
       image: Hypnotiq,
-      caption: 'Hypnotiq',
+      caption: "Hypnotiq",
     },
     {
       image: BoundzBookstore,
-      caption: 'Boundz Bookstore',
+      caption: "Boundz Bookstore",
     },
     {
       image: IdleClicker,
-      caption: 'Idle Clicker',
+      caption: "Idle Clicker",
     },
     {
       image: GuessingGame,
-      caption: 'Guessing Game',
+      caption: "Guessing Game",
     },
   ];
 
   const captionStyle = {
-    fontSize: '2em',
-    fontWeight: 'bold',
+    fontSize: "2em",
+    fontWeight: "bold",
   };
   const slideNumberStyle = {
-    fontSize: '20px',
-    fontWeight: 'bold',
+    fontSize: "20px",
+    fontWeight: "bold",
   };
   return (
     <div
       className="App bg-black-alpha-90"
       style={{
-        color: 'white',
-        textShadow: '2px 2px 2px #01020E',
-        paddingTop: '1rem',
+        color: "white",
+        textShadow: "2px 2px 2px #01020E",
+        paddingTop: "1rem",
         paddingBottom: 175,
       }}
     >
-      <h1 style={{ textAlign: 'center', color: 'rebeccapurple' }}>Projects</h1>
-      <div style={{ textAlign: 'center' }}>
+      <h1 style={{ textAlign: "center", color: "rebeccapurple" }}>Projects</h1>
+      <div style={{ textAlign: "center" }}>
         <div
           style={{
-            padding: '0 20px',
+            padding: "0 20px",
           }}
         >
           <Carousel
@@ -71,17 +71,20 @@ export default function ProjectGallery() {
             dots={true}
             pauseIconColor="white"
             pauseIconSize="40px"
-            slideBackgroundColor="black"
+            slideBackgroundColor="rebeccapurple"
             slideImageFit="contain"
             thumbnails={true}
-            thumbnailWidth="100px"
+            thumbnailWidth={"100vw"}
+            showNavBtn={true}
             style={{
-              textAlign: 'center',
-              maxWidth: '50vw',
-              maxHeight: '50vh',
-              margin: '40px  auto',
-              color: 'white',
-              textShadow: '2px 2px 2px #01020E',
+              textAlign: "center",
+              justifyContent: "center",
+              justifyItems: "center",
+              maxWidth: "50vw",
+              maxHeight: "50vh",
+              margin: "40px  auto",
+              color: "white",
+              textShadow: "2px 2px 2px #01020E",
             }}
           />
         </div>
