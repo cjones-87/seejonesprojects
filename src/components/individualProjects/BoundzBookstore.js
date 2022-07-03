@@ -33,23 +33,23 @@ export default class BoundzBookstore extends React.Component {
 
     this.orgChart = [
       {
-        label: 'Boundz Bookstore',
-        className: 'title',
-        type: 'title',
+        label: "Boundz Bookstore",
+        className: "title",
+        type: "title",
         expanded: true,
         data: { name: this.label, avatar: BoundzBookstorePic },
         children: [
           {
-            label: 'MVP Goal',
-            className: 'info',
-            type: 'info',
+            label: "MVP Goal",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: 'Minimum Viable Product',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Minimum Viable Product",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
@@ -62,9 +62,9 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: 'Stretch Goals',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Stretch Goals",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
@@ -81,16 +81,16 @@ export default class BoundzBookstore extends React.Component {
             ],
           },
           {
-            label: 'Tech Stack',
-            className: 'info',
-            type: 'info',
+            label: "Tech Stack",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: 'Technologies',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Technologies",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
@@ -124,16 +124,35 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: 'Integration',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Integration",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,
                   avatar: BoundzBookstorePic,
                   info: (
                     <div>
-                      <p>Boundz Bookstore was constructed & designed using </p>
+                      <p>
+                        Boundz Bookstore was constructed & designed
+                        using&nbsp;&nbsp;&nbsp;
+                        <FaReact />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiRedux />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiMaterialui />
+                        &nbsp;&nbsp;&nbsp;
+                        <ImHtmlFive />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiCss3 />
+                        &nbsp;&nbsp;&nbsp;for the front-end & <FaNodeJs />
+                        &nbsp;&nbsp;&nbsp; <SiPostgresql />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiSequelize />
+                        &nbsp;&nbsp;&nbsp;
+                        <SiExpress />
+                        &nbsp;&nbsp;&nbsp;for the back-end.
+                      </p>
                     </div>
                   ),
                 },
@@ -141,16 +160,16 @@ export default class BoundzBookstore extends React.Component {
             ],
           },
           {
-            label: 'Implementations',
-            className: 'info',
-            type: 'info',
+            label: "Implementations",
+            className: "info",
+            type: "info",
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: 'Contributions',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Contributions",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: false,
                 data: {
                   name: this.label,
@@ -163,9 +182,9 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: 'Challenges',
-                className: 'moreInfo',
-                type: 'moreInfo',
+                label: "Challenges",
+                className: "moreInfo",
+                type: "moreInfo",
                 expanded: true,
                 data: {
                   name: this.label,

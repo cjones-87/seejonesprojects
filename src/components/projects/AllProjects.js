@@ -26,46 +26,46 @@ export default class AllProjects extends React.Component {
     this.state = {
       projects: [
         {
-          name: 'See Jones Engineer',
+          name: "See Jones Engineer",
           image: SeeJonesEngineer,
-          category: 'React Web App',
+          category: "React Web App",
           difficulty: 8,
-          status: 'complete',
+          status: "complete",
         },
         {
-          name: 'Computer Love',
+          name: "Computer Love",
           image: computerLove,
-          category: 'React Native Mobile App',
+          category: "React Native Mobile App",
           difficulty: 10,
-          status: 'complete',
+          status: "complete",
         },
         {
-          name: 'Hypnotiq',
+          name: "Hypnotiq",
           image: Hypnotiq,
-          category: 'React Native Mobile App',
+          category: "React Native Mobile App",
           difficulty: 7,
-          status: 'complete',
+          status: "v2 in progress",
         },
         {
-          name: 'Boundz Bookstore',
+          name: "Boundz Bookstore",
           image: BoundzBookstore,
-          category: 'React Web App',
+          category: "React Web App",
           difficulty: 10,
-          status: 'complete',
+          status: "complete",
         },
         {
-          name: 'Idle Clicker',
+          name: "Idle Clicker",
           image: IdleClicker,
-          category: 'Vanilla JS, HTML, CSS',
+          category: "Vanilla JS, HTML, CSS",
           difficulty: 6,
-          status: 'complete',
+          status: "v2 in progress",
         },
         {
-          name: 'Guessing Game',
+          name: "Guessing Game",
           image: GuessingGame,
-          category: 'Vanilla JS, HTML, CSS',
+          category: "Vanilla JS, HTML, CSS",
           difficulty: 3,
-          status: 'complete',
+          status: "complete",
         },
       ],
     };
@@ -102,7 +102,7 @@ export default class AllProjects extends React.Component {
   statusBodyTemplate(rowData) {
     const isCompleted = false;
     return (
-      <span className={isCompleted ? 'completed' : 'false'}>
+      <span className={isCompleted ? "completed" : "version 2 in progress"}>
         {rowData.status}
       </span>
     );
@@ -123,9 +123,9 @@ export default class AllProjects extends React.Component {
       <div
         className="datatable-project"
         style={{
-          color: 'white',
-          textShadow: '2px 2px 2px #01020E',
-          paddingTop: '1rem',
+          color: "white",
+          textShadow: "2px 2px 2px #01020E",
+          paddingTop: "1rem",
         }}
       >
         <div>

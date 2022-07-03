@@ -51,7 +51,7 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <body id="landingPage">
-        <div style={{ color: 'white', textShadow: '2px 2px 2px #01020E' }}>
+        <div style={{ color: "white", textShadow: "2px 2px 2px #01020E" }}>
           <header id="showcase">
             <div>
               <h2>Hello!</h2>
@@ -75,10 +75,10 @@ export default class LandingPage extends React.Component {
             </div>
           </header>
           <div
-            style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+            style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
           >
             <div id="sectionA">
-              I am a FullStack Academy graduate, committed to learning and
+              I am a Freelance Software Engineer, committed to learning and
               continuing my career as a developer.
             </div>
             <div id="sectionB">
@@ -95,7 +95,7 @@ export default class LandingPage extends React.Component {
               <SiExpress />
               &nbsp;&nbsp; <SiMaterialui />
               &nbsp;&nbsp;
-              <i className="pi pi-prime" style={{ fontSize: '1em' }} />
+              <i className="pi pi-prime" style={{ fontSize: "1em" }} />
               &nbsp;&nbsp; <SiChakraui />
               &nbsp;&nbsp; <SiSemanticuireact />
             </div>
