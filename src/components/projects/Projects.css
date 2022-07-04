@@ -8,3 +8,9 @@
   width: 100px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
+/* # SCSS */
+/* @import '~react-image-gallery/styles/scss/image-gallery.scss'; */
+
+/* # CSS */
+@import '~react-image-gallery/styles/css/image-gallery.css';
