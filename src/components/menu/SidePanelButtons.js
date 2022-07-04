@@ -54,67 +54,106 @@ export default class SidePanelButtons extends React.Component {
           </h5>
           <div
             className="template"
-            style={{ display: 'flex', flexDirection: 'column' }}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+            }}
           >
             <Button className="linkedin p-0">
               <i className="pi pi-linkedin px-2"></i>
-              <a href="https://www.linkedin.com/in/cjones1827/">
+              <a
+                href="https://www.linkedin.com/in/cjones1827/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">LinkedIn</span>
               </a>
             </Button>
 
             <Button className="youtube p-0">
               <i className="pi pi-youtube px-2"></i>
-              <a href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw">
+              <a
+                href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Youtube</span>
               </a>
             </Button>
 
             <Button className="instagram p-0">
               <i className="pi pi-instagram px-2"></i>
-              <a href="https://www.instagram.com/seejonesengineer/">
+              <a
+                href="https://www.instagram.com/seejonesengineer/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Instagram</span>
               </a>
             </Button>
 
             <Button className="facebook p-0">
               <i className="pi pi-facebook px-2"></i>
-              <a href="https://www.facebook.com/seejonesengineer">
+              <a
+                href="https://www.facebook.com/seejonesengineer"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Facebook</span>
               </a>
             </Button>
 
             <Button className="slack p-0">
               <i className="pi pi-slack px-2"></i>
-              <a href="https://seejonesengineer.slack.com/archives/D037H4J82TU">
+              <a
+                href="https://seejonesengineer.slack.com/archives/D037H4J82TU"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Slack</span>
               </a>
             </Button>
 
-            <Button className="google p-0">
+            {/* <Button className="google p-0">
               <i className="pi pi-google px-2"></i>
               <a href="https://www.google.com">
                 <span className="px-3">Google</span>
               </a>
-            </Button>
+            </Button> */}
 
             <Button className="whatsapp p-0">
-              <i className="pi pi-whatsapp px-2"></i>
-              <a href="https://wa.me/3473918511">
+              <i
+                className="pi pi-whatsapp px-2"
+                target="_blank"
+                rel="noreferrer noopener"
+              ></i>
+              <a
+                href="https://wa.me/3473918511"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">WhatsApp</span>
               </a>
             </Button>
 
             <Button className="twitter p-0">
               <i className="pi pi-twitter px-2"></i>
-              <a href="https://twitter.com/cjonesengineer1">
+              <a
+                href="https://twitter.com/cjonesengineer1"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Twitter</span>
               </a>
             </Button>
 
             <Button className="github p-0">
               <i className="pi pi-github px-2"></i>
-              <a href="https://github.com/cjones-87">
+              <a
+                href="https://github.com/cjones-87"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Github</span>
               </a>
             </Button>
@@ -126,7 +165,11 @@ export default class SidePanelButtons extends React.Component {
 
             <Button className="money-bill p-0">
               <i className="pi pi-money-bill px-2"></i>
-              <a href="https://www.buymeacoffee.com/cjonesengineer">
+              <a
+                href="https://www.buymeacoffee.com/cjonesengineer"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <span className="px-3">Buy Me A Coffee</span>
               </a>
             </Button>
