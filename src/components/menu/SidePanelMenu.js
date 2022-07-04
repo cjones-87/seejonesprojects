@@ -11,6 +11,8 @@ import SidePanelButtons from './SidePanelButtons';
 import TheLittleDwarf from '../../sounds/TheLittleDwarf.mp3';
 import PowerDown from '../../sounds/PowerDown.mp3';
 
+import Typewriter from 'typewriter-effect';
+
 export default class SidePanelMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -73,7 +75,13 @@ export default class SidePanelMenu extends React.Component {
             <div style={{ textAlign: 'center' }}>
               <Button
                 icon="pi pi-comments"
-                label="Network With Me"
+                label=<Typewriter
+                  options={{
+                    strings: 'Network With Me',
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
                 onClick={this.onClick}
               />
             </div>
