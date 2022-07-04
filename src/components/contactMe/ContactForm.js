@@ -9,7 +9,6 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
-import { Tooltip } from 'primereact/tooltip';
 import { Button } from 'primereact/button';
 
 export default class ContactForm extends React.Component {

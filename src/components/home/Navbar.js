@@ -7,15 +7,17 @@ import React from 'react';
 
 import { Menubar } from 'primereact/menubar';
 
-import SidePanelMenu from './components/menu/SidePanelMenu';
+import SidePanelMenu from '../menu/SidePanelMenu';
 
-import MartianGun from './sounds/MartianGun.mp3';
-import Quest from './sounds/Quest.mp3';
-import Coins from './sounds/Coins.mp3';
+import MartianGun from '../../sounds/MartianGun.mp3';
+import Quest from '../../sounds/Quest.mp3';
+import Coins from '../../sounds/Coins.mp3';
 
 import Typewriter from 'typewriter-effect';
 
-import PDF from './CJs - SWE - Resume.pdf';
+import { Tooltip } from 'primereact/tooltip';
+
+import PDF from '../../CJs - SWE - Resume.pdf';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -24,6 +26,10 @@ export default class Navbar extends React.Component {
     const mainAudio = new Audio(MartianGun);
     const gameAudio = new Audio(Quest);
     const hireAudio = new Audio(Coins);
+
+    this.state = {
+      resumeTooltip: 'Right Click to Open in New Window & Download',
+    };
 
     this.items = [
       {
@@ -126,13 +132,16 @@ export default class Navbar extends React.Component {
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Resumé',
-              autoStart: true,
-              loop: false,
-            }}
-          />
+          <span className="resume" data-pr-position="bottom">
+            <Tooltip target=".resume" content={`${this.state.resumeTooltip}`} />
+            <Typewriter
+              options={{
+                strings: 'Resumé',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </span>
         ),
         icon: 'pi pi-fw pi-file',
         command: (event) => {
