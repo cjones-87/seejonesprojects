@@ -38,7 +38,10 @@ ReactDOM.render(
         <Route path="/projects/boundzbookstore" element={<BoundzBookstore />} />
         <Route path="/projects/hypnotiq" element={<Hypnotiq />} />
         <Route path="/projects/computerlove" element={<ComputerLove />} />
-        <Route path="/projects/seejonesengineer" element={<IdleClicker />} />
+        <Route
+          path="/projects/seejonesengineer"
+          element={<SeeJonesEngineer />}
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
