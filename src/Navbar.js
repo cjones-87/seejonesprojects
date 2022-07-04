@@ -15,6 +15,8 @@ import Coins from './sounds/Coins.mp3';
 
 import Typewriter from 'typewriter-effect';
 
+import PDF from './CJs - SWE - Resume.pdf';
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +38,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-home',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/home'), 1600);
+          setTimeout(() => (window.location.pathname = '/home'), 1600);
           let playAudio = (event) => {
             mainAudio.play();
           };
@@ -55,7 +57,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-info-circle',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/aboutme'), 1600);
+          setTimeout(() => (window.location.pathname = '/aboutme'), 1600);
           let playAudio = (event) => {
             mainAudio.play();
           };
@@ -74,7 +76,10 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-history',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/learningjournal'), 1600);
+          setTimeout(
+            () => (window.location.pathname = '/learningjournal'),
+            1600
+          );
           let playAudio = (event) => {
             mainAudio.play();
           };
@@ -93,7 +98,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-images',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/projects'), 1600);
+          setTimeout(() => (window.location.pathname = '/projects'), 1600);
           let playAudio = (event) => {
             mainAudio.play();
           };
@@ -112,7 +117,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-play',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/playgames'), 2000);
+          setTimeout(() => (window.location.pathname = '/playgames'), 2000);
           let playAudio = (event) => {
             gameAudio.play();
           };
@@ -131,7 +136,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-file',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/resume'), 1600);
+          setTimeout(() => (window.location.pathname = PDF), 1600);
           let playAudio = (event) => {
             mainAudio.play();
           };
@@ -150,7 +155,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-dollar',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/hireme'), 250);
+          setTimeout(() => (window.location.pathname = '/hireme'), 250);
           let playAudio = (event) => {
             hireAudio.play();
           };
