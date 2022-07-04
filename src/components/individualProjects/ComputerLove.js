@@ -11,8 +11,6 @@ import ComputerLovePic from './photos/computerLove.gif';
 
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from 'react-icons/im';
-
 import {
   SiCss3,
   SiExpo,
