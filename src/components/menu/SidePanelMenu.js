@@ -75,13 +75,15 @@ export default class SidePanelMenu extends React.Component {
             <div style={{ textAlign: 'center' }}>
               <Button
                 icon="pi pi-comments"
-                label=<Typewriter
-                  options={{
-                    strings: 'Network With Me',
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
+                label={
+                  <Typewriter
+                    options={{
+                      strings: 'Network With Me',
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                }
                 onClick={this.onClick}
               />
             </div>
