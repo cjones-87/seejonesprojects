@@ -6,11 +6,11 @@ import './AboutMe.css';
 
 import React from 'react';
 
-import FullstackLogo from '../projects/FullstackLogo.png';
-
 import { SiExpo } from 'react-icons/si';
 import { DiJavascript1 } from 'react-icons/di';
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
+
+import Typewriter from 'typewriter-effect';
 
 export default class AboutMe extends React.Component {
   render() {
@@ -40,31 +40,70 @@ export default class AboutMe extends React.Component {
           </div>
         </div>
         <div>
-          <p>
-            I, CJ Jones, am a software engineer living in NYC. I have
-            successfully graduated from an immersive full-time software
-            engineering program offered by Fullstack Academy. Currently, I
-            freelance for individuals and brands across multiple industries.
+          <p style={{ fontSize: '2em' }}>
+            <Typewriter
+              options={{
+                strings: `I, CJ Jones, am a software engineer living in NYC. I have
+                  successfully graduated from an immersive full-time software
+                  engineering program offered by Fullstack Academy. Currently, I
+                  freelance for individuals and brands across multiple industries.`,
+                autoStart: true,
+                loop: false,
+                delay: 25,
+              }}
+            />
           </p>
-          <p>
-            I have a passion for using technology to create intuitive & visually
-            stimulating UI for enhanced user experiences. This, coupled with a
-            penchant for furthering my knowledge and SWE skillset, gives me a
-            love of combining existing best practices with innovative solutions
-            to solve client & company needs.
+          <p style={{ fontSize: '2em' }}>
+            <Typewriter
+              options={{
+                strings: `I have a passion for using technology to create intuitive & visually
+                stimulating UI for enhanced user experiences. This, coupled with a
+                penchant for furthering my knowledge and SWE skillset, gives me a
+                love of combining existing best practices with innovative solutions
+                to solve client & company needs.`,
+                autoStart: true,
+                loop: false,
+                delay: 25,
+              }}
+            />
           </p>
-          <p>
-            <small>I specialize in</small>&nbsp;
+          <p style={{ fontSize: '1.25em' }}>
+            <small>
+              <Typewriter
+                options={{
+                  strings: 'I specialize in',
+                  autoStart: true,
+                  loop: false,
+                }}
+              />
+            </small>
+
             <big>
               <FaReact /> <FaMobileAlt /> <SiExpo /> <FaNodeJs />
             </big>
-            &nbsp;
-            <small>for mobile development & &nbsp;</small>
+
+            <small>
+              <Typewriter
+                options={{
+                  strings: 'for mobile development & ',
+                  autoStart: true,
+                  loop: false,
+                }}
+              />
+            </small>
             <big>
               <FaReact /> <DiJavascript1 /> <FaNodeJs />
             </big>
-            &nbsp;
-            <small>for web development</small>
+
+            <small>
+              <Typewriter
+                options={{
+                  strings: 'for web development',
+                  autoStart: true,
+                  loop: false,
+                }}
+              />
+            </small>
           </p>
           <p>
             {/* My love for tech started at an early age, when my mother bought our

@@ -28,6 +28,8 @@ import {
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 
+import Typewriter from 'typewriter-effect';
+
 export default class LandingPage extends React.Component {
   constructor() {
     super();
@@ -51,31 +53,79 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <body id="landingPage">
-        <div style={{ color: "white", textShadow: "2px 2px 2px #01020E" }}>
+        <div style={{ color: 'white', textShadow: '2px 2px 2px #01020E' }}>
           <header id="showcase">
             <div>
-              <h2>Hello!</h2>
-              <h1>My Name is CJ</h1>
-              <p>Frontend Software Engineer & Fullstack Developer</p>
+              <h1>
+                <Typewriter
+                  options={{
+                    strings: 'Welcome! My Name is CJ Jones',
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </h1>
               <p>
-                <small>Specializing in</small>&nbsp;
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Software Engineer',
+                      'Android & IOS Developer',
+                      'Web Developer',
+                      'Solutions Engineer',
+                      'SWE Consultant',
+                      'Mentor',
+                      'Tutor',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </p>
+              <p>
+                <small>
+                  <Typewriter
+                    options={{
+                      strings: 'Specializing in',
+                      autoStart: true,
+                      loop: false,
+                    }}
+                  />
+                </small>
+                &nbsp;
                 <big>
                   <FaReact /> <FaMobileAlt /> <SiExpo />
                 </big>
                 &nbsp;
-                <small>for mobile development & &nbsp;</small>
+                <small>
+                  <Typewriter
+                    options={{
+                      strings: 'for mobile development',
+                      autoStart: true,
+                      loop: false,
+                    }}
+                  />
+                </small>
                 <big>
                   <FaReact /> <DiJavascript1 />
                 </big>
                 &nbsp;
-                <small>for web development</small>
+                <small>
+                  <Typewriter
+                    options={{
+                      strings: 'for web development',
+                      autoStart: true,
+                      loop: false,
+                    }}
+                  />
+                </small>
               </p>
 
               <Button label="See Jones Engineer" onClick={this.onClick} />
             </div>
           </header>
           <div
-            style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+            style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
           >
             <div id="sectionA">
               I am a Freelance Software Engineer, committed to learning and
@@ -95,7 +145,7 @@ export default class LandingPage extends React.Component {
               <SiExpress />
               &nbsp;&nbsp; <SiMaterialui />
               &nbsp;&nbsp;
-              <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+              <i className="pi pi-prime" style={{ fontSize: '1em' }} />
               &nbsp;&nbsp; <SiChakraui />
               &nbsp;&nbsp; <SiSemanticuireact />
             </div>

@@ -13,6 +13,8 @@ import MartianGun from './sounds/MartianGun.mp3';
 import Quest from './sounds/Quest.mp3';
 import Coins from './sounds/Coins.mp3';
 
+import Typewriter from 'typewriter-effect';
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +25,15 @@ export default class Navbar extends React.Component {
 
     this.items = [
       {
-        label: 'Home',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Home',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-home',
         command: (event) => {
           setTimeout(() => (window.location.href = '/home'), 1600);
@@ -34,7 +44,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'About Me',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'About Me',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-info-circle',
         command: (event) => {
           setTimeout(() => (window.location.href = '/aboutme'), 1600);
@@ -45,7 +63,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Learning Journal',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Learning Journal',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-history',
         command: (event) => {
           setTimeout(() => (window.location.href = '/learningjournal'), 1600);
@@ -56,7 +82,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Projects',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Projects',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-images',
         command: (event) => {
           setTimeout(() => (window.location.href = '/projects'), 1600);
@@ -67,7 +101,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Interactive Games',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Interactive Games',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-play',
         command: (event) => {
           setTimeout(() => (window.location.href = '/playgames'), 2000);
@@ -78,7 +120,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Resume',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Resumé',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-file',
         command: (event) => {
           setTimeout(() => (window.location.href = '/resume'), 1600);
@@ -89,7 +139,15 @@ export default class Navbar extends React.Component {
         },
       },
       {
-        label: 'Hire Me',
+        label: (
+          <Typewriter
+            options={{
+              strings: 'Hire Me',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        ),
         icon: 'pi pi-fw pi-dollar',
         command: (event) => {
           setTimeout(() => (window.location.href = '/hireme'), 250);
@@ -108,7 +166,7 @@ export default class Navbar extends React.Component {
         alt="logo"
         src="https://i.imgur.com/zUk8geK.png"
         onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
-        height="40"
+        height="100vh"
         className="mr-2"
         style={{ borderRadius: '50%' }}
       ></img>
