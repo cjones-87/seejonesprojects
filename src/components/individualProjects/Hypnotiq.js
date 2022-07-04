@@ -15,21 +15,13 @@ import ClassicalJams from './photos/Hypnotiq/ClassicalJams.jpg';
 import ClassicalFacts from './photos/Hypnotiq/ClassicFacts.jpg';
 import JazzJams from './photos/Hypnotiq/JazzJams.jpg';
 import JazzFacts from './photos/Hypnotiq/JazzFacts.jpg';
-import WhiteNoise from './photos/Hypnotiq/WhiteNoise.jpg';
-import WhiteFacts from './photos/Hypnotiq/WhiteFacts.jpg';
 import BrownNoise from './photos/Hypnotiq/BrownNoise.jpg';
 import BrownFacts from './photos/Hypnotiq/BrownFacts.jpg';
 import MainMenu from './photos/Hypnotiq/MainMenu.png';
-import PinkNoise from './photos/Hypnotiq/PinkNoise.jpg';
-import BlackNoise from './photos/Hypnotiq/BlackNoise.jpg';
 
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from 'react-icons/im';
-
 import { SiCss3, SiExpo, SiHeroku } from 'react-icons/si';
-
-import { DiJavascript1 } from 'react-icons/di';
 
 export default class Hypnotiq extends React.Component {
   constructor() {

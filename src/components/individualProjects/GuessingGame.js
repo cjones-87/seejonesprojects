@@ -7,7 +7,7 @@ import 'primeicons/primeicons.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import GuessingGamePic from './photos/GuessingGame.png';
 
-import { FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaNodeJs } from 'react-icons/fa';
 
 import { ImHtmlFive } from 'react-icons/im';
 
