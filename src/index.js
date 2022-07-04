@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllProjects from './components/projects/AllProjects';
 import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
-import Resume from './components/timelines/Resume';
 import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
 import LandingPage from './components/home/LandingPage';
@@ -31,7 +30,6 @@ ReactDOM.render(
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />
         <Route path="/playgames" element={<PlayGames />} />
-        <Route path="/resume" element={<Resume />} />
         <Route path="/hireme" element={<ContactForm />} />
         <Route path="/projects/guessinggame" element={<GuessingGame />} />
         <Route path="/projects/idleclicker" element={<IdleClicker />} />
