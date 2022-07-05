@@ -11,11 +11,10 @@ import './Timeline.css';
 import IdleClicker from '../projects/IdleClicker.png';
 import GuessingGame from '../projects/GuessingGame.png';
 import FullstackLogo from '../projects/FullstackLogo.png';
-// import BootcampDiploma from '../projects/BootcampDiploma.jpg';
 import computerLove from '../projects/computerLove.gif';
 import BoundzBookstore from '../projects/BoundzBookstore.png';
 import Hypnotiq from '../projects/Hypnotiq.gif';
-import SeeJonesEngineer from '../projects/SeeJonesEngineer.png';
+import seeJonesEngineer from '../individualProjects/photos/SeeJonesEngineer/seeJonesEngineer.png';
 import imageNotFound from '../projects/imageNotFound.jpeg';
 
 import BeggingForMore from '../../sounds/BeggingForMore.mp3';
@@ -51,7 +50,7 @@ export default class LearningJournalTimeline extends Component {
         date: 'Present',
         icon: 'pi pi-star',
         color: '#9C27B0',
-        image: SeeJonesEngineer,
+        image: seeJonesEngineer,
         description: 'Frontend Personal Portfolio Web App',
         techStack: (
           <span>
