@@ -18,6 +18,7 @@ import JazzFacts from './photos/Hypnotiq/JazzFacts.jpg';
 import BrownNoise from './photos/Hypnotiq/BrownNoise.jpg';
 import BrownFacts from './photos/Hypnotiq/BrownFacts.jpg';
 import MainMenu from './photos/Hypnotiq/MainMenu.png';
+import imageNotFound from './photos/imageNotFound.jpeg';
 
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
 
@@ -248,7 +249,7 @@ export default class Hypnotiq extends React.Component {
             <img
               alt={node.data.avatar}
               src={node.data.avatar}
-              onError={(event) => (event.target.src = { HypnotiqPic })}
+              onError={(event) => (event.target.src = { imageNotFound })}
               style={{ width: '100px' }}
             />
             <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>

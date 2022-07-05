@@ -5,7 +5,9 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
+
 import GuessingGamePic from './photos/GuessingGame.png';
+import imageNotFound from './photos/imageNotFound.jpeg';
 
 import { FaNodeJs } from 'react-icons/fa';
 
@@ -176,7 +178,7 @@ export default class GuessingGame extends React.Component {
             <img
               alt={node.data.avatar}
               src={GuessingGamePic}
-              onError={(event) => (event.target.src = { GuessingGamePic })}
+              onError={(event) => (event.target.src = { imageNotFound })}
               style={{ width: '100px' }}
             />
             <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>

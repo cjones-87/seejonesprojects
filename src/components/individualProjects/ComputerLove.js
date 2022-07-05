@@ -7,7 +7,6 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
-import ComputerLovePic from './photos/computerLove.gif';
 
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
@@ -22,6 +21,15 @@ import {
 } from 'react-icons/si';
 
 import { DiJavascript1 } from 'react-icons/di';
+
+import ComputerLovePic from './photos/ComputerLove/computerLove.gif';
+import activityScreen from './photos/ComputerLove/activityScreen.png';
+import homeScreen from './photos/ComputerLove/homeScreen.png';
+import loginScreen from './photos/ComputerLove/loginScreen.png';
+import likeScreen from './photos/ComputerLove/likeScreen.png';
+import meetScreen from './photos/ComputerLove/meetScreen.png';
+import registrationScreen from './photos/ComputerLove/registrationScreen.png';
+import imageNotFound from './photos/imageNotFound.jpeg';
 
 export default class ComputerLove extends React.Component {
   constructor() {
@@ -44,7 +52,7 @@ export default class ComputerLove extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: ComputerLovePic },
+            data: { name: this.label, avatar: loginScreen },
             children: [
               {
                 label: 'Minimum Viable Product',
@@ -53,7 +61,7 @@ export default class ComputerLove extends React.Component {
                 expanded: false,
                 data: {
                   name: this.label,
-                  avatar: ComputerLovePic,
+                  avatar: registrationScreen,
                   info: (
                     <div>
                       <p>
@@ -64,8 +72,8 @@ export default class ComputerLove extends React.Component {
                       </p>{' '}
                       <p>
                         This app was designed for users in the tech industry. A
-                        lot of times we spend so much time stuck behind our
-                        computers and phones that it can be hard to meet others
+                        lot of times, we spend so much time stuck behind our
+                        computers and phones, that it can be hard to meet others
                         to date or network. Computer Love is designed to make it
                         as easy as swiping your screen.
                       </p>
@@ -80,7 +88,7 @@ export default class ComputerLove extends React.Component {
                 expanded: true,
                 data: {
                   name: this.label,
-                  avatar: ComputerLovePic,
+                  avatar: likeScreen,
                   info: (
                     <div>
                       <p>
@@ -114,7 +122,7 @@ export default class ComputerLove extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: ComputerLovePic },
+            data: { name: this.label, avatar: homeScreen },
             children: [
               {
                 label: 'Technologies',
@@ -123,7 +131,7 @@ export default class ComputerLove extends React.Component {
                 expanded: false,
                 data: {
                   name: this.label,
-                  avatar: ComputerLovePic,
+                  avatar: meetScreen,
                   info: (
                     <span>
                       <FaReact />
@@ -159,7 +167,7 @@ export default class ComputerLove extends React.Component {
                 expanded: true,
                 data: {
                   name: this.label,
-                  avatar: ComputerLovePic,
+                  avatar: activityScreen,
                   info: (
                     <div>
                       <p>
@@ -192,7 +200,7 @@ export default class ComputerLove extends React.Component {
             className: 'info',
             type: 'info',
             expanded: true,
-            data: { name: this.label, avatar: ComputerLovePic },
+            data: { name: this.label, avatar: likeScreen },
             children: [
               {
                 label: 'Contributions',
@@ -272,9 +280,9 @@ export default class ComputerLove extends React.Component {
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
-              src={ComputerLovePic}
-              onError={(event) => (event.target.src = { ComputerLovePic })}
-              style={{ width: '100px' }}
+              src={node.data.avatar}
+              onError={(event) => (event.target.src = { imageNotFound })}
+              style={{ width: '75px', height: '100px' }}
             />
             <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
           </div>

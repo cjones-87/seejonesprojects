@@ -6,6 +6,7 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 import IdleClickerPic from './photos/IdleClicker.png';
+import imageNotFound from './photos/imageNotFound.jpeg';
 
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 
@@ -194,7 +195,12 @@ export default class IdleClicker extends React.Component {
                   avatar: IdleClickerPic,
                   info: (
                     <div>
-                      <p></p>
+                      <p>
+                        The biggest challenge i faced in completing this idle
+                        clicker game, was understanding how to update a page
+                        dynamically in real time. Once I broke through that
+                        barrier, it was smooth sailing.
+                      </p>
                     </div>
                   ),
                 },
@@ -211,14 +217,14 @@ export default class IdleClicker extends React.Component {
   nodeTemplate(node) {
     if (node.type) {
       return (
-        <div>
+        <div className="containerDiv">
           <div className="node-header">{node.label}</div>
           <div className="node-content" style={{ margin: 5 }}>
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
-              src={IdleClickerPic}
-              onError={(event) => (event.target.src = { IdleClickerPic })}
+              src={node.data.avatar}
+              onError={(event) => (event.target.src = { imageNotFound })}
               style={{ width: '100px' }}
             />
             <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
@@ -230,13 +236,17 @@ export default class IdleClicker extends React.Component {
 
   render() {
     return (
-      <OrganizationChart
-        value={this.orgChart}
-        nodeTemplate={this.nodeTemplate}
-        selection={this.state.selection}
-        selectionMode="multiple"
-        onSelectionChange={(event) => this.setState({ selection: event.data })}
-      />
+      <div className="containersContainerDiv">
+        <OrganizationChart
+          value={this.orgChart}
+          nodeTemplate={this.nodeTemplate}
+          selection={this.state.selection}
+          selectionMode="multiple"
+          onSelectionChange={(event) =>
+            this.setState({ selection: event.data })
+          }
+        />
+      </div>
     );
   }
 }

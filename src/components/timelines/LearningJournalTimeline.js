@@ -48,7 +48,7 @@ export default class LearningJournalTimeline extends Component {
       {
         id: 8,
         status: 'See Jones Engineer',
-        date: '2/2022',
+        date: 'Present',
         icon: 'pi pi-star',
         color: '#9C27B0',
         image: SeeJonesEngineer,
