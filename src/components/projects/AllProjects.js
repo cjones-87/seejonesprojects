@@ -16,7 +16,7 @@ import GuessingGame from './GuessingGame.png';
 import computerLove from './computerLove.gif';
 import BoundzBookstore from './BoundzBookstore.png';
 import Hypnotiq from './Hypnotiq.gif';
-import seeJonesEngineer from './seeJonesEngineer.png';
+import portfolioPic from './portfolioPic.png';
 import imageNotFound from './imageNotFound.jpeg';
 
 export default class AllProjects extends React.Component {
@@ -27,7 +27,7 @@ export default class AllProjects extends React.Component {
       projects: [
         {
           name: 'See Jones Engineer',
-          image: seeJonesEngineer,
+          image: portfolioPic,
           category: 'React Web App',
           difficulty: 8,
           status: 'complete',
