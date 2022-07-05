@@ -322,7 +322,8 @@ export default class LearningJournalTimeline extends Component {
               src={item.image}
               onError={(e) => (e.target.src = imageNotFound)}
               alt={item.name}
-              width={200}
+              width={'600vw'}
+              height={'300vh'}
               className="p-shadow-2"
             />
           )}
