@@ -12,7 +12,7 @@ import landingPage from './photos/SeeJonesEngineer/landingPage.png';
 import projects from './photos/SeeJonesEngineer/projects.png';
 import learningJournal from './photos/SeeJonesEngineer/learningJournal.png';
 import interactiveGames from './photos/SeeJonesEngineer/interactiveGames.png';
-import contactForm from './photos/SeeJonesEngineer/seeJonesEngineer.png';
+import contactForm from './photos/SeeJonesEngineer/contactForm.png';
 
 import imageNotFound from './photos/imageNotFound.jpeg';
 
