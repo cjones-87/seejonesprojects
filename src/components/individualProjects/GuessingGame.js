@@ -50,7 +50,13 @@ export default class GuessingGame extends React.Component {
                   avatar: GuessingGamePic,
                   info: (
                     <div>
-                      <p> </p> <p></p> <p></p>
+                      <p>
+                        Guessing Game was a simple "guessing game" in which the
+                        user had limited guesses in which to guess a number
+                        between 1 & 100. It included a hint button to assist a
+                        user with guessing, as well as a reset button to restart
+                        the game.
+                      </p>
                     </div>
                   ),
                 },
@@ -65,9 +71,11 @@ export default class GuessingGame extends React.Component {
                   avatar: GuessingGamePic,
                   info: (
                     <div>
-                      <p></p>
-                      <p></p>
-                      <p></p>
+                      <p>
+                        There are no future goals for Guessing Game at this
+                        time. Guessing Game was created mainly as an
+                        instructional introduction into DOM manipulation.
+                      </p>
                     </div>
                   ),
                 },
@@ -139,7 +147,10 @@ export default class GuessingGame extends React.Component {
                   avatar: GuessingGamePic,
                   info: (
                     <div>
-                      <p> </p>
+                      <p>
+                        This project was completed solely by my. It was my first
+                        successful endeavour into DOM manipulation.
+                      </p>
                     </div>
                   ),
                 },
@@ -154,7 +165,12 @@ export default class GuessingGame extends React.Component {
                   avatar: GuessingGamePic,
                   info: (
                     <div>
-                      <p></p>
+                      <p>
+                        This project was completed while studying DOM
+                        manipulation. It was a bit challenging to manipulate the
+                        DOM while learning how to manipulate it for the first
+                        time.
+                      </p>
                     </div>
                   ),
                 },

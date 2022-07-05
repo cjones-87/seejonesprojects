@@ -201,16 +201,17 @@ export default class SeeJonesEngineer extends React.Component {
                         The biggest challenge I ran into came early on in the
                         development of this portfolio site. I ran into a bit of
                         a stumbling block at first with routing internal pages
-                        to different routes. It took a deep dive of the internet
-                        for me to realize and understand how important it is to
-                        stay up on current documentation. I also learned a
-                        lesson on being explicitly specific concerning versions
-                        when searching for errors. Even though I had routed
-                        pages a thousand times before. A recent change in
+                        to different routes. Even though I had routed pages a
+                        thousand times before, it took a deep dive of the
+                        internet for me to realize and understand how important
+                        it is to stay up on current documentation. I also
+                        learned a lesson on being explicitly specific concerning
+                        versions when searching for errors. A recent change in
                         documentation removed some higher order components &
                         basic internet searches would only return the previous
-                        version of documentation. This initial struggleled to a
-                        vast improvement in my researching and debugging skills.
+                        versions of documentation. This initial struggle led to
+                        a vast improvement in my researching and debugging
+                        skills, as well as my overall internet search efficacy.
                       </p>
                     </div>
                   ),
