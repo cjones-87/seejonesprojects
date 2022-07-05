@@ -198,8 +198,8 @@ export default class Hypnotiq extends React.Component {
                       <p>
                         I really enjoyed the different ways that a mobile phone
                         navigates screens and displays data in comparison to a
-                        web site or desktop app. Implementing features I was
-                        interested felt more intuitive, as it was much easier to
+                        web site or desktop app. Implementing mobile features
+                        felt more intuitive, as it was much easier to
                         conceptualize.
                       </p>
                     </div>

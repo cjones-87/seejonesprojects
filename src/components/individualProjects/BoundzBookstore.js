@@ -6,7 +6,7 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
-import BoundzBookstorePic from './photos/BoundzBookstore.png';
+import BoundzBookstorePic from './photos/BoundzBookstore/BoundzBookstore.png';
 import imageNotFound from './photos/imageNotFound.jpeg';
 
 import { FaNodeJs, FaReact } from 'react-icons/fa';
