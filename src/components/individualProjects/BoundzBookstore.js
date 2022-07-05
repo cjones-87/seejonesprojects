@@ -5,7 +5,9 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
+
 import BoundzBookstorePic from './photos/BoundzBookstore.png';
+import imageNotFound from './photos/imageNotFound.jpeg';
 
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 
@@ -33,23 +35,23 @@ export default class BoundzBookstore extends React.Component {
 
     this.orgChart = [
       {
-        label: "Boundz Bookstore",
-        className: "title",
-        type: "title",
+        label: 'Boundz Bookstore',
+        className: 'title',
+        type: 'title',
         expanded: true,
         data: { name: this.label, avatar: BoundzBookstorePic },
         children: [
           {
-            label: "MVP Goal",
-            className: "info",
-            type: "info",
+            label: 'MVP Goal',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: "Minimum Viable Product",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Minimum Viable Product',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -62,9 +64,9 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: "Stretch Goals",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Stretch Goals',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -81,16 +83,16 @@ export default class BoundzBookstore extends React.Component {
             ],
           },
           {
-            label: "Tech Stack",
-            className: "info",
-            type: "info",
+            label: 'Tech Stack',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: "Technologies",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Technologies',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -124,9 +126,9 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: "Integration",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Integration',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -160,16 +162,16 @@ export default class BoundzBookstore extends React.Component {
             ],
           },
           {
-            label: "Implementations",
-            className: "info",
-            type: "info",
+            label: 'Implementations',
+            className: 'info',
+            type: 'info',
             expanded: true,
             data: { name: this.label, avatar: BoundzBookstorePic },
             children: [
               {
-                label: "Contributions",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Contributions',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: false,
                 data: {
                   name: this.label,
@@ -182,9 +184,9 @@ export default class BoundzBookstore extends React.Component {
                 },
               },
               {
-                label: "Challenges",
-                className: "moreInfo",
-                type: "moreInfo",
+                label: 'Challenges',
+                className: 'moreInfo',
+                type: 'moreInfo',
                 expanded: true,
                 data: {
                   name: this.label,
@@ -214,8 +216,8 @@ export default class BoundzBookstore extends React.Component {
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
-              src={BoundzBookstorePic}
-              onError={(event) => (event.target.src = { BoundzBookstorePic })}
+              src={node.data.avatar}
+              onError={(event) => (event.target.src = { imageNotFound })}
               style={{ width: '100px' }}
             />
             <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>

@@ -2,8 +2,6 @@ import React from 'react';
 import ProjectGallery from '../projects/ProjectGallery';
 import '../../App.css';
 
-import { Button } from 'primereact/button';
-
 export default function Home() {
   const handleError = (e) => (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg');
 
