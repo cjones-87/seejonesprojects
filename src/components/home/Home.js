@@ -13,7 +13,7 @@ export default function Home() {
             alt="Card"
             src="https://i.imgur.com/zUk8geK.png"
             onError={handleError}
-            style={{ width: '300px', height: '300px', borderRadius: '50%' }}
+            style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '50%' }}
           />
         </div>
         <div id="homeCJ">
@@ -21,7 +21,7 @@ export default function Home() {
             alt="Card"
             src="https://i.imgur.com/YvqyfW5.png"
             onError={handleError}
-            style={{ width: '300px', height: '300px', borderRadius: '50%' }}
+            style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '50%' }}
           />
         </div>
       </div>

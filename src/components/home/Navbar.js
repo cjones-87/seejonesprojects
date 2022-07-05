@@ -180,7 +180,7 @@ export default class Navbar extends React.Component {
         alt="logo"
         src="https://i.imgur.com/zUk8geK.png"
         onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
-        height="100vh"
+        height="75vh"
         className="mr-2"
         style={{ borderRadius: '50%' }}
       ></img>

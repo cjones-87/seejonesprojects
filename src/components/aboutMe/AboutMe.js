@@ -35,7 +35,11 @@ export default class AboutMe extends React.Component {
               alt="Card"
               src="https://i.imgur.com/YvqyfW5.png"
               onError={handleError}
-              style={{ width: '300px', height: '300px', borderRadius: '50%' }}
+              style={{
+                maxWidth: '150%',
+                maxHeight: '150%',
+                borderRadius: '50%',
+              }}
             />
           </div>
         </div>
