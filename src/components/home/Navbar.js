@@ -17,7 +17,7 @@ import Typewriter from 'typewriter-effect';
 
 import { Tooltip } from 'primereact/tooltip';
 
-import PDF from '../../CJs - SWE - Resume.pdf';
+import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 
 export default class Navbar extends React.Component {
   constructor(props) {
