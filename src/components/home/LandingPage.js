@@ -70,7 +70,7 @@ export default class LandingPage extends React.Component {
                   options={{
                     strings: [
                       'Software Engineer',
-                      'Android & IOS Developer',
+                      'Mobile Developer',
                       'Web Developer',
                       'Solutions Engineer',
                       'SWE Consultant',
