@@ -1,4 +1,5 @@
 import React from 'react';
+import Cube from '../3dAnimations/home3dCube';
 import ProjectGallery from '../projects/ProjectGallery';
 import '../../App.css';
 
@@ -8,7 +9,8 @@ export default function Home() {
   return (
     <div className="App bg-black-alpha-90">
       <div id="homeFlex">
-        <div id="homeLogo">
+        <Cube id="homeCJ" />
+        {/* <div id="homeLogo">
           <img
             alt="Card"
             src="https://i.imgur.com/zUk8geK.png"
@@ -23,7 +25,7 @@ export default function Home() {
             onError={handleError}
             style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '50%' }}
           />
-        </div>
+        </div> */}
       </div>
       <ProjectGallery />
     </div>
