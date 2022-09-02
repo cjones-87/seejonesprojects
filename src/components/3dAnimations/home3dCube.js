@@ -21,7 +21,6 @@ export default function Cube() {
     const canvas = document.getElementById('threeJsCanvas');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setSize(window.outerWidth, 450);
-    // const cubeDiv = document.getElementById('cubeDiv');
     document.getElementById('cubeDiv').appendChild(renderer.domElement);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -34,32 +33,19 @@ export default function Cube() {
     scene.add(spotLight);
 
     const boxGeometry = new THREE.BoxGeometry(30, 30, 30);
-    const cubeMaterials = [
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(blueShirtSmile),
-        side: THREE.DoubleSide,
-      }),
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(blueShirtSmile),
-        side: THREE.DoubleSide,
-      }),
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(altLogo),
-        side: THREE.DoubleSide,
-      }),
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(altLogo),
-        side: THREE.DoubleSide,
-      }),
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(logo),
-        side: THREE.DoubleSide,
-      }),
-      new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(logo),
-        side: THREE.DoubleSide,
-      }),
-    ];
+    const CJ = new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load(blueShirtSmile),
+      side: THREE.DoubleSide,
+    });
+    const logo1 = new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load(altLogo),
+      side: THREE.DoubleSide,
+    });
+    const logo2 = new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load(logo),
+      side: THREE.DoubleSide,
+    });
+    const cubeMaterials = [CJ, CJ, logo1, logo1, logo2, logo2];
     const boxMesh = new THREE.Mesh(boxGeometry, cubeMaterials);
     scene.add(boxMesh);
 
@@ -73,14 +59,7 @@ export default function Cube() {
   }, []);
 
   return (
-    <div
-      id="cubeDiv"
-      className="App bg-black-alpha-90"
-      style={{
-        color: 'white',
-        textShadow: '2px 2px 2px #01020E',
-      }}
-    >
+    <div id="cubeDiv" className="App bg-black-alpha-90">
       <canvas id="threeJsCanvas" className="App bg-black-alpha-90" />
     </div>
   );
