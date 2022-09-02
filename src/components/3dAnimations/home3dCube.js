@@ -14,13 +14,13 @@ export default function Cube() {
       50,
       window.innerWidth / window.innerHeight,
       1,
-      2000
+      1000
     );
     camera.position.z = 100;
 
     const canvas = document.getElementById('threeJsCanvas');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.outerWidth, 450);
     // const cubeDiv = document.getElementById('cubeDiv');
     document.getElementById('cubeDiv').appendChild(renderer.domElement);
 
@@ -64,8 +64,8 @@ export default function Cube() {
     scene.add(boxMesh);
 
     const animate = () => {
-      boxMesh.rotation.x += 0.02;
-      boxMesh.rotation.y += 0.02;
+      boxMesh.rotation.x += 0.008;
+      boxMesh.rotation.y += 0.008;
       renderer.render(scene, camera);
       window.requestAnimationFrame(animate);
     };
@@ -73,8 +73,15 @@ export default function Cube() {
   }, []);
 
   return (
-    <div id="cubeDiv">
-      <canvas id="threeJsCanvas" />
+    <div
+      id="cubeDiv"
+      className="App bg-black-alpha-90"
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+      }}
+    >
+      <canvas id="threeJsCanvas" className="App bg-black-alpha-90" />
     </div>
   );
 }
