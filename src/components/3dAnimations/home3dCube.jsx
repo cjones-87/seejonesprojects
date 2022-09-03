@@ -21,7 +21,6 @@ export default function Cube() {
     const canvas = document.getElementById('threeJsCanvas');
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
     renderer.setSize(window.outerWidth, 450);
-    // const cubeDiv = document.getElementById('cubeDiv');
     document.getElementById('cubeDiv').appendChild(renderer.domElement);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);

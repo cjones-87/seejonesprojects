@@ -9,7 +9,10 @@ import { Column } from 'primereact/column';
 import { ProjectFunctions } from './ProjectFunctions';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
-import ProjectGallery from './ProjectGallery';
+
+import ProjectSlideshow from './ProjectSlideshow';
+import { ProjectData } from './data/ProjectData';
+import './ProjectSlideshow.css';
 
 import IdleClicker from './IdleClicker.png';
 import GuessingGame from './GuessingGame.png';
@@ -131,7 +134,7 @@ export default class AllProjects extends React.Component {
         }}
       >
         <div>
-          <ProjectGallery />
+          <ProjectSlideshow slides={ProjectData} />
         </div>
         <div className="card">
           <DataTable
