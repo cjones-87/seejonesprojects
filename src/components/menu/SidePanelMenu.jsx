@@ -54,9 +54,9 @@ export default class SidePanelMenu extends React.Component {
     return (
       <div
         style={{
-          color: "white",
-          textShadow: "2px 2px 2px #01020E",
-          textAlign: "center",
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
+          textAlign: 'center',
         }}
       >
         <div className="card">
@@ -65,22 +65,22 @@ export default class SidePanelMenu extends React.Component {
             onHide={this.onHide}
             icons={customIcons}
           >
-            <h3 style={{ textAlign: "center", color: "white" }}>
+            <h3 style={{ textAlign: 'center', color: 'white' }}>
               See Jones Engineer
             </h3>
             <SidePanelButtons />
           </Sidebar>
 
           <div>
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: 'center' }}>
               <Button
                 icon="pi pi-comments"
                 label={
                   <Typewriter
                     options={{
-                      strings: "Network With Me",
+                      strings: 'Network With Me',
                       autoStart: true,
-                      loop: true,
+                      loop: false,
                     }}
                   />
                 }
