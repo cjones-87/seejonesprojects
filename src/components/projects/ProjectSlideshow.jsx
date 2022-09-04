@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ProjectData } from './data/ProjectData';
 import './ProjectSlideshow.css';
 
 import 'primeicons/primeicons.css';
@@ -22,7 +21,28 @@ const ProjectSlideshow = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  // if (!Array.isArray(slides) || slides.length <= 0) return null;
+  const timeoutRef = React.useRef(null);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setCurrent((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      4500
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [current]);
 
   return (
     <div
@@ -46,7 +66,7 @@ const ProjectSlideshow = ({ slides }) => {
           style={{ color: 'rebeccapurple' }}
         />
 
-        {ProjectData.map((slide, index) => {
+        {slides.map((slide, index) => {
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -60,17 +80,19 @@ const ProjectSlideshow = ({ slides }) => {
                     paddingTop: '1rem',
                   }}
                 >
-                  <h5 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
-                    {slide.id}/{ProjectData.length}
-                  </h5>
+                  <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+                    {slide.caption}
+                  </h3>
+
                   <img
                     src={slide.image}
                     alt={slide.caption}
                     className="image"
+                    id="image"
                   />
-                  <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
-                    {slide.caption}
-                  </h3>
+                  <h5 style={{ color: 'red' }} className="slideNumber">
+                    {slide.id} of {length}
+                  </h5>
                 </div>
               )}
             </div>

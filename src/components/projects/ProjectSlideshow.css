@@ -9,7 +9,7 @@
 .image {
   width: 75vw;
   height: 75vh;
-  border-radius: 10px;
+  border-radius: 5%;
 }
 
 .next {
@@ -36,11 +36,22 @@
 
 .slide {
   opacity: 0;
+  transition: 2s;
   transition-duration: 2s ease;
 }
 
 .slide.active {
   opacity: 1;
+  transition: 2s;
   transition-duration: 2s;
   transform: scale(1.08);
+}
+
+.slideNumber {
+  color: rebeccapurple;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
