@@ -9,10 +9,6 @@ import { Menubar } from 'primereact/menubar';
 
 import SidePanelMenu from '../menu/SidePanelMenu';
 
-import MartianGun from '../../sounds/MartianGun.mp3';
-import Quest from '../../sounds/Quest.mp3';
-import Coins from '../../sounds/Coins.mp3';
-
 import Typewriter from 'typewriter-effect';
 
 import { Tooltip } from 'primereact/tooltip';
@@ -22,10 +18,6 @@ import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
-
-    const mainAudio = new Audio(MartianGun);
-    const gameAudio = new Audio(Quest);
-    const hireAudio = new Audio(Coins);
 
     this.state = {
       resumeTooltip: 'Right Click to Open in New Window & Download',
@@ -44,11 +36,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-home',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = '/home'), 1600);
-          let playAudio = (event) => {
-            mainAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/home';
         },
       },
       {
@@ -63,11 +51,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-info-circle',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = '/aboutme'), 1600);
-          let playAudio = (event) => {
-            mainAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/aboutme';
         },
       },
       {
@@ -82,14 +66,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-history',
         command: (event) => {
-          setTimeout(
-            () => (window.location.pathname = '/learningjournal'),
-            1600
-          );
-          let playAudio = (event) => {
-            mainAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/learningjournal';
         },
       },
       {
@@ -104,11 +81,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-images',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = '/projects'), 1600);
-          let playAudio = (event) => {
-            mainAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/projects';
         },
       },
       {
@@ -123,11 +96,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-play',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = '/playgames'), 2000);
-          let playAudio = (event) => {
-            gameAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/playgames';
         },
       },
       {
@@ -144,12 +113,9 @@ export default class Navbar extends React.Component {
           </span>
         ),
         icon: 'pi pi-fw pi-file',
+        target: '_blank',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = PDF), 1600);
-          let playAudio = (event) => {
-            mainAudio.play();
-          };
-          playAudio();
+          window.location.pathname = PDF;
         },
       },
       {
@@ -164,11 +130,7 @@ export default class Navbar extends React.Component {
         ),
         icon: 'pi pi-fw pi-dollar',
         command: (event) => {
-          setTimeout(() => (window.location.pathname = '/hireme'), 250);
-          let playAudio = (event) => {
-            hireAudio.play();
-          };
-          playAudio();
+          window.location.pathname = '/hireme';
         },
       },
     ];

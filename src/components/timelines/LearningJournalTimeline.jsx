@@ -17,8 +17,6 @@ import Hypnotiq from '../projects/Hypnotiq.gif';
 import seeJonesEngineer from '../individualProjects/photos/SeeJonesEngineer/seeJonesEngineer.png';
 import imageNotFound from '../projects/imageNotFound.jpeg';
 
-import BeggingForMore from '../../sounds/BeggingForMore.mp3';
-
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
 import { ImHtmlFive } from 'react-icons/im';
@@ -40,8 +38,6 @@ import {
 export default class LearningJournalTimeline extends Component {
   constructor(props) {
     super(props);
-
-    const audio = new Audio(BeggingForMore);
 
     this.events1 = [
       {
@@ -67,20 +63,13 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = '/projects/seejonesengineer'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/seejonesengineer';
         },
       },
       {
         id: 7,
         status: 'Computer love',
-        date: '01/2022',
+        date: '2022',
         icon: 'pi pi-star',
         color: '#673AB7',
         image: computerLove,
@@ -115,20 +104,13 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = '/projects/computerlove'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/computerlove';
         },
       },
       {
         id: 6,
         status: 'Hypnotiq',
-        date: '01/2022',
+        date: '2022',
         icon: 'pi pi-star',
         color: '#FF9800',
         image: Hypnotiq,
@@ -148,37 +130,26 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(() => (window.location.href = '/projects/hypnotiq'), 1200);
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/hypnotiq';
         },
       },
       {
         id: 5,
         status: 'Graduated Fullstack Academy',
-        date: '12/2021',
+        date: '2021',
         icon: 'pi pi-star',
         color: '#607D8B',
         image: FullstackLogo,
         description: 'Graduated Coding Bootcamp',
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = 'https://www.fullstackacademy.com/'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = 'https://www.fullstackacademy.com/';
         },
       },
       {
         id: 4,
         status: 'Boundz eCommerce',
-        date: '12/2021',
+        date: '2021',
         icon: 'pi pi-star',
         color: '#9C27B0',
         image: BoundzBookstore,
@@ -211,20 +182,13 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = '/projects/boundzbookstore'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/boundzbookstore';
         },
       },
       {
         id: 3,
         status: 'Idle Clicker',
-        date: '10/2021',
+        date: '2021',
         icon: 'pi pi-star',
         color: '#673AB7',
         image: IdleClicker,
@@ -240,20 +204,13 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = '/projects/idleclicker'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/idleclicker';
         },
       },
       {
         id: 2,
         status: 'Guessing Game',
-        date: '09/2021',
+        date: '2021',
         icon: 'pi pi-star',
         color: '#FF9800',
         image: GuessingGame,
@@ -269,34 +226,20 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = '/projects/guessinggame'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = '/projects/guessinggame';
         },
       },
       {
         id: 1,
         status: 'Enrolled Fullstack Academy',
-        date: '06/2021',
+        date: '2021',
         icon: 'pi pi-star',
         color: '#607D8B',
         image: FullstackLogo,
         description: 'Enrolled Coding Bootcamp',
         moreInfo: '',
         command: (event) => {
-          setTimeout(
-            () => (window.location.href = 'https://www.fullstackacademy.com/'),
-            1200
-          );
-          let playAudio = (event) => {
-            audio.play();
-          };
-          playAudio();
+          window.location.href = 'https://www.fullstackacademy.com/';
         },
       },
     ];
