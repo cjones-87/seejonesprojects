@@ -14,22 +14,6 @@ export default function Cube() {
   useEffect(() => {
     const scene = new THREE.Scene();
 
-    let FOV = 50;
-    let FAR;
-    let NEAR = 1;
-
-    // Mobile camera
-    if (window.innerWidth <= 768) {
-      FAR = 500;
-      // 769px - 1080px screen width camera
-    } else if (window.innerWidth >= 769 && window.innerWidth <= 1080) {
-      FAR = 1000;
-      // > 1080px screen width res camera
-    } else {
-      FOV = 40;
-      FAR = 1500;
-    }
-
     const camera = new THREE.PerspectiveCamera(
       50,
       window.innerWidth / window.innerHeight,
