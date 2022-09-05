@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
 
+import 'primeicons/primeicons.css';
+import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
+import 'primereact/resources/primereact.css';
+
 import * as THREE from 'three';
 
 import logo from './images/favicon.ico';

@@ -80,7 +80,7 @@ export default class SidePanelMenu extends React.Component {
                     options={{
                       strings: 'Network With Me',
                       autoStart: true,
-                      loop: false,
+                      loop: true,
                     }}
                   />
                 }
