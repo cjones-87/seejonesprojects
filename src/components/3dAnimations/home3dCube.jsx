@@ -31,10 +31,10 @@ export default function Cube() {
     }
 
     const camera = new THREE.PerspectiveCamera(
-      FOV,
+      50,
       window.innerWidth / window.innerHeight,
-      NEAR,
-      FAR
+      1,
+      1000
     );
     camera.position.z = 100;
 
