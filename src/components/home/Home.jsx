@@ -9,9 +9,9 @@ import '../../App.css';
 export default function Home() {
   return (
     <div className="App bg-black-alpha-90">
-      {/* <div id="homeFlex">
+      <div id="homeFlex">
         <Cube id="homeCJ" />
-      </div> */}
+      </div>
       <ProjectSlideshow slides={ProjectData} />
     </div>
   );
