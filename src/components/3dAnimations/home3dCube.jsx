@@ -14,7 +14,7 @@ export default function Cube() {
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
-        paddingBottom: '5rem',
+        paddingBottom: '1rem',
         width: '100%',
       }}
     >
@@ -34,6 +34,7 @@ export default function Cube() {
           width="100%"
           id="myId"
           scrolling="no"
+          frameBorder={0}
         />
       </div>
     </div>
