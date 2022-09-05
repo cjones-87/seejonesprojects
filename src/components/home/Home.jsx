@@ -7,6 +7,7 @@ import '.././projects/ProjectSlideshow.css';
 import '../../App.css';
 
 export default function Home() {
+  window.onresize = () => location.reload();
   return (
     <div className="App bg-black-alpha-90">
       <div id="homeFlex">
