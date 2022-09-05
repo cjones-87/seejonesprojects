@@ -18,6 +18,7 @@ import BoundzBookstore from './components/individualProjects/BoundzBookstore';
 import Hypnotiq from './components/individualProjects/Hypnotiq';
 import ComputerLove from './components/individualProjects/ComputerLove';
 import SeeJonesEngineer from './components/individualProjects/SeeJonesEngineer';
+import PageNotFound404 from './components/error/PageNotFound404';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -40,6 +41,7 @@ ReactDOM.render(
           path="/projects/seejonesengineer"
           element={<SeeJonesEngineer />}
         />
+        <Route path="*" element={<PageNotFound404 />} />
       </Routes>
     </BrowserRouter>
     <Footer />
