@@ -15,6 +15,8 @@ import { Tooltip } from 'primereact/tooltip';
 
 import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 
+import Iframe from 'react-iframe';
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -116,6 +118,7 @@ export default class Navbar extends React.Component {
         target: '_blank',
         command: (event) => {
           window.location.pathname = PDF;
+          window.location.target = '_blank';
         },
       },
       {
@@ -145,7 +148,7 @@ export default class Navbar extends React.Component {
         height="75vh"
         className="mr-2"
         style={{ borderRadius: '50%' }}
-      ></img>
+      />
     );
     const end = (
       <div style={{ paddingTop: '1.5rem' }}>
