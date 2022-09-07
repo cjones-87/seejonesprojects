@@ -109,10 +109,6 @@ export default class AboutMe extends React.Component {
               />
             </small>
           </p>
-          <p>
-            {/* My love for tech started at an early age, when my mother bought our
-            first desktop pc. */}
-          </p>
         </div>
       </div>
     );
