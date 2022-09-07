@@ -12,6 +12,8 @@ import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
 import Typewriter from 'typewriter-effect';
 
+import TechSkills from '../techSkills/TechSkills';
+
 export default class AboutMe extends React.Component {
   render() {
     const handleError = (e) =>
@@ -109,6 +111,9 @@ export default class AboutMe extends React.Component {
               />
             </small>
           </p>
+        </div>
+        <div>
+          <TechSkills />
         </div>
       </div>
     );
