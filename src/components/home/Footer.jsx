@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Button } from 'primereact/button';
-
 export default class Footer extends React.Component {
   render() {
     return (
@@ -12,10 +10,10 @@ export default class Footer extends React.Component {
             color: 'rebeccapurple',
             textShadow: '2px 2px 2px #01020E',
             textAlign: 'center',
+            paddingTop: '.75rem',
             paddingBottom: '.5rem',
           }}
         >
-          <h5>© 2022 by CJ Jones</h5>
           <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
             <a
               href="https://www.seejonesengineer.com/assets/CJsSoftwareEngineeringResume.24a34476.pdf#"
@@ -47,6 +45,9 @@ export default class Footer extends React.Component {
                 style={{ width: '5rem', height: '5rem' }}
               />
             </a>
+            <h5 style={{ verticalAlign: 'middle', paddingTop: '.5em' }}>
+              © 2022 by CJ Jones
+            </h5>
             <a href="https://twitter.com/cjonesengineer1" target="_blank">
               <img
                 src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-128.png"
