@@ -82,16 +82,19 @@ const ProjectSlideshow = ({ slides }) => {
                     paddingTop: '1rem',
                   }}
                 >
-                  <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
-                    {slide.caption}
-                  </h3>
-
-                  <img
-                    src={slide.image}
-                    alt={slide.caption}
-                    className="image"
-                    id="image"
-                  />
+                  <a href={slide.href}>
+                    <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+                      {slide.caption}
+                    </h3>
+                  </a>
+                  <a href={slide.href}>
+                    <img
+                      src={slide.image}
+                      alt={slide.caption}
+                      className="image"
+                      id="image"
+                    />
+                  </a>
                   <h5 style={{ color: 'red' }} className="slideNumber">
                     {slide.id} of {length}
                   </h5>
