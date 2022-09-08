@@ -25,8 +25,12 @@ export default function Home() {
           justifyContent: 'space-evenly',
         }}
       >
-        <img src={GithubSkyline2021} style={{ textAlign: 'center' }} />
-        <img src={GithubSkyline2022} style={{ textAlign: 'center' }} />
+        <a href="https://skyline.github.com/cjones-87/2021">
+          <img src={GithubSkyline2021} style={{ textAlign: 'center' }} />
+        </a>
+        <a href="https://skyline.github.com/cjones-87/2022">
+          <img src={GithubSkyline2022} style={{ textAlign: 'center' }} />
+        </a>
       </div>
     </div>
   );

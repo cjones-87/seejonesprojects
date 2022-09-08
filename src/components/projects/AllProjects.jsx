@@ -34,6 +34,7 @@ export default class AllProjects extends React.Component {
           category: 'React Web App',
           difficulty: 8,
           status: 'complete',
+          href: 'https://www.seejonesengineer.com/',
         },
         {
           name: 'Computer Love',
@@ -41,6 +42,7 @@ export default class AllProjects extends React.Component {
           category: 'React Native Mobile App',
           difficulty: 10,
           status: 'complete',
+          href: 'https://www.seejonesengineer.com/projects/computerlove',
         },
         {
           name: 'Hypnotiq',
@@ -48,6 +50,7 @@ export default class AllProjects extends React.Component {
           category: 'React Native Mobile App',
           difficulty: 7,
           status: 'v2 in progress',
+          href: 'https://www.seejonesengineer.com/projects/hypnotiq',
         },
         {
           name: 'Boundz Bookstore',
@@ -55,6 +58,7 @@ export default class AllProjects extends React.Component {
           category: 'React Web App',
           difficulty: 10,
           status: 'complete',
+          href: 'https://www.seejonesengineer.com/projects/boundzbookstore',
         },
         {
           name: 'Idle Clicker',
@@ -62,6 +66,7 @@ export default class AllProjects extends React.Component {
           category: 'Vanilla JS, HTML, CSS',
           difficulty: 6,
           status: 'v2 in progress',
+          href: 'https://www.seejonesengineer.com/projects/idleclicker',
         },
         {
           name: 'Guessing Game',
@@ -69,6 +74,7 @@ export default class AllProjects extends React.Component {
           category: 'Vanilla JS, HTML, CSS',
           difficulty: 3,
           status: 'complete',
+          href: 'https://www.seejonesengineer.com/projects/guessinggame',
         },
       ],
     };
@@ -87,14 +93,17 @@ export default class AllProjects extends React.Component {
 
   imageBodyTemplate(rowData) {
     return (
-      <img
-        src={rowData.image}
-        onError={(e) => (e.target.src = imageNotFound)}
-        alt={rowData.image}
-        className="project-image"
-        height="75vh"
-        width="100vw"
-      />
+      <a href={rowData.href}>
+        {' '}
+        <img
+          src={rowData.image}
+          onError={(e) => (e.target.src = imageNotFound)}
+          alt={rowData.image}
+          className="project-image"
+          height="75vh"
+          width="100vw"
+        />
+      </a>
     );
   }
 
