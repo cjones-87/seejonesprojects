@@ -53,6 +53,34 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+        <a href="https://mui.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"
+            alt="MUI"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a
+          href="https://www.primefaces.org/primereact/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://www.primefaces.org/primereact/images/primereact-logo-dark.svg"
+            alt="PrimeReact UI"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://chakra-ui.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://img.icons8.com/color/344/chakra-ui.png"
+            alt="Chakra UI"
+            width="40"
+            height="40"
+          />
+        </a>
         <a href="https://redux.js.org" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
@@ -69,21 +97,29 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+        <a href="https://babeljs.io/" target="_blank" rel="noreferrer">
+          <img
+            src="https://img.icons8.com/wired/344/ffffff/babel.png"
+            alt="babel"
+            width="40"
+            height="40"
+          />
+        </a>
       </div>
       <h4 align="center"> Back-End </h4>
       <div align="center">
         <a href="https://nodejs.org" target="_blank" rel="noreferrer">
           <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+            src="https://img.icons8.com/fluency/344/node-js.png"
             alt="nodejs"
             width="40"
             height="40"
           />
         </a>
-        <a href="https://expressjs.com" target="_blank" rel="noreferrer">
+        <a href="https://sequelize.org/" target="_blank" rel="noreferrer">
           <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
-            alt="express"
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original-wordmark.svg"
+            alt="sequelize"
             width="40"
             height="40"
           />
@@ -96,12 +132,63 @@ export default function TechSkills() {
             height="40"
           />
         </a>
-        <a href="https://babeljs.io/" target="_blank" rel="noreferrer">
+        <a href="https://expressjs.com" target="_blank" rel="noreferrer">
           <img
-            src="https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg"
-            alt="babel"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            alt="express"
             width="40"
             height="40"
+          />
+        </a>
+      </div>
+      <h4 align="center"> Tools </h4>
+      <div align="center">
+        <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
+          <img
+            src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/344/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-filled-tal-revivo.png"
+            alt="netlify"
+            width="30"
+            height="25"
+          />
+        </a>
+        <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+          <img
+            align="center"
+            img
+            src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/344/ffffff/external-glyph-shapes-tanah-basah-glyph-tanah-basah-69.png"
+            width="35"
+            height="35"
+            alt="vercel"
+          />
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <img
+            align="center"
+            img
+            src="https://img.icons8.com/dusk/45/000000/github.png"
+            width="40"
+            height="40"
+            alt="github"
+          />
+        </a>
+        <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+          <img
+            align="center"
+            img
+            src="https://img.icons8.com/nolan/45/git.png"
+            width="40"
+            height="40"
+            alt="git"
+          />
+        </a>
+        <a href="https://www.heroku.com/" target="_blank" rel="noreferrer">
+          <img
+            align="center"
+            img
+            src="https://img.icons8.com/nolan/45/heroku.png"
+            width="40"
+            height="40"
+            alt="heroku"
           />
         </a>
       </div>
