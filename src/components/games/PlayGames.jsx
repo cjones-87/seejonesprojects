@@ -29,12 +29,13 @@ export default function PlayGames() {
           </a>
           <Iframe
             url="https://guessing-game-blue.vercel.app/"
-            width="800px"
-            height="800px"
+            width={window.innerWidth / 2.5}
+            height={window.innerHeight / 2.5}
             id="myId"
             className="myClassname"
             display="initial"
             position="relative"
+            frameBorder={0}
           />
         </div>
         <div>
@@ -45,12 +46,13 @@ export default function PlayGames() {
           </a>
           <Iframe
             url="https://mugnificent-coffee-clicker.vercel.app/"
-            width="800px"
-            height="800px"
+            width={window.innerWidth / 2.5}
+            height={window.innerHeight / 2.5}
             id="myId"
             className="myClassname"
             display="initial"
             position="relative"
+            frameBorder={0}
           />
         </div>
       </div>

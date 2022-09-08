@@ -17,7 +17,7 @@ import TechSkills from '../techSkills/TechSkills';
 export default class AboutMe extends React.Component {
   render() {
     const handleError = (e) =>
-      (e.target.src = 'https://i.imgur.com/xNRiK7S.jpg');
+      (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
 
     return (
       <div
@@ -35,7 +35,7 @@ export default class AboutMe extends React.Component {
           <div id="homeLogo" style={{ paddingBottom: '1.5rem' }}>
             <img
               alt="Card"
-              src="https://i.imgur.com/YvqyfW5.png"
+              src="https://i.imgur.com/5rXZ1Fl.png"
               onError={handleError}
               style={{
                 maxWidth: '150%',
