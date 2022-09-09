@@ -6,8 +6,10 @@ import { ProjectData } from '.././projects/data/ProjectData';
 import '.././projects/ProjectSlideshow.css';
 import '../../App.css';
 
-import GithubSkyline2021 from './2021 Github Skyline.gif';
-import GithubSkyline2022 from './2022 Github Skyline.gif';
+import {
+  GithubSkyline2021,
+  GithubSkyline2022,
+} from '../../photos/PhotoExports';
 
 export default function Home() {
   window.onresize = () => location.reload();

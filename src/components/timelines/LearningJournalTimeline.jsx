@@ -8,14 +8,16 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import './Timeline.css';
 
-import IdleClicker from '../projects/IdleClicker.png';
-import GuessingGame from '../projects/GuessingGame.png';
-import FullstackLogo from '../projects/FullstackLogo.png';
-import computerLove from '../projects/computerLove.gif';
-import BoundzBookstore from '../projects/BoundzBookstore.png';
-import Hypnotiq from '../projects/Hypnotiq.gif';
-import seeJonesEngineer from '../individualProjects/photos/SeeJonesEngineer/seeJonesEngineer.png';
-import imageNotFound from '../projects/imageNotFound.jpeg';
+import {
+  IdleClickerPic,
+  GuessingGamePic,
+  FullstackLogo,
+  ComputerLovePic,
+  browseBooks,
+  HypnotiqPic,
+  seeJonesEngineer,
+  imageNotFound,
+} from '../../photos/PhotoExports';
 
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
@@ -72,7 +74,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2022',
         icon: 'pi pi-star',
         color: '#673AB7',
-        image: computerLove,
+        image: ComputerLovePic,
         description: 'Full Stack Expo Mobile App',
 
         techStack: (
@@ -113,7 +115,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2022',
         icon: 'pi pi-star',
         color: '#FF9800',
-        image: Hypnotiq,
+        image: HypnotiqPic,
         description: 'Frontend Mobile App',
         techStack: (
           <span>
@@ -152,7 +154,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2021',
         icon: 'pi pi-star',
         color: '#9C27B0',
-        image: BoundzBookstore,
+        image: browseBooks,
         description: 'Full Stack Secure eCommerce',
         techStack: (
           <span>
@@ -191,7 +193,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2021',
         icon: 'pi pi-star',
         color: '#673AB7',
-        image: IdleClicker,
+        image: IdleClickerPic,
         description: 'Idle click and accrue game.',
         techStack: (
           <span>
@@ -213,7 +215,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2021',
         icon: 'pi pi-star',
         color: '#FF9800',
-        image: GuessingGame,
+        image: GuessingGamePic,
         description: 'Guess the number in 5 guesses or less.',
         techStack: (
           <span>

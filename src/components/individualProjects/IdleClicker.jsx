@@ -5,8 +5,7 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
-import IdleClickerPic from './photos/IdleClicker.png';
-import imageNotFound from './photos/imageNotFound.jpeg';
+import { IdleClickerPic, imageNotFound } from '../../photos/PhotoExports';
 
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 

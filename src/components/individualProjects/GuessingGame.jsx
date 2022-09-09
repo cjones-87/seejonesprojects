@@ -6,8 +6,7 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
-import GuessingGamePic from './photos/GuessingGame.png';
-import imageNotFound from './photos/imageNotFound.jpeg';
+import { GuessingGamePic, imageNotFound } from '../../photos/PhotoExports';
 
 import { FaNodeJs } from 'react-icons/fa';
 

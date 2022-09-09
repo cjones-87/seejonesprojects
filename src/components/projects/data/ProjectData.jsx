@@ -1,37 +1,39 @@
-import IdleClicker from '../IdleClicker.png';
-import GuessingGame from '../GuessingGame.png';
-import computerLove from '../computerLove.gif';
-import BoundzBookstore from '../BoundzBookstore.png';
-import Hypnotiq from '../Hypnotiq.gif';
+import {
+  IdleClickerPic,
+  GuessingGamePic,
+  ComputerLovePic,
+  browseBooks,
+  HypnotiqPic,
+} from '../../../photos/PhotoExports';
 
 export const ProjectData = [
   {
     id: 1,
-    image: computerLove,
+    image: ComputerLovePic,
     caption: 'Computer Love',
     href: 'https://www.seejonesengineer.com/projects/computerlove',
   },
   {
     id: 2,
-    image: Hypnotiq,
+    image: HypnotiqPic,
     caption: 'Hypnotiq',
     href: 'https://www.seejonesengineer.com/projects/hypnotiq',
   },
   {
     id: 3,
-    image: BoundzBookstore,
+    image: browseBooks,
     caption: 'Boundz Bookstore',
     href: 'https://www.seejonesengineer.com/projects/boundzbookstore',
   },
   {
     id: 4,
-    image: IdleClicker,
+    image: IdleClickerPic,
     caption: 'Idle Clicker',
     href: 'https://www.seejonesengineer.com/projects/idleclicker',
   },
   {
     id: 5,
-    image: GuessingGame,
+    image: GuessingGamePic,
     caption: 'Guessing Game',
     href: 'https://www.seejonesengineer.com/projects/guessinggame',
   },

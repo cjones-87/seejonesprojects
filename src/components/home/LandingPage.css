@@ -3,11 +3,6 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   color: white;
-  /* background-image: url('https://i.imgur.com/xNRiK7S.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; */
 }
 
 a {
@@ -23,7 +18,7 @@ h2 {
 }
 
 #showcase {
-  background-image: url("./CJ'sDesktop.jpeg");
+  background-image: url("../../photos/CJ'sDesktop.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
