@@ -260,15 +260,24 @@ export default class LearningJournalTimeline extends Component {
     };
 
     const customizedContent = (item) => {
+      window.onresize = () => location.reload();
       return (
-        <Card title={item.status} subTitle={item.date}>
+        <Card
+          title={item.status}
+          subTitle={item.date}
+          style={{
+            justifyContent: 'space-evenly',
+            textAlign: 'center',
+            paddingTop: '1.5rem',
+          }}
+        >
           {item.image && (
             <img
               src={item.image}
               onError={(e) => (e.target.src = imageNotFound)}
               alt={item.name}
-              width={'600vw'}
-              height={'300vh'}
+              width={window.innerWidth / 2.5}
+              height={window.innerHeight / 3}
               className="p-shadow-2"
             />
           )}
