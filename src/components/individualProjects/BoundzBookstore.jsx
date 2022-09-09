@@ -6,14 +6,16 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
-import home from './photos/BoundzBookstore/home.png';
-import browseBooks from './photos/BoundzBookstore/browseBooks.png';
-import editBooks from './photos/BoundzBookstore/editBooks.png';
-import viewUser from './photos/BoundzBookstore/viewUser.png';
-import shoppingCart from './photos/BoundzBookstore/shoppingCart.png';
-import checkout1 from './photos/BoundzBookstore/checkout1.png';
-import checkout2 from './photos/BoundzBookstore/checkout2.png';
-import imageNotFound from './photos/imageNotFound.jpeg';
+import {
+  home,
+  browseBooks,
+  editBooks,
+  viewUser,
+  shoppingCart,
+  checkout1,
+  checkout2,
+  imageNotFound,
+} from '../../photos/PhotoExports';
 
 import { FaNodeJs, FaReact } from 'react-icons/fa';
 

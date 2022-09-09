@@ -22,14 +22,16 @@ import {
 
 import { DiJavascript1 } from 'react-icons/di';
 
-import ComputerLovePic from './photos/ComputerLove/computerLove.gif';
-import activityScreen from './photos/ComputerLove/activityScreen.png';
-import homeScreen from './photos/ComputerLove/homeScreen.png';
-import loginScreen from './photos/ComputerLove/loginScreen.png';
-import likeScreen from './photos/ComputerLove/likeScreen.png';
-import meetScreen from './photos/ComputerLove/meetScreen.png';
-import registrationScreen from './photos/ComputerLove/registrationScreen.png';
-import imageNotFound from './photos/imageNotFound.jpeg';
+import {
+  ComputerLovePic,
+  activityScreen,
+  homeScreen,
+  loginScreen,
+  likeScreen,
+  meetScreen,
+  registrationScreen,
+  imageNotFound,
+} from '../../photos/PhotoExports';
 
 export default class ComputerLove extends React.Component {
   constructor() {

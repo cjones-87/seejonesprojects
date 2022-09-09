@@ -8,17 +8,19 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
-import HypnotiqPic from './photos/Hypnotiq/Hypnotiq.gif';
-import BabyJams from './photos/Hypnotiq/BabyJams.jpg';
-import BabyFacts from './photos/Hypnotiq/BabyFacts.jpg';
-import ClassicalJams from './photos/Hypnotiq/ClassicalJams.jpg';
-import ClassicalFacts from './photos/Hypnotiq/ClassicFacts.jpg';
-import JazzJams from './photos/Hypnotiq/JazzJams.jpg';
-import JazzFacts from './photos/Hypnotiq/JazzFacts.jpg';
-import BrownNoise from './photos/Hypnotiq/BrownNoise.jpg';
-import BrownFacts from './photos/Hypnotiq/BrownFacts.jpg';
-import MainMenu from './photos/Hypnotiq/MainMenu.png';
-import imageNotFound from './photos/imageNotFound.jpeg';
+import {
+  HypnotiqPic,
+  BabyJams,
+  BabyFacts,
+  ClassicalJams,
+  ClassicalFacts,
+  JazzJams,
+  JazzFacts,
+  BrownNoise,
+  BrownFacts,
+  MainMenu,
+  imageNotFound,
+} from '../../photos/PhotoExports';
 
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
 

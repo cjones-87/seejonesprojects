@@ -73,6 +73,18 @@ export default class AboutMe extends React.Component {
               }}
             />
           </p>
+          <p style={{ fontSize: '2em' }}>
+            <Typewriter
+              options={{
+                strings: `I enjoy working with libraries/frameworks such as React & React Native Expo. I’m looking to grow in my software engineer journey by transitioning from freelance. I plan to start a career at a company where communication, passion, and innovation go hand in hand. I am also currently studying data structures & algorithms. I’m looking to collaborate on projects on varying topics. One of my strongest passions is entertainment, so I would love to collaborate with individuals or groups on anything music, tv/movie, or gaming-related.
+
+                `,
+                autoStart: true,
+                loop: false,
+                delay: 25,
+              }}
+            />
+          </p>
           <p style={{ fontSize: '1.25em' }}>
             <small>
               <Typewriter
@@ -85,7 +97,8 @@ export default class AboutMe extends React.Component {
             </small>
 
             <big>
-              <FaReact /> <FaMobileAlt /> <SiExpo /> <FaNodeJs />
+              <DiJavascript1 /> <FaReact /> <FaMobileAlt /> <SiExpo />{' '}
+              <FaNodeJs />
             </big>
 
             <small>
@@ -98,7 +111,7 @@ export default class AboutMe extends React.Component {
               />
             </small>
             <big>
-              <FaReact /> <DiJavascript1 /> <FaNodeJs />
+              <DiJavascript1 /> <FaReact /> <FaNodeJs />
             </big>
 
             <small>

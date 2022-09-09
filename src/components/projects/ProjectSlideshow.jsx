@@ -51,9 +51,7 @@ const ProjectSlideshow = ({ slides }) => {
         paddingTop: '1rem',
       }}
     >
-      <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
-        Projects
-      </h1>
+      <h1 style={{ color: 'rebeccapurple' }}>Projects</h1>
       <section className="slider">
         <FaArrowAltCircleLeft
           className="previous"
@@ -77,7 +75,6 @@ const ProjectSlideshow = ({ slides }) => {
                   style={{
                     color: 'white',
                     textShadow: '2px 2px 2px #01020E',
-                    paddingTop: '1rem',
                   }}
                 >
                   <a href={slide.href}>

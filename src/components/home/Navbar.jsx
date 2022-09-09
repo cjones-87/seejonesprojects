@@ -15,8 +15,6 @@ import { Tooltip } from 'primereact/tooltip';
 
 import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 
-import Iframe from 'react-iframe';
-
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);

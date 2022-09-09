@@ -14,13 +14,21 @@ import ProjectSlideshow from './ProjectSlideshow';
 import { ProjectData } from './data/ProjectData';
 import './ProjectSlideshow.css';
 
-import IdleClicker from './IdleClicker.png';
-import GuessingGame from './GuessingGame.png';
-import computerLove from './computerLove.gif';
-import BoundzBookstore from './BoundzBookstore.png';
-import Hypnotiq from './Hypnotiq.gif';
-import portfolioPic from './portfolioPic.png';
-import imageNotFound from './imageNotFound.jpeg';
+import {
+  IdleClickerPic,
+  GuessingGamePic,
+  ComputerLovePic,
+  browseBooks,
+  HypnotiqPic,
+  portfolioPic,
+  imageNotFound,
+} from '../../photos/PhotoExports';
+// import GuessingGame from '../../photos/GuessingGame.png';
+// import computerLove from '../../photos/ComputerLove/computerLove.gif';
+// import BoundzBookstore from '../../photos/BoundzBookstore/browseBooks.png';
+// import Hypnotiq from '../../photos/Hypnotiq/Hypnotiq.gif';
+// import portfolioPic from '../../photos/portfolioPic.png';
+// import imageNotFound from '../../photos/imageNotFound.jpeg';
 
 export default class AllProjects extends React.Component {
   constructor(props) {
@@ -38,7 +46,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'Computer Love',
-          image: computerLove,
+          image: ComputerLovePic,
           category: 'React Native Mobile App',
           difficulty: 10,
           status: 'complete',
@@ -46,7 +54,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'Hypnotiq',
-          image: Hypnotiq,
+          image: HypnotiqPic,
           category: 'React Native Mobile App',
           difficulty: 7,
           status: 'v2 in progress',
@@ -54,7 +62,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'Boundz Bookstore',
-          image: BoundzBookstore,
+          image: browseBooks,
           category: 'React Web App',
           difficulty: 10,
           status: 'complete',
@@ -62,7 +70,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'Idle Clicker',
-          image: IdleClicker,
+          image: IdleClickerPic,
           category: 'Vanilla JS, HTML, CSS',
           difficulty: 6,
           status: 'v2 in progress',
@@ -70,7 +78,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'Guessing Game',
-          image: GuessingGame,
+          image: GuessingGamePic,
           category: 'Vanilla JS, HTML, CSS',
           difficulty: 3,
           status: 'complete',

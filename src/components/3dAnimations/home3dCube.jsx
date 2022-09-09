@@ -18,16 +18,6 @@ export default function Cube() {
         width: '100%',
       }}
     >
-      <a href="https://3d-box-animation.vercel.app/">
-        <h1
-          style={{
-            color: 'rebeccapurple',
-            paddingBottom: '1rem',
-          }}
-        >
-          3d Animation
-        </h1>
-      </a>
       <div className="App bg-black-alpha-90" style={{ width: '100%' }}>
         <Iframe
           url="https://3d-box-animation.vercel.app/"

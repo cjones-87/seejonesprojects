@@ -6,15 +6,16 @@ import 'primeicons/primeicons.css';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
-import seeJonesEngineer from './photos/SeeJonesEngineer/seeJonesEngineer.png';
-import aboutMe from './photos/SeeJonesEngineer/aboutMe.png';
-import landingPage from './photos/SeeJonesEngineer/landingPage.png';
-import projects from './photos/SeeJonesEngineer/projects.png';
-import learningJournal from './photos/SeeJonesEngineer/learningJournal.png';
-import interactiveGames from './photos/SeeJonesEngineer/interactiveGames.png';
-import contactForm from './photos/SeeJonesEngineer/contactForm.png';
-
-import imageNotFound from './photos/imageNotFound.jpeg';
+import {
+  seeJonesEngineer,
+  aboutMe,
+  landingPage,
+  projects,
+  learningJournal,
+  interactiveGames,
+  contactForm,
+  imageNotFound,
+} from '../../photos/PhotoExports';
 
 import { FaReact } from 'react-icons/fa';
 
