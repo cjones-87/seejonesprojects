@@ -7,8 +7,6 @@ import 'primereact/resources/primereact.css';
 
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
-import './ProjectSlideshow.css';
-
 const ProjectSlideshow = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
