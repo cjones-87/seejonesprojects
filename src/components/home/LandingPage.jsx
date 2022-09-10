@@ -120,9 +120,9 @@ export default class LandingPage extends React.Component {
             <div id="sectionA">
               I am a freelance software engineer, passionate about learning &
               implementing new technologies. I am proficient in writing clean,
-              efficient, DRY implementations. I am a perspicacious problem
-              solver and fastidious engineer who can accomplish anything I set
-              my mind to.
+              efficient, DRY implementations. I am a fastidious engineer and
+              perspicacious problem solver who can accomplish anything I set my
+              mind to.
             </div>
             <div id="sectionB">
               <h4 align="center"> Languages </h4>
