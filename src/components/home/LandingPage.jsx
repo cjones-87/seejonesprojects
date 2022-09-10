@@ -13,17 +13,7 @@ import { ImHtmlFive } from 'react-icons/im';
 
 import { DiJavascript1 } from 'react-icons/di';
 
-import {
-  SiChakraui,
-  SiCss3,
-  SiExpo,
-  SiExpress,
-  SiMaterialui,
-  SiPostgresql,
-  SiRedux,
-  SiSemanticuireact,
-  SiSequelize,
-} from 'react-icons/si';
+import { SiCss3, SiExpo, SiRedux } from 'react-icons/si';
 
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
