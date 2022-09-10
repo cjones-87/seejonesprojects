@@ -3,6 +3,10 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   color: white;
+  background-image: url("../../photos/CJ'sDesktop.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -18,10 +22,6 @@ h2 {
 }
 
 #showcase {
-  background-image: url("../../photos/CJ'sDesktop.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 120vh;
   display: flex;
   flex-direction: column;
