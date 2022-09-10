@@ -33,15 +33,17 @@ h2 {
 }
 
 #sectionA {
-  padding: 20px;
-  background: gray;
-  text-align: center;
-}
-#sectionB {
-  padding: 20px;
+  padding: 1rem;
   background: rebeccapurple;
   text-align: center;
+  border: groove 0.5rem white;
+}
+#sectionB {
+  padding: 1rem;
+  background: gray;
+  text-align: center;
   flex-grow: 1;
+  border: groove 0.5rem white;
 }
 
 #sectionC {
@@ -51,17 +53,19 @@ h2 {
 }
 
 #sectionC div {
-  padding: 20px;
+  border: groove 0.5rem white;
   width: 100%;
 }
 
-.sectionC1,
-.sectionC3 {
+.sectionC1 {
+  padding: 1rem;
   background: gray;
   text-align: center;
 }
 
 .sectionC2 {
+  padding: 1rem;
+
   background: rebeccapurple;
   text-align: center;
 }
