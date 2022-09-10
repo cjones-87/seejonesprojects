@@ -1,5 +1,5 @@
 import React from 'react';
-import Cube from '../3dAnimations/home3dCube';
+import Cube from './Cube';
 
 import ProjectSlideshow from '../projects/ProjectSlideshow';
 import { ProjectData } from '.././projects/data/ProjectData';
