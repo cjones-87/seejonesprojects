@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ProjectSlideshow.css';
+import "./ProjectsCSS/ProjectSlideshow.css";
 
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';

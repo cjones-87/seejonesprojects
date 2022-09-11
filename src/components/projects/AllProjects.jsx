@@ -1,18 +1,18 @@
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import './Projects.css';
+import "./ProjectsCSS/Projects.css";
 
-import React from 'react';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { ProjectFunctions } from './ProjectFunctions';
-import { Button } from 'primereact/button';
-import { Rating } from 'primereact/rating';
+import React from "react";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { ProjectFunctions } from "./ProjectFunctions";
+import { Button } from "primereact/button";
+import { Rating } from "primereact/rating";
 
-import ProjectSlideshow from './ProjectSlideshow';
-import { ProjectData } from './data/ProjectData';
-import './ProjectSlideshow.css';
+import ProjectSlideshow from "./ProjectSlideshow";
+import { ProjectData } from "./data/ProjectData";
+import "./ProjectsCSS/ProjectSlideshow.css";
 
 import {
   IdleClickerPic,

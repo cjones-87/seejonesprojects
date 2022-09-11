@@ -5,19 +5,20 @@ import Navbar from './components/home/Navbar';
 import Footer from './components/home/Footer';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AllProjects from './components/projects/AllProjects';
-import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
-import AboutMe from './components/aboutMe/AboutMe';
-import ContactForm from './components/contactMe/ContactForm';
-import LandingPage from './components/home/LandingPage';
-import Home from './components/home/Home';
-import PlayGames from './components/games/PlayGames';
-import GuessingGame from './components/individualProjects/GuessingGame/GuessingGame';
-import IdleClicker from './components/individualProjects/IdleClicker/IdleClicker';
-import BoundzBookstore from './components/individualProjects/BoundzBookstore/BoundzBookstore';
-import Hypnotiq from './components/individualProjects/Hypnotiq/Hypnotiq';
-import ComputerLove from './components/individualProjects/ComputerLove/ComputerLove';
-import SeeJonesEngineer from './components/individualProjects/SeeJonesEngineer/SeeJonesEngineer';
+
+import AllProjects from "./components/projects/AllProjects";
+import LearningJournalTimeline from "./components/timelines/LearningJournalTimeline";
+import AboutMe from "./components/aboutMe/AboutMe";
+import ContactForm from "./components/contactMe/ContactForm";
+import LandingPage from "./components/home/LandingPage";
+import Home from "./components/home/Home";
+import PlayGames from "./components/games/PlayGames";
+import GuessingGame from "./components/projects/GuessingGame/GuessingGame";
+import IdleClicker from "./components/projects/IdleClicker/IdleClicker";
+import BoundzBookstore from "./components/projects/BoundzBookstore/BoundzBookstore";
+import Hypnotiq from "./components/projects/Hypnotiq/Hypnotiq";
+import ComputerLove from "./components/projects/ComputerLove/ComputerLove";
+import SeeJonesEngineer from "./components/projects/SeeJonesEngineer/SeeJonesEngineer";
 import PageNotFound404 from './components/error/PageNotFound404';
 
 ReactDOM.render(
