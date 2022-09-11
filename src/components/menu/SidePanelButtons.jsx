@@ -38,16 +38,16 @@ export default class SidePanelButtons extends React.Component {
       <div
         className="button bg-black-alpha-90"
         style={{
-          color: 'white',
-          textShadow: '2px 2px 2px #01020E',
+          color: "white",
+          textShadow: "2px 2px 2px #01020E",
         }}
       >
         <div className="card bg-black-alpha-90">
           <h5
             style={{
-              textAlign: 'center',
+              textAlign: "center",
               paddingTop: 10,
-              color: 'rebeccapurple',
+              color: "rebeccapurple",
             }}
           >
             Stay connected with me & my work by following me on:
@@ -55,8 +55,8 @@ export default class SidePanelButtons extends React.Component {
           <div
             className="template"
             style={{
-              display: 'flex',
-              flexDirection: 'column',
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <Button className="linkedin p-0">
@@ -158,10 +158,16 @@ export default class SidePanelButtons extends React.Component {
               </a>
             </Button>
 
-            {/* <Button className="paypal p-0 bg-black-alpha-20">
-              <i className="pi pi-paypal px-2"></i>
-              <span className="px-3">Paypal</span>
-            </Button> */}
+            <Button className="tiktok p-0 bg-black-alpha-20">
+              <i className="pi pi-user px-2"></i>
+              <a
+                href="https://www.tiktok.com/@seejonesengineer"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <span className="px-3">TikTok</span>
+              </a>
+            </Button>
 
             <Button className="money-bill p-0">
               <i className="pi pi-money-bill px-2"></i>

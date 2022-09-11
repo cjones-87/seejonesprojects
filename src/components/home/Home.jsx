@@ -3,7 +3,7 @@ import Cube from './Cube';
 
 import ProjectSlideshow from '../projects/ProjectSlideshow';
 import { ProjectData } from '.././projects/data/ProjectData';
-import '.././projects/ProjectSlideshow.css';
+import ".././projects/ProjectsCSS/ProjectSlideshow.css";
 import '../../App.css';
 
 import {

@@ -218,26 +218,26 @@
 }
 /*  */
 /*  */
-.button .template .p-button.paypal {
+.button .template .p-button.tiktok {
   background: linear-gradient(
     to left,
-    var(--blue-600) 50%,
-    var(--blue-700) 50%
+    var(--gray-900) 50%,
+    var(--teal-400) 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position 0.5s ease-out;
   color: #fff;
-  border-color: var(--blue-700);
+  border-color: var(--teal-400);
 }
-.button .template .p-button.paypal:hover {
+.button .template .p-button.tiktok:hover {
   background-position: left bottom;
 }
-.button .template .p-button.paypal i {
-  background-color: var(--blue-700);
+.button .template .p-button.tiktok i {
+  background-color: var(--teal-400);
 }
-.button .template .p-button.paypal:focus {
-  box-shadow: 0 0 0 1px var(--blue-400);
+.button .template .p-button.tiktok:focus {
+  box-shadow: 0 0 0 1px var(--teal-400);
 }
 /*  */
 .button .template .p-button.money-bill {

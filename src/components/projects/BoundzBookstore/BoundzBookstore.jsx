@@ -1,16 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
+import "primereact/resources/primereact.css";
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
 
-import { OrganizationChart } from 'primereact/organizationchart';
+import { OrganizationChart } from "primereact/organizationchart";
 
-import { imageNotFound } from './../../../photos/PhotoExports';
+import { imageNotFound } from "./../../../photos/PhotoExports";
 
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-
-import BoundzBookstoreData from './BoundzBookstoreData';
+import BoundzBookstoreData from "./BoundzBookstoreData";
 
 export default class BoundzBookstore extends React.Component {
   constructor() {
@@ -36,9 +34,9 @@ export default class BoundzBookstore extends React.Component {
               alt={node.data.avatar}
               src={node.data.avatar}
               onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: '100px' }}
+              style={{ width: "100px" }}
             />
-            <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
+            <div style={{ color: "rebeccapurple" }}>{node.data.info}</div>
           </div>
         </div>
       );
