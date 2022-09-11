@@ -12,12 +12,12 @@ import ContactForm from './components/contactMe/ContactForm';
 import LandingPage from './components/home/LandingPage';
 import Home from './components/home/Home';
 import PlayGames from './components/games/PlayGames';
-import GuessingGame from './components/individualProjects/GuessingGame';
-import IdleClicker from './components/individualProjects/IdleClicker';
-import BoundzBookstore from './components/individualProjects/BoundzBookstore';
-import Hypnotiq from './components/individualProjects/Hypnotiq';
-import ComputerLove from './components/individualProjects/ComputerLove';
-import SeeJonesEngineer from './components/individualProjects/SeeJonesEngineer';
+import GuessingGame from './components/individualProjects/GuessingGame/GuessingGame';
+import IdleClicker from './components/individualProjects/IdleClicker/IdleClicker';
+import BoundzBookstore from './components/individualProjects/BoundzBookstore/BoundzBookstore';
+import Hypnotiq from './components/individualProjects/Hypnotiq/Hypnotiq';
+import ComputerLove from './components/individualProjects/ComputerLove/ComputerLove';
+import SeeJonesEngineer from './components/individualProjects/SeeJonesEngineer/SeeJonesEngineer';
 import PageNotFound404 from './components/error/PageNotFound404';
 
 ReactDOM.render(
