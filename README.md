@@ -6,9 +6,11 @@
 
 <!-- Technologies Used -->
 
-### Languages & Technologies Used
+### Made With
+
 
 <div align="center">  
+<h2>Frameworks, Languages, & Tools</h2>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
   </a>
@@ -31,9 +33,11 @@
 
 <!-- View Here -->
 
-### View My Portfolio Here
+### Check Me Out
 
 <div align="center">
+ <p>This portfolio is my personal portfolio website and should work in all modern browsers.</p>
+ <p>View <img src="https://cdn-icons-png.flaticon.com/128/608/608258.png" alt="down arrow" width="15" height="15"/> Here</p>
  <a href="https://www.seejonesengineer.com/" target="_blank" >
          <img align="center" src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=opsgenie&logoColor=white" alt="CJ's Portfolio"/>
       </a>
