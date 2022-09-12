@@ -1,18 +1,19 @@
+import React from 'react';
+
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import "./ProjectsCSS/Projects.css";
+import './ProjectsCSS/Projects.css';
+import './ProjectsCSS/ProjectSlideshow.css';
 
-import React from "react";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { ProjectFunctions } from "./ProjectFunctions";
-import { Button } from "primereact/button";
-import { Rating } from "primereact/rating";
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { ProjectFunctions } from './ProjectFunctions';
+import { Button } from 'primereact/button';
+import { Rating } from 'primereact/rating';
 
-import ProjectSlideshow from "./ProjectSlideshow";
-import { ProjectData } from "./data/ProjectData";
-import "./ProjectsCSS/ProjectSlideshow.css";
+import ProjectSlideshow from './ProjectSlideshow';
+import { ProjectData } from './data/ProjectData';
 
 import {
   IdleClickerPic,
@@ -23,12 +24,6 @@ import {
   portfolioPic,
   imageNotFound,
 } from '../../photos/PhotoExports';
-// import GuessingGame from '../../photos/GuessingGame.png';
-// import computerLove from '../../photos/ComputerLove/computerLove.gif';
-// import BoundzBookstore from '../../photos/BoundzBookstore/browseBooks.png';
-// import Hypnotiq from '../../photos/Hypnotiq/Hypnotiq.gif';
-// import portfolioPic from '../../photos/portfolioPic.png';
-// import imageNotFound from '../../photos/imageNotFound.jpeg';
 
 export default class AllProjects extends React.Component {
   constructor(props) {
@@ -90,7 +85,6 @@ export default class AllProjects extends React.Component {
     this.projectFunctions = new ProjectFunctions();
     this.imageBodyTemplate = this.imageBodyTemplate.bind(this);
     this.ratingBodyTemplate = this.ratingBodyTemplate.bind(this);
-    this.statusBodyTemplate = this.statusBodyTemplate.bind(this);
   }
 
   componentDidMount() {
@@ -118,15 +112,6 @@ export default class AllProjects extends React.Component {
   ratingBodyTemplate(rowData) {
     return (
       <Rating value={rowData.difficulty} readOnly cancel={false} stars={10} />
-    );
-  }
-
-  statusBodyTemplate(rowData) {
-    const isCompleted = false;
-    return (
-      <span className={isCompleted ? 'completed' : 'version 2 in progress'}>
-        {rowData.status}
-      </span>
     );
   }
 
@@ -167,10 +152,6 @@ export default class AllProjects extends React.Component {
               field="rating"
               header="Difficulty Level (current)"
               body={this.ratingBodyTemplate}
-            ></Column>
-            <Column
-              header="Completion Status"
-              body={this.statusBodyTemplate}
             ></Column>
           </DataTable>
         </div>
