@@ -33,9 +33,10 @@
 
 <!-- View Here -->
 
-### Check Me Out
+### Check It Out
 
 <div align="center">
+  <h2>Personal Website</h2>
  <p>This portfolio is my personal portfolio website and should work in all modern browsers.</p>
  <p>View <img src="https://cdn-icons-png.flaticon.com/128/608/608258.png" alt="down arrow" width="15" height="15"/> Here</p>
  <a href="https://www.seejonesengineer.com/" target="_blank" >
