@@ -33,6 +33,10 @@
 
 ### View My Portfolio Here
 
- <a href="https://www.seejonesengineer.com/" target="_blank">
+ <a href="https://www.seejonesengineer.com/" target="_blank" align="center">
          <img align="center" src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=opsgenie&logoColor=white" alt="CJ's Portfolio"/>
       </a>
+
+<!-- Footer -->
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:301D42,10:553373,20:7a49a5,30:6D4194,40:A17FC0,50:C9B6DB,60:A17FC0,70:6D4194,80:7a49a5,90:553373,100:301D42&height=100&reversal=true&section=footer)
