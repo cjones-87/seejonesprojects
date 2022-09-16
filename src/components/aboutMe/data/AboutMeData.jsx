@@ -51,7 +51,7 @@ export const AboutMeData = [
       <div style={{ fontSize: '2rem' }}>
         <Typewriter
           options={{
-            strings: `I am also currently studying data structures & algorithms. I’m looking to collaborate on projects on varying topics. One of my strongest passions is entertainment, so I would love to collaborate with individuals or groups on anything music, tv/movie, or gaming-related.`,
+            strings: `I enjoy working with libraries/frameworks such as React & React Native Expo. I’m looking to grow in my software engineer journey by transitioning from freelance. I plan to start a career at a company where communication, passion, and innovation go hand in hand.`,
             autoStart: true,
             loop: false,
             delay: 1,
@@ -67,7 +67,7 @@ export const AboutMeData = [
       <div style={{ fontSize: '2rem' }}>
         <Typewriter
           options={{
-            strings: `I am also currently studying data structures & algorithms. I’m looking to collaborate on projects on varying topics. One of my strongest passions is entertainment, so I would love to collaborate with individuals or groups on anything music, tv/movie, or gaming-related.`,
+            strings: `Currently, I'm looking to collaborate by studying data structures & algorithms & working on projects on varying topics. One of my strongest passions is entertainment, so I would love to collaborate with individuals or groups on anything music, tv/movie, or gaming-related.`,
             autoStart: true,
             loop: false,
             delay: 1,
