@@ -25,6 +25,16 @@ export default class AboutMe extends React.Component {
         <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
           About Me
         </h1>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
         <div style={{ paddingBottom: 100 }}>
           <WhoAmI slides={AboutMeData} />
         </div>
