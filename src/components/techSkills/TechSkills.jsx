@@ -6,8 +6,16 @@ import React from 'react';
 
 export default function TechSkills() {
   return (
-    <>
-      <h4 align="center"> Languages </h4>
+    <div
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+        paddingTop: '1rem',
+      }}
+    >
+      <h4 align="center">
+        <b>Languages </b>
+      </h4>
       <div align="center">
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -43,7 +51,10 @@ export default function TechSkills() {
         </a>
       </div>
 
-      <h4 align="center"> Front-End </h4>
+      <h4 align="center">
+        {' '}
+        <b>Front-End</b>{' '}
+      </h4>
       <div align="center">
         <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
           <img
@@ -106,7 +117,10 @@ export default function TechSkills() {
           />
         </a>
       </div>
-      <h4 align="center"> Back-End </h4>
+      <h4 align="center">
+        {' '}
+        <b>Back-End</b>{' '}
+      </h4>
       <div align="center">
         <a href="https://nodejs.org" target="_blank" rel="noreferrer">
           <img
@@ -141,7 +155,9 @@ export default function TechSkills() {
           />
         </a>
       </div>
-      <h4 align="center"> Tools </h4>
+      <h4 align="center">
+        <b>Tools</b>
+      </h4>
       <div align="center">
         <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
           <img
@@ -192,6 +208,6 @@ export default function TechSkills() {
           />
         </a>
       </div>
-    </>
+    </div>
   );
 }

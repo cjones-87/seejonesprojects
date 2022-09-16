@@ -1,24 +1,18 @@
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-
+import WhoAmI from './WhoAmI';
 import './AboutMe.css';
+import { AboutMeData } from './data/AboutMeData';
 
 import React from 'react';
 
-import { SiExpo } from 'react-icons/si';
-import { DiJavascript1 } from 'react-icons/di';
-import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
-
-import Typewriter from 'typewriter-effect';
+import Specialization from '../techSkills/Specialization';
 
 import TechSkills from '../techSkills/TechSkills';
 
 export default class AboutMe extends React.Component {
   render() {
-    const handleError = (e) =>
-      (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
-
     return (
       <div
         className="aboutMeParent bg-black-alpha-90"
@@ -31,99 +25,21 @@ export default class AboutMe extends React.Component {
         <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
           About Me
         </h1>
-        <div>
-          <div id="homeLogo" style={{ paddingBottom: '1.5rem' }}>
-            <img
-              alt="Card"
-              src="https://i.imgur.com/5rXZ1Fl.png"
-              onError={handleError}
-              style={{
-                maxWidth: '150%',
-                maxHeight: '150%',
-                borderRadius: '50%',
-              }}
-            />
-          </div>
+        <div style={{ paddingBottom: 100 }}>
+          <WhoAmI slides={AboutMeData} />
         </div>
-        <div>
-          <p style={{ fontSize: '2em' }}>
-            <Typewriter
-              options={{
-                strings: `I, CJ Jones, am a software engineer living in NYC. I have
-                  successfully graduated from an immersive full-time software
-                  engineering program offered by Fullstack Academy. Currently, I
-                  freelance for individuals and brands across multiple industries.`,
-                autoStart: true,
-                loop: false,
-                delay: 25,
-              }}
-            />
-          </p>
-          <p style={{ fontSize: '2em' }}>
-            <Typewriter
-              options={{
-                strings: `I have a passion for using technology to create intuitive & visually
-                stimulating UI for enhanced user experiences. This, coupled with a
-                penchant for furthering my knowledge and SWE skillset, gives me a
-                love of combining existing best practices with innovative solutions
-                to solve client & company needs.`,
-                autoStart: true,
-                loop: false,
-                delay: 25,
-              }}
-            />
-          </p>
-          <p style={{ fontSize: '2em' }}>
-            <Typewriter
-              options={{
-                strings: `I enjoy working with libraries/frameworks such as React & React Native Expo. I’m looking to grow in my software engineer journey by transitioning from freelance. I plan to start a career at a company where communication, passion, and innovation go hand in hand. I am also currently studying data structures & algorithms. I’m looking to collaborate on projects on varying topics. One of my strongest passions is entertainment, so I would love to collaborate with individuals or groups on anything music, tv/movie, or gaming-related.
-
-                `,
-                autoStart: true,
-                loop: false,
-                delay: 25,
-              }}
-            />
-          </p>
-          <p style={{ fontSize: '1.25em' }}>
-            <small>
-              <Typewriter
-                options={{
-                  strings: 'I specialize in',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </small>
-
-            <big>
-              <DiJavascript1 /> <FaReact /> <FaMobileAlt /> <SiExpo />{' '}
-              <FaNodeJs />
-            </big>
-
-            <small>
-              <Typewriter
-                options={{
-                  strings: 'for mobile development & ',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </small>
-            <big>
-              <DiJavascript1 /> <FaReact /> <FaNodeJs />
-            </big>
-
-            <small>
-              <Typewriter
-                options={{
-                  strings: 'for web development',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </small>
-          </p>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
+        <div style={{ paddingTop: 100 }}>
+          <Specialization />
         </div>
         <div>
           <TechSkills />
