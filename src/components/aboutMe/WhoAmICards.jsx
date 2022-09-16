@@ -4,7 +4,7 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
-const WhoAmI = ({ slides }) => {
+const WhoAmICards = ({ slides }) => {
   const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
 
   const [current, setCurrent] = useState(0);
@@ -109,4 +109,4 @@ const WhoAmI = ({ slides }) => {
     </div>
   );
 };
-export default WhoAmI;
+export default WhoAmICards;
