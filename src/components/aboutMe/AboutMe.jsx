@@ -1,7 +1,7 @@
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import WhoAmI from './WhoAmI';
+import WhoAmICards from './WhoAmICards';
 import './AboutMe.css';
 import { AboutMeData } from './data/AboutMeData';
 
@@ -36,7 +36,7 @@ export default class AboutMe extends React.Component {
         <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
         <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
         <div style={{ paddingBottom: 100 }}>
-          <WhoAmI slides={AboutMeData} />
+          <WhoAmICards slides={AboutMeData} />
         </div>
         <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
         <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
