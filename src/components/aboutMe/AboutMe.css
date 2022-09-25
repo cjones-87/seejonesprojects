@@ -1,9 +1,0 @@
-.aboutMeParent {
-  /* margin: 1rem; */
-  text-align: center;
-}
-.aboutMeChild {
-  display: inline-block;
-  padding: 1rem 1rem;
-  vertical-align: top;
-}

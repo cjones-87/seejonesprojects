@@ -1,8 +1,8 @@
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import WhoAmICards from './WhoAmICards';
-import './AboutMe.css';
+
+import AboutMeCards from './AboutMeCards';
 import { AboutMeData } from './data/AboutMeData';
 
 import React from 'react';
@@ -15,40 +15,26 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <div
-        className="aboutMeParent bg-black-alpha-90"
+        className="bg-black-alpha-90"
         style={{
           color: 'white',
           textShadow: '2px 2px 2px #01020E',
           paddingTop: '1rem',
+          textAlign: 'center',
         }}
       >
-        <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+        <h1
+          style={{
+            color: 'rebeccapurple',
+            paddingBottom: '1rem',
+          }}
+        >
           About Me
         </h1>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ paddingBottom: 100 }}>
-          <WhoAmICards slides={AboutMeData} />
-        </div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ width: '100%', height: '100%' }}>&nbsp;</div>
-        <div style={{ paddingTop: 100 }}>
+
+        <AboutMeCards slides={AboutMeData} />
+        <div>{'\n\n\n\n\n\n'}</div>
+        <div style={{ paddingTop: 75 }}>
           <Specialization />
         </div>
         <div>
