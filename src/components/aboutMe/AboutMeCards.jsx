@@ -4,6 +4,8 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
+import { Card } from 'primereact/card';
+
 const WhoAmICards = ({ slides }) => {
   const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
 
@@ -33,13 +35,14 @@ const WhoAmICards = ({ slides }) => {
         setCurrent((prevIndex) =>
           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         ),
-      25000
+      20000
     );
 
     return () => {
       resetTimeout();
     };
   }, [current]);
+
   return (
     <div id="section">
       <section className="slider">
@@ -55,6 +58,9 @@ const WhoAmICards = ({ slides }) => {
         />
 
         {slides.map((slide, index) => {
+          const header = (
+            <img alt="Card" src={slide.image} onError={handleError} />
+          );
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -62,46 +68,11 @@ const WhoAmICards = ({ slides }) => {
             >
               {index === current && (
                 <div>
-                  <div
-                    style={{
-                      color: 'white',
-                      textShadow: '2px 2px 2px #01020E',
-                      textAlign: 'center',
-                      justifyContent: 'center',
-                      alignContent: 'center',
-                      alignItems: 'center',
-                      alignSelf: 'center',
-                      border: 'solid',
-                      borderColor: 'rebeccapurple',
-                      borderRadius: 50,
-                      borderWidth: 5,
-                      padding: 30,
-                    }}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={''}
-                      className="image"
-                      id="image"
-                      onError={handleError}
-                      style={{
-                        borderRadius: '50%',
-                        width: window.innerWidth / 3,
-                        height: window.innerHeight / 3,
-                        paddingBottom: 10,
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      color: 'white',
-                      textShadow: '2px 2px 2px #01020E',
-                      width: window.innerWidth / 3,
-                      paddingTop: 20,
-                    }}
-                  >
-                    {slide.paragraph}
-                  </div>
+                  <Card style={{ width: '25em' }} header={header}>
+                    <p className="m-0" style={{ lineHeight: '1.5' }}>
+                      {slide.paragraph}
+                    </p>
+                  </Card>
                 </div>
               )}
             </div>
