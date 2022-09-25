@@ -61,41 +61,43 @@ const WhoAmICards = ({ slides }) => {
               key={index}
             >
               {index === current && (
-                <div
-                  style={{
-                    color: 'white',
-                    textShadow: '2px 2px 2px #01020E',
-                    textAlign: 'center',
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                    alignItems: 'center',
-                    alignSelf: 'center',
-                    border: 'solid',
-                    borderColor: 'rebeccapurple',
-                    borderRadius: 50,
-                    borderWidth: 5,
-                    padding: 30,
-                  }}
-                >
-                  <img
-                    src={slide.image}
-                    alt={''}
-                    className="image"
-                    id="image"
-                    onError={handleError}
+                <div>
+                  <div
                     style={{
-                      borderRadius: '50%',
-                      width: window.innerWidth / 3,
-                      height: window.innerHeight / 3,
-                      paddingBottom: 10,
+                      color: 'white',
+                      textShadow: '2px 2px 2px #01020E',
+                      textAlign: 'center',
+                      justifyContent: 'center',
+                      alignContent: 'center',
+                      alignItems: 'center',
+                      alignSelf: 'center',
+                      border: 'solid',
+                      borderColor: 'rebeccapurple',
+                      borderRadius: 50,
+                      borderWidth: 5,
+                      padding: 30,
                     }}
-                  />
-
+                  >
+                    <img
+                      src={slide.image}
+                      alt={''}
+                      className="image"
+                      id="image"
+                      onError={handleError}
+                      style={{
+                        borderRadius: '50%',
+                        width: window.innerWidth / 3,
+                        height: window.innerHeight / 3,
+                        paddingBottom: 10,
+                      }}
+                    />
+                  </div>
                   <div
                     style={{
                       color: 'white',
                       textShadow: '2px 2px 2px #01020E',
                       width: window.innerWidth / 3,
+                      paddingTop: 20,
                     }}
                   >
                     {slide.paragraph}
