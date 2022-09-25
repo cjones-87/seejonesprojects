@@ -23,17 +23,9 @@ export default class AboutMe extends React.Component {
           textAlign: 'center',
         }}
       >
-        <h1
-          style={{
-            color: 'rebeccapurple',
-            paddingBottom: '1rem',
-          }}
-        >
-          About Me
-        </h1>
-
-        <AboutMeCards slides={AboutMeData} />
-        <div>{'\n\n\n\n\n\n'}</div>
+        <div>
+          <AboutMeCards slides={AboutMeData} />
+        </div>
         <div style={{ paddingTop: 75 }}>
           <Specialization />
         </div>

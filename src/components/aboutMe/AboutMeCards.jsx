@@ -6,7 +6,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 import { Card } from 'primereact/card';
 
-const WhoAmICards = ({ slides }) => {
+const AboutMeCards = ({ slides }) => {
   const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
 
   const [current, setCurrent] = useState(0);
@@ -45,6 +45,15 @@ const WhoAmICards = ({ slides }) => {
 
   return (
     <div id="section">
+      <h1
+        style={{
+          color: 'rebeccapurple',
+          paddingBottom: '1rem',
+        }}
+      >
+        About Me
+      </h1>
+
       <section className="slider">
         <FaArrowAltCircleLeft
           className="previous"
@@ -59,7 +68,15 @@ const WhoAmICards = ({ slides }) => {
 
         {slides.map((slide, index) => {
           const header = (
-            <img alt="Card" src={slide.image} onError={handleError} />
+            <img
+              alt="Card"
+              src={slide.image}
+              onError={handleError}
+              style={{
+                borderRadius: 25,
+                padding: 10,
+              }}
+            />
           );
           return (
             <div
@@ -67,8 +84,25 @@ const WhoAmICards = ({ slides }) => {
               key={index}
             >
               {index === current && (
-                <div>
-                  <Card style={{ width: '25em' }} header={header}>
+                <div
+                  style={{
+                    justifyContent: 'center',
+                    alignContent: 'center',
+                    justifyItems: 'center',
+                    alignItems: 'center',
+                    justifySelf: 'center',
+                    alignSelf: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <Card
+                    style={{
+                      borderRadius: 25,
+                      width: window.innerWidth / 3,
+                    }}
+                    header={header}
+                  >
                     <p className="m-0" style={{ lineHeight: '1.5' }}>
                       {slide.paragraph}
                     </p>
@@ -82,4 +116,4 @@ const WhoAmICards = ({ slides }) => {
     </div>
   );
 };
-export default WhoAmICards;
+export default AboutMeCards;
