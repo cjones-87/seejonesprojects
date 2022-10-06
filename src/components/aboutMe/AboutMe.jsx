@@ -15,15 +15,14 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <div
-        className="bg-black-alpha-90"
+        className="App bg-black-alpha-90"
         style={{
           color: 'white',
           textShadow: '2px 2px 2px #01020E',
-          paddingTop: '1rem',
           textAlign: 'center',
         }}
       >
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <AboutMeCards slides={AboutMeData} />
         </div>
         <div style={{ paddingTop: 75 }}>

@@ -44,16 +44,22 @@ const AboutMeCards = ({ slides }) => {
   }, [current]);
 
   return (
-    <div id="section">
+    <div
+      // className="App bg-black-alpha-90"
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+        paddingTop: '1rem',
+      }}
+    >
       <h1
         style={{
           color: 'rebeccapurple',
-          paddingBottom: '1rem',
+          paddingBottom: '4rem',
         }}
       >
         About Me
       </h1>
-
       <section className="slider">
         <FaArrowAltCircleLeft
           className="previous"
@@ -84,18 +90,7 @@ const AboutMeCards = ({ slides }) => {
               key={index}
             >
               {index === current && (
-                <div
-                  style={{
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                    justifyItems: 'center',
-                    alignItems: 'center',
-                    justifySelf: 'center',
-                    alignSelf: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
+                <div style={{ marginTop: '2rem' }}>
                   <Card
                     style={{
                       borderRadius: 25,
