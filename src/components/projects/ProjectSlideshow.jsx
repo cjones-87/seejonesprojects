@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./ProjectsCSS/ProjectSlideshow.css";
+import './ProjectsCSS/ProjectSlideshow.css';
 
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
@@ -51,7 +51,9 @@ const ProjectSlideshow = ({ slides }) => {
         paddingTop: '1rem',
       }}
     >
-      <h1 style={{ color: 'rebeccapurple' }}>Projects</h1>
+      <h1 style={{ color: 'rebeccapurple', paddingBottom: '4rem' }}>
+        Projects
+      </h1>
       <section className="slider">
         <FaArrowAltCircleLeft
           className="previous"
