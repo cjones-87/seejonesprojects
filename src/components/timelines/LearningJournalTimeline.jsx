@@ -16,6 +16,7 @@ import {
   browseBooks,
   HypnotiqPic,
   seeJonesEngineer,
+  IYKYK,
   imageNotFound,
 } from '../../photos/PhotoExports';
 
@@ -35,6 +36,8 @@ import {
   SiPostgresql,
   SiRedux,
   SiSequelize,
+  SiTypescript,
+  SiVercel,
 } from 'react-icons/si';
 
 export default class LearningJournalTimeline extends Component {
@@ -42,6 +45,32 @@ export default class LearningJournalTimeline extends Component {
     super(props);
 
     this.events1 = [
+      {
+        id: 9,
+        status: 'AIKI, IYKYK',
+        date: '2022',
+        icon: 'pi pi-star',
+        color: '#9C27B0',
+        image: IYKYK,
+        description: 'Frontend SPA Multiple Choice Quiz',
+        techStack: (
+          <span>
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <SiTypescript />
+            &nbsp;&nbsp;&nbsp;
+            <ImHtmlFive />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <SiVercel />
+          </span>
+        ),
+        moreInfo: '',
+        command: (event) => {
+          window.location.href = '/projects/seejonesengineer';
+        },
+      },
       {
         id: 8,
         status: 'See Jones Engineer',
@@ -53,6 +82,8 @@ export default class LearningJournalTimeline extends Component {
         techStack: (
           <span>
             <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <DiJavascript1 />
             &nbsp;&nbsp;&nbsp;
             <ImHtmlFive />
             &nbsp;&nbsp;&nbsp;
@@ -120,6 +151,8 @@ export default class LearningJournalTimeline extends Component {
         techStack: (
           <span>
             <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <DiJavascript1 />
             &nbsp;&nbsp;&nbsp;
             <FaMobileAlt />
             &nbsp;&nbsp;&nbsp;
@@ -197,11 +230,13 @@ export default class LearningJournalTimeline extends Component {
         description: 'Idle click and accrue game.',
         techStack: (
           <span>
-            <FaNodeJs />
+            <DiJavascript1 />
             &nbsp;&nbsp;&nbsp;
             <ImHtmlFive />
             &nbsp; &nbsp;&nbsp;
             <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <SiVercel />
           </span>
         ),
         moreInfo: '',
@@ -219,11 +254,13 @@ export default class LearningJournalTimeline extends Component {
         description: 'Guess the number in 5 guesses or less.',
         techStack: (
           <span>
-            <FaNodeJs />
+            <DiJavascript1 />
             &nbsp;&nbsp;&nbsp;
             <ImHtmlFive />
             &nbsp;&nbsp;&nbsp;
             <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <SiVercel />
           </span>
         ),
         moreInfo: '',

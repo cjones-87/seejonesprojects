@@ -35,6 +35,8 @@ import shoppingCart from './BoundzBookstore/shoppingCart.png';
 import checkout1 from './BoundzBookstore/checkout1.png';
 import checkout2 from './BoundzBookstore/checkout2.png';
 
+import IYKYK from './IYKYK/IYKYK.jpeg';
+
 import IdleClickerPic from './IdleClicker.png';
 
 import GuessingGamePic from './GuessingGame.png';
@@ -79,6 +81,7 @@ export {
   shoppingCart,
   checkout1,
   checkout2,
+  IYKYK,
   IdleClickerPic,
   GuessingGamePic,
   FullstackLogo,
