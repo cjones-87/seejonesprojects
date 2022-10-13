@@ -6,19 +6,20 @@ import Footer from './components/home/Footer';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import AllProjects from "./components/projects/AllProjects";
-import LearningJournalTimeline from "./components/timelines/LearningJournalTimeline";
-import AboutMe from "./components/aboutMe/AboutMe";
-import ContactForm from "./components/contactMe/ContactForm";
-import LandingPage from "./components/home/LandingPage";
-import Home from "./components/home/Home";
-import PlayGames from "./components/games/PlayGames";
-import GuessingGame from "./components/projects/GuessingGame/GuessingGame";
-import IdleClicker from "./components/projects/IdleClicker/IdleClicker";
-import BoundzBookstore from "./components/projects/BoundzBookstore/BoundzBookstore";
-import Hypnotiq from "./components/projects/Hypnotiq/Hypnotiq";
-import ComputerLove from "./components/projects/ComputerLove/ComputerLove";
-import SeeJonesEngineer from "./components/projects/SeeJonesEngineer/SeeJonesEngineer";
+import AllProjects from './components/projects/AllProjects';
+import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
+import AboutMe from './components/aboutMe/AboutMe';
+import ContactForm from './components/contactMe/ContactForm';
+import LandingPage from './components/home/LandingPage';
+import Home from './components/home/Home';
+import PlayGames from './components/games/PlayGames';
+import GuessingGame from './components/projects/GuessingGame/GuessingGame';
+import IdleClicker from './components/projects/IdleClicker/IdleClicker';
+import BoundzBookstore from './components/projects/BoundzBookstore/BoundzBookstore';
+import Hypnotiq from './components/projects/Hypnotiq/Hypnotiq';
+import ComputerLove from './components/projects/ComputerLove/ComputerLove';
+import SeeJonesEngineer from './components/projects/SeeJonesEngineer/SeeJonesEngineer';
+import IYKYK from './components/projects/IYKYK/IYKYK';
 import PageNotFound404 from './components/error/PageNotFound404';
 
 ReactDOM.render(
@@ -42,6 +43,7 @@ ReactDOM.render(
           path="/projects/seejonesengineer"
           element={<SeeJonesEngineer />}
         />
+        <Route path="/projects/iykyk" element={<IYKYK />} />
         <Route path="*" element={<PageNotFound404 />} />
       </Routes>
     </BrowserRouter>

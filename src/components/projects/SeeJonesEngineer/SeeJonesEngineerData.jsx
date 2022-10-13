@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   seeJonesEngineer,
@@ -8,35 +8,35 @@ import {
   learningJournal,
   interactiveGames,
   contactForm,
-} from "../../../photos/PhotoExports";
+} from '../../../photos/PhotoExports';
 
-import { FaReact } from "react-icons/fa";
+import { FaReact } from 'react-icons/fa';
 
-import { ImHtmlFive } from "react-icons/im";
+import { ImHtmlFive } from 'react-icons/im';
 
-import { SiCss3, SiNetlify } from "react-icons/si";
+import { SiCss3, SiNetlify } from 'react-icons/si';
 
-import { DiJavascript1 } from "react-icons/di";
+import { DiJavascript1 } from 'react-icons/di';
 
 const SeeJonesEngineerData = [
   {
-    label: "seejonesengineer.com",
-    className: "title",
-    type: "title",
+    label: 'seejonesengineer.com',
+    className: 'title',
+    type: 'title',
     expanded: true,
     data: { avatar: seeJonesEngineer },
     children: [
       {
-        label: "MVP Goal",
-        className: "info",
-        type: "info",
+        label: 'MVP Goal',
+        className: 'info',
+        type: 'info',
         expanded: true,
         data: { avatar: landingPage },
         children: [
           {
-            label: "Minimum Viable Product",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Minimum Viable Product',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: false,
             data: {
               avatar: contactForm,
@@ -54,9 +54,9 @@ const SeeJonesEngineerData = [
             },
           },
           {
-            label: "Stretch Goals",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Stretch Goals',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: true,
             data: {
               avatar: projects,
@@ -75,16 +75,16 @@ const SeeJonesEngineerData = [
         ],
       },
       {
-        label: "Tech Stack",
-        className: "info",
-        type: "info",
+        label: 'Tech Stack',
+        className: 'info',
+        type: 'info',
         expanded: true,
         data: { avatar: learningJournal },
         children: [
           {
-            label: "Technologies",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Technologies',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: false,
             data: {
               avatar: landingPage,
@@ -98,7 +98,7 @@ const SeeJonesEngineerData = [
                   &nbsp;&nbsp;&nbsp;
                   <SiCss3 />
                   &nbsp;&nbsp;&nbsp;
-                  <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+                  <i className="pi pi-prime" style={{ fontSize: '1em' }} />
                   &nbsp;&nbsp;&nbsp;
                   <SiNetlify />
                 </span>
@@ -106,9 +106,9 @@ const SeeJonesEngineerData = [
             },
           },
           {
-            label: "Integration",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Integration',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: true,
             data: {
               avatar: seeJonesEngineer,
@@ -125,7 +125,7 @@ const SeeJonesEngineerData = [
                     &nbsp;&nbsp;&nbsp;
                     <SiCss3 />
                     &nbsp;&nbsp;&nbsp;
-                    <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+                    <i className="pi pi-prime" style={{ fontSize: '1em' }} />
                     &nbsp;&nbsp;&nbsp;
                     <SiNetlify />
                   </p>
@@ -136,16 +136,16 @@ const SeeJonesEngineerData = [
         ],
       },
       {
-        label: "Implementations",
-        className: "info",
-        type: "info",
+        label: 'Implementations',
+        className: 'info',
+        type: 'info',
         expanded: true,
         data: { avatar: projects },
         children: [
           {
-            label: "Contributions",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Contributions',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: false,
             data: {
               avatar: aboutMe,
@@ -155,7 +155,7 @@ const SeeJonesEngineerData = [
                     This portfolio site was created solely by me. I used a
                     combination of <SiCss3 />
                     &nbsp;&&nbsp;
-                    <i className="pi pi-prime" style={{ fontSize: "1em" }} />
+                    <i className="pi pi-prime" style={{ fontSize: '1em' }} />
                     &nbsp; to illustrate & enhance the UI/UX.
                   </p>
                 </div>
@@ -163,9 +163,9 @@ const SeeJonesEngineerData = [
             },
           },
           {
-            label: "Challenges",
-            className: "moreInfo",
-            type: "moreInfo",
+            label: 'Challenges',
+            className: 'moreInfo',
+            type: 'moreInfo',
             expanded: true,
             data: {
               avatar: interactiveGames,
