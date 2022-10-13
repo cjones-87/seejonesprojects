@@ -47,7 +47,7 @@ export default class LearningJournalTimeline extends Component {
     this.events1 = [
       {
         id: 9,
-        status: 'AIKI, IYKYK',
+        status: `All I Know Is, IYKYK`,
         date: '2022',
         icon: 'pi pi-star',
         color: '#9C27B0',
@@ -68,7 +68,7 @@ export default class LearningJournalTimeline extends Component {
         ),
         moreInfo: '',
         command: (event) => {
-          window.location.href = '/projects/seejonesengineer';
+          window.location.href = '/projects/iykyk';
         },
       },
       {

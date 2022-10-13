@@ -25,7 +25,7 @@ export default class AboutMe extends React.Component {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <AboutMeCards slides={AboutMeData} />
         </div>
-        <div style={{ paddingTop: 75 }}>
+        <div>
           <Specialization />
         </div>
         <div>

@@ -38,6 +38,7 @@ h2 {
   text-align: center;
   border: groove 0.5rem white;
 }
+
 #sectionB {
   padding: 1rem;
   background: gray;
@@ -65,7 +66,6 @@ h2 {
 
 .sectionC2 {
   padding: 1rem;
-
   background: rebeccapurple;
   text-align: center;
 }
