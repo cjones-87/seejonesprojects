@@ -4,6 +4,7 @@ import {
   ComputerLovePic,
   browseBooks,
   HypnotiqPic,
+  IYKYK,
 } from '../../../photos/PhotoExports';
 
 export const ProjectData = [
@@ -13,6 +14,7 @@ export const ProjectData = [
     caption: 'Computer Love',
     href: 'https://www.seejonesengineer.com/projects/computerlove',
   },
+
   {
     id: 2,
     image: HypnotiqPic,
@@ -21,21 +23,26 @@ export const ProjectData = [
   },
   {
     id: 3,
+    image: IYKYK,
+    caption: 'IYKYK',
+    href: 'https://www.seejonesengineer.com/projects/iykyk',
+  },
+  {
+    id: 4,
     image: browseBooks,
     caption: 'Boundz Bookstore',
     href: 'https://www.seejonesengineer.com/projects/boundzbookstore',
   },
   {
-    id: 4,
+    id: 5,
     image: IdleClickerPic,
     caption: 'Idle Clicker',
     href: 'https://www.seejonesengineer.com/projects/idleclicker',
   },
   {
-    id: 5,
+    id: 6,
     image: GuessingGamePic,
     caption: 'Guessing Game',
     href: 'https://www.seejonesengineer.com/projects/guessinggame',
   },
-  //   { id: 6, image, caption },
 ];
