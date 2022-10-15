@@ -38,7 +38,7 @@ export default class AllProjects extends React.Component {
           category: 'React Web App',
           difficulty: 8,
           status: 'complete',
-          href: 'https://iykyk-two.vercel.app/',
+          href: 'https://www.seejonesengineer.com/projects/iykyk',
         },
         {
           name: 'See Jones Engineer',
@@ -104,8 +104,7 @@ export default class AllProjects extends React.Component {
 
   imageBodyTemplate(rowData) {
     return (
-      <a href={rowData.href}>
-        {' '}
+      <a href={rowData.href} target="_blank">
         <img
           src={rowData.image}
           onError={(e) => (e.target.src = imageNotFound)}
