@@ -22,6 +22,7 @@ import {
   browseBooks,
   HypnotiqPic,
   portfolioPic,
+  IYKYK,
   imageNotFound,
 } from '../../photos/PhotoExports';
 
@@ -31,6 +32,14 @@ export default class AllProjects extends React.Component {
 
     this.state = {
       projects: [
+        {
+          name: 'All I Know Is, IYKYK',
+          image: IYKYK,
+          category: 'React Web App',
+          difficulty: 8,
+          status: 'complete',
+          href: 'https://iykyk-two.vercel.app/',
+        },
         {
           name: 'See Jones Engineer',
           image: portfolioPic,
