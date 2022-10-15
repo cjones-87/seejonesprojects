@@ -33,10 +33,11 @@ const IYKYKData = [
               info: (
                 <div>
                   <p>
-                    A multiple choice quiz game. Users choose from a menu of
-                    quiz categories based on their preference. Each game has 10
-                    questions with 4 answers each, fetched from an external api,
-                    then shuffled, formatted, & returned.
+                    A multiple choice quiz game where users choose their
+                    preference from a menu of quiz categories. Each game hax 10
+                    questions each with an answer bank. Questions and answers
+                    are fetched from an external api then formatted to meet the
+                    design of the game.
                   </p>
                 </div>
               ),
@@ -52,11 +53,10 @@ const IYKYKData = [
               info: (
                 <div>
                   <p>
-                    Future goals for this game include adding additional topics
-                    to expand the number of categories available. I would also
-                    like to add true/false questions. Finally, I also plan to
-                    implement multi-nested menus & submenus in the navigation
-                    bar.
+                    Future goals for this game include adding additional quiz
+                    topics and types; I would like to diversify the categories
+                    and add true/false questions. I also plan to implement
+                    multi-nested menus & submenus in the navigation bar.
                   </p>
                 </div>
               ),
@@ -138,8 +138,10 @@ const IYKYKData = [
               info: (
                 <div>
                   <p>
-                    This website was created solely by me. I used <SiCss3 /> to
-                    illustrate & enhance the UI/UX.
+                    This website was created solely by me. I had fun learning
+                    and implementing <SiTypescript /> as I completed this
+                    project. The syntactic sugar that it provided came in a lot
+                    of handy when debugging each error that occurred.
                   </p>
                 </div>
               ),
