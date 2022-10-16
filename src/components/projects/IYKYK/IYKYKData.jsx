@@ -6,6 +6,8 @@ import { FaReact } from 'react-icons/fa';
 
 import { ImHtmlFive } from 'react-icons/im';
 
+import { DiJavascript1 } from 'react-icons/di';
+
 import { SiCss3, SiTypescript, SiVercel } from 'react-icons/si';
 
 const IYKYKData = [
@@ -33,11 +35,11 @@ const IYKYKData = [
               info: (
                 <div>
                   <p>
-                    A multiple choice quiz game where users choose their
-                    preference from a menu of quiz categories. Each game hax 10
-                    questions each with an answer bank. Questions and answers
-                    are fetched from an external api then formatted to meet the
-                    design of the game.
+                    A multiple choice quiz game where users can choose their
+                    quiz categories preference from a menu of options. Each game
+                    has 10 questions with an answer bank of multiple choice
+                    answers. Questions and answers are fetched from an external
+                    api then formatted to meet the design of the game.
                   </p>
                 </div>
               ),
@@ -138,10 +140,13 @@ const IYKYKData = [
               info: (
                 <div>
                   <p>
-                    This website was created solely by me. I had fun learning
-                    and implementing <SiTypescript /> as I completed this
-                    project. The syntactic sugar that it provided came in a lot
-                    of handy when debugging each error that occurred.
+                    This website was created solely by me. This was my first
+                    time using Typescript and I had fun learning the nuances of
+                    applying what i know pertaining to <DiJavascript1 /> &
+                    applying that knowledge to my implementation of{' '}
+                    <SiTypescript /> as I completed this project. The syntactic
+                    sugar that it provided came in a lot of handy when debugging
+                    each error that occurred.
                   </p>
                 </div>
               ),
@@ -161,7 +166,9 @@ const IYKYKData = [
                     time. Having never used it professionally before, I had fun
                     learning some of the intricacies of the language. The
                     syntatical sugar it provides was extremely helpful in
-                    debugging.
+                    debugging. One of the biggest challenges was learning what
+                    the differences in implementation were between{' '}
+                    <DiJavascript1 /> & <SiTypescript />.
                   </p>
                 </div>
               ),
