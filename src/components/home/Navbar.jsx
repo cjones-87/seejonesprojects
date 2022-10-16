@@ -116,7 +116,6 @@ export default class Navbar extends React.Component {
         target: '_blank',
         command: (event) => {
           window.location.pathname = PDF;
-          window.location.target = '_blank';
         },
       },
       {
@@ -139,14 +138,16 @@ export default class Navbar extends React.Component {
 
   render() {
     const start = (
-      <img
-        alt="logo"
-        src="https://i.imgur.com/zUk8geK.png"
-        onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
-        height="75vh"
-        className="mr-2"
-        style={{ borderRadius: '50%' }}
-      />
+      <a href="/">
+        <img
+          alt="logo"
+          src="https://i.imgur.com/zUk8geK.png"
+          onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
+          height="75vh"
+          className="mr-2"
+          style={{ borderRadius: '50%' }}
+        />
+      </a>
     );
     const end = (
       <div style={{ paddingTop: '1.5rem' }}>
