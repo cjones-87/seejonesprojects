@@ -7,11 +7,10 @@ export default class Footer extends React.Component {
         <div
           className="button bg-black-alpha-90"
           style={{
-            color: 'rebeccapurple',
+            color: 'indigo',
             textShadow: '2px 2px 2px #01020E',
             textAlign: 'center',
-            paddingTop: '.75rem',
-            paddingBottom: '.5rem',
+            paddingTop: '2rem',
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
@@ -19,66 +18,52 @@ export default class Footer extends React.Component {
               href="https://www.seejonesengineer.com/assets/CJsSoftwareEngineeringResume.24a34476.pdf#"
               target="_blank"
             >
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/business-finance-vol-3-39/512/cv_resume_job_application-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-file-pdf fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
-            <a href="mailto:cj@seejonesengineer.com" target="_blank">
-              <img
-                src="https://cdn4.iconfinder.com/data/icons/buno-email/32/__email_send_message-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+
+            <a
+              href="mailto:cj@seejonesengineer.com"
+              style={{ color: 'indigo', textDecoration: 'none' }}
+              target="_blank"
+            >
+              <i className="fa fa-at fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
             <a href="https://www.linkedin.com/in/cjones1827/" target="_blank">
-              <img
-                src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
             <a
               href="https://www.instagram.com/seejonesengineer/"
               target="_blank"
             >
-              <img
-                src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
-            <h5 style={{ verticalAlign: 'middle', paddingTop: '.5em' }}>
-              © 2022 by CJ Jones
-            </h5>
+
             <a href="https://twitter.com/cjonesengineer1" target="_blank">
-              <img
-                src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
             <a
               href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw"
               target="_blank"
             >
-              <img
-                src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
             <a href="https://www.tiktok.com/@seejonesengineer" target="_blank">
-              <img
-                src="https://cdn0.iconfinder.com/data/icons/internet-2020/1080/tiktokgradient-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fab fa-tiktok fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
             <a
               href="https://www.facebook.com/seejonesengineer/"
               target="_blank"
             >
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/social-media-2285/512/Colored_Facebook3_svg-128.png"
-                style={{ width: '5rem', height: '5rem' }}
-              />
+              <i className="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
           </div>
+
+          <h5 className="bg-black-alpha-90">© 2022 by CJ Jones</h5>
         </div>
       </>
     );
