@@ -38,16 +38,16 @@ export default class SidePanelButtons extends React.Component {
       <div
         className="button bg-black-alpha-90"
         style={{
-          color: "white",
-          textShadow: "2px 2px 2px #01020E",
+          color: 'white',
+          textShadow: '2px 2px 2px #01020E',
         }}
       >
         <div className="card bg-black-alpha-90">
           <h5
             style={{
-              textAlign: "center",
+              textAlign: 'center',
               paddingTop: 10,
-              color: "rebeccapurple",
+              color: 'rebeccapurple',
             }}
           >
             Stay connected with me & my work by following me on:
@@ -55,8 +55,8 @@ export default class SidePanelButtons extends React.Component {
           <div
             className="template"
             style={{
-              display: "flex",
-              flexDirection: "column",
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <Button className="linkedin p-0">
@@ -66,7 +66,9 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">LinkedIn</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  LinkedIn
+                </span>
               </a>
             </Button>
 
@@ -77,7 +79,9 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Youtube</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Youtube
+                </span>
               </a>
             </Button>
 
@@ -88,7 +92,9 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Instagram</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Instagram
+                </span>
               </a>
             </Button>
 
@@ -99,7 +105,9 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Facebook</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Facebook
+                </span>
               </a>
             </Button>
 
@@ -110,16 +118,11 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Slack</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Slack
+                </span>
               </a>
             </Button>
-
-            {/* <Button className="google p-0">
-              <i className="pi pi-google px-2"></i>
-              <a href="https://www.google.com">
-                <span className="px-3">Google</span>
-              </a>
-            </Button> */}
 
             <Button className="whatsapp p-0">
               <i
@@ -132,7 +135,9 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">WhatsApp</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  WhatsApp
+                </span>
               </a>
             </Button>
 
@@ -143,40 +148,48 @@ export default class SidePanelButtons extends React.Component {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Twitter</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Twitter
+                </span>
               </a>
             </Button>
 
             <Button className="github p-0">
-              <i className="pi pi-github px-2"></i>
+              <i className="pi pi-github px-2" style={{ color: 'white' }}></i>
               <a
                 href="https://github.com/cjones-87"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Github</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Github
+                </span>
               </a>
             </Button>
 
             <Button className="tiktok p-0 bg-black-alpha-20">
-              <i className="pi pi-user px-2"></i>
+              <i className="fab fa-tiktok px-2"></i>
               <a
                 href="https://www.tiktok.com/@seejonesengineer"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">TikTok</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  TikTok
+                </span>
               </a>
             </Button>
 
-            <Button className="money-bill p-0">
-              <i className="pi pi-money-bill px-2"></i>
+            <Button className="coffee p-0">
+              <i className="fa fa-coffee px-2"></i>
               <a
                 href="https://www.buymeacoffee.com/cjonesengineer"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <span className="px-3">Buy Me A Coffee</span>
+                <span className="px-3" style={{ color: 'white' }}>
+                  Buy Me A Coffee
+                </span>
               </a>
             </Button>
           </div>
