@@ -36,7 +36,7 @@ export default class AllProjects extends React.Component {
           name: 'All I Know Is, IYKYK',
           image: IYKYK,
           category: 'React Web App',
-          difficulty: 8,
+          difficulty: 7,
           status: 'complete',
           href: 'https://www.seejonesengineer.com/projects/iykyk',
         },
