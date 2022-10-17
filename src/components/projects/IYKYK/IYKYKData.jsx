@@ -143,7 +143,7 @@ const IYKYKData = [
                     This website was created solely by me. This was my first
                     time using Typescript and I had fun learning the nuances of
                     applying what i know pertaining to <DiJavascript1 /> &
-                    applying that knowledge to my implementation of{' '}
+                    applying that knowledge to my implementation of
                     <SiTypescript /> as I completed this project. The syntactic
                     sugar that it provided came in a lot of handy when debugging
                     each error that occurred.
