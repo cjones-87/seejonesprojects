@@ -221,26 +221,26 @@
 .button .template .p-button.tiktok {
   background: linear-gradient(
     to left,
-    var(--gray-900) 50%,
-    var(--teal-400) 50%
+    var(--teal-400) 50%,
+    var(--teal-600) 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position 0.5s ease-out;
   color: #fff;
-  border-color: var(--teal-400);
+  border-color: var(--teal-600);
 }
 .button .template .p-button.tiktok:hover {
   background-position: left bottom;
 }
 .button .template .p-button.tiktok i {
-  background-color: var(--teal-400);
+  background-color: var(--teal-600);
 }
 .button .template .p-button.tiktok:focus {
-  box-shadow: 0 0 0 1px var(--teal-400);
+  box-shadow: 0 0 0 1px var(--teal-600);
 }
 /*  */
-.button .template .p-button.money-bill {
+.button .template .p-button.coffee {
   background: linear-gradient(
     to left,
     var(--yellow-600) 50%,
@@ -252,13 +252,13 @@
   color: #fff;
   border-color: var(--yellow-700);
 }
-.button .template .p-button.money-bill:hover {
+.button .template .p-button.coffee:hover {
   background-position: left bottom;
 }
-.button .template .p-button.money-bill i {
+.button .template .p-button.coffee i {
   background-color: var(--yellow-700);
 }
-.button .template .p-button.money-bill:focus {
+.button .template .p-button.coffee:focus {
   box-shadow: 0 0 0 1px var(--yellow-400);
 }
 /*  */
