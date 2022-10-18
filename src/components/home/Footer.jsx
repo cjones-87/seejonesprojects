@@ -8,7 +8,7 @@ export default class Footer extends React.Component {
           className="button bg-black-alpha-90"
           style={{
             color: 'indigo',
-            textShadow: '2px 2px 2px #01020E',
+            textShadow: '1px 1px 1px #f5f5f5', //changed from #01020E
             textAlign: 'center',
             paddingTop: '2rem',
           }}

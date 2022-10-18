@@ -347,7 +347,7 @@ export default class LearningJournalTimeline extends Component {
         >
           Learning Journal
         </h1>
-        <div className="card">
+        <div className="card" style={{ padding: '2rem' }}>
           <Timeline
             value={this.events1}
             align="alternate"

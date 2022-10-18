@@ -14,8 +14,8 @@ import {
 export default function Home() {
   window.onresize = () => location.reload();
   return (
-    <div className="App bg-black-alpha-90">
-      <div id="homeFlex" className="App bg-black-alpha-90">
+    <div className="App">
+      <div id="homeFlex">
         <Cube id="homeCJ" />
       </div>
       <ProjectSlideshow slides={ProjectData} />
