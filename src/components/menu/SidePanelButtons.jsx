@@ -60,7 +60,7 @@ export default class SidePanelButtons extends React.Component {
             }}
           >
             <Button className="linkedin p-0">
-              <i className="pi pi-linkedin px-2"></i>
+              <i className="pi pi-linkedin px-2" />
               <a
                 href="https://www.linkedin.com/in/cjones1827/"
                 target="_blank"
@@ -73,7 +73,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="youtube p-0">
-              <i className="pi pi-youtube px-2"></i>
+              <i className="pi pi-youtube px-2" />
               <a
                 href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw"
                 target="_blank"
@@ -86,7 +86,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="instagram p-0">
-              <i className="pi pi-instagram px-2"></i>
+              <i className="pi pi-instagram px-2" />
               <a
                 href="https://www.instagram.com/seejonesengineer/"
                 target="_blank"
@@ -99,7 +99,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="facebook p-0">
-              <i className="pi pi-facebook px-2"></i>
+              <i className="pi pi-facebook px-2" />
               <a
                 href="https://www.facebook.com/seejonesengineer"
                 target="_blank"
@@ -112,7 +112,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="slack p-0">
-              <i className="pi pi-slack px-2"></i>
+              <i className="pi pi-slack px-2" />
               <a
                 href="https://seejonesengineer.slack.com/archives/D037H4J82TU"
                 target="_blank"
@@ -129,7 +129,7 @@ export default class SidePanelButtons extends React.Component {
                 className="pi pi-whatsapp px-2"
                 target="_blank"
                 rel="noreferrer noopener"
-              ></i>
+              />
               <a
                 href="https://wa.me/3473918511"
                 target="_blank"
@@ -142,7 +142,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="twitter p-0">
-              <i className="pi pi-twitter px-2"></i>
+              <i className="pi pi-twitter px-2" />
               <a
                 href="https://twitter.com/cjonesengineer1"
                 target="_blank"
@@ -155,7 +155,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="github p-0">
-              <i className="pi pi-github px-2" style={{ color: 'white' }}></i>
+              <i className="pi pi-github px-2" style={{ color: 'white' }} />
               <a
                 href="https://github.com/cjones-87"
                 target="_blank"
@@ -167,8 +167,8 @@ export default class SidePanelButtons extends React.Component {
               </a>
             </Button>
 
-            <Button className="tiktok p-0 bg-black-alpha-20">
-              <i className="fab fa-tiktok px-2"></i>
+            <Button className="tiktok p-0">
+              <i className="fab fa-tiktok px-2" />
               <a
                 href="https://www.tiktok.com/@seejonesengineer"
                 target="_blank"
@@ -181,7 +181,7 @@ export default class SidePanelButtons extends React.Component {
             </Button>
 
             <Button className="coffee p-0">
-              <i className="fa fa-coffee px-2"></i>
+              <i className="fa fa-coffee px-2" />
               <a
                 href="https://www.buymeacoffee.com/cjonesengineer"
                 target="_blank"

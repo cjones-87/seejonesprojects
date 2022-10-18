@@ -9,16 +9,14 @@ import 'primereact/resources/primereact.css';
 export default function Cube() {
   return (
     <div
-      className="bg-black-alpha-90"
       style={{
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
-        paddingTop: '1rem',
-        paddingBottom: '1rem',
+        paddingBottom: '2rem',
         width: '100%',
       }}
     >
-      <div className="App bg-black-alpha-90" style={{ width: '100%' }}>
+      <div className="App" style={{ width: '100%' }}>
         <Iframe
           url="https://3d-box-animation.vercel.app/"
           width="100%"
