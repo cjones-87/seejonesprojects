@@ -431,8 +431,6 @@ export default class ContactForm extends React.Component {
                 method="POST"
               />
             </div>
-
-            <div className="card"></div>
           </div>
         </div>
       </form>

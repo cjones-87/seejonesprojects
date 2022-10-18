@@ -12,7 +12,7 @@ export default function PlayGames() {
       }}
     >
       <div
-        className="bg-black-alpha-90"
+        className="bg-black-alpha-90 card"
         style={{
           display: 'flex',
           flexDirection: 'row',

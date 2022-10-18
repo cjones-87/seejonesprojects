@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       <ProjectSlideshow slides={ProjectData} />
       <div
-        className="App bg-black-alpha-90"
+        className="App bg-black-alpha-90 card"
         style={{
           marginTop: '2rem',
           display: 'flex',
