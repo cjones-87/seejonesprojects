@@ -51,10 +51,10 @@ const ProjectSlideshow = ({ slides }) => {
         paddingTop: '1rem',
       }}
     >
-      <h1 style={{ color: 'rebeccapurple', paddingBottom: '4rem' }}>
+      <h1 style={{ color: 'rebeccapurple', paddingBottom: '3rem' }}>
         Projects
       </h1>
-      <section className="slider">
+      <section className="slider" style={{ paddingBottom: '4.5rem' }}>
         <FaArrowAltCircleLeft
           className="previous"
           onClick={previousSlide}

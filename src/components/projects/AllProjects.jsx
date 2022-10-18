@@ -143,7 +143,7 @@ export default class AllProjects extends React.Component {
           paddingTop: '1rem',
         }}
       >
-        <div>
+        <div style={{ marginBottom: '2rem' }}>
           <ProjectSlideshow slides={ProjectData} />
         </div>
         <div className="card">
