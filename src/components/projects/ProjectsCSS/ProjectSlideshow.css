@@ -1,13 +1,7 @@
 .slider {
-  /* position: relative; */
   height: auto;
   width: auto;
   display: block;
-  /* display: flex; */
-  /* align-self: center;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; */
 }
 
 .image {
@@ -17,7 +11,7 @@
 }
 
 .next {
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: 32px;
   font-size: 3rem;
@@ -28,7 +22,7 @@
 }
 
 .previous {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 32px;
   font-size: 3rem;
