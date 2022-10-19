@@ -45,7 +45,6 @@ const AboutMeCards = ({ slides }) => {
 
   return (
     <div
-      // className="App bg-black-alpha-90"
       style={{
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
