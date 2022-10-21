@@ -12,7 +12,11 @@ export default function PlayGames() {
       }}
     >
       <div
-        className="bg-black-alpha-90 card"
+        className={
+          localStorage.getItem('lightMode') === 'true'
+            ? 'bg-black-alpha-10 card'
+            : 'bg-black-alpha-90 card'
+        }
         style={{
           display: 'flex',
           flexDirection: 'row',
