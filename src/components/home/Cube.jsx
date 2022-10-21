@@ -2,10 +2,6 @@ import React from 'react';
 
 import Iframe from 'react-iframe';
 
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
-import 'primereact/resources/primereact.css';
-
 export default function Cube() {
   return (
     <div

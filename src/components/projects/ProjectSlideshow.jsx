@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import './ProjectsCSS/ProjectSlideshow.css';
 
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
-import 'primereact/resources/primereact.css';
+import './ProjectsCSS/ProjectSlideshow.css';
 
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 

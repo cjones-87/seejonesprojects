@@ -1,7 +1,3 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
-import 'primereact/resources/primereact.css';
-
 import AboutMeCards from './AboutMeCards';
 import { AboutMeData } from './data/AboutMeData';
 

@@ -1,8 +1,3 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/vela-purple/theme.css';
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-
 import React from 'react';
 
 import { Menubar } from 'primereact/menubar';

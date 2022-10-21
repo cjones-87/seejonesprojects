@@ -1,7 +1,3 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/vela-purple/theme.css';
-import 'primereact/resources/primereact.css';
-
 import React, { Component } from 'react';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';

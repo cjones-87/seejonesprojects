@@ -2,7 +2,6 @@ import React from 'react';
 import MainLogo from '../../../photos/favicon.png';
 import BlueShirtSmile from '../../../photos/blueShirtSmile.png';
 import LogoCJ from '../../../photos/logoCJ.png';
-import Typewriter from 'typewriter-effect';
 
 export const AboutMeData = [
   {
