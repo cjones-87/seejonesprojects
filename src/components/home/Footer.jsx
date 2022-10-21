@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
 
+import useLocalStorage from 'use-local-storage';
+
 import { ToggleButton } from 'primereact/togglebutton';
 
-const Footer = () => {
-  const [lightMode, setLightMode] = useState(true);
+export const DarkMode = () => {
+  const [lightMode, setLightMode] = useLocalStorage('lightMode', 'true');
 
   const handleClick = () => {
     setLightMode((current) => (current = !current));
-    console.log(lightMode);
+    const currentMode = localStorage.getItem('lightMode');
+    window.location.reload();
   };
+  return (
+    <ToggleButton
+      aria-label="Light/Dark Mode Toggle"
+      checked={lightMode}
+      className="w-full sm:w-3rem p-togglebuttons"
+      offLabel=""
+      offIcon="pi pi-sun"
+      onChange={handleClick}
+      onIcon="pi pi-moon"
+      onLabel=""
+      tooltip={lightMode ? 'switch to dark mode' : 'switch to light mode'}
+      tooltipOptions={{ position: 'bottom' }}
+    />
+  );
+};
 
+const Footer = (props) => {
   return (
     <>
       <div
@@ -21,6 +40,7 @@ const Footer = () => {
           paddingTop: '2rem',
         }}
       >
+        {localStorage.getItem('lightMode')}
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
           <a
             href="https://www.seejonesengineer.com/assets/CJsSoftwareEngineeringResume.24a34476.pdf#"
@@ -46,18 +66,7 @@ const Footer = () => {
           </a>
 
           {/*  */}
-          <ToggleButton
-            aria-label="Light/Dark Mode Toggle"
-            checked={lightMode}
-            className="w-full sm:w-3rem p-togglebuttons"
-            offLabel=""
-            offIcon="pi pi-sun"
-            onChange={handleClick}
-            onIcon="pi pi-moon"
-            onLabel=""
-            tooltip={lightMode ? 'switch to light mode' : 'switch to dark mode'}
-            tooltipOptions={{ position: 'bottom' }}
-          />
+          <DarkMode />
           {/*  */}
 
           <a href="https://twitter.com/cjonesengineer1" target="_blank">
@@ -87,3 +96,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// export { darkMode };

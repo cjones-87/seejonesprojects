@@ -26,6 +26,7 @@
     "react-transition-group": "^4.4.2",
     "three": "^0.144.0",
     "typewriter-effect": "^2.19.0",
+    "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
