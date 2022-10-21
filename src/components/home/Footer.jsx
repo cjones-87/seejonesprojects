@@ -9,7 +9,13 @@ export default class Footer extends React.Component {
     this.state = {
       lightMode: false,
     };
+
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick = (e) => {
+    this.setState({ lightMode: e.value });
+  };
 
   render() {
     return (
@@ -57,7 +63,7 @@ export default class Footer extends React.Component {
               className="w-full sm:w-3rem p-togglebuttons"
               offLabel=""
               offIcon="pi pi-sun"
-              onChange={(e) => this.setState({ lightMode: e.value })}
+              onChange={this.handleClick}
               onIcon="pi pi-moon"
               onLabel=""
               tooltip={

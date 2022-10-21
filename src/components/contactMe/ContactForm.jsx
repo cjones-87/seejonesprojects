@@ -159,6 +159,7 @@ export default class ContactForm extends React.Component {
   //form render
 
   render() {
+    console.log(this.state);
     return (
       <form
         action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
