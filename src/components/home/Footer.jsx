@@ -39,12 +39,14 @@ const Footer = (props) => {
         }
         style={{
           color: 'indigo',
-          textShadow: '1px 1px 1px #f5f5f5', //changed from #01020E
+          textShadow:
+            localStorage.getItem('lightMode') === 'true'
+              ? '1px 1px 1px #01020E'
+              : '1px 1px 1px #f5f5f5',
           textAlign: 'center',
           paddingTop: '2rem',
         }}
       >
-        {localStorage.getItem('lightMode')}
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
           <a
             href="https://www.seejonesengineer.com/assets/CJsSoftwareEngineeringResume.24a34476.pdf#"
@@ -108,5 +110,3 @@ const Footer = (props) => {
 };
 
 export default Footer;
-
-// export { darkMode };
