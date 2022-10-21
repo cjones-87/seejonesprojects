@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import './Timeline.css';
+// import './Timeline.css';
 
 import {
   IdleClickerPic,
@@ -327,7 +327,11 @@ export default class LearningJournalTimeline extends Component {
 
     return (
       <div
-        className="timeline-demo bg-black-alpha-90"
+        className={
+          localStorage.getItem('lightMode') === 'true'
+            ? 'timeline-demo bg-black-alpha-20'
+            : 'timeline-demo bg-black-alpha-90'
+        }
         style={{
           color: 'white',
           textShadow: '2px 2px 2px #01020E',

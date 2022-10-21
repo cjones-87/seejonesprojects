@@ -124,7 +124,7 @@ export default class AllProjects extends React.Component {
     const header = (
       <div className="table-header">
         See Jones Projects
-        <Button icon="pi pi-refresh" c={10} />
+        {/* <Button icon="pi pi-refresh" c={10} /> */}
       </div>
     );
     const footer = `In total there are ${

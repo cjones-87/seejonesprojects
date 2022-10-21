@@ -20,7 +20,11 @@ export default function Home() {
       </div>
       <ProjectSlideshow slides={ProjectData} />
       <div
-        className="App bg-black-alpha-90 card"
+        className={
+          localStorage.getItem('lightMode') === 'true'
+            ? 'bg-black-alpha-20 App card'
+            : 'bg-black-alpha-90 App card'
+        }
         style={{
           marginTop: '2rem',
           display: 'flex',
