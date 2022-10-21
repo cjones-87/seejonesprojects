@@ -1,6 +1,16 @@
 import React from 'react';
 
+import { ToggleButton } from 'primereact/togglebutton';
+
 export default class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lightMode: false,
+    };
+  }
+
   render() {
     return (
       <>
@@ -39,6 +49,25 @@ export default class Footer extends React.Component {
             >
               <i className="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" />
             </a>
+
+            {/*  */}
+            <ToggleButton
+              aria-label="Light/Dark Mode Toggle"
+              checked={this.state.lightMode}
+              className="w-full sm:w-3rem p-togglebuttons"
+              offLabel=""
+              offIcon="pi pi-sun"
+              onChange={(e) => this.setState({ lightMode: e.value })}
+              onIcon="pi pi-moon"
+              onLabel=""
+              tooltip={
+                this.state.lightMode
+                  ? 'switch to light mode'
+                  : 'switch to dark mode'
+              }
+              tooltipOptions={{ position: 'bottom' }}
+            />
+            {/*  */}
 
             <a href="https://twitter.com/cjonesengineer1" target="_blank">
               <i className="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" />
