@@ -14,7 +14,7 @@ export default function PlayGames() {
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
-            ? 'bg-black-alpha-10 card'
+            ? 'bg-black-alpha-20 card'
             : 'bg-black-alpha-90 card'
         }
         style={{

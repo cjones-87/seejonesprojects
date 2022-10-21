@@ -11,7 +11,11 @@ export default class AboutMe extends React.Component {
   render() {
     return (
       <div
-        className="App bg-black-alpha-90 card"
+        className={
+          localStorage.getItem('lightMode') === 'true'
+            ? 'bg-black-alpha-20 App card'
+            : 'bg-black-alpha-90 App card'
+        }
         style={{
           color: 'white',
           textShadow: '2px 2px 2px #01020E',

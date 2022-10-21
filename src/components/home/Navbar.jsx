@@ -155,7 +155,7 @@ export default class Navbar extends React.Component {
         className="sticky top-0"
         id="navbar"
         style={{
-          color: 'white',
+          color: localStorage.getItem('lightMode') ? 'black' : 'white',
           textShadow: '2px 2px 2px #01020E',
         }}
       >

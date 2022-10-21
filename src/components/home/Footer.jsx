@@ -32,7 +32,11 @@ const Footer = (props) => {
   return (
     <>
       <div
-        className="button bg-black-alpha-90"
+        className={
+          localStorage.getItem('lightMode') === 'true'
+            ? 'bg-black-alpha-20 button'
+            : 'bg-black-alpha-90 button'
+        }
         style={{
           color: 'indigo',
           textShadow: '1px 1px 1px #f5f5f5', //changed from #01020E
@@ -89,7 +93,15 @@ const Footer = (props) => {
           </a>
         </div>
 
-        <h5 className="bg-black-alpha-90">© 2022 by CJ Jones</h5>
+        <h5
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-20 card'
+              : 'bg-black-alpha-90 card'
+          }
+        >
+          © 2022 by CJ Jones
+        </h5>
       </div>
     </>
   );

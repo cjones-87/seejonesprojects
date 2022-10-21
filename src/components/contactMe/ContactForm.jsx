@@ -166,7 +166,11 @@ export default class ContactForm extends React.Component {
         method="POST"
       >
         <div
-          className="bg-black-alpha-90"
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-20 button'
+              : 'bg-black-alpha-90 button'
+          }
           style={{
             textAlign: 'center',
             paddingTop: '1rem',
