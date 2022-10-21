@@ -1,8 +1,5 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
-import 'primereact/resources/primereact.css';
-
 import React from 'react';
+
 import { InputText } from 'primereact/inputtext';
 import { InputMask } from 'primereact/inputmask';
 import { InputTextarea } from 'primereact/inputtextarea';

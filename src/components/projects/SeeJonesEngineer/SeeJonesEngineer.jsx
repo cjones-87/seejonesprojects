@@ -1,9 +1,5 @@
 import React from 'react';
 
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-
 import { OrganizationChart } from 'primereact/organizationchart';
 
 import { imageNotFound } from '../../../photos/PhotoExports';

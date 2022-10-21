@@ -1,11 +1,8 @@
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/vela-purple/theme.css';
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import './SidePanelButtons.css';
-
 import React from 'react';
+
 import { Button } from 'primereact/button';
+
+import './SidePanelButtons.css';
 
 export default class SidePanelButtons extends React.Component {
   constructor(props) {

@@ -2,10 +2,6 @@ import React from 'react';
 
 import Iframe from 'react-iframe';
 
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-
 import { OrganizationChart } from 'primereact/organizationchart';
 
 import ComputerLoveData from './ComputerLoveData';
