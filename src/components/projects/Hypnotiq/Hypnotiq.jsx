@@ -24,7 +24,19 @@ export default class Hypnotiq extends React.Component {
   nodeTemplate(node) {
     if (node.type) {
       return (
-        <div>
+        <div
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-00'
+              : 'bg-black-alpha-90'
+          }
+          style={{
+            color:
+              localStorage.getItem('lightMode') === 'true'
+                ? 'whitesmoke'
+                : 'rebeccapurple',
+          }}
+        >
           <div className="node-header">{node.label}</div>
           <div className="node-content" style={{ margin: 5 }}>
             <div>{node.data.name}</div>
@@ -34,7 +46,16 @@ export default class Hypnotiq extends React.Component {
               onError={(event) => (event.target.src = { imageNotFound })}
               style={{ width: '100px' }}
             />
-            <div style={{ color: 'rebeccapurple' }}>{node.data.info}</div>
+            <div
+              style={{
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'whitesmoke'
+                    : 'rebeccapurple',
+              }}
+            >
+              {node.data.info}
+            </div>
           </div>
         </div>
       );
@@ -55,13 +76,18 @@ export default class Hypnotiq extends React.Component {
           allowFullScreen
         />
         <OrganizationChart
-          value={this.orgChart}
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-20'
+              : 'bg-black-alpha-90'
+          }
           nodeTemplate={this.nodeTemplate}
-          selection={this.state.selection}
-          selectionMode="multiple"
           onSelectionChange={(event) =>
             this.setState({ selection: event.data })
           }
+          selection={this.state.selection}
+          selectionMode="multiple"
+          value={this.orgChart}
         />
       </div>
     );

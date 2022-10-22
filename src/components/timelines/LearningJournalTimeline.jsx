@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-// import './Timeline.css';
 
 import {
   IdleClickerPic,
