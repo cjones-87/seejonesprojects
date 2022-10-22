@@ -27,7 +27,16 @@ export default function PlayGames() {
       >
         <div>
           <a href="https://guessing-game-blue.vercel.app/">
-            <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+            <h1
+              style={{
+                color: 'rebeccapurple',
+                paddingBottom: '1rem',
+                textShadow:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? '1px 1px 1px indigo'
+                    : '1px 1px 1px whitesmoke',
+              }}
+            >
               Guessing Game
             </h1>
           </a>
@@ -44,7 +53,16 @@ export default function PlayGames() {
         </div>
         <div>
           <a href="https://mugnificent-coffee-clicker.vercel.app/">
-            <h1 style={{ color: 'rebeccapurple', paddingBottom: '1rem' }}>
+            <h1
+              style={{
+                color: 'rebeccapurple',
+                paddingBottom: '1rem',
+                textShadow:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? '1px 1px 1px indigo'
+                    : '1px 1px 1px whitesmoke',
+              }}
+            >
               Idle Clicker
             </h1>
           </a>

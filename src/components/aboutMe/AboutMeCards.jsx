@@ -47,14 +47,19 @@ const AboutMeCards = ({ slides }) => {
     <div
       style={{
         color: 'white',
-        textShadow: '2px 2px 2px #01020E',
+        // textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
+        paddingBottom: '2rem',
       }}
     >
       <h1
         style={{
           color: 'rebeccapurple',
           paddingBottom: '4rem',
+          textShadow:
+            localStorage.getItem('lightMode') === 'true'
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px whitesmoke',
         }}
       >
         About Me

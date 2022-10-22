@@ -18,7 +18,6 @@ export default class AboutMe extends React.Component {
         }
         style={{
           color: 'white',
-          textShadow: '2px 2px 2px #01020E',
           textAlign: 'center',
         }}
       >

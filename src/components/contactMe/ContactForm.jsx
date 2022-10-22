@@ -181,6 +181,10 @@ export default class ContactForm extends React.Component {
               textAlign: 'center',
               color: 'rebeccapurple',
               paddingBottom: '1rem',
+              textShadow:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '1px 1px 1px indigo'
+                  : '1px 1px 1px whitesmoke',
             }}
           >
             Hire Me
