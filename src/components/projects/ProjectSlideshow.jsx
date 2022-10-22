@@ -52,7 +52,16 @@ const ProjectSlideshow = ({ slides }) => {
         paddingTop: '1rem',
       }}
     >
-      <h1 style={{ color: 'rebeccapurple', paddingBottom: '3rem' }}>
+      <h1
+        style={{
+          color: 'rebeccapurple',
+          paddingBottom: '3rem',
+          textShadow:
+            localStorage.getItem('lightMode') === 'true'
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px whitesmoke',
+        }}
+      >
         Projects
       </h1>
       <section className="slider" style={{ paddingBottom: '4.5rem' }}>
@@ -77,7 +86,10 @@ const ProjectSlideshow = ({ slides }) => {
                 <div
                   style={{
                     color: 'white',
-                    textShadow: '2px 2px 2px #01020E',
+                    textShadow:
+                      localStorage.getItem('lightMode') === 'true'
+                        ? '1px 1px 1px indigo'
+                        : '1px 1px 1px whitesmoke',
                   }}
                 >
                   <a href={slide.href}>

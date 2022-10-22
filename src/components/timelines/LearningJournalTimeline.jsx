@@ -334,7 +334,10 @@ export default class LearningJournalTimeline extends Component {
         }
         style={{
           color: 'white',
-          textShadow: '2px 2px 2px #01020E',
+          textShadow:
+            localStorage.getItem('lightMode') === 'true'
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px whitesmoke',
           paddingTop: '1rem',
         }}
       >

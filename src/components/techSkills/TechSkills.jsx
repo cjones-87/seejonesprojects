@@ -4,8 +4,12 @@ export default function TechSkills() {
   return (
     <div
       style={{
-        color: 'white',
-        textShadow: '2px 2px 2px #01020E',
+        color:
+          localStorage.getItem('lightMode') === 'true' ? 'indigo' : 'white',
+        textShadow:
+          localStorage.getItem('lightMode') === 'true'
+            ? '2px 2px 2px whitesmoke'
+            : '2px 2px 2px indigo',
         paddingTop: '1rem',
       }}
     >

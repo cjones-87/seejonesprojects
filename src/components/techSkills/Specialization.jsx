@@ -10,7 +10,12 @@ const Specialization = () => {
   return (
     <div
       style={{
-        // position: 'relative',
+        color:
+          localStorage.getItem('lightMode') === 'true' ? 'indigo' : 'white',
+        textShadow:
+          localStorage.getItem('lightMode') === 'true'
+            ? '1px 1px 1px whitesmoke'
+            : '1px 1px 1px indigo',
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
