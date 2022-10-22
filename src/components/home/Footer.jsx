@@ -1,32 +1,4 @@
-import React, { useState } from 'react';
-
-import useLocalStorage from 'use-local-storage';
-
-import { ToggleButton } from 'primereact/togglebutton';
-
-export const DarkMode = () => {
-  const [lightMode, setLightMode] = useLocalStorage('lightMode', 'true');
-
-  const handleClick = () => {
-    setLightMode((current) => (current = !current));
-    const currentMode = localStorage.getItem('lightMode');
-    window.location.reload();
-  };
-  return (
-    <ToggleButton
-      aria-label="Light/Dark Mode Toggle"
-      checked={lightMode}
-      className="w-full sm:w-3rem p-togglebuttons"
-      offLabel=""
-      offIcon="pi pi-sun"
-      onChange={handleClick}
-      onIcon="pi pi-moon"
-      onLabel=""
-      tooltip={lightMode ? 'switch to dark mode' : 'switch to light mode'}
-      tooltipOptions={{ position: 'bottom' }}
-    />
-  );
-};
+import React from 'react';
 
 const Footer = (props) => {
   return (
@@ -70,10 +42,6 @@ const Footer = (props) => {
           <a href="https://www.instagram.com/seejonesengineer/" target="_blank">
             <i className="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" />
           </a>
-
-          {/*  */}
-          <DarkMode />
-          {/*  */}
 
           <a href="https://twitter.com/cjonesengineer1" target="_blank">
             <i className="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" />

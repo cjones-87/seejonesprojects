@@ -10,6 +10,8 @@ import { Tooltip } from 'primereact/tooltip';
 
 import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 
+import DarkModeToggle from './DarkModeToggle';
+
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -145,8 +147,18 @@ export default class Navbar extends React.Component {
       </a>
     );
     const end = (
-      <div style={{ paddingTop: '1.5rem' }}>
-        <SidePanelMenu />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+        }}
+      >
+        <div style={{ paddingTop: '1.5rem' }}>
+          <SidePanelMenu />
+        </div>
+        <div style={{ paddingLeft: '1rem', paddingTop: '1.5rem' }}>
+          <DarkModeToggle />
+        </div>
       </div>
     );
 
