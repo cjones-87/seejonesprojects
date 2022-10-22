@@ -42,12 +42,12 @@ export default class SidePanelMenu extends React.Component {
   render() {
     const customIcons = (
       <React.Fragment>
-        <button className="p-sidebar-icon p-link mr-1">
+        {/* <button className="p-sidebar-icon p-link mr-1">
           <span className="pi pi-info-circle" />
         </button>
         <button className="p-sidebar-icon p-link mr-1">
           <span className="pi pi-arrow-right" />
-        </button>
+        </button> */}
       </React.Fragment>
     );
 
@@ -85,6 +85,8 @@ export default class SidePanelMenu extends React.Component {
                   />
                 }
                 onClick={this.onClick}
+                tooltip="like what you see? network with me!"
+                tooltipOptions={{ mousetrack: true, position: 'left' }}
               />
             </div>
           </div>
