@@ -24,8 +24,8 @@ import PageNotFound404 from './components/error/PageNotFound404';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />

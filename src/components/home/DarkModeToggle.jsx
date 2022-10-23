@@ -14,6 +14,10 @@ const DarkMode = () => {
   };
   return (
     <ToggleButton
+      style={{
+        backgroundColor:
+          localStorage.getItem('lightMode') === 'true' ? '#0f0f0f' : '#cccccc',
+      }}
       aria-label="Light/Dark Mode Toggle"
       checked={lightMode}
       className="w-full sm:w-3rem p-togglebutton"
