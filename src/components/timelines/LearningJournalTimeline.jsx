@@ -295,9 +295,22 @@ export default class LearningJournalTimeline extends Component {
       window.onresize = () => location.reload();
       return (
         <Card
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-40'
+              : 'bg-gray-alpha-80'
+          }
           title={item.status}
           subTitle={item.date}
           style={{
+            color:
+              localStorage.getItem('lightMode') === 'true'
+                ? 'whitesmoke'
+                : 'indigo',
+            textShadow:
+              localStorage.getItem('lightMode') === 'true'
+                ? '1px 1px 1px whitesmoke'
+                : '1px 1px 1px indigo',
             justifyContent: 'space-evenly',
             textAlign: 'center',
             paddingTop: '1.5rem',
@@ -316,7 +329,7 @@ export default class LearningJournalTimeline extends Component {
           <p>{item.description}</p>
           <p>{item.techStack}</p>
           <Button
-            label="Read more"
+            label="Learn more"
             className="p-button-text"
             onClick={item.command}
           />

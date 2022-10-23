@@ -47,7 +47,6 @@ const AboutMeCards = ({ slides }) => {
     <div
       style={{
         color: 'white',
-        // textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
         paddingBottom: '2rem',
       }}
@@ -88,6 +87,17 @@ const AboutMeCards = ({ slides }) => {
               }}
             />
           );
+
+          // const playButton = () => {
+          //   return (
+          //     <Button
+          //       icon="pi pi-play"
+          //       className="p-button-rounded "
+          //       aria-label="Favorite"
+          //     />
+          //   );
+          // };
+
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -96,13 +106,34 @@ const AboutMeCards = ({ slides }) => {
               {index === current && (
                 <div style={{ marginTop: '2rem' }}>
                   <Card
+                    className={
+                      localStorage.getItem('lightMode') === 'true'
+                        ? 'bg-black-alpha-20'
+                        : 'bg-black-alpha-40'
+                    }
                     style={{
                       borderRadius: 25,
+                      color:
+                        localStorage.getItem('lightMode') === 'true'
+                          ? 'rebeccapurple'
+                          : 'whitesmoke',
+                      textShadow:
+                        localStorage.getItem('lightMode') === 'true'
+                          ? '1px 1px 1px indigo'
+                          : '1px 1px 1px whitesmoke',
                       width: window.innerWidth / 3,
                     }}
                     header={header}
+                    // footer={playButton}
                   >
-                    <p className="m-0" style={{ lineHeight: '1.5' }}>
+                    <p
+                      className="m-0"
+                      style={{
+                        borderRadius: 25,
+                        width: window.innerWidth / 3,
+                        textAlign: 'center',
+                      }}
+                    >
                       {slide.paragraph}
                     </p>
                   </Card>

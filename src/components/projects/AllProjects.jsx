@@ -128,7 +128,7 @@ export default class AllProjects extends React.Component {
           <Button
             icon="pi pi-images"
             tooltip="view in my learning journal"
-            tooltipOptions={{ position: 'lefts' }}
+            tooltipOptions={{ position: 'left' }}
           />
         </a>
       </div>

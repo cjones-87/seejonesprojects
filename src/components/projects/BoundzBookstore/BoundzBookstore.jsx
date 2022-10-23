@@ -61,7 +61,6 @@ export default class BoundzBookstore extends React.Component {
   }
 
   render() {
-    console.log(this.orgChart);
     return (
       <OrganizationChart
         className={
