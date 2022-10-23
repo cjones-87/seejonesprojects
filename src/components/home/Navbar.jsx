@@ -8,6 +8,8 @@ import Typewriter from 'typewriter-effect';
 
 import { Tooltip } from 'primereact/tooltip';
 
+import { NavLink } from 'react-router-dom';
+
 import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 
 import DarkModeToggle from './DarkModeToggle';
@@ -23,82 +25,128 @@ export default class Navbar extends React.Component {
     this.items = [
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Home',
-              autoStart: true,
-              loop: false,
-            }}
-          />
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
+            }} // classic rose rgb(251,204,231)
+            to="/home"
+          >
+            <Typewriter
+              options={{
+                strings: 'Home',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-home',
-        command: (event) => {
-          window.location.pathname = '/home';
-        },
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'About Me',
-              autoStart: true,
-              loop: false,
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
             }}
-          />
+            to="/aboutme"
+          >
+            <Typewriter
+              options={{
+                strings: 'About Me',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-info-circle',
-        command: (event) => {
-          window.location.pathname = '/aboutme';
-        },
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Learning Journal',
-              autoStart: true,
-              loop: false,
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
             }}
-          />
+            to="/learningjournal"
+          >
+            <Typewriter
+              options={{
+                strings: 'Learning Journal',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-history',
-        command: (event) => {
-          window.location.pathname = '/learningjournal';
-        },
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Projects',
-              autoStart: true,
-              loop: false,
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
             }}
-          />
+            to="/projects"
+          >
+            <Typewriter
+              options={{
+                strings: 'Projects',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-images',
-        command: (event) => {
-          window.location.pathname = '/projects';
-        },
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Interactive Games',
-              autoStart: true,
-              loop: false,
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
             }}
-          />
+            to="/playgames"
+          >
+            <Typewriter
+              options={{
+                strings: 'Interactive Games',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-play',
-        command: (event) => {
-          window.location.pathname = '/playgames';
-        },
       },
       {
         label: (
-          <span className="resume" data-pr-position="bottom">
+          <NavLink
+            className="resume"
+            data-pr-position="bottom"
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
+            }}
+            target="_blank"
+            to={PDF}
+          >
             <Tooltip target=".resume" content={`${this.state.resumeTooltip}`} />
             <Typewriter
               options={{
@@ -107,7 +155,7 @@ export default class Navbar extends React.Component {
                 loop: false,
               }}
             />
-          </span>
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-file',
         target: '_blank',
@@ -117,25 +165,32 @@ export default class Navbar extends React.Component {
       },
       {
         label: (
-          <Typewriter
-            options={{
-              strings: 'Hire Me',
-              autoStart: true,
-              loop: false,
+          <NavLink
+            style={{
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#fbcce7'
+                  : 'whitesmoke',
             }}
-          />
+            to="/hireme"
+          >
+            <Typewriter
+              options={{
+                strings: 'Hire Me',
+                autoStart: true,
+                loop: false,
+              }}
+            />
+          </NavLink>
         ),
         icon: 'pi pi-fw pi-dollar',
-        command: (event) => {
-          window.location.pathname = '/hireme';
-        },
       },
     ];
   }
 
   render() {
     const start = (
-      <a href="/">
+      <NavLink to="/">
         <img
           alt="logo"
           src="https://i.imgur.com/zUk8geK.png"
@@ -144,7 +199,7 @@ export default class Navbar extends React.Component {
           className="mr-2"
           style={{ borderRadius: '50%' }}
         />
-      </a>
+      </NavLink>
     );
     const end = (
       <div
