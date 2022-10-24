@@ -10,8 +10,6 @@ import { Tooltip } from 'primereact/tooltip';
 
 import { NavLink } from 'react-router-dom';
 
-import PDF from '../../CJsSoftwareEngineeringResume.pdf';
-
 import DarkModeToggle from './DarkModeToggle';
 
 export default class Navbar extends React.Component {
@@ -144,8 +142,7 @@ export default class Navbar extends React.Component {
                   ? '#fbcce7'
                   : 'whitesmoke',
             }}
-            target="_blank"
-            to={PDF}
+            to={'/resume'}
           >
             <Tooltip target=".resume" content={`${this.state.resumeTooltip}`} />
             <Typewriter
@@ -157,11 +154,7 @@ export default class Navbar extends React.Component {
             />
           </NavLink>
         ),
-        icon: 'pi pi-fw pi-file',
-        target: '_blank',
-        command: (event) => {
-          window.location.pathname = PDF;
-        },
+        icon: 'pi pi-fw pi-file-pdf',
       },
       {
         label: (

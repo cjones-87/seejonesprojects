@@ -7,12 +7,11 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { recognition } from './api/VoiceRecognition';
 
-// import PDF from './CJsSoftwareEngineeringResume.pdf';
-
 import AllProjects from './components/projects/AllProjects';
 import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
 import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
+import Resume from './components/resume/Resume';
 import LandingPage from './components/home/LandingPage';
 import Home from './components/home/Home';
 import PlayGames from './components/games/PlayGames';
@@ -70,7 +69,7 @@ const App = () => {
         command.includes('cv') ||
         command.includes('job history')
       ) {
-        navigate('/hireme');
+        navigate('/resume');
       } else if (
         command.includes('contact') ||
         command.includes('contact me') ||
@@ -107,7 +106,7 @@ const App = () => {
         <Route path="/projects" element={<AllProjects />} />
         <Route path="/learningjournal" element={<LearningJournalTimeline />} />
         <Route path="/playgames" element={<PlayGames />} />
-        {/* <Route path="/resume" element={<PDF />} /> */}
+        <Route path="/resume" element={<Resume />} />
         <Route path="/hireme" element={<ContactForm />} />
         <Route path="/projects/guessinggame" element={<GuessingGame />} />
         <Route path="/projects/idleclicker" element={<IdleClicker />} />

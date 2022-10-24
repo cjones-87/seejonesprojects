@@ -9,9 +9,9 @@ const DarkMode = () => {
 
   const handleClick = () => {
     setLightMode((current) => (current = !current));
-    const currentMode = localStorage.getItem('lightMode');
     window.location.reload();
   };
+
   return (
     <ToggleButton
       style={{
