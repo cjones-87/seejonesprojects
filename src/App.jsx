@@ -19,6 +19,7 @@ import GuessingGame from './components/projects/GuessingGame/GuessingGame';
 import IdleClicker from './components/projects/IdleClicker/IdleClicker';
 import BoundzBookstore from './components/projects/BoundzBookstore/BoundzBookstore';
 import Hypnotiq from './components/projects/Hypnotiq/Hypnotiq';
+import Hypnotiq2 from './components/projects/Hypnotiq2/Hypnotiq2';
 import ComputerLove from './components/projects/ComputerLove/ComputerLove';
 import SeeJonesEngineer from './components/projects/SeeJonesEngineer/SeeJonesEngineer';
 import IYKYK from './components/projects/IYKYK/IYKYK';
@@ -118,6 +119,7 @@ const App = () => {
           element={<SeeJonesEngineer />}
         />
         <Route path="/projects/iykyk" element={<IYKYK />} />
+        <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
         <Route path="*" element={<PageNotFound404 />} />
       </Routes>
       <Footer />
