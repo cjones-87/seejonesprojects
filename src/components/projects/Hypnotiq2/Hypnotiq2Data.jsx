@@ -242,19 +242,6 @@ const Hypnotiq2Data = [
                     addition to audio that aids in their sleep/study patterns.
                     They are now able to create and manage personal playlists.
                   </p>
-                  <p>
-                    I learned that playing music audio is not as simple a
-                    process as I imagined it to be. In order to achieve seamless
-                    audio playback and allow users complete control of playback
-                    state, I had to keep track of multiple factors, such as was:
-                    {'\n'}
-                    <ul>
-                      <li>audio loaded</li>
-                      <li>audio currently playing</li>
-                      <li>from playlist or general library</li>
-                    </ul>
-                    etc, etc.
-                  </p>
                 </div>
               ),
             },
@@ -268,7 +255,35 @@ const Hypnotiq2Data = [
               avatar: HypnotiqPic,
               info: (
                 <div>
-                  <p></p>
+                  <p>
+                    One of the biggest challenges of Hypnotiq 2.0 was keeping
+                    track of audio playback state and other considerations. I
+                    learned that playing music audio is not as simple a process
+                    as I imagined it to be. I had to keep track of multiple
+                    considerations for current playback state to access and
+                    manipulate them accordingly.
+                  </p>
+                  <p>
+                    In order to achieve seamless audio playback and allow users
+                    complete control , I had to keep track of multiple factors,
+                    such as was:
+                  </p>
+                  <p
+                    style={{
+                      textAlign: 'left',
+                      justifyContent: 'left',
+                      marginLeft: -10,
+                    }}
+                  >
+                    <ul style={{ textAlign: 'left' }}>
+                      <li>audio loaded</li>
+                      <li>audio currently playing</li>
+                      <li>from playlist or general library</li>
+                      <li>current audio position</li>
+                      <li>last audio position</li>
+                      <li>etc</li>
+                    </ul>
+                  </p>
                 </div>
               ),
             },
