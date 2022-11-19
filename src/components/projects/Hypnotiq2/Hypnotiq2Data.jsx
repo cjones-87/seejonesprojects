@@ -268,7 +268,7 @@ const Hypnotiq2Data = [
                     complete control , I had to keep track of multiple factors,
                     such as was:
                   </p>
-                  <p
+                  <div
                     style={{
                       textAlign: 'left',
                       justifyContent: 'left',
@@ -283,7 +283,7 @@ const Hypnotiq2Data = [
                       <li>last audio position</li>
                       <li>etc</li>
                     </ul>
-                  </p>
+                  </div>
                 </div>
               ),
             },

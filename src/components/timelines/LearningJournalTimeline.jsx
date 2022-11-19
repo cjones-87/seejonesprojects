@@ -25,6 +25,7 @@ import {
   SiCss3,
   SiExpo,
   SiExpress,
+  SiFirebase,
   SiHeroku,
   SiMaterialui,
   SiNetlify,
@@ -41,11 +42,46 @@ export default class LearningJournalTimeline extends Component {
 
     this.events1 = [
       {
+        id: 10,
+        status: 'Hypnotiq 2.0',
+        date: '2022',
+        icon: 'pi pi-star',
+        color: '#FF9800',
+        image: HypnotiqPic,
+        description: 'Frontend Mobile App',
+        techStack: (
+          <span>
+            <DiJavascript1 />
+            &nbsp;&nbsp;&nbsp;
+            <FaReact />
+            &nbsp;&nbsp;&nbsp;
+            <FaMobileAlt />
+            &nbsp;&nbsp;&nbsp;
+            <SiExpo />
+            &nbsp;&nbsp;&nbsp;
+            <SiCss3 />
+            &nbsp;&nbsp;&nbsp;
+            <SiFirebase />
+            &nbsp;&nbsp;&nbsp;
+            <img
+              src="https://img.icons8.com/color/2x/cloud-firestore.png"
+              alt="firestore"
+              height={'12rem'}
+              width={'12rem'}
+            />
+          </span>
+        ),
+        moreInfo: '',
+        command: (event) => {
+          window.location.href = '/projects/hypnotiq2';
+        },
+      },
+      {
         id: 9,
         status: `All I Know Is, IYKYK`,
         date: '2022',
         icon: 'pi pi-star',
-        color: '#9C27B0',
+        color: '#607D8B',
         image: IYKYK,
         description: 'Frontend SPA Multiple Choice Quiz',
         techStack: (
@@ -84,7 +120,7 @@ export default class LearningJournalTimeline extends Component {
             &nbsp;&nbsp;&nbsp;
             <SiCss3 />
             &nbsp;&nbsp;&nbsp;
-            <i className="pi pi-prime" style={{ fontSize: '1em' }} />{' '}
+            <i className="pi pi-prime" style={{ fontSize: '1em' }} />
             &nbsp;&nbsp;&nbsp;
             <SiNetlify />
           </span>
@@ -105,7 +141,6 @@ export default class LearningJournalTimeline extends Component {
 
         techStack: (
           <span>
-            {' '}
             <FaReact />
             &nbsp;&nbsp;&nbsp;
             <FaMobileAlt />
@@ -309,8 +344,8 @@ export default class LearningJournalTimeline extends Component {
                 : 'indigo',
             textShadow:
               localStorage.getItem('lightMode') === 'true'
-                ? '1px 1px 1px whitesmoke'
-                : '1px 1px 1px indigo',
+                ? '1px 1px 1px black'
+                : '1px 1px 1px whitesmoke',
             justifyContent: 'space-evenly',
             textAlign: 'center',
             paddingTop: '1.5rem',
@@ -332,6 +367,13 @@ export default class LearningJournalTimeline extends Component {
             label="Learn more"
             className="p-button-text"
             onClick={item.command}
+            style={{
+              backgroundColor: '#ce93d8',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'whitesmoke'
+                  : 'indigo',
+            }}
           />
         </Card>
       );
@@ -348,7 +390,7 @@ export default class LearningJournalTimeline extends Component {
           color: 'white',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px indigo'
+              ? '1px 1px 1px black'
               : '1px 1px 1px whitesmoke',
           paddingTop: '1rem',
         }}
