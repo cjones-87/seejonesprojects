@@ -30,6 +30,14 @@ export default class AllProjects extends React.Component {
     this.state = {
       projects: [
         {
+          name: 'Hypnotiq 2.0',
+          image: HypnotiqPic,
+          category: 'React Native Mobile App',
+          difficulty: 9,
+          status: 'v3 in progress',
+          href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
+        },
+        {
           name: 'All I Know Is, IYKYK',
           image: IYKYK,
           category: 'React Web App',
@@ -58,7 +66,7 @@ export default class AllProjects extends React.Component {
           image: HypnotiqPic,
           category: 'React Native Mobile App',
           difficulty: 7,
-          status: 'v2 in progress',
+          status: 'v2.0 complete',
           href: 'https://www.seejonesengineer.com/projects/hypnotiq',
         },
         {
