@@ -64,17 +64,7 @@ export default class Hypnotiq2 extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center', justifyContent: 'center' }}>
-        <Iframe
-          url="https://www.youtube.com/embed/JAFO_AROg34"
-          width="800px"
-          height="800px"
-          id="myId"
-          className="myClassname"
-          display="initial"
-          position="relative"
-          allowFullScreen
-        />
+      <div>
         <OrganizationChart
           className={
             localStorage.getItem('lightMode') === 'true'
@@ -87,6 +77,7 @@ export default class Hypnotiq2 extends React.Component {
           }
           selection={this.state.selection}
           selectionMode="multiple"
+          style={{ textAlign: 'center', justifyContent: 'center' }}
           value={this.orgChart}
         />
       </div>
