@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = (props) => {
   return (
-    <>
+    <div className="sticky bottom-0" id="footer">
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
@@ -73,7 +73,7 @@ const Footer = (props) => {
           © 2022 by CJ Jones
         </h5>
       </div>
-    </>
+    </div>
   );
 };
 
