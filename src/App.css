@@ -18,6 +18,10 @@ body {
   z-index: 1000;
 }
 
+#footer {
+  z-index: 1000;
+}
+
 #homeFlex {
   display: flex;
   flex-direction: row;
