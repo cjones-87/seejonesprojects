@@ -27,19 +27,20 @@ export default class LandingPage extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick = (event) => {
+  onClick = () => {
     setTimeout(() => (window.location.href = '/home'), 2000);
     const audio = new Audio(OpenUp);
     const audio2 = new Audio(AccessGrantedComputerVoice);
-    let playAudio = (event) => {
+    let playAudio = () => {
       audio.play();
     };
-    let playAudio2 = (event) => {
+    let playAudio2 = () => {
       setTimeout(() => audio2.play(), 500);
     };
     playAudio();
     playAudio2();
   };
+
   render() {
     return (
       <body id="landingPage">
