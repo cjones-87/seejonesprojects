@@ -25,6 +25,8 @@ import SeeJonesEngineer from './components/projects/SeeJonesEngineer/SeeJonesEng
 import IYKYK from './components/projects/IYKYK/IYKYK';
 import PageNotFound404 from './components/error/PageNotFound404';
 
+import PurpleClouds from './components/3dBackgrounds/PurpleClouds';
+
 const App = () => {
   const navigate = useNavigate();
   const [stopRecording, setStopRecording] = useState(false);
@@ -120,6 +122,7 @@ const App = () => {
         />
         <Route path="/projects/iykyk" element={<IYKYK />} />
         <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
+        <Route path="/purpleclouds" element={<PurpleClouds />} />
         <Route path="*" element={<PageNotFound404 />} />
       </Routes>
       <Footer />
