@@ -32,6 +32,7 @@ import {
   SiPostgresql,
   SiRedux,
   SiSequelize,
+  SiThreedotjs,
   SiTypescript,
   SiVercel,
 } from 'react-icons/si';
@@ -89,6 +90,8 @@ export default class LearningJournalTimeline extends Component {
             <FaReact />
             &nbsp;&nbsp;&nbsp;
             <SiTypescript />
+            &nbsp;&nbsp;&nbsp;
+            <SiThreedotjs />
             &nbsp;&nbsp;&nbsp;
             <ImHtmlFive />
             &nbsp;&nbsp;&nbsp;

@@ -15,7 +15,7 @@ import { ImHtmlFive } from 'react-icons/im';
 
 import { DiJavascript1 } from 'react-icons/di';
 
-import { SiCss3, SiTypescript, SiVercel } from 'react-icons/si';
+import { SiCss3, SiThreedotjs, SiTypescript, SiVercel } from 'react-icons/si';
 
 const IYKYKData = [
   {
@@ -97,6 +97,8 @@ const IYKYKData = [
                   &nbsp;&nbsp;&nbsp;
                   <SiCss3 />
                   &nbsp;&nbsp;&nbsp;
+                  <SiThreedotjs />
+                  &nbsp;&nbsp;&nbsp;
                   <SiVercel />
                 </span>
               ),
@@ -121,6 +123,8 @@ const IYKYKData = [
                     <ImHtmlFive />
                     &nbsp;&nbsp;&nbsp;
                     <SiCss3 />
+                    &nbsp;&nbsp;&nbsp;
+                    <SiThreedotjs />
                     &nbsp;&nbsp;&nbsp;
                     <SiVercel />
                   </p>
@@ -150,10 +154,12 @@ const IYKYKData = [
                     This website was created solely by me. This was my first
                     time using Typescript and I had fun learning the nuances of
                     applying what i know pertaining to <DiJavascript1 /> &
-                    applying that knowledge to my implementation of
-                    <SiTypescript /> as I completed this project. The syntactic
-                    sugar that it provided came in a lot of handy when debugging
-                    each error that occurred.
+                    applying that knowledge to my implementation of&nbsp;
+                    <SiTypescript /> as I completed this project.
+                  </p>
+                  <p>
+                    I also used this project to help further my understanding of
+                    3d animations and rendering.
                   </p>
                 </div>
               ),
@@ -174,8 +180,15 @@ const IYKYKData = [
                     learning some of the intricacies of the language. The
                     syntatical sugar it provides was extremely helpful in
                     debugging. One of the biggest challenges was learning what
-                    the differences in implementation were between{' '}
+                    the differences in implementation were between
                     <DiJavascript1 /> & <SiTypescript />.
+                  </p>
+                  <p>
+                    Rendering and animating the 3d background also proved more
+                    difficult than I initially assumed. Some of the bugs that
+                    arose required some additional research, causing me to learn
+                    a lot more, not just about <SiThreedotjs /> but also about
+                    <FaReact /> & its hooks.
                   </p>
                 </div>
               ),
