@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IYKYK } from '../../../photos/PhotoExports';
+import { IYKYKhome } from '../../../photos/PhotoExports';
 
 import { FaReact } from 'react-icons/fa';
 
@@ -16,14 +16,14 @@ const IYKYKData = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: IYKYK },
+    data: { avatar: IYKYKhome },
     children: [
       {
         label: 'MVP Goal',
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYK },
+        data: { avatar: IYKYKhome },
         children: [
           {
             label: 'Minimum Viable Product',
@@ -71,7 +71,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYK },
+        data: { avatar: IYKYKhome },
         children: [
           {
             label: 'Technologies',
@@ -128,7 +128,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYK },
+        data: { avatar: IYKYKhome },
         children: [
           {
             label: 'Contributions',
