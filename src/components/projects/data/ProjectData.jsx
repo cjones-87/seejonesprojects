@@ -4,7 +4,7 @@ import {
   ComputerLovePic,
   browseBooks,
   HypnotiqPic,
-  IYKYK,
+  IYKYKhome,
 } from '../../../photos/PhotoExports';
 
 export const ProjectData = [
@@ -28,7 +28,7 @@ export const ProjectData = [
   },
   {
     id: 4,
-    image: IYKYK,
+    image: IYKYKhome,
     caption: 'IYKYK',
     href: 'https://www.seejonesengineer.com/projects/iykyk',
   },
