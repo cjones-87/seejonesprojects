@@ -16,21 +16,21 @@ export const ProjectData = [
   },
   {
     id: 2,
+    image: IYKYKhome,
+    caption: 'IYKYK',
+    href: 'https://www.seejonesengineer.com/projects/iykyk',
+  },
+  {
+    id: 3,
     image: ComputerLovePic,
     caption: 'Computer Love',
     href: 'https://www.seejonesengineer.com/projects/computerlove',
   },
   {
-    id: 3,
+    id: 4,
     image: HypnotiqPic,
     caption: 'Hypnotiq',
     href: 'https://www.seejonesengineer.com/projects/hypnotiq',
-  },
-  {
-    id: 4,
-    image: IYKYKhome,
-    caption: 'IYKYK',
-    href: 'https://www.seejonesengineer.com/projects/iykyk',
   },
   {
     id: 5,

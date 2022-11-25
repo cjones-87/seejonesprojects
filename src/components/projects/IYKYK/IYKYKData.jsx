@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { IYKYKhome } from '../../../photos/PhotoExports';
+import {
+  IYKYKhome,
+  IYKYKlanding,
+  IYKYKnavbar,
+  IYKYKcomics,
+  IYKYKmath,
+  IYKYKquiz,
+} from '../../../photos/PhotoExports';
 
 import { FaReact } from 'react-icons/fa';
 
@@ -23,7 +30,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYKhome },
+        data: { avatar: IYKYKnavbar },
         children: [
           {
             label: 'Minimum Viable Product',
@@ -31,7 +38,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKlanding,
               info: (
                 <div>
                   <p>
@@ -51,7 +58,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
@@ -71,7 +78,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYKhome },
+        data: { avatar: IYKYKmath },
         children: [
           {
             label: 'Technologies',
@@ -79,7 +86,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKquiz,
               info: (
                 <span>
                   <SiTypescript />
@@ -101,7 +108,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKcomics,
               info: (
                 <div>
                   <p>
@@ -128,7 +135,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYKhome },
+        data: { avatar: IYKYKnavbar },
         children: [
           {
             label: 'Contributions',
@@ -136,7 +143,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKlanding,
               info: (
                 <div>
                   <p>
@@ -158,7 +165,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
