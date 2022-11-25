@@ -11,7 +11,7 @@ import {
   browseBooks,
   HypnotiqPic,
   seeJonesEngineer,
-  IYKYK,
+  IYKYKhome,
   imageNotFound,
 } from '../../photos/PhotoExports';
 
@@ -82,7 +82,7 @@ export default class LearningJournalTimeline extends Component {
         date: '2022',
         icon: 'pi pi-star',
         color: '#607D8B',
-        image: IYKYK,
+        image: IYKYKhome,
         description: 'Frontend SPA Multiple Choice Quiz',
         techStack: (
           <span>

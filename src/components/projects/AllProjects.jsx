@@ -19,7 +19,7 @@ import {
   browseBooks,
   HypnotiqPic,
   portfolioPic,
-  IYKYK,
+  IYKYKhome,
   imageNotFound,
 } from '../../photos/PhotoExports';
 
@@ -39,7 +39,7 @@ export default class AllProjects extends React.Component {
         },
         {
           name: 'All I Know Is, IYKYK',
-          image: IYKYK,
+          image: IYKYKhome,
           category: 'React Web App',
           difficulty: 7,
           status: 'complete',
