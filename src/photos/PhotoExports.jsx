@@ -35,7 +35,12 @@ import shoppingCart from './BoundzBookstore/shoppingCart.png';
 import checkout1 from './BoundzBookstore/checkout1.png';
 import checkout2 from './BoundzBookstore/checkout2.png';
 
-import IYKYK from './IYKYK/IYKYK.jpeg';
+import IYKYKhome from './IYKYK/IYKYKhome.png';
+import IYKYKlanding from './IYKYK/IYKYKlanding.png';
+import IYKYKnavbar from './IYKYK/IYKYKnavbar.png';
+import IYKYKcomics from './IYKYK/IYKYKcomics.png';
+import IYKYKmath from './IYKYK/IYKYKmath.png';
+import IYKYKquiz from './IYKYK/IYKYKquiz.png';
 
 import IdleClickerPic from './IdleClicker.png';
 
@@ -81,7 +86,12 @@ export {
   shoppingCart,
   checkout1,
   checkout2,
-  IYKYK,
+  IYKYKhome,
+  IYKYKlanding,
+  IYKYKnavbar,
+  IYKYKcomics,
+  IYKYKmath,
+  IYKYKquiz,
   IdleClickerPic,
   GuessingGamePic,
   FullstackLogo,
