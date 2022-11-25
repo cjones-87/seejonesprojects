@@ -31,7 +31,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
@@ -51,7 +51,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
@@ -79,7 +79,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <span>
                   <SiTypescript />
@@ -101,7 +101,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
@@ -136,7 +136,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
@@ -158,7 +158,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYK,
+              avatar: IYKYKhome,
               info: (
                 <div>
                   <p>
