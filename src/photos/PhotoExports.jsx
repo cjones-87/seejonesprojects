@@ -35,9 +35,9 @@ import shoppingCart from './BoundzBookstore/shoppingCart.png';
 import checkout1 from './BoundzBookstore/checkout1.png';
 import checkout2 from './BoundzBookstore/checkout2.png';
 
-import IYKYKhome from './IYKYK/IYKYKhome.png';
-import IYKYKlanding from './IYKYK/IYKYKlanding.png';
-import IYKYKnavbar from './IYKYK/IYKYKnavbar.png';
+import IYKYKhome from './IYKYK/IYKYKhome.gif';
+import IYKYKlanding from './IYKYK/IYKYKlanding.gif';
+import IYKYKnavbar from './IYKYK/IYKYKnavbar.gif';
 import IYKYKcomics from './IYKYK/IYKYKcomics.png';
 import IYKYKmath from './IYKYK/IYKYKmath.png';
 import IYKYKquiz from './IYKYK/IYKYKquiz.png';
