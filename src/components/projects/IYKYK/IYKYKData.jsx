@@ -158,8 +158,11 @@ const IYKYKData = [
                     <SiTypescript /> as I completed this project.
                   </p>
                   <p>
-                    I also used this project to help further my understanding of
-                    3d animations and rendering.
+                    I also used this project to enhance my understanding of 3d
+                    animations and rendering. Using a picture of smoke as my
+                    base, I was able to create, replicate, & animate particles.
+                    I rendered these animated images as backgrounds to my
+                    landing and home pages.
                   </p>
                 </div>
               ),

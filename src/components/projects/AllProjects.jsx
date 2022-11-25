@@ -33,7 +33,7 @@ export default class AllProjects extends React.Component {
           name: 'Hypnotiq 2.0',
           image: HypnotiqPic,
           category: 'React Native Mobile App',
-          difficulty: 9,
+          difficulty: 10,
           status: 'v3 in progress',
           href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
         },
@@ -41,7 +41,7 @@ export default class AllProjects extends React.Component {
           name: 'All I Know Is, IYKYK',
           image: IYKYKhome,
           category: 'React Web App',
-          difficulty: 7,
+          difficulty: 8,
           status: 'complete',
           href: 'https://www.seejonesengineer.com/projects/iykyk',
         },
@@ -49,7 +49,7 @@ export default class AllProjects extends React.Component {
           name: 'See Jones Engineer',
           image: portfolioPic,
           category: 'React Web App',
-          difficulty: 8,
+          difficulty: 9,
           status: 'complete',
           href: 'https://www.seejonesengineer.com/',
         },
@@ -169,7 +169,7 @@ export default class AllProjects extends React.Component {
             <Column field="category" header="Category"></Column>
             <Column
               field="rating"
-              header="Difficulty Level (current)"
+              header="Difficulty Level"
               body={this.ratingBodyTemplate}
             ></Column>
           </DataTable>
