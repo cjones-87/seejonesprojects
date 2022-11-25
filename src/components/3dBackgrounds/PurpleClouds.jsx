@@ -155,6 +155,7 @@ const PurpleClouds = () => {
             margin: 'auto',
             paddingTop: '50px',
             position: 'absolute',
+            textShadow: '1px 1px 1px whitesmoke',
             top: window.innerHeight / 1.7,
             transform: 'translate(-50%, -50%)',
             zIndex: -0,
