@@ -12,7 +12,7 @@ import LearningJournalTimeline from './components/timelines/LearningJournalTimel
 import AboutMe from './components/aboutMe/AboutMe';
 import ContactForm from './components/contactMe/ContactForm';
 import Resume from './components/resume/Resume';
-import LandingPage from './components/home/LandingPage';
+import LandingPage from './views/home/LandingPage';
 import Home from './components/home/Home';
 import PlayGames from './components/games/PlayGames';
 import GuessingGame from './components/projects/GuessingGame/GuessingGame';
