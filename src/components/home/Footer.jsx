@@ -16,6 +16,7 @@ const Footer = (props) => {
               ? '1px 1px 1px #01020E'
               : '1px 1px 1px #f5f5f5',
           textAlign: 'center',
+          marginTop: '5rem',
           paddingTop: '2rem',
         }}
       >

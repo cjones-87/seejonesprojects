@@ -104,7 +104,7 @@ const LandingPage = () => {
         map: texture,
         transparent: true,
       });
-      for (let p = 0; p < 50; p++) {
+      for (let p = 0; p < 69; p++) {
         let cloud = new THREE.Mesh(cloudGeometry, cloudMaterial);
 
         cloud.position.set(
@@ -163,10 +163,6 @@ const LandingPage = () => {
     };
 
     window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, [dimensions.height, dimensions.width]);
 
   return (
@@ -192,7 +188,7 @@ const LandingPage = () => {
                   ? 'whitesmoke'
                   : '#fbcce7',
               left: '50%',
-              margin: 'auto',
+              marginTop: '10%',
               position: 'absolute',
               textShadow: '1px 1px 1px black',
               top: dimensions.height / 1.7,
@@ -200,18 +196,20 @@ const LandingPage = () => {
               zIndex: -0,
             }}
           >
-            <h1>
-              <Typewriter
-                options={{
-                  strings: 'Welcome! My Name is CJ Jones',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </h1>
-
-            <div id="landingPage" style={{ lineHeight: '3rem' }}>
-              <div>
+            <div
+              id="landingPage"
+              style={{ lineHeight: '3rem', marginTop: '2rem' }}
+            >
+              <h1>
+                <Typewriter
+                  options={{
+                    strings: 'Welcome! My Name is CJ Jones',
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </h1>
+              <h2>
                 <Typewriter
                   options={{
                     strings: [
@@ -227,19 +225,19 @@ const LandingPage = () => {
                     loop: true,
                   }}
                 />
-              </div>
+              </h2>
 
               <div>
                 <Typewriter
                   options={{
-                    strings: 'Specializing in',
+                    strings: 'Specializing in:',
                     autoStart: true,
                     loop: false,
                   }}
                 />
               </div>
 
-              <div>
+              <div style={{ color: 'indigo' }}>
                 <FaReact /> <FaMobileAlt /> <SiExpo />
               </div>
 
@@ -253,7 +251,7 @@ const LandingPage = () => {
                 />
               </div>
 
-              <div>
+              <div style={{ color: 'indigo' }}>
                 <FaReact /> <DiJavascript1 />
               </div>
 
@@ -301,6 +299,7 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
+
                 <a
                   href="https://www.w3.org/html/"
                   target="_blank"
@@ -313,6 +312,7 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
+
                 <a
                   href="https://www.w3schools.com/css/"
                   target="_blank"
@@ -345,6 +345,46 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                      alt="javascript"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
+                  <a
+                    href="https://www.w3.org/html/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                      alt="html5"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
+                  <a
+                    href="https://www.w3schools.com/css/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                      alt="css3"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
                   <a href="https://mui.com/" target="_blank" rel="noreferrer">
                     <img
                       src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"
@@ -353,6 +393,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://www.primefaces.org/primereact/"
                     target="_blank"
@@ -365,6 +406,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://chakra-ui.com/"
                     target="_blank"
@@ -377,6 +419,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://redux.js.org"
                     target="_blank"
@@ -389,6 +432,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://webpack.js.org"
                     target="_blank"
@@ -401,6 +445,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://babeljs.io/"
                     target="_blank"
@@ -413,7 +458,21 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
+                  <a
+                    href="https://threejs.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg"
+                      alt="three js"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
                 </div>
+
                 <div
                   className="sectionC1"
                   style={{ width: dimensions.width / 3 }}
@@ -495,6 +554,19 @@ const LandingPage = () => {
                 >
                   <h4 align="center"> Back-End </h4>
 
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                      alt="javascript"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
                   <a href="https://nodejs.org" target="_blank" rel="noreferrer">
                     <img
                       src="https://img.icons8.com/fluency/344/node-js.png"
@@ -503,6 +575,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://sequelize.org/"
                     target="_blank"
@@ -515,6 +588,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://www.postgresql.org"
                     target="_blank"
@@ -527,6 +601,7 @@ const LandingPage = () => {
                       height="40"
                     />
                   </a>
+
                   <a
                     href="https://expressjs.com"
                     target="_blank"
@@ -535,6 +610,32 @@ const LandingPage = () => {
                     <img
                       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                       alt="express"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
+                  <a
+                    href="https://firebase.google.com/docs"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/2x/firebase.png"
+                      alt="firebase"
+                      width="40"
+                      height="40"
+                    />
+                  </a>
+
+                  <a
+                    href="https://firebase.google.com/docs/firestore"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/2x/cloud-firestore.png"
+                      alt="firestore"
                       width="40"
                       height="40"
                     />
