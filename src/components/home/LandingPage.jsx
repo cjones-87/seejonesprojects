@@ -231,42 +231,44 @@ const LandingPage = () => {
               />
             </h2>
 
-            <div>
-              <Typewriter
-                options={{
-                  strings: 'Specializing in:',
-                  autoStart: true,
-                  loop: false,
+            <div id="sectionD">
+              <div
+                className="sectionD2"
+                style={{
+                  border: 'none',
                 }}
-              />
-            </div>
+              >
+                <FaReact color="indigo" /> <DiJavascript1 color="indigo" />
+                <Typewriter
+                  options={{
+                    strings: 'for web development',
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </div>
 
-            <div style={{ color: 'indigo' }}>
-              <FaReact /> <FaMobileAlt /> <SiExpo />
-            </div>
+              <div className="sectionD1">
+                <Typewriter
+                  options={{
+                    strings: 'Specializing in:',
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </div>
 
-            <div>
-              <Typewriter
-                options={{
-                  strings: 'for mobile development',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
-            </div>
-
-            <div style={{ color: 'indigo' }}>
-              <FaReact /> <DiJavascript1 />
-            </div>
-
-            <div>
-              <Typewriter
-                options={{
-                  strings: 'for web development',
-                  autoStart: true,
-                  loop: false,
-                }}
-              />
+              <div className="sectionD2">
+                <FaReact color="indigo" /> <FaMobileAlt color="indigo" />{' '}
+                <SiExpo color="indigo" />
+                <Typewriter
+                  options={{
+                    strings: 'for mobile development',
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </div>
             </div>
 
             <Button label="See Jones Engineer" onClick={onClick} />
@@ -288,64 +290,14 @@ const LandingPage = () => {
               perspicacious problem solver who can accomplish anything I set my
               mind to.
             </div>
-            <div id="sectionB">
-              <h4 align="center"> Languages </h4>
 
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                  alt="javascript"
-                  width="40"
-                  height="40"
-                />
-              </a>
-
-              <a
-                href="https://www.w3.org/html/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                  alt="html5"
-                  width="40"
-                  height="40"
-                />
-              </a>
-
-              <a
-                href="https://www.w3schools.com/css/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                  alt="css3"
-                  width="40"
-                  height="40"
-                />
-              </a>
-            </div>
-            <div id="sectionC" style={{ width: dimensions.width }}>
+            <div id="sectionC">
               <div
-                className="sectionC2"
+                align="center"
+                id="sectionC1"
                 style={{ width: dimensions.width / 3 }}
               >
-                <h4 align="center"> Front-End </h4>
-
-                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-                  <img
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                    alt="react"
-                    width="40"
-                    height="40"
-                  />
-                </a>
-
+                <h4 align="center"> Proficient Languages </h4>
                 <a
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                   target="_blank"
@@ -358,7 +310,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a
                   href="https://www.w3.org/html/"
                   target="_blank"
@@ -371,7 +322,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a
                   href="https://www.w3schools.com/css/"
                   target="_blank"
@@ -384,7 +334,112 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
+              </div>
 
+              <div
+                align="center"
+                id="sectionC2"
+                style={{ width: dimensions.width / 3 }}
+              >
+                <h4 align="center"> Familiar (Read-Only) Languages </h4>
+                <a
+                  href="https://www.python.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                    alt="python"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+              </div>
+
+              <div
+                align="center"
+                id="sectionC1"
+                style={{ width: dimensions.width / 3 }}
+              >
+                <h4 align="center"> Knowledgeable Languages </h4>
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                    alt="typescript"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div id="sectionC" style={{ width: dimensions.width }}>
+              <div
+                className="sectionC2"
+                style={{ width: dimensions.width / 3 }}
+              >
+                <h4 align="center"> Front-End </h4>
+                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    alt="react"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    alt="javascript"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                &nbsp;
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                    alt="typescript"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a
+                  href="https://www.w3.org/html/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                    alt="html5"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a
+                  href="https://www.w3schools.com/css/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                    alt="css3"
+                    width="40"
+                    height="40"
+                  />
+                </a>
                 <a href="https://mui.com/" target="_blank" rel="noreferrer">
                   <img
                     src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"
@@ -393,7 +448,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a
                   href="https://www.primefaces.org/primereact/"
                   target="_blank"
@@ -406,7 +460,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a
                   href="https://chakra-ui.com/"
                   target="_blank"
@@ -419,7 +472,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a href="https://redux.js.org" target="_blank" rel="noreferrer">
                   <img
                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
@@ -428,7 +480,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a
                   href="https://webpack.js.org"
                   target="_blank"
@@ -441,7 +492,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a href="https://babeljs.io/" target="_blank" rel="noreferrer">
                   <img
                     src="https://img.icons8.com/wired/344/ffffff/babel.png"
@@ -450,7 +500,6 @@ const LandingPage = () => {
                     height="40"
                   />
                 </a>
-
                 <a href="https://threejs.org/" target="_blank" rel="noreferrer">
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg"
