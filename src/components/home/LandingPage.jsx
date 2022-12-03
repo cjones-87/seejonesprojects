@@ -198,7 +198,7 @@ const LandingPage = () => {
           <div
             className="header"
             // id="landingPage"
-            style={{ lineHeight: '2rem', marginTop: '.5rem' }}
+            style={{ lineHeight: '2rem', marginTop: '10rem' }}
           >
             <h1>
               <Typewriter
