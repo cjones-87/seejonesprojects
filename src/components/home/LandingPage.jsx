@@ -171,12 +171,12 @@ const LandingPage = () => {
       style={{
         height: dimensions.height,
         width: dimensions.width,
-        zIndex: -100,
+        zIndex: -20,
       }}
     >
       <div
         style={{
-          zIndex: -20,
+          zIndex: -10,
         }}
       >
         <div
@@ -187,19 +187,15 @@ const LandingPage = () => {
                 ? 'whitesmoke'
                 : '#fbcce7',
             left: '50%',
-            marginTop: '10%',
-            position: 'absolute',
+            // marginTop: '10%',
+            position: 'fixed',
             textShadow: '1px 1px 1px black',
-            top: dimensions.height / 1.7,
+            top: dimensions.height / 2,
             transform: 'translate(-50%, -50%)',
-            zIndex: -0,
+            zIndex: 1,
           }}
         >
-          <div
-            className="header"
-            // id="landingPage"
-            style={{ lineHeight: '2rem', marginTop: '10rem' }}
-          >
+          <div className="header">
             <h1>
               <Typewriter
                 options={{
