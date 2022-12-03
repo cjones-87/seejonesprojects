@@ -190,7 +190,7 @@ const LandingPage = () => {
             // marginTop: '10%',
             position: 'absolute',
             textShadow: '1px 1px 1px black',
-            top: dimensions.height / 2,
+            top: dimensions.height + 100,
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
           }}
