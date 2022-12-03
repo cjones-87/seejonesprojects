@@ -61,3 +61,24 @@ h2 {
   background: rgb(75, 0, 130, 0.3);
   text-align: center;
 }
+
+#sectionD {
+  border: groove 0.5rem white;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.sectionD1 {
+  background: rgb(128, 128, 128, 0.3);
+  text-align: center;
+  /* margin: auto; */
+  display: grid;
+  place-items: center;
+}
+
+.sectionD2 {
+  padding: 1rem;
+  background: rgb(75, 0, 130, 0.3);
+  text-align: center;
+}
