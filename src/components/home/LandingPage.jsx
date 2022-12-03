@@ -188,14 +188,22 @@ const LandingPage = () => {
                 : '#fbcce7',
             left: '50%',
             // marginTop: '10%',
-            position: 'fixed',
+            position: 'absolute',
             textShadow: '1px 1px 1px black',
             top: dimensions.height / 2,
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
           }}
         >
-          <div className="header">
+          <div
+            className="header"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              flexGrow: 1,
+              paddingTop: '3rem',
+            }}
+          >
             <h1>
               <Typewriter
                 options={{
