@@ -2,12 +2,6 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-
-  /* color: white; */
-  /* background-image: url("../../photos/CJ'sDesktop.jpeg"); */
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
 a {
@@ -15,11 +9,11 @@ a {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .header {
@@ -28,16 +22,7 @@ h2 {
   align-items: center;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: auto;
-  /* align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  line-height: 1;
-  padding: 0 20px;
-  text-align: center;
-  width: 100%; */
+  margin-top: 20%;
 }
 
 #sectionA {
