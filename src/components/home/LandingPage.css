@@ -1,7 +1,7 @@
 #landingPage {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 1.5rem;
 
   /* color: white; */
   /* background-image: url("../../photos/CJ'sDesktop.jpeg"); */
@@ -22,8 +22,12 @@ h2 {
   font-size: 2em;
 }
 
-#showcase {
+.header {
+  display: grid;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  /* align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -31,7 +35,7 @@ h2 {
   line-height: 1;
   padding: 0 20px;
   text-align: center;
-  width: 100%;
+  width: 100%; */
 }
 
 #sectionA {
