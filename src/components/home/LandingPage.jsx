@@ -13,14 +13,6 @@ import Typewriter from 'typewriter-effect';
 
 import { Button } from 'primereact/button';
 
-import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
-
-import { DiJavascript1 } from 'react-icons/di';
-
-import { ImHtmlFive } from 'react-icons/im';
-
-import { SiCss3, SiExpo, SiRedux } from 'react-icons/si';
-
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 
@@ -170,6 +162,7 @@ const LandingPage = () => {
       id="canvas"
       style={{
         height: dimensions.height,
+
         width: dimensions.width,
         zIndex: -20,
       }}
@@ -191,6 +184,9 @@ const LandingPage = () => {
             textShadow: '1px 1px 1px black',
             top: dimensions.height + 100,
             transform: 'translate(-50%, -50%)',
+
+            paddingBottom: dimensions.height * 1.3,
+            paddingTop: dimensions.height / 3,
             zIndex: 1,
           }}
         >
