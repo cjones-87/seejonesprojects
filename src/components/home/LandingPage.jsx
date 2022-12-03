@@ -271,7 +271,11 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <Button label="See Jones Engineer" onClick={onClick} />
+            <Button
+              label="See Jones Engineer"
+              onClick={onClick}
+              style={{ marginTop: '2rem' }}
+            />
           </div>
 
           <div
