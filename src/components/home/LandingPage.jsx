@@ -187,7 +187,6 @@ const LandingPage = () => {
                 ? 'whitesmoke'
                 : '#fbcce7',
             left: '50%',
-            // marginTop: '10%',
             position: 'absolute',
             textShadow: '1px 1px 1px black',
             top: dimensions.height + 100,
@@ -201,7 +200,7 @@ const LandingPage = () => {
               display: 'flex',
               flexDirection: 'column',
               flexGrow: 1,
-              paddingTop: '3rem',
+              paddingTop: '5rem',
             }}
           >
             <h1>
@@ -220,8 +219,7 @@ const LandingPage = () => {
                     'Software Engineer',
                     'Mobile Developer',
                     'Web Developer',
-                    'Solutions Engineer',
-                    'SWE Consultant',
+                    'Consultant',
                     'Mentor',
                     'Tutor',
                   ],
@@ -238,10 +236,29 @@ const LandingPage = () => {
                   border: 'none',
                 }}
               >
-                <FaReact color="indigo" /> <DiJavascript1 color="indigo" />
+                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    alt="react"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    alt="javascript"
+                    width="40"
+                    height="40"
+                  />
+                </a>
                 <Typewriter
                   options={{
-                    strings: 'for web development',
+                    strings: 'Web Development',
                     autoStart: true,
                     loop: false,
                   }}
@@ -251,7 +268,7 @@ const LandingPage = () => {
               <div className="sectionD1">
                 <Typewriter
                   options={{
-                    strings: 'Specializing in:',
+                    strings: 'Specializing In',
                     autoStart: true,
                     loop: false,
                   }}
@@ -259,11 +276,42 @@ const LandingPage = () => {
               </div>
 
               <div className="sectionD2">
-                <FaReact color="indigo" /> <FaMobileAlt color="indigo" />{' '}
-                <SiExpo color="indigo" />
+                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    alt="react"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a
+                  href="https://docs.expo.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://i.imgur.com/LNiblbi.png"
+                    alt="react native expo"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                &nbsp;
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    alt="javascript"
+                    width="40"
+                    height="40"
+                  />
+                </a>
                 <Typewriter
                   options={{
-                    strings: 'for mobile development',
+                    strings: 'Mobile Development',
                     autoStart: true,
                     loop: false,
                   }}
@@ -683,19 +731,19 @@ const LandingPage = () => {
                 className="sectionC1"
                 style={{ width: dimensions.width / 3 }}
               >
-                <FaReact /> & <FaReact />+<SiRedux /> Web Apps
+                Web Apps
               </div>
               <div
                 className="sectionC2"
                 style={{ width: dimensions.width / 3 }}
               >
-                <FaReact /> <FaMobileAlt /> <SiExpo /> Mobile Apps
+                Mobile Apps
               </div>
               <div
                 className="sectionC1"
                 style={{ width: dimensions.width / 3 }}
               >
-                <FaNodeJs />, <ImHtmlFive />, <SiCss3 /> - Basic Web Pages
+                Websites
               </div>
             </div>
           </div>

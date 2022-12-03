@@ -71,7 +71,6 @@ h2 {
 .sectionD1 {
   background: rgb(128, 128, 128, 0.3);
   text-align: center;
-  /* margin: auto; */
   display: grid;
   place-items: center;
 }
