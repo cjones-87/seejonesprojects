@@ -184,7 +184,7 @@ const LandingPage = () => {
             top: dimensions.height + 100,
             transform: 'translate(-50%, -50%)',
 
-            paddingBottom: '1rem',
+            // paddingBottom: '1rem',
             // paddingTop: dimensions.height / 3,
             zIndex: 1,
           }}
@@ -718,7 +718,7 @@ const LandingPage = () => {
             <div
               id="sectionC"
               style={{
-                paddingBottom: '2rem',
+                // paddingBottom: '2rem',
                 width: '100vw',
               }}
             >
