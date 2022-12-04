@@ -161,8 +161,7 @@ const LandingPage = () => {
     <div
       id="canvas"
       style={{
-        height: dimensions.height,
-
+        height: dimensions.height * 2,
         width: dimensions.width,
         zIndex: -20,
       }}
@@ -185,8 +184,8 @@ const LandingPage = () => {
             top: dimensions.height + 100,
             transform: 'translate(-50%, -50%)',
 
-            paddingBottom: dimensions.height * 1.3,
-            paddingTop: dimensions.height / 3,
+            paddingBottom: '1rem',
+            // paddingTop: dimensions.height / 3,
             zIndex: 1,
           }}
         >
