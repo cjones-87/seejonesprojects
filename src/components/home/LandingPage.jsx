@@ -80,7 +80,7 @@ const LandingPage = () => {
       stencil: false,
       depth: false,
     });
-    renderer.setSize(dimensions.width, dimensions.height);
+    renderer.setSize(dimensions.width, dimensions.height * 1.5);
     scene.fog =
       localStorage.getItem('lightMode') === 'true'
         ? new THREE.FogExp2(0x51414f, 0.0001)
@@ -161,7 +161,7 @@ const LandingPage = () => {
     <div
       id="canvas"
       style={{
-        height: dimensions.height * 2,
+        height: dimensions.height * 3,
         width: dimensions.width,
         zIndex: -20,
       }}
