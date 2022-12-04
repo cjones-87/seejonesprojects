@@ -161,7 +161,7 @@ const LandingPage = () => {
     <div
       id="canvas"
       style={{
-        height: dimensions.height,
+        height: dimensions.height * 2,
         width: dimensions.width,
         zIndex: -20,
       }}
