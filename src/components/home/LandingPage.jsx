@@ -80,7 +80,7 @@ const LandingPage = () => {
       stencil: false,
       depth: false,
     });
-    renderer.setSize(dimensions.width, dimensions.height * 2.5);
+    renderer.setSize(dimensions.width, dimensions.height * 2);
     scene.fog =
       localStorage.getItem('lightMode') === 'true'
         ? new THREE.FogExp2(0x51414f, 0.0001)
