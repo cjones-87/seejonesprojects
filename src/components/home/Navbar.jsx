@@ -220,7 +220,12 @@ export default class Navbar extends React.Component {
         }}
       >
         <div className="card">
-          <Menubar model={this.items} start={start} end={end} />
+          <Menubar
+            model={this.items}
+            start={start}
+            end={end}
+            style={{ width: innerWidth }}
+          />
         </div>
       </div>
     );
