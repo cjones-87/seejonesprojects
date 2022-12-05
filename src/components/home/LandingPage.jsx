@@ -183,9 +183,6 @@ const LandingPage = () => {
             textShadow: '1px 1px 1px black',
             top: dimensions.height + 100,
             transform: 'translate(-50%, -50%)',
-
-            // paddingBottom: '1rem',
-            // paddingTop: dimensions.height / 3,
             zIndex: 1,
           }}
         >
