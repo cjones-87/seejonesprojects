@@ -181,7 +181,7 @@ const LandingPage = () => {
             left: '50%',
             position: 'absolute',
             textShadow: '1px 1px 1px black',
-            top: dimensions.height + 100,
+            top: dimensions.height < 700 ? dimensions.height / 0.8 : '50rem',
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
           }}
@@ -192,9 +192,10 @@ const LandingPage = () => {
               display: 'flex',
               flexDirection: 'column',
               flexGrow: 1,
-              paddingTop: '5rem',
+              paddingTop: dimensions.height <= 600 ? '40rem' : '5rem',
             }}
           >
+            {console.log(dimensions.height)}
             <h1>
               <Typewriter
                 options={{
@@ -220,7 +221,6 @@ const LandingPage = () => {
                 }}
               />
             </h2>
-
             <div id="sectionD">
               <div
                 className="sectionD2"
@@ -310,7 +310,6 @@ const LandingPage = () => {
                 />
               </div>
             </div>
-
             <Button
               label="See Jones Engineer"
               onClick={onClick}
