@@ -13,20 +13,19 @@ const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const setWindowDimensions = () => {
-    setWindowHeight(window.innerHeight);
-    setWindowWidth(window.innerWidth);
-  };
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
 
   useEffect(() => {
-    window.addEventListener('resize', setWindowDimensions);
-    return () => {
-      window.removeEventListener('resize', setWindowDimensions);
+    const handleResize = () => {
+      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      window.location.reload();
     };
-  }, []);
+
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.height, dimensions.width]);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -34,7 +33,7 @@ const Resume = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: dimensions.width }}>
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
@@ -60,9 +59,9 @@ const Resume = () => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Document file={PDF} onLoadSuccess={onDocumentLoadSuccess}>
           <Page
-            height={windowHeight / 1.2}
+            height={dimensions.height}
             pageNumber={pageNumber}
-            width={windowWidth / 1.2}
+            width={dimensions.width}
           />
           <span
             style={{
