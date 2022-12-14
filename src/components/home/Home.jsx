@@ -12,7 +12,20 @@ import {
 } from '../../photos/PhotoExports';
 
 export default function Home() {
-  window.onresize = () => location.reload();
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      window.location.reload();
+    };
+
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.height, dimensions.width]);
+
   return (
     <div className="App">
       <div id="homeFlex">
