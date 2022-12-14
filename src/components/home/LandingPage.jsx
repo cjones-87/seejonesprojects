@@ -21,8 +21,8 @@ import stars from '../../photos/stars.png';
 
 const LandingPage = () => {
   const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: innerHeight,
+    width: innerWidth,
   });
 
   const onClick = () => {
@@ -139,7 +139,7 @@ const LandingPage = () => {
 
     const animate = () => {
       cloudParticles.forEach((particle) => {
-        particle.rotation.z -= 0.002;
+        particle.rotation.z -= 0.01;
       });
 
       renderer.render(scene, camera);
@@ -150,7 +150,7 @@ const LandingPage = () => {
     animate();
 
     const handleResize = () => {
-      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      setDimensions({ height: innerHeight, width: innerWidth });
       window.location.reload();
     };
 
