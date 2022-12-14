@@ -126,16 +126,7 @@ const AboutMeCards = ({ slides }) => {
                     header={header}
                     // footer={playButton}
                   >
-                    <p
-                      className="m-0"
-                      style={{
-                        borderRadius: 25,
-                        width: window.innerWidth / 3,
-                        textAlign: 'center',
-                      }}
-                    >
-                      {slide.paragraph}
-                    </p>
+                    <p className="m-0">{slide.paragraph}</p>
                   </Card>
                 </div>
               )}
