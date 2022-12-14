@@ -34,11 +34,26 @@ const Specialization = () => {
             />
           </b>
         </big>
-
-        <big>
-          <DiJavascript1 /> <FaReact /> <FaMobileAlt /> <SiExpo /> <FaNodeJs />
-        </big>
-
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+            alt="react"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            alt="javascript"
+            width="40"
+            height="40"
+          />
+        </a>
         <big>
           <b>
             <Typewriter
@@ -50,10 +65,35 @@ const Specialization = () => {
             />
           </b>
         </big>
-        <big>
-          <DiJavascript1 /> <FaReact /> <FaNodeJs />
-        </big>
-
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+            alt="react"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://docs.expo.dev/" target="_blank" rel="noreferrer">
+          <img
+            src="https://i.imgur.com/LNiblbi.png"
+            alt="react native expo"
+            width="40"
+            height="40"
+          />
+        </a>
+        &nbsp;
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            alt="javascript"
+            width="40"
+            height="40"
+          />
+        </a>
         <big>
           <b>
             <Typewriter
