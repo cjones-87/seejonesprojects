@@ -4,19 +4,17 @@ import Iframe from 'react-iframe';
 
 export default function PlayGames() {
   const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: innerHeight,
+    width: innerWidth,
   });
 
   useEffect(() => {
     const handleResize = () => {
-      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      setDimensions({ height: innerHeight, width: innerWidth });
       window.location.reload();
     };
 
     window.addEventListener('resize', handleResize);
-
-    // window.removeEventListener('resize', handleResize);
   }, [dimensions.height, dimensions.width]);
 
   return (
@@ -25,6 +23,7 @@ export default function PlayGames() {
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
+        width: dimensions.width,
       }}
     >
       <div
