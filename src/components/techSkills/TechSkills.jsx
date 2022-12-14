@@ -64,6 +64,51 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            alt="javascript"
+            width="40"
+            height="40"
+          />
+        </a>
+        &nbsp;
+        <a
+          href="https://www.typescriptlang.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+            alt="typescript"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+            alt="html5"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a
+          href="https://www.w3schools.com/css/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+            alt="css3"
+            width="40"
+            height="40"
+          />
+        </a>
         <a href="https://mui.com/" target="_blank" rel="noreferrer">
           <img
             src="https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png"
@@ -116,12 +161,33 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+        <a href="https://threejs.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original-wordmark.svg"
+            alt="three js"
+            width="40"
+            height="40"
+          />
+        </a>
       </div>
       <h4 align="center">
         {' '}
         <b>Back-End</b>{' '}
       </h4>
       <div align="center">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            alt="javascript"
+            width="40"
+            height="40"
+          />
+        </a>
+
         <a href="https://nodejs.org" target="_blank" rel="noreferrer">
           <img
             src="https://img.icons8.com/fluency/344/node-js.png"
@@ -130,6 +196,7 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+
         <a href="https://sequelize.org/" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original-wordmark.svg"
@@ -138,6 +205,7 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+
         <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
@@ -146,10 +214,37 @@ export default function TechSkills() {
             height="40"
           />
         </a>
+
         <a href="https://expressjs.com" target="_blank" rel="noreferrer">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
             alt="express"
+            width="40"
+            height="40"
+          />
+        </a>
+
+        <a
+          href="https://firebase.google.com/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/color/2x/firebase.png"
+            alt="firebase"
+            width="40"
+            height="40"
+          />
+        </a>
+
+        <a
+          href="https://firebase.google.com/docs/firestore"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/color/2x/cloud-firestore.png"
+            alt="firestore"
             width="40"
             height="40"
           />
