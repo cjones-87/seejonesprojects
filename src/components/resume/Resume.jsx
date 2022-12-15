@@ -14,13 +14,13 @@ const Resume = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const [dimensions, setDimensions] = useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: innerHeight,
+    width: innerWidth,
   });
 
   useEffect(() => {
     const handleResize = () => {
-      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      setDimensions({ height: innerHeight, width: innerWidth });
       window.location.reload();
     };
 
