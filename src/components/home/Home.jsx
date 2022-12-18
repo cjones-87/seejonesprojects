@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Cube from './Cube';
 
 import ProjectSlideshow from '../projects/ProjectSlideshow';
@@ -12,12 +12,12 @@ import {
 } from '../../photos/PhotoExports';
 
 export default function Home() {
-  const [dimensions, setDimensions] = React.useState({
+  const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setDimensions({ height: innerHeight, width: innerWidth });
       window.location.reload();
