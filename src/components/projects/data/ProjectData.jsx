@@ -4,13 +4,14 @@ import {
   ComputerLovePic,
   browseBooks,
   HypnotiqPic,
+  Hypnotiq2GIF,
   IYKYKhome,
 } from '../../../photos/PhotoExports';
 
 export const ProjectData = [
   {
     id: 1,
-    image: HypnotiqPic,
+    image: Hypnotiq2GIF,
     caption: 'Hypnotiq 2.0',
     href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
   },

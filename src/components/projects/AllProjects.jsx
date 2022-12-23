@@ -18,6 +18,7 @@ import {
   ComputerLovePic,
   browseBooks,
   HypnotiqPic,
+  Hypnotiq2GIF,
   portfolioPic,
   IYKYKhome,
   imageNotFound,
@@ -31,7 +32,7 @@ export default class AllProjects extends React.Component {
       projects: [
         {
           name: 'Hypnotiq 2.0',
-          image: HypnotiqPic,
+          image: Hypnotiq2GIF,
           category: 'React Native Mobile App',
           difficulty: 10,
           status: 'v3 in progress',
