@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HypnotiqPic } from '../../../photos/PhotoExports';
+import { Hypnotiq2GIF } from '../../../photos/PhotoExports';
 
 import { DiJavascript1 } from 'react-icons/di';
 
@@ -16,14 +16,14 @@ const Hypnotiq2Data = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: HypnotiqPic },
+    data: { avatar: Hypnotiq2GIF },
     children: [
       {
         label: 'MVP Goal',
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: HypnotiqPic },
+        data: { avatar: Hypnotiq2GIF },
         children: [
           {
             label: 'Minimum Viable Product',
@@ -31,7 +31,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <div>
                   <p>
@@ -76,7 +76,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <div>
                   <p>
@@ -107,7 +107,7 @@ const Hypnotiq2Data = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: HypnotiqPic },
+        data: { avatar: Hypnotiq2GIF },
         children: [
           {
             label: 'Technologies',
@@ -115,7 +115,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <span>
                   <span>
@@ -148,7 +148,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <div>
                   <p>
@@ -182,7 +182,7 @@ const Hypnotiq2Data = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: HypnotiqPic },
+        data: { avatar: Hypnotiq2GIF },
         children: [
           {
             label: 'Contributions',
@@ -190,7 +190,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <div>
                   <p>
@@ -252,7 +252,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: HypnotiqPic,
+              avatar: Hypnotiq2GIF,
               info: (
                 <div>
                   <p>

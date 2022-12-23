@@ -10,6 +10,7 @@ import {
   ComputerLovePic,
   browseBooks,
   HypnotiqPic,
+  Hypnotiq2GIF,
   seeJonesEngineer,
   IYKYKhome,
   imageNotFound,
@@ -50,7 +51,7 @@ const LearningJournalTimeline = () => {
       date: '2022',
       icon: 'pi pi-star',
       color: '#FF9800',
-      image: HypnotiqPic,
+      image: Hypnotiq2GIF,
       description: 'Frontend Mobile App',
       techStack: (
         <span>
