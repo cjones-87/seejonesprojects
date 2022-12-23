@@ -1,5 +1,8 @@
 import imageNotFound from './imageNotFound.jpeg';
 
+import Hypnotiq2GIF from './Hypnotiq2/HypnotiqMusiq2.gif';
+import Hypnotiq2MP4 from './Hypnotiq2/HypnotiqMusiq2.mp4';
+
 import ComputerLovePic from './ComputerLove/computerLove.gif';
 import activityScreen from './ComputerLove/activityScreen.png';
 import homeScreen from './ComputerLove/homeScreen.png';
@@ -55,6 +58,8 @@ import GithubSkyline2022 from './2022GithubSkyline.gif';
 
 export {
   imageNotFound,
+  Hypnotiq2GIF,
+  Hypnotiq2MP4,
   ComputerLovePic,
   activityScreen,
   homeScreen,
