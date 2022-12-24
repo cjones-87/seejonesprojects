@@ -139,7 +139,7 @@ const LandingPage = () => {
 
     const animate = () => {
       cloudParticles.forEach((particle) => {
-        particle.rotation.z -= 0.01;
+        particle.rotation.z -= 0.003;
       });
 
       renderer.render(scene, camera);
