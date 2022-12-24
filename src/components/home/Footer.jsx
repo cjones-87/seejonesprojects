@@ -18,7 +18,6 @@ const Footer = (props) => {
           textAlign: 'center',
           marginTop: '2rem',
           paddingTop: '2rem',
-
           width: innerWidth,
         }}
       >
