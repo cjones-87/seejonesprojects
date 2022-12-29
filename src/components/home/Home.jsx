@@ -53,7 +53,7 @@ export default function Home() {
         <a href="https://skyline.github.com/cjones-87/2022">
           <img
             src={GithubSkyline2022}
-            style={{ textAlign: 'center', width: dimensions.height / 3 }}
+            style={{ textAlign: 'center', width: dimensions.width / 3 }}
           />
         </a>
       </div>
