@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
@@ -6,20 +6,23 @@ import { imageNotFound } from './../../../photos/PhotoExports';
 
 import BoundzBookstoreData from './BoundzBookstoreData';
 
-export default class BoundzBookstore extends React.Component {
-  constructor() {
-    super();
+const BoundzBookstore = () => {
+  const [selection, setSelection] = useState([]);
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
 
-    this.state = {
-      selection: [],
-    };
+  useEffect(() => {
+    const handleResize = () =>
+      setDimensions({ height: innerHeight, width: innerWidth });
 
-    this.orgChart = BoundzBookstoreData;
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.width, dimensions.height]);
 
-    this.nodeTemplate = this.nodeTemplate.bind(this);
-  }
+  const orgChart = BoundzBookstoreData;
 
-  nodeTemplate(node) {
+  const nodeTemplate = (node) => {
     if (node.type) {
       return (
         <div
@@ -42,7 +45,7 @@ export default class BoundzBookstore extends React.Component {
               alt={node.data.avatar}
               src={node.data.avatar}
               onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: '100px' }}
+              style={{ width: dimensions.width / 5 }}
             />
             <div
               style={{
@@ -58,22 +61,23 @@ export default class BoundzBookstore extends React.Component {
         </div>
       );
     }
-  }
+  };
 
-  render() {
-    return (
-      <OrganizationChart
-        className={
-          localStorage.getItem('lightMode') === 'true'
-            ? 'bg-black-alpha-20'
-            : 'bg-black-alpha-90'
-        }
-        nodeTemplate={this.nodeTemplate}
-        onSelectionChange={(event) => this.setState({ selection: event.data })}
-        selection={this.state.selection}
-        selectionMode="multiple"
-        value={this.orgChart}
-      />
-    );
-  }
-}
+  return (
+    <OrganizationChart
+      className={
+        localStorage.getItem('lightMode') === 'true'
+          ? 'bg-black-alpha-20'
+          : 'bg-black-alpha-90'
+      }
+      nodeTemplate={nodeTemplate}
+      onSelectionChange={(event) => setSelection(event.data)}
+      selection={selection}
+      selectionMode="multiple"
+      style={{ width: dimensions.width * 2 }}
+      value={orgChart}
+    />
+  );
+};
+
+export default BoundzBookstore;
