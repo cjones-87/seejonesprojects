@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { OrganizationChart } from 'primereact/organizationchart';
 
 import { imageNotFound } from '../../../photos/PhotoExports';
+
 import SeeJonesEngineerData from './SeeJonesEngineerData';
 
-export default class SeeJonesEngineer extends React.Component {
-  constructor() {
-    super();
+const SeeJonesEngineer = () => {
+  const [selection, setSelection] = useState([]);
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
 
-    this.state = {
-      selection: [],
-    };
+  useEffect(() => {
+    const handleResize = () =>
+      setDimensions({ height: innerHeight, width: innerWidth });
 
-    this.orgChart = SeeJonesEngineerData;
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.width, dimensions.height]);
 
-    this.nodeTemplate = this.nodeTemplate.bind(this);
-  }
+  const orgChart = SeeJonesEngineerData;
 
-  nodeTemplate(node) {
+  const nodeTemplate = (node) => {
     if (node.type) {
       return (
         <div
@@ -32,16 +36,20 @@ export default class SeeJonesEngineer extends React.Component {
               localStorage.getItem('lightMode') === 'true'
                 ? 'whitesmoke'
                 : 'rebeccapurple',
+            overflowWrap: 'anywhere',
+            width: dimensions.width / 9,
           }}
         >
-          <div className="node-header">{node.label}</div>
-          <div className="node-content" style={{ margin: 5 }}>
+          <div className="node-header" style={{ fontSize: '1.5em' }}>
+            {node.label}
+          </div>
+          <div className="node-content">
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
               src={node.data.avatar}
               onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: '100px' }}
+              style={{ width: dimensions.width / 10 }}
             />
             <div
               style={{
@@ -57,22 +65,32 @@ export default class SeeJonesEngineer extends React.Component {
         </div>
       );
     }
-  }
+  };
 
-  render() {
-    return (
-      <OrganizationChart
-        className={
-          localStorage.getItem('lightMode') === 'true'
-            ? 'bg-black-alpha-20'
-            : 'bg-black-alpha-90'
-        }
-        nodeTemplate={this.nodeTemplate}
-        onSelectionChange={(event) => this.setState({ selection: event.data })}
-        selection={this.state.selection}
-        selectionMode="multiple"
-        value={this.orgChart}
-      />
-    );
-  }
-}
+  return (
+    <div
+      className={
+        localStorage.getItem('lightMode') === 'true'
+          ? 'bg-black-alpha-20'
+          : 'bg-black-alpha-90'
+      }
+      style={{
+        alignItems: 'center',
+        width: dimensions.width,
+      }}
+    >
+      <div style={{ width: dimensions.width + 20 }}>
+        <OrganizationChart
+          nodeTemplate={nodeTemplate}
+          onSelectionChange={(event) => setSelection(event.data)}
+          selection={selection}
+          selectionMode="multiple"
+          style={{ overflow: 'scroll' }}
+          value={orgChart}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default SeeJonesEngineer;
