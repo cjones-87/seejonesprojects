@@ -44,6 +44,14 @@ const LearningJournalTimeline = () => {
     width: innerWidth,
   });
 
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({ height: innerHeight, width: innerWidth });
+    };
+
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.width, dimensions.height]);
+
   const learningJournalEvents = [
     {
       id: 10,
@@ -53,6 +61,7 @@ const LearningJournalTimeline = () => {
       color: '#FF9800',
       image: Hypnotiq2GIF,
       description: 'Frontend Mobile App',
+      link: '/projects/hypnotiq2',
       techStack: (
         <span>
           <DiJavascript1 />
@@ -88,6 +97,7 @@ const LearningJournalTimeline = () => {
       color: '#607D8B',
       image: IYKYKhome,
       description: 'Frontend SPA Multiple Choice Quiz',
+      link: '/projects/iykyk',
       techStack: (
         <span>
           <FaReact />
@@ -116,6 +126,7 @@ const LearningJournalTimeline = () => {
       color: '#9C27B0',
       image: seeJonesEngineer,
       description: 'Frontend Personal Portfolio Web App',
+      link: '/projects/seejonesengineer',
       techStack: (
         <span>
           <FaReact />
@@ -144,7 +155,7 @@ const LearningJournalTimeline = () => {
       color: '#673AB7',
       image: ComputerLovePic,
       description: 'Full Stack Expo Mobile App',
-
+      link: '/projects/computerlove',
       techStack: (
         <span>
           <FaReact />
@@ -184,6 +195,7 @@ const LearningJournalTimeline = () => {
       color: '#FF9800',
       image: HypnotiqPic,
       description: 'Frontend Mobile App',
+      link: '/projects/hypnotiq',
       techStack: (
         <span>
           <FaReact />
@@ -212,6 +224,7 @@ const LearningJournalTimeline = () => {
       color: '#607D8B',
       image: FullstackLogo,
       description: 'Graduated Coding Bootcamp',
+      link: 'https://www.fullstackacademy.com/',
       moreInfo: '',
       command: (event) => {
         window.location.href = 'https://www.fullstackacademy.com/';
@@ -225,6 +238,7 @@ const LearningJournalTimeline = () => {
       color: '#9C27B0',
       image: browseBooks,
       description: 'Full Stack Secure eCommerce',
+      link: '/projects/boundzbookstore',
       techStack: (
         <span>
           <DiJavascript1 />
@@ -264,6 +278,7 @@ const LearningJournalTimeline = () => {
       color: '#673AB7',
       image: IdleClickerPic,
       description: 'Idle click and accrue game.',
+      link: '/projects/idleclicker',
       techStack: (
         <span>
           <DiJavascript1 />
@@ -288,6 +303,7 @@ const LearningJournalTimeline = () => {
       color: '#FF9800',
       image: GuessingGamePic,
       description: 'Guess the number in 5 guesses or less.',
+      link: '/projects/guessinggame',
       techStack: (
         <span>
           <DiJavascript1 />
@@ -312,6 +328,7 @@ const LearningJournalTimeline = () => {
       color: '#607D8B',
       image: FullstackLogo,
       description: 'Enrolled Coding Bootcamp',
+      link: 'https://www.fullstackacademy.com/',
       moreInfo: '',
       command: (event) => {
         window.location.href = 'https://www.fullstackacademy.com/';
@@ -367,9 +384,13 @@ const LearningJournalTimeline = () => {
         <p>{item.description}</p>
         <p>{item.techStack}</p>
         <Button
-          label="Learn more"
+          label={
+            <a href={item.link} target="_blank">
+              Learn More
+            </a>
+          }
           className="p-button-text"
-          onClick={item.command}
+          // onClick={item.command}
           style={{
             backgroundColor: '#ce93d8',
             color:
@@ -381,14 +402,6 @@ const LearningJournalTimeline = () => {
       </Card>
     );
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({ height: innerHeight, width: innerWidth });
-    };
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
 
   return (
     <div
