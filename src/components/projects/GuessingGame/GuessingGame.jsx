@@ -99,7 +99,7 @@ const GuessingGame = () => {
                   : '1px 1px 1px whitesmoke',
             }}
           >
-            Idle Clicker
+            Guessing Game
           </h1>
         </a>
         <div style={{ marginBottom: '1.5rem' }}>
