@@ -36,16 +36,20 @@ const BoundzBookstore = () => {
               localStorage.getItem('lightMode') === 'true'
                 ? 'whitesmoke'
                 : 'rebeccapurple',
+            overflowWrap: 'anywhere',
+            width: dimensions.width / 9,
           }}
         >
-          <div className="node-header">{node.label}</div>
-          <div className="node-content" style={{ margin: 5 }}>
+          <div className="node-header" style={{ fontSize: '1.5em' }}>
+            {node.label}
+          </div>
+          <div className="node-content">
             <div>{node.data.name}</div>
             <img
               alt={node.data.avatar}
               src={node.data.avatar}
               onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: dimensions.width / 5 }}
+              style={{ width: dimensions.width / 10 }}
             />
             <div
               style={{
@@ -64,19 +68,28 @@ const BoundzBookstore = () => {
   };
 
   return (
-    <OrganizationChart
+    <div
       className={
         localStorage.getItem('lightMode') === 'true'
           ? 'bg-black-alpha-20'
           : 'bg-black-alpha-90'
       }
-      nodeTemplate={nodeTemplate}
-      onSelectionChange={(event) => setSelection(event.data)}
-      selection={selection}
-      selectionMode="multiple"
-      style={{ width: dimensions.width * 2 }}
-      value={orgChart}
-    />
+      style={{
+        alignItems: 'center',
+        width: dimensions.width,
+      }}
+    >
+      <div style={{ width: dimensions.width + 20 }}>
+        <OrganizationChart
+          nodeTemplate={nodeTemplate}
+          onSelectionChange={(event) => setSelection(event.data)}
+          selection={selection}
+          selectionMode="multiple"
+          style={{ overflow: 'scroll' }}
+          value={orgChart}
+        />
+      </div>
+    </div>
   );
 };
 
