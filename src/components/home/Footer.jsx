@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Footer = (props) => {
+const Footer = () => {
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
+
+  useEffect(() => {
+    const handleResize = () =>
+      setDimensions({ height: innerHeight, width: innerWidth });
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.width, dimensions.height]);
+
   return (
-    <div className="sticky bottom-0" id="footer">
+    <div
+      className="sticky bottom-0"
+      id="footer"
+      style={{ width: dimensions.width }}
+    >
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
@@ -18,7 +35,6 @@ const Footer = (props) => {
           textAlign: 'center',
           marginTop: '2rem',
           paddingTop: '2rem',
-          width: innerWidth,
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
