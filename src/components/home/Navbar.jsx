@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Menubar } from 'primereact/menubar';
 
@@ -13,6 +13,18 @@ import { NavLink } from 'react-router-dom';
 import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
+
+  useEffect(() => {
+    const handleResize = () =>
+      setDimensions({ height: innerHeight, width: innerWidth });
+
+    window.addEventListener('resize', handleResize);
+  }, [dimensions.width, dimensions.height]);
+
   const resumeTooltip = 'Right Click to Open in New Window & Download';
 
   const items = [
@@ -210,6 +222,7 @@ const Navbar = () => {
       style={{
         color: localStorage.getItem('lightMode') ? 'black' : 'white',
         textShadow: '2px 2px 2px #01020E',
+        width: dimensions.width,
       }}
     >
       <div className="card">
