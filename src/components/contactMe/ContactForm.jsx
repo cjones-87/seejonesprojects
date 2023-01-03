@@ -420,8 +420,8 @@ const ContactForm = () => {
               // loading={loading}
               type="submit"
               onClick={() => 'https://formsubmit.co/cj@seejonesengineer.com'}
-              // action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-              // method="POST"
+              action="https://formsubmit.co/cj@seejonesengineer.com"
+              method="POST"
             />
           </div>
         </div>
