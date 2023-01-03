@@ -418,6 +418,7 @@ const ContactForm = () => {
             <Button
               label="Hire Me"
               loading={loading}
+              type="submit"
               // onClick={() =>
               //   'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957'
               // }
