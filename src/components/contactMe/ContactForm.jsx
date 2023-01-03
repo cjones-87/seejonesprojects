@@ -162,10 +162,7 @@ const ContactForm = () => {
   //form render
 
   return (
-    <form
-      action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-      method="POST"
-    >
+    <form action="https://formsubmit.co/el/wenabu" method="POST">
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
