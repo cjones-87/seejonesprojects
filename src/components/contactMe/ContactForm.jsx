@@ -420,11 +420,11 @@ const ContactForm = () => {
             <Button
               label="Hire Me"
               loading={loading}
-              onClick={() =>
-                'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957'
-              }
-              action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-              method="POST"
+              // onClick={() =>
+              //   'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957'
+              // }
+              // action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
+              // method="POST"
             />
           </div>
         </div>
