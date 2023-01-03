@@ -88,7 +88,17 @@ const Footer = () => {
               : 'bg-black-alpha-90 card'
           }
         >
-          © 2022 by CJ Jones
+          Designed & Built by CJ Jones
+        </h5>
+        <h5
+          className={
+            localStorage.getItem('lightMode') === 'true'
+              ? 'bg-black-alpha-20 card'
+              : 'bg-black-alpha-90 card'
+          }
+          style={{ marginTop: '-2rem' }}
+        >
+          © 2021 - {new Date().getFullYear()}
         </h5>
       </div>
     </div>
