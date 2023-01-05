@@ -26,6 +26,7 @@ const Navbar = () => {
   }, [dimensions.width, dimensions.height]);
 
   const resumeTooltip = 'Right Click to Open in New Window & Download';
+  const hireMeTooltip = 'Right Click to Open & Complete in New Window';
 
   const items = [
     {
@@ -165,25 +166,23 @@ const Navbar = () => {
     },
     {
       label: (
-        <NavLink
+        <Typewriter
+          options={{
+            strings: 'Hire Me',
+            autoStart: true,
+            loop: false,
+          }}
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
                 ? '#fbcce7'
                 : 'whitesmoke',
           }}
-          to="/hireme"
-        >
-          <Typewriter
-            options={{
-              strings: 'Hire Me',
-              autoStart: true,
-              loop: false,
-            }}
-          />
-        </NavLink>
+        />
       ),
       icon: 'pi pi-fw pi-dollar',
+      target: 'blank',
+      url: 'https://formsubmit.co/el/wenabu/?next=https://www.seejonesengineer.com',
     },
   ];
 
