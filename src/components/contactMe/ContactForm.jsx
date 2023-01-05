@@ -163,7 +163,10 @@ const ContactForm = () => {
 
   return (
     // <form action="https://formsubmit.co/el/wenabu" method="POST">
-    <form action="https://formsubmit.co/cj@seejonesengineer.com" method="POST">
+    <form
+      action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
+      method="POST"
+    >
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
@@ -419,8 +422,10 @@ const ContactForm = () => {
               label="Hire Me"
               // loading={loading}
               type="submit"
-              onClick={() => 'https://formsubmit.co/cj@seejonesengineer.com'}
-              action="https://formsubmit.co/cj@seejonesengineer.com"
+              onClick={() =>
+                'https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957'
+              }
+              action="https://formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
               method="POST"
             />
           </div>
