@@ -53,6 +53,8 @@ import FullstackLogo from './FullstackLogo.png';
 
 import portfolioPic from './portfolioPic.png';
 
+import CJTransparentBackground from './CJTransparentBackground.png';
+
 import GithubSkyline2021 from './2021GithubSkyline.gif';
 import GithubSkyline2022 from './2022GithubSkyline.gif';
 
@@ -101,6 +103,7 @@ export {
   GuessingGamePic,
   FullstackLogo,
   portfolioPic,
+  CJTransparentBackground,
   GithubSkyline2021,
   GithubSkyline2022,
 };
