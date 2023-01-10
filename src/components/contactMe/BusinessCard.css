@@ -1,23 +1,23 @@
 .business-card-container {
   position: static;
-  /* top: 50%; */
-  /* left: 50%;
+  top: 50%;
+  left: 50%;
   /* transform: translate(-50%, -50%); */
   perspective: 1000px;
 }
 
 .business-card {
-  /* width: 550px;
-  height: 300px; */
+  width: 550px;
+  height: 300px;
   /* background-color: #fff; */
   transform-style: preserve-3d;
   position: relative;
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
-  /* border-radius: 30px; */
+  border-radius: 30px;
   transition: transform 3s;
 }
 
-.business-card-container:hover .card {
+.business-card-container:hover .business-card {
   transform: rotateY(180deg);
 }
 
@@ -31,66 +31,69 @@
 
 .business-card-front {
   display: flex;
-  background: linear-gradient(
-    100deg,
-    rgb(255, 255, 255) 40%,
-    rgb(38, 38, 38) 0
-  );
+  background: linear-gradient(100deg, rgb(255, 255, 255) 40%, #663399 0);
   position: absolute;
 }
 
-.business-card-left img {
+.business-card-front img {
   width: 100%;
 }
 
 .business-card-left h4 {
-  margin: 40px;
-  font-size: 18px;
-  letter-spacing: 1px;
+  color: #1a1a1a;
+  overflow-wrap: normal;
+  padding: 15px 15px 15px 15px;
+  /* margin: 40px; */
+  /* font-size: 18px; */
+  /* letter-spacing: 1px; */
 }
 
 .business-card-left span {
   text-decoration: underline;
-  color: #0d5692;
+  color: #663399;
 }
 
 .business-card-right {
-  width: 60%;
+  width: 80%;
   color: #fff;
 }
 
 .business-card-person {
-  background-color: #663399;
+  background-color: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #663399;
+  display: flex;
+  justify-content: center;
   /* padding: 6px 0 5px 30px; */
-  margin: 30px 0;
+  /* margin: 30px 0; */
+  margin: 15px 15px 15px 15px;
+  /* text-align: center; */
 }
 
 .business-card-person h4 {
   text-transform: uppercase;
 }
 
-.business-card-phone {
-  padding-left: 90px;
-  height: 35px;
-  color: white;
-}
-
-.business-card-email {
-  padding-left: 50px;
-  height: 35px;
-  color: white;
+.business-card-phone-and-email {
+  /* bottom: 0%; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .business-card-address {
+  color: #663399;
   display: flex;
+  flex-direction: column;
   justify-content: left;
   align-items: left;
-  background-color: #663399;
+  background-color: #1a1a1a;
   border-radius: 15px;
-  padding: 20px 0 20px 30px;
-  margin: 10px 0;
+  /* padding: 20px 0 20px 30px; */
+  /* margin: 10px 0; */
+  margin: 15px 15px 15px 15px;
 }
 
 .business-card-back {
