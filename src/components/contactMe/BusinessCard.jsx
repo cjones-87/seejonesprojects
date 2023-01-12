@@ -18,35 +18,34 @@ const BusinessCard = () => {
   return (
     <div className="business-card-container">
       <div className="business-card">
-        <div className="business-card-front">
-          <img
+        <div
+          className="business-card-front"
+          style={{
+            background: `linear-gradient(100deg, #bebebe 40%, #663399 0)`,
+          }}
+        >
+          {/* <img
             src={CJTransparentBackground}
             style={{
               height: '300px',
               width: '550px',
               position: 'fixed',
-              // zIndex: 0,
-            }}
-          />
-          <div className="business-card-left" style={{ marginTop: ' -3rem' }}>
-            {/* <img
-            src={CJTransparentBackground}
-            style={{
-              height: '300px',
-              width: '550px',
-              position: 'fixed',
-              // zIndex: 0,
             }}
           /> */}
-            <h4 style={{ marginTop: '7.5rem', marginLeft: 5 }}>
-              A program is only as <span>good</span>, as it is{' '}
-              <span>useful</span>.
+          <div className="business-card-left">
+            <img
+              src={CJTransparentBackground}
+              style={{
+                height: '250px',
+                width: '550px',
+                position: 'fixed',
+              }}
+            />
+            <h4 style={{ marginLeft: '-15px' }}>
+              Quality is &nbsp;<span>free</span>. &nbsp;But&nbsp;
+              <span>only</span>&nbsp;to those who are&nbsp;<span>willing</span>
+              &nbsp;to pay heavily for it.
             </h4>
-
-            <div className="business-card-address">
-              <p>Freelance - Remote</p>
-              <p>New York, NY</p>
-            </div>
           </div>
 
           <div className="business-card-right">
@@ -60,6 +59,11 @@ const BusinessCard = () => {
             <div className="business-card-phone-and-email">
               <p>(929)</p>
               <p>cj@seejonesengineer.com</p>
+            </div>
+
+            <div className="business-card-address">
+              <p>Freelance - Remote</p>
+              <p>New York, NY</p>
             </div>
           </div>
         </div>
