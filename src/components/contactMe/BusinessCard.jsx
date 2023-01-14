@@ -24,14 +24,6 @@ const BusinessCard = () => {
             background: `linear-gradient(100deg, #bebebe 40%, #663399 0)`,
           }}
         >
-          {/* <img
-            src={CJTransparentBackground}
-            style={{
-              height: '300px',
-              width: '550px',
-              position: 'fixed',
-            }}
-          /> */}
           <div className="business-card-left">
             <img
               src={CJTransparentBackground}
@@ -41,6 +33,7 @@ const BusinessCard = () => {
                 position: 'fixed',
               }}
             />
+
             <h4 style={{ marginLeft: '-15px' }}>
               Quality is &nbsp;<span>free</span>. &nbsp;But&nbsp;
               <span>only</span>&nbsp;to those who are&nbsp;<span>willing</span>
