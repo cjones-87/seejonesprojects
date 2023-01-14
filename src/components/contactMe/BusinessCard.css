@@ -70,12 +70,16 @@
   color: #bebebe;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2.05rem;
   margin-right: 1rem;
 }
 
 .business-card-person h4 {
   text-transform: uppercase;
+}
+
+.business-card-person p {
+  margin: 0;
 }
 
 .business-card-phone-and-email {
@@ -95,6 +99,10 @@
   background-color: #1a1a1a;
   border-radius: 20px;
   margin-right: 1rem;
+}
+
+.business-card-address p {
+  margin: 0;
 }
 
 .business-card-back {
