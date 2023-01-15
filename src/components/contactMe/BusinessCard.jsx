@@ -43,10 +43,11 @@ const BusinessCard = () => {
 
           <div className="business-card-right">
             <div className="business-card-person">
-              <div>
-                <h4>CJ Jones</h4>
-                <p>Frontend & Fullstack Software Engineer</p>
-              </div>
+              <h4>CJ Jones</h4>
+            </div>
+
+            <div className="business-card-person">
+              <p>Software Engineer/Designer</p>
             </div>
 
             <div className="business-card-phone-and-email">
