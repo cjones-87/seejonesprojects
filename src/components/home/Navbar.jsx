@@ -166,19 +166,22 @@ const Navbar = () => {
     },
     {
       label: (
-        <Typewriter
-          options={{
-            strings: 'Hire Me',
-            autoStart: true,
-            loop: false,
-          }}
+        <span
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
                 ? '#fbcce7'
                 : 'whitesmoke',
           }}
-        />
+        >
+          <Typewriter
+            options={{
+              strings: 'Hire Me',
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        </span>
       ),
       icon: 'pi pi-fw pi-dollar',
       target: 'blank',
