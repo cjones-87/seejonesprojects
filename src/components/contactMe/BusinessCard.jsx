@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { CJTransparentBackground } from '../../photos/PhotoExports';
 
+import BackLogo from '../../photos/favicon.png';
+
 const BusinessCard = () => {
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
@@ -59,6 +61,18 @@ const BusinessCard = () => {
               <p>Freelance - Remote</p>
               <p>New York, NY</p>
             </div>
+          </div>
+        </div>
+
+        <div className="business-card-back">
+          <div className="business-card-back-left">
+            <img
+              src={BackLogo}
+              style={{
+                height: '250px',
+                width: '550px',
+              }}
+            />
           </div>
         </div>
       </div>
