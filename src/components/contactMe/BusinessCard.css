@@ -2,14 +2,12 @@
   position: static;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
   perspective: 1000px;
 }
 
 .business-card {
   width: 550px;
   height: 300px;
-  /* background-color: #fff; */
   transform-style: preserve-3d;
   position: relative;
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
@@ -106,6 +104,7 @@
 }
 
 .business-card-back {
+  background: linear-gradient(100deg, rgb(255, 255, 255) 40%, #663399 0);
   transform: rotateY(180deg);
   position: absolute;
 }
