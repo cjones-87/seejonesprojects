@@ -20,12 +20,7 @@ const BusinessCard = () => {
   return (
     <div className="business-card-container">
       <div className="business-card">
-        <div
-          className="business-card-front"
-          style={{
-            background: `linear-gradient(100deg, #bebebe 40%, #663399 0)`,
-          }}
-        >
+        <div className="business-card-front">
           <div className="business-card-left">
             <img
               src={CJTransparentBackground}
