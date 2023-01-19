@@ -29,7 +29,7 @@
 
 .business-card-front {
   display: flex;
-  background: linear-gradient(100deg, #bebebe 40%, #663399 0);
+  background: linear-gradient(27.5deg, #bebebe 50%, #502e93 0);
   position: absolute;
 }
 
@@ -38,16 +38,16 @@
 }
 
 .business-card-left img {
-  left: -115px;
-  margin-top: 23%;
+  height: 250;
+  left: -135px;
+  margin-top: 1%;
+  width: 550;
 }
 
 .business-card-left h4 {
   color: #1a1a1a;
-  overflow-wrap: normal;
-  padding: 15px 15px 15px 15px;
-  margin-top: 20%;
-  padding-left: 7%;
+  overflow-wrap: anywhere;
+  margin-top: 60%;
 }
 
 .business-card-left span {
@@ -104,7 +104,13 @@
 }
 
 .business-card-back {
-  background: linear-gradient(100deg, rgb(255, 255, 255) 40%, #663399 0);
+  background: linear-gradient(-207.5deg, #502e93 50%, #bebebe 0);
   transform: rotateY(180deg);
-  border-radius: 30px;
+}
+
+.business-card-back-left img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  height: 255;
+  width: 550;
 }
