@@ -31,10 +31,12 @@ const BusinessCard = () => {
               }}
             />
 
-            <h4 style={{ marginLeft: '-15px' }}>
-              Quality is &nbsp;<span>free</span>. &nbsp;But&nbsp;
-              <span>only</span>&nbsp;to those who are&nbsp;<span>willing</span>
-              &nbsp;to pay heavily for it.
+            <h4>
+              Software engineering is an&nbsp;<span>artform</span>. You can
+              have&nbsp;
+              <span>good, fast, & cheap</span>&nbsp;. But only&nbsp;
+              <span>two</span>
+              &nbsp;of those.
             </h4>
           </div>
 
