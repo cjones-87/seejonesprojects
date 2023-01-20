@@ -42,21 +42,27 @@ const BusinessCard = () => {
 
           <div className="business-card-right">
             <div className="business-card-person">
-              <h4>CJ Jones</h4>
+              <h4>CJ JONES</h4>
             </div>
 
-            <div className="business-card-person">
+            <div className="business-card-title">
               <p>Software Engineer/Designer</p>
-            </div>
-
-            <div className="business-card-phone-and-email">
-              <p>(929)</p>
-              <p>cj@seejonesengineer.com</p>
             </div>
 
             <div className="business-card-address">
               <p>Freelance - Remote</p>
+            </div>
+
+            <div className="business-card-address">
               <p>New York, NY</p>
+            </div>
+
+            <div className="business-card-phone-and-email">
+              <p>(929)</p>
+            </div>
+
+            <div className="business-card-phone-and-email">
+              <p>cj@seejonesengineer.com</p>
             </div>
           </div>
         </div>
