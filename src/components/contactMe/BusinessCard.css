@@ -29,7 +29,7 @@
 
 .business-card-front {
   display: flex;
-  background: linear-gradient(27.5deg, #bebebe 50%, #502e93 0);
+  background: linear-gradient(28.6deg, #bebebe 50%, #502e93 0);
   position: absolute;
 }
 
@@ -53,12 +53,12 @@
 .business-card-left span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-  color: #f55b85;
+  color: #ce92d8;
 }
 
 .business-card-right {
   width: 80%;
-  color: #fff;
+  color: #bebebe;
 }
 
 .business-card-person {
@@ -84,6 +84,7 @@
   color: #1a1a1a;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
   justify-content: center;
   margin-top: 1rem;
 }
@@ -104,13 +105,30 @@
 }
 
 .business-card-back {
-  background: linear-gradient(-207.5deg, #502e93 50%, #bebebe 0);
+  background: linear-gradient(-28.6deg, #502e93 50%, #bebebe 0);
   transform: rotateY(180deg);
 }
 
-.business-card-back-left img {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  height: 255;
-  width: 550;
+.business-card-back-top img {
+  /* border-top-left-radius: 30px;
+  border-top-right-radius: 30px; */
+  border-radius: 50%;
+  height: 150px;
+  /* position: fixed; */
+  margin-top: 14%;
+  width: 150px;
+}
+
+.business-card-back-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5.5%;
+  width: inherit;
+}
+
+.business-card-back-bottom i {
+  color: #ce92d8;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
 }
