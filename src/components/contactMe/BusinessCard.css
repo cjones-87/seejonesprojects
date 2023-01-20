@@ -101,20 +101,40 @@ h4 {
 
 .business-card-back {
   background: linear-gradient(-28.6deg, #502e93 50%, #bebebe 0);
+  color: #ce92d8;
+  text-shadow: 2px 2px 2px #1a1a1a;
   transform: rotateY(180deg);
 }
 
-.business-card-back-top img {
+.business-card-tech-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-card-back-top h2 {
+  margin-top: 4%;
+}
+
+.business-card-back-top a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.business-card-back-top a h4 {
+  margin-top: -3.5%;
+}
+
+.business-card-back-middle img {
   border-radius: 50%;
   height: 150px;
-  margin-top: 14%;
+  margin-top: 2%;
   width: 150px;
 }
 
 .business-card-back-bottom {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5.5%;
+  margin-top: 4.5%;
   width: inherit;
 }
 
@@ -123,5 +143,4 @@ h4 {
   left: 50%;
   position: relative;
   transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 2px #1a1a1a;
 }
