@@ -35,23 +35,27 @@
 
 .business-card-left {
   margin-top: -3.5rem;
+  text-shadow: 1px 1px 1px #502e93;
 }
 
 .business-card-left img {
   height: 250;
-  left: -135px;
-  margin-top: 1%;
+  left: -110px;
+  margin-top: 3%;
   width: 550;
 }
 
 .business-card-left h4 {
   color: #1a1a1a;
   overflow-wrap: anywhere;
-  margin-top: 60%;
+  margin-left: 5%;
+  margin-top: 70%;
 }
 
 .business-card-left span {
+  font-weight: bold;
   text-decoration: underline;
+  text-shadow: 1px 1px 1px #1a1a1a;
   text-underline-offset: 0.3rem;
   color: #ce92d8;
 }
@@ -61,46 +65,37 @@
   color: #bebebe;
 }
 
-.business-card-person {
-  background-color: #1a1a1a;
-  border-radius: 20px;
+.business-card-person,
+.business-card-title,
+.business-card-phone-and-email,
+.business-card-address {
+  background-color: #bebebe;
+  border-radius: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  color: #bebebe;
+  color: #502e93;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 2.05rem;
   margin-right: 1rem;
+  margin: 1.5rem;
+  text-shadow: 1px 1px 1px #1a1a1a;
+  width: 200px;
 }
 
-.business-card-person h4 {
-  text-transform: uppercase;
+.business-card-person {
+  margin-top: 2.3rem;
 }
 
-.business-card-person p {
+.business-card-title p,
+h4 {
   margin: 0;
 }
 
-.business-card-phone-and-email {
-  color: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.business-card-address {
-  color: #bebebe;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  margin-right: 1rem;
-}
-
 .business-card-address p {
+  margin: 0;
+}
+
+.business-card-phone-and-email p {
   margin: 0;
 }
 
@@ -110,11 +105,8 @@
 }
 
 .business-card-back-top img {
-  /* border-top-left-radius: 30px;
-  border-top-right-radius: 30px; */
   border-radius: 50%;
   height: 150px;
-  /* position: fixed; */
   margin-top: 14%;
   width: 150px;
 }
@@ -131,4 +123,5 @@
   left: 50%;
   position: relative;
   transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px #1a1a1a;
 }
