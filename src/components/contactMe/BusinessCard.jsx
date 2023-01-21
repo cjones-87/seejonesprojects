@@ -77,7 +77,9 @@ const BusinessCard = () => {
             </div>
 
             <div className="business-card-back-middle">
-              <img src={BackLogo} />
+              <a href="https://www.seejonesengineer.com/" target="_blank">
+                <img src={BackLogo} />
+              </a>
             </div>
 
             <div className="business-card-back-bottom">
