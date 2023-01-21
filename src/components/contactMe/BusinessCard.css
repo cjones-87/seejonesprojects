@@ -69,7 +69,7 @@
 .business-card-title,
 .business-card-phone-and-email,
 .business-card-address {
-  background-color: #bebebe;
+  background-color: #1a1a1a;
   border-radius: 30px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   color: #502e93;
@@ -78,7 +78,7 @@
   justify-content: center;
   margin-right: 1rem;
   margin: 1.5rem;
-  text-shadow: 1px 1px 1px #1a1a1a;
+  text-shadow: 1px 1px 1px #bebebe;
   width: 200px;
 }
 
