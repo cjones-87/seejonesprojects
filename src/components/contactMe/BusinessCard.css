@@ -2,6 +2,7 @@
   position: static;
   top: 50%;
   left: 50%;
+  margin-top: 2rem;
   perspective: 1000px;
 }
 
