@@ -35,7 +35,7 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }} // classic rose rgb(251,204,231)
           to="/home"
@@ -57,7 +57,7 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
           to="/aboutme"
@@ -79,7 +79,7 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
           to="/learningjournal"
@@ -101,7 +101,7 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
           to="/projects"
@@ -123,7 +123,7 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
           to="/playgames"
@@ -147,10 +147,10 @@ const Navbar = () => {
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
-          to={'/resume'}
+          to="/resume"
         >
           <Tooltip target=".resume" content={`${resumeTooltip}`} />
           <Typewriter
@@ -166,13 +166,15 @@ const Navbar = () => {
     },
     {
       label: (
-        <span
+        <NavLink
+          className="hireme"
           style={{
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? '#fbcce7'
+                ? '#ce92d8'
                 : 'whitesmoke',
           }}
+          to="/hireme"
         >
           <Typewriter
             options={{
@@ -181,11 +183,10 @@ const Navbar = () => {
               loop: false,
             }}
           />
-        </span>
+        </NavLink>
       ),
       icon: 'pi pi-fw pi-dollar',
-      target: 'blank',
-      url: 'https://formsubmit.co/el/wenabu/?next=https://www.seejonesengineer.com',
+      // target: 'blank',
     },
   ];
 
