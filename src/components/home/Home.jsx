@@ -6,6 +6,9 @@ import { ProjectData } from '.././projects/data/ProjectData';
 import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
 
+import BusinessCard from '../contactMe/BusinessCard';
+import '../contactMe/BusinessCard.css';
+
 import {
   GithubSkyline2021,
   GithubSkyline2022,
@@ -31,7 +34,19 @@ export default function Home() {
       <div id="homeFlex">
         <Cube id="homeCJ" />
       </div>
+
       <ProjectSlideshow slides={ProjectData} />
+
+      <div
+        style={{
+          display: 'grid',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '2rem',
+        }}
+      >
+        <BusinessCard />
+      </div>
       <div
         className={
           localStorage.getItem('lightMode') === 'true'
