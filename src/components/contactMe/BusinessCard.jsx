@@ -62,7 +62,7 @@ const BusinessCard = () => {
             </div>
 
             <div className="business-card-phone-and-email">
-              <p>(929)</p>
+              <p>www.seejonesengineer.com</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ const BusinessCard = () => {
             <div className="business-card-back-top">
               <h2>CJ JONES</h2>
               <a href="https://www.seejonesengineer.com/" target="_blank">
-                <h4>https://www.seejonesengineer.com/</h4>
+                <h4>www.seejonesengineer.com</h4>
               </a>
             </div>
 
