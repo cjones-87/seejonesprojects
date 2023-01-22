@@ -50,7 +50,7 @@ const Hypnotiq2Data = [
                       style={{
                         color:
                           localStorage.getItem('lightMode') === 'true'
-                            ? '#fbcce7'
+                            ? '#ce92d8'
                             : 'whitesmoke',
                         textDecoration: 'none',
                       }}
@@ -202,7 +202,7 @@ const Hypnotiq2Data = [
                       style={{
                         color:
                           localStorage.getItem('lightMode') === 'true'
-                            ? '#fbcce7'
+                            ? '#ce92d8'
                             : 'whitesmoke',
                         textDecoration: 'none',
                       }}
@@ -223,7 +223,7 @@ const Hypnotiq2Data = [
                       style={{
                         color:
                           localStorage.getItem('lightMode') === 'true'
-                            ? '#fbcce7'
+                            ? '#ce92d8'
                             : 'whitesmoke',
                         textDecoration: 'none',
                       }}
