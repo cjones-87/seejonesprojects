@@ -7,6 +7,7 @@ import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
 import { Button } from 'primereact/button';
+import BusinessCard from './BusinessCard';
 
 const ContactForm = () => {
   const [dimensions, setDimensions] = useState({
@@ -434,19 +435,40 @@ const ContactForm = () => {
   //);
 
   return (
-    <div style={{ textAlign: 'center', paddingBlockEnd: 10 }}>
-      <Button
-        label={
-          <a href="https://formsubmit.co/el/wenabu" target="_blank">
-            Contact Me
-          </a>
-        }
-        type="submit"
-        onClick={() => 'https:formsubmit.co/el/wenabu'}
-        action="https:formsubmit.co/el/wenabu"
-        // action="https:formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-        method="POST"
-      />
+    <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '-2rem',
+          textAlign: 'center',
+        }}
+      >
+        <BusinessCard />
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '2rem',
+          textAlign: 'center',
+        }}
+      >
+        <Button
+          label={
+            <a
+              href="https://formsubmit.co/el/wenabu/?next=https://www.seejonesengineer.com/"
+              target="_blank"
+            >
+              Contact Me
+            </a>
+          }
+          type="submit"
+          action="https:formsubmit.co/el/wenabu"
+          // action="https:formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
+          method="POST"
+        />
+      </div>
     </div>
   );
 };
