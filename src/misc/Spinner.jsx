@@ -3,8 +3,9 @@ const Spinner = (props) => {
     <svg
       className="loadingSpinner"
       viewBox="0 0 2400 2400"
-      width={24}
-      height={24}
+      width={'25rem'}
+      height={'25rem'}
+      preserveAspectRatio
       {...props}
     >
       <g
