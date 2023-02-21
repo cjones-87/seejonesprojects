@@ -26,7 +26,6 @@ const Navbar = () => {
   }, [dimensions.width, dimensions.height]);
 
   const resumeTooltip = 'Right Click to Open in New Window & Download';
-  const hireMeTooltip = 'Right Click to Open & Complete in New Window';
 
   const items = [
     {
