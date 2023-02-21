@@ -1,29 +1,59 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import './index.css';
-import Navbar from './components/home/Navbar';
-import Footer from './components/home/Footer';
 
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { recognition } from './api/VoiceRecognition';
 
-import AllProjects from './components/projects/AllProjects';
-import LearningJournalTimeline from './components/timelines/LearningJournalTimeline';
-import AboutMe from './components/aboutMe/AboutMe';
-import ContactForm from './components/contactMe/ContactForm';
-import Resume from './components/resume/Resume';
-import LandingPage from './views/home/LandingPage';
-import Home from './components/home/Home';
-import PlayGames from './components/games/PlayGames';
-import GuessingGame from './components/projects/GuessingGame/GuessingGame';
-import IdleClicker from './components/projects/IdleClicker/IdleClicker';
-import BoundzBookstore from './components/projects/BoundzBookstore/BoundzBookstore';
-import Hypnotiq from './components/projects/Hypnotiq/Hypnotiq';
-import Hypnotiq2 from './components/projects/Hypnotiq2/Hypnotiq2';
-import ComputerLove from './components/projects/ComputerLove/ComputerLove';
-import SeeJonesEngineer from './components/projects/SeeJonesEngineer/SeeJonesEngineer';
-import IYKYK from './components/projects/IYKYK/IYKYK';
-import PageNotFound404 from './components/error/PageNotFound404';
+const Navbar = lazy(() => import('./components/home/Navbar'));
+const Footer = lazy(() => import('./components/home/Footer'));
+const AllProjects = lazy(() => import('./components/projects/AllProjects'));
+const LearningJournalTimeline = lazy(() =>
+  import('./components/timelines/LearningJournalTimeline')
+);
+const AboutMe = lazy(() => import('./components/aboutMe/AboutMe'));
+const ContactForm = lazy(() => import('./components/contactMe/ContactForm'));
+const Resume = lazy(() => import('./components/resume/Resume'));
+const LandingPage = lazy(() => import('./views/home/LandingPage'));
+const Home = lazy(() => import('./components/home/Home'));
+const PlayGames = lazy(() => import('./components/games/PlayGames'));
+const GuessingGame = lazy(() =>
+  import('./components/projects/GuessingGame/GuessingGame')
+);
+const IdleClicker = lazy(() =>
+  import('./components/projects/IdleClicker/IdleClicker')
+);
+const BoundzBookstore = lazy(() =>
+  import('./components/projects/BoundzBookstore/BoundzBookstore')
+);
+const Hypnotiq = lazy(() => import('./components/projects/Hypnotiq/Hypnotiq'));
+const Hypnotiq2 = lazy(() =>
+  import('./components/projects/Hypnotiq2/Hypnotiq2')
+);
+const ComputerLove = lazy(() =>
+  import('./components/projects/ComputerLove/ComputerLove')
+);
+const SeeJonesEngineer = lazy(() =>
+  import('./components/projects/SeeJonesEngineer/SeeJonesEngineer')
+);
+const IYKYK = lazy(() => import('./components/projects/IYKYK/IYKYK'));
+const PageNotFound404 = lazy(() =>
+  import('./components/error/PageNotFound404')
+);
+
+import Spinner from './misc/Spinner';
+const Loading = () => (
+  <div
+    style={{
+      left: '50%',
+      position: 'fixed',
+      top: '50%',
+      transform: 'translate(-50%, -50%)',
+    }}
+  >
+    <Spinner />
+  </div>
+);
 
 const App = () => {
   const navigate = useNavigate();
@@ -99,30 +129,39 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/projects" element={<AllProjects />} />
-        <Route path="/learningjournal" element={<LearningJournalTimeline />} />
-        <Route path="/playgames" element={<PlayGames />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/hireme" element={<ContactForm />} />
-        <Route path="/projects/guessinggame" element={<GuessingGame />} />
-        <Route path="/projects/idleclicker" element={<IdleClicker />} />
-        <Route path="/projects/boundzbookstore" element={<BoundzBookstore />} />
-        <Route path="/projects/hypnotiq" element={<Hypnotiq />} />
-        <Route path="/projects/computerlove" element={<ComputerLove />} />
-        <Route
-          path="/projects/seejonesengineer"
-          element={<SeeJonesEngineer />}
-        />
-        <Route path="/projects/iykyk" element={<IYKYK />} />
-        <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
-        <Route path="*" element={<PageNotFound404 />} />
-      </Routes>
-      <Footer />
+      <Suspense fallback={<Loading />}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/projects" element={<AllProjects />} />
+          <Route
+            path="/learningjournal"
+            element={<LearningJournalTimeline />}
+          />
+          <Route path="/playgames" element={<PlayGames />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/hireme" element={<ContactForm />} />
+          <Route path="/projects/guessinggame" element={<GuessingGame />} />
+          <Route path="/projects/idleclicker" element={<IdleClicker />} />
+          <Route
+            path="/projects/boundzbookstore"
+            element={<BoundzBookstore />}
+          />
+          <Route path="/projects/hypnotiq" element={<Hypnotiq />} />
+          <Route path="/projects/computerlove" element={<ComputerLove />} />
+          <Route
+            path="/projects/seejonesengineer"
+            element={<SeeJonesEngineer />}
+          />
+          <Route path="/projects/iykyk" element={<IYKYK />} />
+          <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
+          <Route path="*" element={<PageNotFound404 />} />
+        </Routes>
+
+        <Footer />
+      </Suspense>
     </div>
   );
 };
