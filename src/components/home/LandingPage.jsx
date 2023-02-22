@@ -195,7 +195,6 @@ const LandingPage = () => {
               paddingTop: dimensions.height <= 600 ? '40rem' : '5rem',
             }}
           >
-            {console.log(dimensions.height)}
             <h1>
               <Typewriter
                 options={{
