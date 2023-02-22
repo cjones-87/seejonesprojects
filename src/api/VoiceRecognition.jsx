@@ -3,4 +3,4 @@ const SpeechRecognition =
 
 export const recognition = new SpeechRecognition();
 
-recognition.start();
+// recognition.start();
