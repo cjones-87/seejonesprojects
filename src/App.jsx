@@ -42,7 +42,8 @@ const PageNotFound404 = lazy(() =>
 );
 
 import Spinner from './misc/Spinner';
-const Loading = () => (
+
+export const Loading = () => (
   <div
     style={{
       left: '50%',
