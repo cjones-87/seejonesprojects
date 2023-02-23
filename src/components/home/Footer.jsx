@@ -96,7 +96,7 @@ const Footer = () => {
               ? 'bg-black-alpha-20 card'
               : 'bg-black-alpha-90 card'
           }
-          style={{ marginTop: '-2rem' }}
+          style={{ marginTop: '-1.4rem' }}
         >
           © 2021 - {new Date().getFullYear()}
         </h5>
