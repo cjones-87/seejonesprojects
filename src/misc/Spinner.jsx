@@ -5,7 +5,7 @@ const Spinner = (props) => {
       viewBox="0 0 2400 2400"
       width={'25rem'}
       height={'25rem'}
-      preserveAspectRatio
+      // preserveAspectRatio={'xMidYMid meet'}
       {...props}
     >
       <g
