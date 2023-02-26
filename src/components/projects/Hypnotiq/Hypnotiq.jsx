@@ -186,7 +186,7 @@ const Hypnotiq = () => {
       >
         <Iframe
           url="https://www.youtube.com/embed/JAFO_AROg34"
-          width={dimensions.width / 1.5}
+          width={dimensions.width / 2}
           height={dimensions.height / 2}
           id="myId"
           className="myClassname"
