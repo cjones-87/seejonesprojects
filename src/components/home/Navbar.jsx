@@ -219,7 +219,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="sticky top-0"
+      className="sticky top-0 App bg-black-alpha-90"
       id="navbar"
       style={{
         color: localStorage.getItem('lightMode') ? 'black' : 'white',
@@ -232,7 +232,7 @@ const Navbar = () => {
           model={items}
           start={start}
           end={end}
-          style={{ width: innerWidth }}
+          style={{ width: dimensions.width }}
         />
       </div>
     </div>
