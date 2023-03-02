@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 import { Card } from 'primereact/card';
+
+import Spinner from '../../misc/Spinner';
 
 const AboutMeCards = ({ slides }) => {
   const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
@@ -67,25 +69,27 @@ const AboutMeCards = ({ slides }) => {
         <FaArrowAltCircleLeft
           className="previous"
           onClick={previousSlide}
-          style={{ color: 'rebeccapurple' }}
+          style={{ color: 'rebeccapurple', position: 'static' }}
         />
         <FaArrowAltCircleRight
           className="next"
           onClick={nextSlide}
-          style={{ color: 'rebeccapurple' }}
+          style={{ color: 'rebeccapurple', position: 'static' }}
         />
 
         {slides.map((slide, index) => {
           const header = (
-            <img
-              alt="Card"
-              src={slide.image}
-              onError={handleError}
-              style={{
-                borderRadius: 25,
-                padding: 10,
-              }}
-            />
+            <Suspense fallback={<Spinner />}>
+              <img
+                alt="Card"
+                src={slide.image}
+                onError={handleError}
+                style={{
+                  borderRadius: 25,
+                  padding: 10,
+                }}
+              />
+            </Suspense>
           );
 
           // const playButton = () => {
@@ -105,29 +109,31 @@ const AboutMeCards = ({ slides }) => {
             >
               {index === current && (
                 <div style={{ marginTop: '2rem' }}>
-                  <Card
-                    className={
-                      localStorage.getItem('lightMode') === 'true'
-                        ? 'bg-black-alpha-20'
-                        : 'bg-black-alpha-40'
-                    }
-                    style={{
-                      borderRadius: 25,
-                      color:
+                  <Suspense fallback={<Spinner />}>
+                    <Card
+                      className={
                         localStorage.getItem('lightMode') === 'true'
-                          ? 'rebeccapurple'
-                          : 'whitesmoke',
-                      textShadow:
-                        localStorage.getItem('lightMode') === 'true'
-                          ? '1px 1px 1px indigo'
-                          : '1px 1px 1px whitesmoke',
-                      width: window.innerWidth / 3,
-                    }}
-                    header={header}
-                    // footer={playButton}
-                  >
-                    <p className="m-0">{slide.paragraph}</p>
-                  </Card>
+                          ? 'bg-black-alpha-20'
+                          : 'bg-black-alpha-40'
+                      }
+                      style={{
+                        borderRadius: 25,
+                        color:
+                          localStorage.getItem('lightMode') === 'true'
+                            ? 'rebeccapurple'
+                            : 'whitesmoke',
+                        textShadow:
+                          localStorage.getItem('lightMode') === 'true'
+                            ? '1px 1px 1px indigo'
+                            : '1px 1px 1px whitesmoke',
+                        width: window.innerWidth / 3,
+                      }}
+                      header={header}
+                      // footer={playButton}
+                    >
+                      <p className="m-0">{slide.paragraph}</p>
+                    </Card>
+                  </Suspense>
                 </div>
               )}
             </div>
