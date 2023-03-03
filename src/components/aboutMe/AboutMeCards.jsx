@@ -92,16 +92,6 @@ const AboutMeCards = ({ slides }) => {
             </Suspense>
           );
 
-          // const playButton = () => {
-          //   return (
-          //     <Button
-          //       icon="pi pi-play"
-          //       className="p-button-rounded "
-          //       aria-label="Favorite"
-          //     />
-          //   );
-          // };
-
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -129,7 +119,6 @@ const AboutMeCards = ({ slides }) => {
                         width: window.innerWidth / 3,
                       }}
                       header={header}
-                      // footer={playButton}
                     >
                       <p className="m-0">{slide.paragraph}</p>
                     </Card>
