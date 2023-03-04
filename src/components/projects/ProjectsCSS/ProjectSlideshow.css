@@ -11,9 +11,9 @@
 }
 
 .next {
-  position: absolute;
-  top: 50%;
-  right: 32px;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* right: 32px; */
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -22,9 +22,9 @@
 }
 
 .previous {
-  position: absolute;
-  top: 50%;
-  left: 32px;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 32px; */
   font-size: 3rem;
   color: #000;
   z-index: 10;
