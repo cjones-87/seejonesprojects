@@ -1,4 +1,7 @@
 import React, { lazy, Suspense, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
@@ -80,7 +83,7 @@ const AboutMeCards = ({ slides }) => {
         {slides.map((slide, index) => {
           const header = (
             <Suspense fallback={<Spinner />}>
-              <img
+              {/* <img
                 alt="Card"
                 src={slide.image}
                 onError={handleError}
@@ -88,6 +91,19 @@ const AboutMeCards = ({ slides }) => {
                   borderRadius: 25,
                   padding: 10,
                 }}
+              /> */}
+
+              <LazyLoadImage
+                alt={slide.alt}
+                effect="blur"
+                height={slide.height}
+                onError={handleError}
+                src={slide.image}
+                style={{
+                  borderRadius: 25,
+                  padding: 10,
+                }}
+                width={slide.width}
               />
             </Suspense>
           );
