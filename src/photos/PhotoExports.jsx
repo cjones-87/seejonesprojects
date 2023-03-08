@@ -1,5 +1,9 @@
 import imageNotFound from './imageNotFound.jpeg';
 
+import MainLogo from './favicon.png';
+import BlueShirtSmile from './blueShirtSmile.png';
+import LogoCJ from './logoCJ.png';
+
 import Hypnotiq2GIF from './Hypnotiq2/HypnotiqMusiq2.gif';
 import Hypnotiq2MP4 from './Hypnotiq2/HypnotiqMusiq2.mp4';
 
@@ -61,6 +65,9 @@ import GithubSkyline2022 from './2022GithubSkyline.gif';
 
 export {
   imageNotFound,
+  MainLogo,
+  BlueShirtSmile,
+  LogoCJ,
   Hypnotiq2GIF,
   Hypnotiq2MP4,
   ComputerLovePic,
