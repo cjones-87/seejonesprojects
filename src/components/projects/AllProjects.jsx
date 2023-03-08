@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import './ProjectsCSS/Projects.css';
 import './ProjectsCSS/ProjectSlideshow.css';
@@ -29,6 +31,8 @@ const AllProjects = () => {
     height: innerHeight,
     width: innerWidth,
   });
+
+  const handleError = (e) => (e.target.src = imageNotFound);
 
   const [projects, setProjects] = useState([
     {
@@ -111,13 +115,26 @@ const AllProjects = () => {
   const imageBodyTemplate = (rowData) => {
     return (
       <a href={rowData.href} target="_blank">
-        <img
-          src={rowData.image}
-          onError={(e) => (e.target.src = imageNotFound)}
+        {/* <img
+          // src={rowData.image}
+          // onError={(e) => (e.target.src = imageNotFound)}
+          // alt={rowData.image}
+          // className="project-image"
+          // height="75vh"
+          // width="100vw"
+        /> */}
+        <LazyLoadImage
           alt={rowData.image}
-          className="project-image"
-          height="75vh"
-          width="100vw"
+          className={'project-image'}
+          effect="blur"
+          height={dimensions.height / 10}
+          onError={handleError}
+          src={rowData.image}
+          style={{
+            borderRadius: 25,
+            padding: '5px',
+          }}
+          width={dimensions.width / 10}
         />
       </a>
     );
@@ -166,7 +183,11 @@ const AllProjects = () => {
           responsiveLayout="scroll"
         >
           <Column field="name" header="Title"></Column>
-          <Column header="Image" body={imageBodyTemplate}></Column>
+          <Column
+            header="Image"
+            body={imageBodyTemplate}
+            style={{ paddingRight: '4rem' }}
+          ></Column>
           <Column field="category" header="Category"></Column>
           <Column
             field="rating"
