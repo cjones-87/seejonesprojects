@@ -89,15 +89,14 @@ const Footer = () => {
           }
         >
           Designed & Built by CJ Jones
-        </h5>
-        <h5
-          className={
-            localStorage.getItem('lightMode') === 'true'
-              ? 'bg-black-alpha-20 card'
-              : 'bg-black-alpha-90 card'
-          }
-          style={{ marginTop: '-1.4rem' }}
-        >
+          <h5
+            className={
+              localStorage.getItem('lightMode') === 'true'
+                ? 'bg-black-alpha-20 card'
+                : 'bg-black-alpha-90 card'
+            }
+            style={{ marginTop: '-1.4rem' }}
+          ></h5>
           © 2021 - {new Date().getFullYear()}
         </h5>
       </div>
