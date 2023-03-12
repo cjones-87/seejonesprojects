@@ -115,14 +115,6 @@ const AllProjects = () => {
   const imageBodyTemplate = (rowData) => {
     return (
       <a href={rowData.href} target="_blank">
-        {/* <img
-          // src={rowData.image}
-          // onError={(e) => (e.target.src = imageNotFound)}
-          // alt={rowData.image}
-          // className="project-image"
-          // height="75vh"
-          // width="100vw"
-        /> */}
         <LazyLoadImage
           alt={rowData.image}
           className={'project-image'}
