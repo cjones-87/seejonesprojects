@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/ProjectSlideshow.css';
-
+import { imageNotFound } from '../../photos/PhotoExports';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 const ProjectSlideshow = ({ slides }) => {
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
+  const handleError = (e) => (e.target.src = imageNotFound);
+
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -25,6 +32,11 @@ const ProjectSlideshow = ({ slides }) => {
   };
 
   React.useEffect(() => {
+    const handleResize = () =>
+      setDimensions({ height: innerWidth, width: innerWidth });
+
+    window.addEventListener('resize', handleResize);
+
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
@@ -37,7 +49,7 @@ const ProjectSlideshow = ({ slides }) => {
     return () => {
       resetTimeout();
     };
-  }, [current]);
+  }, [current, dimensions.width, dimensions.height]);
 
   return (
     <div
@@ -56,6 +68,7 @@ const ProjectSlideshow = ({ slides }) => {
         style={{
           color: 'rebeccapurple',
           paddingBottom: '3rem',
+          textAlign: 'center',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
               ? '1px 1px 1px indigo'
@@ -64,18 +77,14 @@ const ProjectSlideshow = ({ slides }) => {
       >
         Projects
       </h1>
-      <section className="slider" style={{ paddingBottom: '4.5rem' }}>
-        <FaArrowAltCircleLeft
-          className="previous"
-          onClick={previousSlide}
-          style={{ color: 'rebeccapurple' }}
-        />
-        <FaArrowAltCircleRight
-          className="next"
-          onClick={nextSlide}
-          style={{ color: 'rebeccapurple' }}
-        />
-
+      <section
+        className="slider"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          paddingBottom: '4.5rem',
+        }}
+      >
         {slides.map((slide, index) => {
           return (
             <div
@@ -93,21 +102,62 @@ const ProjectSlideshow = ({ slides }) => {
                   }}
                 >
                   <a href={slide.href}>
-                    <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
-                      {slide.caption}
-                    </h3>
-                  </a>
-                  <a href={slide.href}>
-                    <img
+                    {/* <img
                       src={slide.image}
                       alt={slide.caption}
                       className="image"
                       id="image"
-                    />
+                    /> */}
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <LazyLoadImage
+                        className="image"
+                        alt={slide.caption}
+                        effect="blur"
+                        height={dimensions.height / 2}
+                        onError={handleError}
+                        src={slide.image}
+                        style={{
+                          borderRadius: 25,
+                          padding: 10,
+                        }}
+                        width={dimensions.width / 2}
+                      />
+                    </div>
+                    <a href={slide.href}>
+                      <h3
+                        style={{ textAlign: 'center', color: 'rebeccapurple' }}
+                      >
+                        {slide.caption}
+                      </h3>
+                    </a>
                   </a>
                   <h5 style={{ color: 'red' }} className="slideNumber">
                     {slide.id} of {length}
                   </h5>
+                  <div
+                    style={{
+                      alignItems: 'center',
+                      display: 'flex',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <FaArrowAltCircleLeft
+                      className="previous"
+                      onClick={previousSlide}
+                      style={{
+                        color: 'rebeccapurple',
+                        position: 'static',
+                      }}
+                    />
+                    <FaArrowAltCircleRight
+                      className="next"
+                      onClick={nextSlide}
+                      style={{
+                        color: 'rebeccapurple',
+                        position: 'static',
+                      }}
+                    />
+                  </div>
                 </div>
               )}
             </div>
