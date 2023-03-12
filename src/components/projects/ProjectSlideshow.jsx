@@ -102,12 +102,6 @@ const ProjectSlideshow = ({ slides }) => {
                   }}
                 >
                   <a href={slide.href}>
-                    {/* <img
-                      src={slide.image}
-                      alt={slide.caption}
-                      className="image"
-                      id="image"
-                    /> */}
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                       <LazyLoadImage
                         className="image"
