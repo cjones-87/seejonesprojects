@@ -88,16 +88,8 @@ const Footer = () => {
               : 'bg-black-alpha-90 card'
           }
         >
-          Designed & Built by CJ Jones
-          <h5
-            className={
-              localStorage.getItem('lightMode') === 'true'
-                ? 'bg-black-alpha-20 card'
-                : 'bg-black-alpha-90 card'
-            }
-            style={{ marginTop: '-1.4rem' }}
-          ></h5>
-          © 2021 - {new Date().getFullYear()}
+          Designed & Built by CJ Jones <br></br> © 2021&nbsp;-&nbsp;
+          {new Date().getFullYear()}
         </h5>
       </div>
     </div>
