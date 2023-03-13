@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
@@ -15,6 +17,8 @@ import {
   IYKYKhome,
   imageNotFound,
 } from '../../photos/PhotoExports';
+
+import Spinner from '../../misc/Spinner';
 
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 
@@ -39,6 +43,8 @@ import {
 } from 'react-icons/si';
 
 const LearningJournalTimeline = () => {
+  const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
+
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
@@ -349,57 +355,64 @@ const LearningJournalTimeline = () => {
 
   const customizedContent = (item) => {
     return (
-      <Card
-        className={
-          localStorage.getItem('lightMode') === 'true'
-            ? 'bg-black-alpha-40'
-            : 'bg-gray-alpha-80'
-        }
-        title={item.status}
-        subTitle={item.date}
-        style={{
-          color:
+      <Suspense fallback={<Spinner />}>
+        <Card
+          className={
             localStorage.getItem('lightMode') === 'true'
-              ? 'whitesmoke'
-              : 'indigo',
-          textShadow:
-            localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px black'
-              : '1px 1px 1px whitesmoke',
-          justifyContent: 'space-evenly',
-          textAlign: 'center',
-          paddingTop: '1.5rem',
-        }}
-      >
-        {item.image && (
-          <img
-            src={item.image}
-            onError={(e) => (e.target.src = imageNotFound)}
-            alt={item.name}
-            width={dimensions.width / 2.5}
-            height={dimensions.height / 3}
-            className="p-shadow-2"
-          />
-        )}
-        <p>{item.description}</p>
-        <p>{item.techStack}</p>
-        <Button
-          label={
-            <a href={item.link} target="_blank">
-              Learn More
-            </a>
+              ? 'bg-black-alpha-40'
+              : 'bg-gray-alpha-80'
           }
-          className="p-button-text"
-          // onClick={item.command}
+          title={item.status}
+          subTitle={item.date}
           style={{
-            backgroundColor: '#ce93d8',
             color:
               localStorage.getItem('lightMode') === 'true'
                 ? 'whitesmoke'
                 : 'indigo',
+            textShadow:
+              localStorage.getItem('lightMode') === 'true'
+                ? '1px 1px 1px black'
+                : '1px 1px 1px whitesmoke',
+            justifyContent: 'space-evenly',
+            textAlign: 'center',
+            paddingTop: '1.5rem',
           }}
-        />
-      </Card>
+        >
+          {item.image && (
+            <LazyLoadImage
+              alt={item.name}
+              className="p-shadow-2"
+              effect="blur"
+              height={dimensions.height / 3}
+              // onError={handleError}
+              onError={() => imageNotFound}
+              src={item.image}
+              style={{
+                borderRadius: 25,
+                padding: 10,
+              }}
+              width={dimensions.width / 2.5}
+            />
+          )}
+          <p>{item.description}</p>
+          <p>{item.techStack}</p>
+          <Button
+            label={
+              <a href={item.link} target="_blank">
+                Learn More
+              </a>
+            }
+            className="p-button-text"
+            style={{
+              backgroundColor: '#ce93d8',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'whitesmoke'
+                  : 'indigo',
+            }}
+          />
+        </Card>
+      </Suspense>
     );
   };
 
