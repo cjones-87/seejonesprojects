@@ -69,30 +69,28 @@ const AboutMeCards = ({ slides }) => {
         About Me
       </h1>
       <section className="slider">
-        <FaArrowAltCircleLeft
-          className="previous"
-          onClick={previousSlide}
-          style={{ color: 'rebeccapurple', position: 'static' }}
-        />
-        <FaArrowAltCircleRight
-          className="next"
-          onClick={nextSlide}
-          style={{ color: 'rebeccapurple', position: 'static' }}
-        />
+        <div
+          style={{
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <FaArrowAltCircleLeft
+            className="previous"
+            onClick={previousSlide}
+            style={{ color: 'rebeccapurple', position: 'static' }}
+          />
+          <FaArrowAltCircleRight
+            className="next"
+            onClick={nextSlide}
+            style={{ color: 'rebeccapurple', position: 'static' }}
+          />
+        </div>
 
         {slides.map((slide, index) => {
           const header = (
             <Suspense fallback={<Spinner />}>
-              {/* <img
-                alt="Card"
-                src={slide.image}
-                onError={handleError}
-                style={{
-                  borderRadius: 25,
-                  padding: 10,
-                }}
-              /> */}
-
               <LazyLoadImage
                 alt={slide.alt}
                 effect="blur"
