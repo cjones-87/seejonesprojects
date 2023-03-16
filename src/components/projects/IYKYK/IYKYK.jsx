@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
-
 import { imageNotFound } from '../../../photos/PhotoExports';
+
 import IYKYKData from './IYKYKData';
 
 const IYKYK = () => {
@@ -11,6 +12,11 @@ const IYKYK = () => {
     height: innerHeight,
     width: innerWidth,
   });
+
+  const handleError = (event) => {
+    event.target.src = imageNotFound;
+    event.onerror = null;
+  };
 
   useEffect(() => {
     const handleResize = () =>
@@ -44,12 +50,15 @@ const IYKYK = () => {
           </div>
           <div className="node-content">
             <div>{node.data.name}</div>
-            <img
-              alt={node.data.avatar}
+
+            <LazyLoadImage
+              alt={'Computer Love snapshot'}
+              effect="blur"
+              onError={handleError}
               src={node.data.avatar}
-              onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: dimensions.width / 10 }}
+              width={dimensions.width / 10}
             />
+
             <div
               style={{
                 color:
