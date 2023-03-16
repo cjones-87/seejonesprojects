@@ -55,9 +55,11 @@ const GuessingGame = () => {
             <LazyLoadImage
               alt={'Guessing Game snapshot'}
               effect="blur"
+              onError={handleError}
               src={node.data.avatar}
               width={dimensions.width / 10}
             />
+
             <div
               style={{
                 color:
