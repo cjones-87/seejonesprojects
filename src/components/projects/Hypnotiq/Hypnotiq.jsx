@@ -53,8 +53,9 @@ const Hypnotiq = () => {
             <div>{node.data.name}</div>
 
             <LazyLoadImage
-              alt={'Guessing Game snapshot'}
+              alt={'Hypnotiq snapshot'}
               effect="blur"
+              onError={handleError}
               src={node.data.avatar}
               width={dimensions.width / 10}
             />
