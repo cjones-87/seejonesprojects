@@ -54,6 +54,7 @@ const BoundzBookstore = () => {
             <LazyLoadImage
               alt={'Boundz Bookstore snapshot'}
               effect="blur"
+              onError={handleError}
               src={node.data.avatar}
               width={dimensions.width / 10}
             />
