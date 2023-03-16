@@ -51,12 +51,15 @@ const IdleClicker = () => {
           </div>
           <div className="node-content">
             <div>{node.data.name}</div>
+
             <LazyLoadImage
               alt={'Idle Clicker snapshot'}
               effect="blur"
+              onError={handleError}
               src={node.data.avatar}
               width={dimensions.width / 10}
             />
+
             <div
               style={{
                 color:
