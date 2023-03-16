@@ -17,7 +17,7 @@ import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 
 import smoke from '../../photos/smoke.png';
-import stars from '../../photos/stars.png';
+import stars from '../../photos/stars.jpeg';
 
 const LandingPage = () => {
   const [dimensions, setDimensions] = useState({
