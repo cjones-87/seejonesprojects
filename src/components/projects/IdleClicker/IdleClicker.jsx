@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
-
 import Iframe from 'react-iframe';
 
 import IdleClickerData from './IdleClickerData';
@@ -13,6 +13,11 @@ const IdleClicker = () => {
     height: innerHeight,
     width: innerWidth,
   });
+
+  const handleError = (event) => {
+    event.target.src = imageNotFound;
+    event.onerror = null;
+  };
 
   useEffect(() => {
     const handleResize = () =>
@@ -46,11 +51,11 @@ const IdleClicker = () => {
           </div>
           <div className="node-content">
             <div>{node.data.name}</div>
-            <img
-              alt={node.data.avatar}
+            <LazyLoadImage
+              alt={'Idle Clicker snapshot'}
+              effect="blur"
               src={node.data.avatar}
-              onError={(event) => (event.target.src = { imageNotFound })}
-              style={{ width: dimensions.width / 10 }}
+              width={dimensions.width / 10}
             />
             <div
               style={{
