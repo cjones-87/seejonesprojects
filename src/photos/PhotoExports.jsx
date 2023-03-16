@@ -1,4 +1,4 @@
-import imageNotFound from './imageNotFound.jpeg';
+import imageNotFound from './imageNotFound.jpg';
 
 import MainLogo from './favicon.png';
 import BlueShirtSmile from './blueShirtSmile.png';
@@ -8,12 +8,12 @@ import Hypnotiq2GIF from './Hypnotiq2/HypnotiqMusiq2.gif';
 import Hypnotiq2MP4 from './Hypnotiq2/HypnotiqMusiq2.mp4';
 
 import ComputerLovePic from './ComputerLove/computerLove.gif';
-import activityScreen from './ComputerLove/activityScreen.png';
-import homeScreen from './ComputerLove/homeScreen.png';
-import loginScreen from './ComputerLove/loginScreen.png';
-import likeScreen from './ComputerLove/likeScreen.png';
-import meetScreen from './ComputerLove/meetScreen.png';
-import registrationScreen from './ComputerLove/registrationScreen.png';
+import activityScreen from './ComputerLove/activityScreen.jpg';
+import homeScreen from './ComputerLove/homeScreen.jpg';
+import loginScreen from './ComputerLove/loginScreen.jpg';
+import likeScreen from './ComputerLove/likeScreen.jpg';
+import meetScreen from './ComputerLove/meetScreen.jpg';
+import registrationScreen from './ComputerLove/registrationScreen.jpg';
 
 import HypnotiqPic from './Hypnotiq/Hypnotiq.gif';
 import BabyJams from './Hypnotiq/BabyJams.jpg';
@@ -24,38 +24,38 @@ import JazzJams from './Hypnotiq/JazzJams.jpg';
 import JazzFacts from './Hypnotiq/JazzFacts.jpg';
 import BrownNoise from './Hypnotiq/BrownNoise.jpg';
 import BrownFacts from './Hypnotiq/BrownFacts.jpg';
-import MainMenu from './Hypnotiq/MainMenu.png';
+import MainMenu from './Hypnotiq/MainMenu.jpg';
 
-import seeJonesEngineer from './SeeJonesEngineer/seeJonesEngineer.png';
-import aboutMe from './SeeJonesEngineer/aboutMe.png';
-import landingPage from './SeeJonesEngineer/landingPage.png';
-import projects from './SeeJonesEngineer/projects.png';
-import learningJournal from './SeeJonesEngineer/learningJournal.png';
-import interactiveGames from './SeeJonesEngineer/interactiveGames.png';
-import contactForm from './SeeJonesEngineer/contactForm.png';
+import seeJonesEngineer from './SeeJonesEngineer/seeJonesEngineer.jpg';
+import aboutMe from './SeeJonesEngineer/aboutMe.jpg';
+import landingPage from './SeeJonesEngineer/landingPage.jpg';
+import projects from './SeeJonesEngineer/projects.jpg';
+import learningJournal from './SeeJonesEngineer/learningJournal.jpg';
+import interactiveGames from './SeeJonesEngineer/interactiveGames.jpg';
+import contactForm from './SeeJonesEngineer/contactForm.jpg';
 
-import home from './BoundzBookstore/home.png';
-import browseBooks from './BoundzBookstore/browseBooks.png';
-import editBooks from './BoundzBookstore/editBooks.png';
-import viewUser from './BoundzBookstore/viewUser.png';
-import shoppingCart from './BoundzBookstore/shoppingCart.png';
-import checkout1 from './BoundzBookstore/checkout1.png';
-import checkout2 from './BoundzBookstore/checkout2.png';
+import home from './BoundzBookstore/home.jpg';
+import browseBooks from './BoundzBookstore/browseBooks.jpg';
+import editBooks from './BoundzBookstore/editBooks.jpg';
+import viewUser from './BoundzBookstore/viewUser.jpg';
+import shoppingCart from './BoundzBookstore/shoppingCart.jpg';
+import checkout1 from './BoundzBookstore/checkout1.jpg';
+import checkout2 from './BoundzBookstore/checkout2.jpg';
 
 import IYKYKhome from './IYKYK/IYKYKhome.gif';
-import IYKYKlanding from './IYKYK/IYKYKlanding.gif';
-import IYKYKnavbar from './IYKYK/IYKYKnavbar.gif';
-import IYKYKcomics from './IYKYK/IYKYKcomics.png';
-import IYKYKmath from './IYKYK/IYKYKmath.png';
-import IYKYKquiz from './IYKYK/IYKYKquiz.png';
+import IYKYKlanding from './IYKYK/IYKYKlanding.jpg';
+import IYKYKnavbar from './IYKYK/IYKYKnavbar.jpg';
+import IYKYKcomics from './IYKYK/IYKYKcomics.jpg';
+import IYKYKmath from './IYKYK/IYKYKmath.jpg';
+import IYKYKquiz from './IYKYK/IYKYKquiz.jpg';
 
-import IdleClickerPic from './IdleClicker.png';
+import IdleClickerPic from './IdleClicker.jpg';
 
-import GuessingGamePic from './GuessingGame.png';
+import GuessingGamePic from './GuessingGame.jpg';
 
 import FullstackLogo from './FullstackLogo.png';
 
-import portfolioPic from './portfolioPic.png';
+import portfolioPic from './portfolioPic.jpg';
 
 import CJTransparentBackground from './CJTransparentBackground.png';
 import CJTransparentBackgroundPink from './CJTransparentBackgroundPink.png';
