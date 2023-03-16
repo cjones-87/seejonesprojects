@@ -52,7 +52,7 @@ const BoundzBookstore = () => {
             <div>{node.data.name}</div>
 
             <LazyLoadImage
-              alt={'Guessing Game snapshot'}
+              alt={'Boundz Bookstore snapshot'}
               effect="blur"
               src={node.data.avatar}
               width={dimensions.width / 10}
