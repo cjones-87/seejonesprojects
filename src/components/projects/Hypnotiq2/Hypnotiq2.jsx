@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import React, { Suspense, useEffect, useState } from 'react';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
-
+import Spinner from '../../../misc/Spinner';
 import Hypnotiq2Data from './Hypnotiq2Data';
 
 const Hypnotiq2 = () => {
@@ -16,6 +14,7 @@ const Hypnotiq2 = () => {
   const handleError = (event) => {
     event.target.src = imageNotFound;
     event.onerror = null;
+    return event;
   };
 
   useEffect(() => {
@@ -29,6 +28,7 @@ const Hypnotiq2 = () => {
 
   const nodeTemplate = (node) => {
     if (node.type) {
+      console.log(node);
       return (
         <div
           className={
@@ -51,13 +51,18 @@ const Hypnotiq2 = () => {
           <div className="node-content">
             <div>{node.data.name}</div>
 
-            <LazyLoadImage
-              alt={'Hypnotiq 2 snapshot'}
-              effect="blur"
-              onError={handleError}
-              src={node.data.avatar}
-              width={dimensions.width / 10}
-            />
+            <Suspense fallback={<Spinner />}>
+              <iframe
+                allow="autoplay"
+                onError={handleError}
+                src={node.data.iframe}
+                style={{
+                  borderRadius: 25,
+                  padding: 10,
+                }}
+                width={dimensions.width / 10}
+              ></iframe>
+            </Suspense>
 
             <div
               style={{

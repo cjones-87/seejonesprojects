@@ -1,13 +1,7 @@
 import React from 'react';
-
-import { Hypnotiq2GIF } from '../../../photos/PhotoExports';
-
 import { DiJavascript1 } from 'react-icons/di';
-
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
-
 import { SiCss3, SiExpo, SiFirebase } from 'react-icons/si';
-
 import { Tooltip } from 'primereact/tooltip';
 
 const Hypnotiq2Data = [
@@ -16,14 +10,14 @@ const Hypnotiq2Data = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: Hypnotiq2GIF },
+    data: { iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY' },
     children: [
       {
         label: 'MVP Goal',
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: Hypnotiq2GIF },
+        data: { iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY' },
         children: [
           {
             label: 'Minimum Viable Product',
@@ -31,7 +25,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <div>
                   <p>
@@ -76,7 +70,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <div>
                   <p>
@@ -107,7 +101,7 @@ const Hypnotiq2Data = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: Hypnotiq2GIF },
+        data: { iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY' },
         children: [
           {
             label: 'Technologies',
@@ -115,7 +109,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <span>
                   <span>
@@ -148,7 +142,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <div>
                   <p>
@@ -182,7 +176,7 @@ const Hypnotiq2Data = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: Hypnotiq2GIF },
+        data: { iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY' },
         children: [
           {
             label: 'Contributions',
@@ -190,7 +184,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <div>
                   <p>
@@ -252,7 +246,7 @@ const Hypnotiq2Data = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: Hypnotiq2GIF,
+              iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
               info: (
                 <div>
                   <p>
