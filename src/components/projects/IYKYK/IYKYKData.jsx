@@ -1,20 +1,12 @@
 import React from 'react';
-
 import {
-  IYKYKhome,
-  IYKYKlanding,
-  IYKYKnavbar,
   IYKYKcomics,
   IYKYKmath,
   IYKYKquiz,
 } from '../../../photos/PhotoExports';
-
 import { FaReact } from 'react-icons/fa';
-
 import { ImHtmlFive } from 'react-icons/im';
-
 import { DiJavascript1 } from 'react-icons/di';
-
 import { SiCss3, SiThreedotjs, SiTypescript, SiVercel } from 'react-icons/si';
 
 const IYKYKData = [
@@ -23,14 +15,14 @@ const IYKYKData = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: IYKYKhome },
+    data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
     children: [
       {
         label: 'MVP Goal',
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYKnavbar },
+        data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
         children: [
           {
             label: 'Minimum Viable Product',
@@ -38,7 +30,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYKlanding,
+              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
               info: (
                 <div>
                   <p>
@@ -58,7 +50,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYKhome,
+              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
               info: (
                 <div>
                   <p>
@@ -139,7 +131,7 @@ const IYKYKData = [
         className: 'info',
         type: 'info',
         expanded: true,
-        data: { avatar: IYKYKnavbar },
+        data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
         children: [
           {
             label: 'Contributions',
@@ -147,7 +139,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: IYKYKlanding,
+              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
               info: (
                 <div>
                   <p>
@@ -174,7 +166,7 @@ const IYKYKData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: IYKYKhome,
+              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
               info: (
                 <div>
                   <p>
