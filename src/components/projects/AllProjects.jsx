@@ -126,6 +126,7 @@ const AllProjects = () => {
             <Suspense fallback={<Spinner />}>
               <iframe
                 allow="autoplay"
+                className={'project-image'}
                 height={dimensions.height / 10}
                 onError={handleError}
                 src={rowData.iframe}
