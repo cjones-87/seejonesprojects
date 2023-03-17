@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
-
 import {
   SiCss3,
   SiExpo,
@@ -11,11 +9,8 @@ import {
   SiSequelize,
   SiRedux,
 } from 'react-icons/si';
-
 import { DiJavascript1 } from 'react-icons/di';
-
 import {
-  ComputerLovePic,
   activityScreen,
   homeScreen,
   loginScreen,
@@ -30,7 +25,7 @@ const ComputerLoveData = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: ComputerLovePic },
+    data: { iframe: 'https://www.youtube.com/embed/r6beMntr7nQ' },
     children: [
       {
         label: 'MVP Goal',
@@ -53,7 +48,7 @@ const ComputerLoveData = [
                     register/login for dating/networking, and view profiles of
                     other users. A user would be able to swipe yes or no to
                     dating/networking based on their preference
-                  </p>{' '}
+                  </p>
                   <p>
                     This app was designed for users in the tech industry. A lot
                     of times, we spend so much time stuck behind our computers
@@ -177,7 +172,7 @@ const ComputerLoveData = [
             type: 'moreInfo',
             expanded: false,
             data: {
-              avatar: ComputerLovePic,
+              iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
               info: (
                 <div>
                   <p>
@@ -213,7 +208,7 @@ const ComputerLoveData = [
             type: 'moreInfo',
             expanded: true,
             data: {
-              avatar: ComputerLovePic,
+              iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
               info: (
                 <div>
                   <p>
