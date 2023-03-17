@@ -4,28 +4,18 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-
+import Spinner from '../../misc/Spinner';
 import {
   IdleClickerPic,
   GuessingGamePic,
   FullstackLogo,
-  ComputerLovePic,
   browseBooks,
-  HypnotiqPic,
-  Hypnotiq2GIF,
   seeJonesEngineer,
-  IYKYKhome,
   imageNotFound,
 } from '../../photos/PhotoExports';
-
-import Spinner from '../../misc/Spinner';
-
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
-
 import { ImHtmlFive } from 'react-icons/im';
-
 import { DiJavascript1 } from 'react-icons/di';
-
 import {
   SiCss3,
   SiExpo,
@@ -43,7 +33,12 @@ import {
 } from 'react-icons/si';
 
 const LearningJournalTimeline = () => {
-  const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
+  const iframeIndices = [6, 7, 9, 10];
+  const handleError = (e) => {
+    e.target.src = imageNotFound;
+    e.onerror = null;
+    return e;
+  };
 
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
@@ -64,8 +59,8 @@ const LearningJournalTimeline = () => {
       status: 'Hypnotiq 2.0',
       date: '2022',
       icon: 'pi pi-star',
+      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
       color: '#FF9800',
-      image: Hypnotiq2GIF,
       description: 'Frontend Mobile App',
       link: '/projects/hypnotiq2',
       techStack: (
@@ -100,8 +95,8 @@ const LearningJournalTimeline = () => {
       status: `All I Know Is, IYKYK`,
       date: '2022',
       icon: 'pi pi-star',
+      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
       color: '#607D8B',
-      image: IYKYKhome,
       description: 'Frontend SPA Multiple Choice Quiz',
       link: '/projects/iykyk',
       techStack: (
@@ -159,7 +154,7 @@ const LearningJournalTimeline = () => {
       date: '2022',
       icon: 'pi pi-star',
       color: '#673AB7',
-      image: ComputerLovePic,
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       description: 'Full Stack Expo Mobile App',
       link: '/projects/computerlove',
       techStack: (
@@ -198,8 +193,8 @@ const LearningJournalTimeline = () => {
       status: 'Hypnotiq',
       date: '2022',
       icon: 'pi pi-star',
+      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       color: '#FF9800',
-      image: HypnotiqPic,
       description: 'Frontend Mobile App',
       link: '/projects/hypnotiq',
       techStack: (
@@ -378,14 +373,29 @@ const LearningJournalTimeline = () => {
             paddingTop: '1.5rem',
           }}
         >
-          {item.image && (
+          {iframeIndices.includes(item.id) ? (
+            <div>
+              <Suspense fallback={<Spinner />}>
+                <iframe
+                  allow="autoplay"
+                  height={dimensions.height / 3}
+                  onError={handleError}
+                  src={item.iframe}
+                  style={{
+                    borderRadius: 25,
+                    padding: 10,
+                  }}
+                  width={dimensions.width / 2.5}
+                ></iframe>
+              </Suspense>
+            </div>
+          ) : (
             <LazyLoadImage
               alt={item.name}
               className="p-shadow-2"
               effect="blur"
               height={dimensions.height / 3}
-              // onError={handleError}
-              onError={() => imageNotFound}
+              onError={handleError}
               src={item.image}
               style={{
                 borderRadius: 25,
