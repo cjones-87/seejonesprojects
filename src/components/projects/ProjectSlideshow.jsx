@@ -10,7 +10,13 @@ const ProjectSlideshow = ({ slides }) => {
     height: innerHeight,
     width: innerWidth,
   });
-  const handleError = (e) => (e.target.src = imageNotFound);
+
+  const iframeIndices = [0, 1, 2, 3];
+  const handleError = (e) => {
+    e.target.src = imageNotFound;
+    e.onerror = null;
+    return e;
+  };
 
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -103,19 +109,33 @@ const ProjectSlideshow = ({ slides }) => {
                 >
                   <a href={slide.href}>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                      <LazyLoadImage
-                        className="image"
-                        alt={slide.caption}
-                        effect="blur"
-                        height={dimensions.height / 2}
-                        onError={handleError}
-                        src={slide.image}
-                        style={{
-                          borderRadius: 25,
-                          padding: 10,
-                        }}
-                        width={dimensions.width / 2}
-                      />
+                      {iframeIndices.includes(index) ? (
+                        <iframe
+                          allow="autoplay"
+                          height={dimensions.height / 2}
+                          onError={handleError}
+                          src={slide.iframe}
+                          style={{
+                            borderRadius: 25,
+                            padding: 10,
+                          }}
+                          width={dimensions.width / 2}
+                        ></iframe>
+                      ) : (
+                        <LazyLoadImage
+                          className="image"
+                          alt={slide.caption}
+                          effect="blur"
+                          height={dimensions.height / 2}
+                          onError={handleError}
+                          src={slide.image}
+                          style={{
+                            borderRadius: 25,
+                            padding: 10,
+                          }}
+                          width={dimensions.width / 2}
+                        />
+                      )}
                     </div>
                     <a href={slide.href}>
                       <h3

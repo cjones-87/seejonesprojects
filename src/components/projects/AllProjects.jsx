@@ -1,57 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
 import './ProjectsCSS/Projects.css';
 import './ProjectsCSS/ProjectSlideshow.css';
-
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { ProjectFunctions } from './ProjectFunctions';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
-
 import ProjectSlideshow from './ProjectSlideshow';
+import Spinner from '../../misc/Spinner';
 import { ProjectData } from './data/ProjectData';
-
 import {
   IdleClickerPic,
   GuessingGamePic,
-  ComputerLovePic,
   browseBooks,
-  HypnotiqPic,
-  Hypnotiq2GIF,
   portfolioPic,
-  IYKYKhome,
   imageNotFound,
 } from '../../photos/PhotoExports';
 
 const AllProjects = () => {
+  const iframeIndices = [0, 1, 3, 4];
+  const handleError = (e) => {
+    e.target.src = imageNotFound;
+    e.onerror = null;
+    return e;
+  };
+
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
   });
 
-  const handleError = (e) => (e.target.src = imageNotFound);
-
   const [projects, setProjects] = useState([
     {
+      id: 0,
       name: 'Hypnotiq 2.0',
-      image: Hypnotiq2GIF,
+      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
       category: 'React Native Mobile App',
       difficulty: 10,
       status: 'v3 in progress',
       href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
     },
     {
+      id: 1,
       name: 'All I Know Is, IYKYK',
-      image: IYKYKhome,
+      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
       category: 'React Web App',
       difficulty: 8,
       status: 'complete',
       href: 'https://www.seejonesengineer.com/projects/iykyk',
     },
     {
+      id: 2,
       name: 'See Jones Engineer',
       image: portfolioPic,
       category: 'React Web App',
@@ -60,22 +61,25 @@ const AllProjects = () => {
       href: 'https://www.seejonesengineer.com/',
     },
     {
+      id: 3,
       name: 'Computer Love',
-      image: ComputerLovePic,
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       category: 'React Native Mobile App',
       difficulty: 10,
       status: 'complete',
       href: 'https://www.seejonesengineer.com/projects/computerlove',
     },
     {
+      id: 4,
       name: 'Hypnotiq',
-      image: HypnotiqPic,
+      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       category: 'React Native Mobile App',
       difficulty: 7,
       status: 'v2.0 complete',
       href: 'https://www.seejonesengineer.com/projects/hypnotiq',
     },
     {
+      id: 5,
       name: 'Boundz Bookstore',
       image: browseBooks,
       category: 'React Web App',
@@ -84,6 +88,7 @@ const AllProjects = () => {
       href: 'https://www.seejonesengineer.com/projects/boundzbookstore',
     },
     {
+      id: 6,
       name: 'Idle Clicker',
       image: IdleClickerPic,
       category: 'Vanilla JS, HTML, CSS',
@@ -92,6 +97,7 @@ const AllProjects = () => {
       href: 'https://www.seejonesengineer.com/projects/idleclicker',
     },
     {
+      id: 7,
       name: 'Guessing Game',
       image: GuessingGamePic,
       category: 'Vanilla JS, HTML, CSS',
@@ -115,19 +121,37 @@ const AllProjects = () => {
   const imageBodyTemplate = (rowData) => {
     return (
       <a href={rowData.href} target="_blank">
-        <LazyLoadImage
-          alt={rowData.image}
-          className={'project-image'}
-          effect="blur"
-          height={dimensions.height / 10}
-          onError={handleError}
-          src={rowData.image}
-          style={{
-            borderRadius: 25,
-            padding: '5px',
-          }}
-          width={dimensions.width / 10}
-        />
+        {iframeIndices.includes(rowData.id) ? (
+          <div>
+            <Suspense fallback={<Spinner />}>
+              <iframe
+                allow="autoplay"
+                height={dimensions.height / 10}
+                onError={handleError}
+                src={rowData.iframe}
+                style={{
+                  borderRadius: 25,
+                  padding: '5px',
+                }}
+                width={dimensions.width / 10}
+              ></iframe>
+            </Suspense>
+          </div>
+        ) : (
+          <LazyLoadImage
+            alt={rowData.image}
+            className={'project-image'}
+            effect="blur"
+            height={dimensions.height / 10}
+            onError={handleError}
+            src={rowData.image}
+            style={{
+              borderRadius: 25,
+              padding: '5px',
+            }}
+            width={dimensions.width / 10}
+          />
+        )}
       </a>
     );
   };

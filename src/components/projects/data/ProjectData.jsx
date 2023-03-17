@@ -1,35 +1,31 @@
 import {
   IdleClickerPic,
   GuessingGamePic,
-  ComputerLovePic,
   browseBooks,
-  HypnotiqPic,
-  Hypnotiq2GIF,
-  IYKYKhome,
 } from '../../../photos/PhotoExports';
 
 export const ProjectData = [
   {
     id: 1,
-    image: Hypnotiq2GIF,
+    iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
     caption: 'Hypnotiq 2.0',
     href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
   },
   {
     id: 2,
-    image: IYKYKhome,
+    iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
     caption: 'IYKYK',
     href: 'https://www.seejonesengineer.com/projects/iykyk',
   },
   {
     id: 3,
-    image: ComputerLovePic,
+    iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
     caption: 'Computer Love',
     href: 'https://www.seejonesengineer.com/projects/computerlove',
   },
   {
     id: 4,
-    image: HypnotiqPic,
+    iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     caption: 'Hypnotiq',
     href: 'https://www.seejonesengineer.com/projects/hypnotiq',
   },
