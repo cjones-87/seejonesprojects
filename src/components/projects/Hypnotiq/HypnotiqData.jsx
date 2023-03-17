@@ -1,7 +1,5 @@
 import React from 'react';
-
 import {
-  HypnotiqPic,
   BabyJams,
   BabyFacts,
   ClassicalJams,
@@ -12,9 +10,7 @@ import {
   BrownFacts,
   MainMenu,
 } from '../../../photos/PhotoExports';
-
 import { FaMobileAlt, FaReact } from 'react-icons/fa';
-
 import { SiCss3, SiExpo, SiHeroku } from 'react-icons/si';
 
 const HypnotiqData = [
@@ -23,7 +19,7 @@ const HypnotiqData = [
     className: 'title',
     type: 'title',
     expanded: true,
-    data: { avatar: HypnotiqPic },
+    data: { iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8' },
     children: [
       {
         label: 'MVP Goal',
@@ -193,7 +189,6 @@ const HypnotiqData = [
               info: (
                 <div>
                   <p>
-                    {' '}
                     One of the biggest challenges completing Hypnotiq was not
                     having had any prior experience building mobile apps or
                     working with React Native Expo.I didn't always naturally
