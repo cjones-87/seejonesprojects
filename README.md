@@ -8,7 +8,6 @@
 
 ## Made With
 
-
 <div align="center">  
 <h3>Frameworks, Languages, & Tools</h3>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
@@ -42,7 +41,7 @@
  <a href="https://www.seejonesengineer.com/" target="_blank" >
          <img align="center" src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=opsgenie&logoColor=white" alt="CJ's Portfolio"/>
       </a>
-      <a href="https://www.seejonesengineer.com/" target="_blank" ><img align='center' src='src/photos/SeeJonesEngineer/seeJonesEngineer.png' alt='CJ's Portfolio Pic' />
+      <a href="https://www.seejonesengineer.com/" target="_blank" ><img align='center' src='src/photos/SeeJonesEngineer/seeJonesEngineer.jpg' alt='CJ's Portfolio Pic' />
 <div>
 <!-- Footer -->
 
