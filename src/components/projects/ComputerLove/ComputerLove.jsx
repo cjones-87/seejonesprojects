@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Iframe from 'react-iframe';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
-
+import Spinner from '../../../misc/Spinner';
 import ComputerLoveData from './ComputerLoveData';
 
 const ComputerLove = () => {
@@ -13,6 +12,8 @@ const ComputerLove = () => {
     height: innerHeight,
     width: innerWidth,
   });
+
+  const isIframe = ['Challenges', 'Contributions', 'Computer Love'];
 
   const handleError = (event) => {
     event.target.src = imageNotFound;
@@ -52,13 +53,24 @@ const ComputerLove = () => {
           <div className="node-content">
             <div>{node.data.name}</div>
 
-            <LazyLoadImage
-              alt={'Computer Love snapshot'}
-              effect="blur"
-              onError={handleError}
-              src={node.data.avatar}
-              width={dimensions.width / 10}
-            />
+            {isIframe.includes(node.label) ? (
+              <Suspense fallback={<Spinner />}>
+                <iframe
+                  allow="autoplay"
+                  onError={handleError}
+                  src={node.data.iframe}
+                  width={dimensions.width / 10}
+                ></iframe>
+              </Suspense>
+            ) : (
+              <LazyLoadImage
+                alt={'Computer Love snapshot'}
+                effect="blur"
+                onError={handleError}
+                src={node.data.avatar}
+                width={dimensions.width / 10}
+              />
+            )}
 
             <div
               style={{
@@ -95,16 +107,18 @@ const ComputerLove = () => {
           width: dimensions.width + 20,
         }}
       >
-        <Iframe
-          url="https://www.youtube.com/embed/fmAzDaepIsM"
-          width={dimensions.width / 1.5}
-          height={dimensions.height / 2}
+        <iframe
           id="myId"
           className="myClassname"
-          display="initial"
-          position="relative"
-          allowFullScreen
-        />
+          height={dimensions.height / 2}
+          onError={handleError}
+          src={'https://www.youtube.com/embed/fmAzDaepIsM'}
+          style={{
+            display: 'initial',
+          }}
+          width={dimensions.width / 1.5}
+        ></iframe>
+
         <OrganizationChart
           nodeTemplate={nodeTemplate}
           onSelectionChange={(event) => setSelection(event.data)}
@@ -119,16 +133,3 @@ const ComputerLove = () => {
 };
 
 export default ComputerLove;
-
-{
-  /* <Iframe
-          url="https://www.youtube.com/embed/fmAzDaepIsM"
-          width="800px"
-          height="800px"
-          id="myId"
-          className="myClassname"
-          display="initial"
-          position="relative"
-          allowFullScreen
-        /> */
-}
