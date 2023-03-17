@@ -4,10 +4,6 @@ import MainLogo from './favicon.png';
 import BlueShirtSmile from './blueShirtSmile.png';
 import LogoCJ from './logoCJ.png';
 
-import Hypnotiq2GIF from './Hypnotiq2/HypnotiqMusiq2.gif';
-import Hypnotiq2MP4 from './Hypnotiq2/HypnotiqMusiq2.mp4';
-
-import ComputerLovePic from './ComputerLove/computerLove.gif';
 import activityScreen from './ComputerLove/activityScreen.jpg';
 import homeScreen from './ComputerLove/homeScreen.jpg';
 import loginScreen from './ComputerLove/loginScreen.jpg';
@@ -15,7 +11,6 @@ import likeScreen from './ComputerLove/likeScreen.jpg';
 import meetScreen from './ComputerLove/meetScreen.jpg';
 import registrationScreen from './ComputerLove/registrationScreen.jpg';
 
-import HypnotiqPic from './Hypnotiq/Hypnotiq.gif';
 import BabyJams from './Hypnotiq/BabyJams.jpg';
 import BabyFacts from './Hypnotiq/BabyFacts.jpg';
 import ClassicalJams from './Hypnotiq/ClassicalJams.jpg';
@@ -42,7 +37,6 @@ import shoppingCart from './BoundzBookstore/shoppingCart.jpg';
 import checkout1 from './BoundzBookstore/checkout1.jpg';
 import checkout2 from './BoundzBookstore/checkout2.jpg';
 
-import IYKYKhome from './IYKYK/IYKYKhome.gif';
 import IYKYKlanding from './IYKYK/IYKYKlanding.jpg';
 import IYKYKnavbar from './IYKYK/IYKYKnavbar.jpg';
 import IYKYKcomics from './IYKYK/IYKYKcomics.jpg';
@@ -68,16 +62,12 @@ export {
   MainLogo,
   BlueShirtSmile,
   LogoCJ,
-  Hypnotiq2GIF,
-  Hypnotiq2MP4,
-  ComputerLovePic,
   activityScreen,
   homeScreen,
   loginScreen,
   likeScreen,
   meetScreen,
   registrationScreen,
-  HypnotiqPic,
   BabyJams,
   BabyFacts,
   ClassicalJams,
@@ -101,9 +91,6 @@ export {
   shoppingCart,
   checkout1,
   checkout2,
-  IYKYKhome,
-  IYKYKlanding,
-  IYKYKnavbar,
   IYKYKcomics,
   IYKYKmath,
   IYKYKquiz,
