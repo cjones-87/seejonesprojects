@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Cube from './Cube';
-
 import ProjectSlideshow from '../projects/ProjectSlideshow';
 import { ProjectData } from '.././projects/data/ProjectData';
 import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
-
 import BusinessCard from '../contactMe/BusinessCard';
 import '../contactMe/BusinessCard.css';
 
-import {
-  GithubSkyline2021,
-  GithubSkyline2022,
-} from '../../photos/PhotoExports';
-
-export default function Home() {
+const Home = () => {
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
@@ -60,18 +53,33 @@ export default function Home() {
         }}
       >
         <a href="https://skyline.github.com/cjones-87/2021">
-          <img
-            src={GithubSkyline2021}
-            style={{ textAlign: 'center', width: dimensions.width / 3 }}
-          />
+          <iframe
+            src="https://www.youtube.com/embed/BAhz7BLA3rA"
+            height={dimensions.height / 3}
+            allow="autoplay"
+          ></iframe>
         </a>
+
         <a href="https://skyline.github.com/cjones-87/2022">
-          <img
-            src={GithubSkyline2022}
-            style={{ textAlign: 'center', width: dimensions.width / 3 }}
-          />
+          <iframe
+            src="https://www.youtube.com/embed/fwvVifpo93o"
+            width={dimensions.width / 3}
+            height={dimensions.height / 3}
+            allow="autoplay"
+          ></iframe>
+        </a>
+
+        <a href="https://skyline.github.com/cjones-87/2023">
+          <iframe
+            src="https://www.youtube.com/embed/-jgXmlOViws"
+            width={dimensions.width / 3}
+            height={dimensions.height / 3}
+            allow="autoplay"
+          ></iframe>
         </a>
       </div>
     </div>
   );
-}
+};
+
+export default Home;
