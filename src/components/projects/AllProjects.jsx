@@ -131,11 +131,12 @@ const AllProjects = () => {
                 onError={handleError}
                 src={rowData.iframe}
                 style={{
+                  backgroundColor: '#cccccc',
                   borderRadius: 25,
                   padding: '5px',
                 }}
                 width={dimensions.width / 10}
-              ></iframe>
+              />
             </Suspense>
           </div>
         ) : (
@@ -147,6 +148,7 @@ const AllProjects = () => {
             onError={handleError}
             src={rowData.image}
             style={{
+              backgroundColor: '#cccccc',
               borderRadius: 25,
               padding: '5px',
             }}
