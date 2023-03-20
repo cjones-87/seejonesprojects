@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes as NavigationRoutes } from 'react-router-dom';
 
 const AllProjects = lazy(() => import('../components/projects/AllProjects'));
 const LearningJournalTimeline = lazy(() =>
@@ -35,10 +35,10 @@ const PageNotFound404 = lazy(() =>
   import('../components/error/PageNotFound404')
 );
 
-const NavigationRoutes = () => {
+const Routes = () => {
   return (
     <>
-      <Routes>
+      <NavigationRoutes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/aboutme" element={<AboutMe />} />
@@ -59,9 +59,9 @@ const NavigationRoutes = () => {
         <Route path="/projects/iykyk" element={<IYKYK />} />
         <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
         <Route path="*" element={<PageNotFound404 />} />
-      </Routes>
+      </NavigationRoutes>
     </>
   );
 };
 
-export default NavigationRoutes;
+export default Routes;
