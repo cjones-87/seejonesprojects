@@ -573,7 +573,6 @@ const LandingPage = () => {
                 <a href="https://vercel.com/" target="_blank" rel="noreferrer">
                   <img
                     align="center"
-                    img
                     src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/344/ffffff/external-glyph-shapes-tanah-basah-glyph-tanah-basah-69.png"
                     width="35"
                     height="35"
@@ -583,7 +582,6 @@ const LandingPage = () => {
                 <a href="https://github.com/" target="_blank" rel="noreferrer">
                   <img
                     align="center"
-                    img
                     src="https://img.icons8.com/dusk/45/000000/github.png"
                     width="40"
                     height="40"
@@ -593,7 +591,6 @@ const LandingPage = () => {
                 <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
                   <img
                     align="center"
-                    img
                     src="https://img.icons8.com/nolan/45/git.png"
                     width="40"
                     height="40"
@@ -607,7 +604,6 @@ const LandingPage = () => {
                 >
                   <img
                     align="center"
-                    img
                     src="https://img.icons8.com/nolan/45/heroku.png"
                     width="40"
                     height="40"
