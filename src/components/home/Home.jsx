@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import Cube from './Cube';
 import ProjectSlideshow from '../projects/ProjectSlideshow';
 import { ProjectData } from '.././projects/data/ProjectData';
@@ -6,6 +7,7 @@ import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
 import BusinessCard from '../contactMe/BusinessCard';
 import '../contactMe/BusinessCard.css';
+import GithubActivity from './GithubActivity';
 
 const Home = () => {
   const [dimensions, setDimensions] = useState({
@@ -28,7 +30,9 @@ const Home = () => {
         <Cube id="homeCJ" />
       </div>
 
-      <ProjectSlideshow slides={ProjectData} />
+      <LazyLoadComponent>
+        <ProjectSlideshow slides={ProjectData} />
+      </LazyLoadComponent>
 
       <div
         style={{
@@ -38,46 +42,12 @@ const Home = () => {
           marginBottom: '2rem',
         }}
       >
-        <BusinessCard />
+        <LazyLoadComponent>
+          <BusinessCard />
+        </LazyLoadComponent>
       </div>
-      <div
-        className={
-          localStorage.getItem('lightMode') === 'true'
-            ? 'bg-black-alpha-20 App card'
-            : 'bg-black-alpha-90 App card'
-        }
-        style={{
-          marginTop: '2rem',
-          display: 'flex',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <a href="https://skyline.github.com/cjones-87/2021">
-          <iframe
-            src="https://www.youtube.com/embed/BAhz7BLA3rA"
-            height={dimensions.height / 3}
-            allow="autoplay"
-          ></iframe>
-        </a>
 
-        <a href="https://skyline.github.com/cjones-87/2022">
-          <iframe
-            src="https://www.youtube.com/embed/fwvVifpo93o"
-            width={dimensions.width / 3}
-            height={dimensions.height / 3}
-            allow="autoplay"
-          ></iframe>
-        </a>
-
-        <a href="https://skyline.github.com/cjones-87/2023">
-          <iframe
-            src="https://www.youtube.com/embed/-jgXmlOViws"
-            width={dimensions.width / 3}
-            height={dimensions.height / 3}
-            allow="autoplay"
-          ></iframe>
-        </a>
-      </div>
+      <GithubActivity />
     </div>
   );
 };
