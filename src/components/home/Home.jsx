@@ -27,7 +27,9 @@ const Home = () => {
   return (
     <div className="App" style={{ width: dimensions.width }}>
       <div id="homeFlex">
-        <Cube id="homeCJ" />
+        <LazyLoadComponent>
+          <Cube id="homeCJ" />
+        </LazyLoadComponent>
       </div>
 
       <LazyLoadComponent>
