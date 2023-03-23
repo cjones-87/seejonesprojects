@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
-import Iframe from 'react-iframe';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import GuessingGameData from './GuessingGameData';
 
@@ -110,15 +109,12 @@ const GuessingGame = () => {
           </h1>
         </a>
         <div style={{ marginBottom: '1.5rem' }}>
-          <Iframe
-            url="https://guessing-game-blue.vercel.app/"
-            width={dimensions.width / 2}
+          <iframe
+            className="myClassname"
             height={dimensions.height / 2}
             id="myId"
-            className="myClassname"
-            display="initial"
-            position="relative"
-            frameBorder={0}
+            src="https://guessing-game-blue.vercel.app/"
+            width={dimensions.width / 2}
           />
         </div>
         <OrganizationChart
