@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import Iframe from 'react-iframe';
-
 export default function PlayGames() {
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
@@ -55,15 +53,13 @@ export default function PlayGames() {
               Idle Clicker
             </h1>
           </a>
-          <Iframe
-            url="https://mugnificent-coffee-clicker.vercel.app/"
-            width={dimensions.width / 1.5}
+
+          <iframe
+            className="myClassname"
             height={dimensions.height / 1.5}
             id="myId"
-            className="myClassname"
-            display="initial"
-            position="relative"
-            frameBorder={0}
+            src="https://mugnificent-coffee-clicker.vercel.app/"
+            width={dimensions.width / 1.5}
           />
         </div>
 
@@ -82,15 +78,13 @@ export default function PlayGames() {
               Guessing Game
             </h1>
           </a>
-          <Iframe
-            url="https://guessing-game-blue.vercel.app/"
-            width={dimensions.width / 1.5}
+
+          <iframe
+            className="myClassname"
             height={dimensions.height / 1.5}
             id="myId"
-            className="myClassname"
-            display="initial"
-            position="relative"
-            frameBorder={0}
+            src="https://guessing-game-blue.vercel.app/"
+            width={dimensions.width / 1.5}
           />
         </div>
       </div>
