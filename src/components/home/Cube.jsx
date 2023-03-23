@@ -1,7 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
 
-import Iframe from 'react-iframe';
-
 const Cube = () => {
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
@@ -26,12 +24,12 @@ const Cube = () => {
     >
       <div className="App" style={{ width: dimensions.width }}>
         <Suspense fallback={<p>Loading....</p>}>
-          <Iframe
-            url="https://3d-box-animation.vercel.app/"
-            width="100%"
+          <iframe
+            className="myClassname"
+            height={dimensions.height / 2}
             id="myId"
-            scrolling="no"
-            frameBorder={0}
+            src="https://3d-box-animation.vercel.app/"
+            width={dimensions.width}
           />
         </Suspense>
       </div>
