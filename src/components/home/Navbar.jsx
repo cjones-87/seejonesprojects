@@ -232,7 +232,7 @@ const Navbar = () => {
           model={items}
           start={start}
           end={end}
-          style={{ width: dimensions.width }}
+          style={{ backgroundColor: '#1a1a1a', width: dimensions.width }}
         />
       </div>
     </div>
