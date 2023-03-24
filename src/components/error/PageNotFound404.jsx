@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './404.css';
 const PageNotFound404 = () => {
   return (
     <div id="FourOhFour">
