@@ -3,95 +3,86 @@ import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 import SidePanelButtons from './SidePanelButtons';
-
 import TheLittleDwarf from '../../sounds/TheLittleDwarf.mp3';
 import PowerDown from '../../sounds/PowerDown.mp3';
-
 import Typewriter from 'typewriter-effect';
 
-export default class SidePanelMenu extends React.Component {
-  constructor(props) {
-    super(props);
+const SidePanelMenu = () => {
+  const [visibleCustomToolbar, setVisibleCustomToolbar] = useState(false);
 
-    this.state = {
-      visibleCustomToolbar: false,
-    };
+  useEffect(() => {});
 
-    this.onClick = this.onClick.bind(this);
-    this.onHide = this.onHide.bind(this);
-  }
-
-  onClick = (event) => {
+  const onOpen = (event) => {
     const audio = new Audio(TheLittleDwarf);
-    this.setState({ visibleCustomToolbar: true });
+    setVisibleCustomToolbar((current) => !current);
     let playAudio = (event) => audio.play();
     playAudio();
   };
 
-  onHide = (event) => {
+  const onHide = (event) => {
     const audio = new Audio(PowerDown);
-    this.setState({ visibleCustomToolbar: false });
+    setVisibleCustomToolbar((current) => !current);
     let playAudio = (event) => audio.play();
     playAudio();
   };
 
-  render() {
-    const customIcons = (
-      <React.Fragment>
-        {/* <button className="p-sidebar-icon p-link mr-1">
-          <span className="pi pi-info-circle" />
-        </button>
-        <button className="p-sidebar-icon p-link mr-1">
-          <span className="pi pi-arrow-right" />
-        </button> */}
-      </React.Fragment>
-    );
+  const customIcons = (
+    <React.Fragment>
+      {/* <button className="p-sidebar-icon p-link mr-1">
+        <span className="pi pi-info-circle" />
+      </button>
+      <button className="p-sidebar-icon p-link mr-1">
+        <span className="pi pi-arrow-right" />
+      </button> */}
+    </React.Fragment>
+  );
 
-    return (
-      <div
-        style={{
-          color: 'white',
-          textShadow: '2px 2px 2px #01020E',
-          textAlign: 'center',
-        }}
-      >
-        <div className="card">
-          <Sidebar
-            visible={this.state.visibleCustomToolbar}
-            onHide={this.onHide}
-            icons={customIcons}
-          >
-            <h3 style={{ textAlign: 'center', color: 'white' }}>
-              See Jones Engineer
-            </h3>
-            <SidePanelButtons />
-          </Sidebar>
+  return (
+    <div
+      style={{
+        color: 'white',
+        textShadow: '2px 2px 2px #01020E',
+        textAlign: 'center',
+      }}
+    >
+      <div className="card">
+        <Sidebar
+          visible={visibleCustomToolbar}
+          onHide={onHide}
+          icons={customIcons}
+        >
+          <h3 style={{ textAlign: 'center', color: 'white' }}>
+            See Jones Engineer
+          </h3>
+          <SidePanelButtons />
+        </Sidebar>
 
-          <div>
-            <div style={{ textAlign: 'center' }}>
-              <Button
-                icon="pi pi-comments"
-                label={
-                  <Typewriter
-                    options={{
-                      strings: 'Network With Me',
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                }
-                onClick={this.onClick}
-                tooltip="like what you see? network with me!"
-                tooltipOptions={{ mousetrack: true, position: 'left' }}
-              />
-            </div>
+        <div>
+          <div style={{ textAlign: 'center' }}>
+            <Button
+              icon="pi pi-comments"
+              label={
+                <Typewriter
+                  options={{
+                    strings: 'Network With Me',
+                    autoStart: true,
+                    // loop: true,
+                  }}
+                />
+              }
+              onClick={onOpen}
+              tooltip="like what you see? network with me!"
+              tooltipOptions={{ mousetrack: true, position: 'left' }}
+            />
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default SidePanelMenu;
