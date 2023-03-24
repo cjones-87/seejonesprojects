@@ -1,11 +1,9 @@
+import React from 'react';
 import AboutMeCards from './AboutMeCards';
 import { AboutMeData } from './data/AboutMeData';
-
-import React from 'react';
-
 import Specialization from '../techSkills/Specialization';
-
 import TechSkills from '../techSkills/TechSkills';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const AboutMe = () => {
   const [dimensions, setDimensions] = React.useState({
@@ -36,13 +34,19 @@ const AboutMe = () => {
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <AboutMeCards slides={AboutMeData} />
+        <LazyLoadComponent>
+          <AboutMeCards slides={AboutMeData} />
+        </LazyLoadComponent>
       </div>
       <div>
-        <Specialization />
+        <LazyLoadComponent>
+          <Specialization />
+        </LazyLoadComponent>
       </div>
       <div>
-        <TechSkills />
+        <LazyLoadComponent>
+          <TechSkills />
+        </LazyLoadComponent>
       </div>
     </div>
   );
