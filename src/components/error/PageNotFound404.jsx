@@ -6,11 +6,17 @@ const PageNotFound404 = () => {
     <div id="FourOhFour">
       <div
         style={{
-          position: 'relative',
-          textAlign: 'center',
-          padding: '30vh',
           color: 'rebeccapurple',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          left: '50%',
+          textAlign: 'center',
+          position: 'fixed',
+          right: '50%',
           textShadow: '2px 2px 2px #01020E',
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
         }}
       >
         <h1>404</h1>
