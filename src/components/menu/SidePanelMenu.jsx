@@ -6,6 +6,7 @@ import 'primeflex/primeflex.css';
 import React, { useEffect, useState } from 'react';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import SidePanelButtons from './SidePanelButtons';
 import TheLittleDwarf from '../../sounds/TheLittleDwarf.mp3';
 import PowerDown from '../../sounds/PowerDown.mp3';
@@ -46,7 +47,9 @@ const SidePanelMenu = () => {
           <h3 style={{ textAlign: 'center', color: 'white' }}>
             See Jones Engineer
           </h3>
-          <SidePanelButtons />
+          <LazyLoadComponent>
+            <SidePanelButtons />
+          </LazyLoadComponent>
         </Sidebar>
 
         <div>
@@ -59,11 +62,9 @@ const SidePanelMenu = () => {
                   options={{
                     strings: 'Network With Me',
                     autoStart: true,
-                    // loop: true,
                   }}
                 />
               }
-              // onClick={onOpen}
               tooltip="like what you see? network with me!"
               tooltipOptions={{ mousetrack: true, position: 'left' }}
             />
