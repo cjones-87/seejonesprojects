@@ -13,12 +13,12 @@ import PowerDown from '../../sounds/PowerDown.mp3';
 import Typewriter from 'typewriter-effect';
 
 const SidePanelMenu = () => {
-  const [visibleCustomToolbar, setVisibleCustomToolbar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     const onOpen = (event) => {
       const audio = new Audio(TheLittleDwarf);
-      setVisibleCustomToolbar((current) => !current);
+      setShowSidebar((current) => !current);
       let playAudio = (event) => audio.play();
       playAudio();
     };
@@ -29,7 +29,7 @@ const SidePanelMenu = () => {
 
   const onHide = (event) => {
     const audio = new Audio(PowerDown);
-    setVisibleCustomToolbar((current) => !current);
+    setShowSidebar((current) => !current);
     let playAudio = (event) => audio.play();
     playAudio();
   };
@@ -43,7 +43,7 @@ const SidePanelMenu = () => {
       }}
     >
       <div className="card">
-        <Sidebar visible={visibleCustomToolbar} onHide={onHide} icons={''}>
+        <Sidebar visible={showSidebar} onHide={onHide} icons={''}>
           <h3 style={{ textAlign: 'center', color: 'white' }}>
             See Jones Engineer
           </h3>
