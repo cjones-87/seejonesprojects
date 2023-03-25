@@ -14,14 +14,17 @@ import Typewriter from 'typewriter-effect';
 const SidePanelMenu = () => {
   const [visibleCustomToolbar, setVisibleCustomToolbar] = useState(false);
 
-  useEffect(() => {});
+  useEffect(() => {
+    const onOpen = (event) => {
+      const audio = new Audio(TheLittleDwarf);
+      setVisibleCustomToolbar((current) => !current);
+      let playAudio = (event) => audio.play();
+      playAudio();
+    };
 
-  const onOpen = (event) => {
-    const audio = new Audio(TheLittleDwarf);
-    setVisibleCustomToolbar((current) => !current);
-    let playAudio = (event) => audio.play();
-    playAudio();
-  };
+    const networkWithMeButton = document.getElementById('networkWithMe');
+    networkWithMeButton.addEventListener('click', onOpen);
+  });
 
   const onHide = (event) => {
     const audio = new Audio(PowerDown);
@@ -29,17 +32,6 @@ const SidePanelMenu = () => {
     let playAudio = (event) => audio.play();
     playAudio();
   };
-
-  const customIcons = (
-    <React.Fragment>
-      {/* <button className="p-sidebar-icon p-link mr-1">
-        <span className="pi pi-info-circle" />
-      </button>
-      <button className="p-sidebar-icon p-link mr-1">
-        <span className="pi pi-arrow-right" />
-      </button> */}
-    </React.Fragment>
-  );
 
   return (
     <div
@@ -50,11 +42,7 @@ const SidePanelMenu = () => {
       }}
     >
       <div className="card">
-        <Sidebar
-          visible={visibleCustomToolbar}
-          onHide={onHide}
-          icons={customIcons}
-        >
+        <Sidebar visible={visibleCustomToolbar} onHide={onHide} icons={''}>
           <h3 style={{ textAlign: 'center', color: 'white' }}>
             See Jones Engineer
           </h3>
@@ -64,6 +52,7 @@ const SidePanelMenu = () => {
         <div>
           <div style={{ textAlign: 'center' }}>
             <Button
+              id="networkWithMe"
               icon="pi pi-comments"
               label={
                 <Typewriter
@@ -74,7 +63,7 @@ const SidePanelMenu = () => {
                   }}
                 />
               }
-              onClick={onOpen}
+              // onClick={onOpen}
               tooltip="like what you see? network with me!"
               tooltipOptions={{ mousetrack: true, position: 'left' }}
             />
