@@ -1,10 +1,10 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import { OrganizationChart } from 'primereact/organizationchart';
-import { imageNotFound } from '../../../photos/PhotoExports';
 import Spinner from '../../../misc/Spinner';
 import IYKYKData from './IYKYKData';
+import { OrganizationChart } from 'primereact/organizationchart';
+import { imageNotFound } from '../../../photos/PhotoExports';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const IYKYK = () => {
   const [selection, setSelection] = useState([]);
@@ -12,16 +12,6 @@ const IYKYK = () => {
     height: innerHeight,
     width: innerWidth,
   });
-
-  const isIframe = [
-    'All I Know Is, IYKYK',
-    'MVP Goal',
-    'Implementations',
-    'Minimum Viable Product',
-    'Stretch Goals',
-    'Contributions',
-    'Challenges',
-  ];
 
   const handleError = (event) => {
     event.target.src = imageNotFound;
@@ -62,14 +52,15 @@ const IYKYK = () => {
           <div className="node-content">
             <div>{node.data.name}</div>
 
-            {isIframe.includes(node.label) ? (
+            {node.data.iframe ? (
               <Suspense fallback={<Spinner />}>
                 <iframe
                   allow="autoplay"
                   onError={handleError}
                   src={node.data.iframe}
+                  style={{ border: 0, borderRadius: 25 }}
                   width={dimensions.width / 10}
-                ></iframe>
+                />
               </Suspense>
             ) : (
               <LazyLoadImage
@@ -77,6 +68,7 @@ const IYKYK = () => {
                 effect="blur"
                 onError={handleError}
                 src={node.data.avatar}
+                style={{ borderRadius: 25 }}
                 width={dimensions.width / 10}
               />
             )}
