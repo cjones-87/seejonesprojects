@@ -379,14 +379,15 @@ const LearningJournalTimeline = () => {
                 <iframe
                   allow="autoplay"
                   height={dimensions.height / 3}
+                  // frameBorder={0}
                   onError={handleError}
                   src={item.iframe}
                   style={{
+                    border: 0,
                     borderRadius: 25,
-                    padding: 10,
                   }}
                   width={dimensions.width / 2.5}
-                ></iframe>
+                />
               </Suspense>
             </div>
           ) : (
