@@ -1,10 +1,10 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
 import Spinner from '../../../misc/Spinner';
 import ComputerLoveData from './ComputerLoveData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ComputerLove = () => {
   const [selection, setSelection] = useState([]);
@@ -12,8 +12,6 @@ const ComputerLove = () => {
     height: innerHeight,
     width: innerWidth,
   });
-
-  const isIframe = ['Challenges', 'Contributions', 'Computer Love'];
 
   const handleError = (event) => {
     event.target.src = imageNotFound;
@@ -53,14 +51,15 @@ const ComputerLove = () => {
           <div className="node-content">
             <div>{node.data.name}</div>
 
-            {isIframe.includes(node.label) ? (
+            {node.data.iframe ? (
               <Suspense fallback={<Spinner />}>
                 <iframe
                   allow="autoplay"
                   onError={handleError}
                   src={node.data.iframe}
+                  style={{ border: 0, borderRadius: 25 }}
                   width={dimensions.width / 10}
-                ></iframe>
+                />
               </Suspense>
             ) : (
               <LazyLoadImage
@@ -68,6 +67,9 @@ const ComputerLove = () => {
                 effect="blur"
                 onError={handleError}
                 src={node.data.avatar}
+                style={{
+                  borderRadius: 25,
+                }}
                 width={dimensions.width / 10}
               />
             )}
@@ -114,10 +116,12 @@ const ComputerLove = () => {
           onError={handleError}
           src={'https://www.youtube.com/embed/fmAzDaepIsM'}
           style={{
+            border: 0,
+            borderRadius: 25,
             display: 'initial',
           }}
           width={dimensions.width / 1.5}
-        ></iframe>
+        />
 
         <OrganizationChart
           nodeTemplate={nodeTemplate}
