@@ -25,20 +25,6 @@ const LandingPage = () => {
     width: innerWidth,
   });
 
-  const onClick = () => {
-    setTimeout(() => (window.location.href = '/home'), 2000);
-    const audio = new Audio(OpenUp);
-    const audio2 = new Audio(AccessGrantedComputerVoice);
-    let playAudio = () => {
-      audio.play();
-    };
-    let playAudio2 = () => {
-      setTimeout(() => audio2.play(), 500);
-    };
-    playAudio();
-    playAudio2();
-  };
-
   useEffect(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -115,15 +101,15 @@ const LandingPage = () => {
       }
     });
 
-    let textureEffect;
+    // let textureEffect;
 
-    loader.load(stars, (texture) => {
-      textureEffect = new POSTPROCESSING.TextureEffect({
-        blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-        texture,
-      });
-      textureEffect.blendMode.opacity.value = 0.2;
-    });
+    // loader.load(stars, (texture) => {
+    //   textureEffect = new POSTPROCESSING.TextureEffect({
+    //     blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
+    //     texture,
+    //   });
+    //   textureEffect.blendMode.opacity.value = 0.2;
+    // });
 
     const bloomEffect = new POSTPROCESSING.BloomEffect({
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
@@ -155,6 +141,23 @@ const LandingPage = () => {
     };
 
     window.addEventListener('resize', handleResize);
+
+    const playSoundWhileEnteringSite = () => {
+      setTimeout(() => (window.location.href = '/home'), 2000);
+      const audio = new Audio(OpenUp);
+      const audio2 = new Audio(AccessGrantedComputerVoice);
+      let playAudio = () => {
+        audio.play();
+      };
+      let playAudio2 = () => {
+        setTimeout(() => audio2.play(), 500);
+      };
+      playAudio();
+      playAudio2();
+    };
+
+    const siteEntrance = document.getElementById('enterSite');
+    siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
   }, [dimensions.height, dimensions.width]);
 
   return (
@@ -310,8 +313,8 @@ const LandingPage = () => {
               </div>
             </div>
             <Button
+              id="enterSite"
               label="See Jones Engineer"
-              onClick={onClick}
               style={{ marginTop: '2rem' }}
             />
           </div>
@@ -709,7 +712,6 @@ const LandingPage = () => {
             <div
               id="sectionC"
               style={{
-                // paddingBottom: '2rem',
                 width: '100vw',
               }}
             >
