@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AboutMeCards from './AboutMeCards';
 import { AboutMeData } from './data/AboutMeData';
 import Specialization from '../techSkills/Specialization';
@@ -6,14 +6,14 @@ import TechSkills from '../techSkills/TechSkills';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const AboutMe = () => {
-  const [dimensions, setDimensions] = React.useState({
+  const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
-      setDimensions({ height: window.innerHeight, width: window.innerWidth });
+      setDimensions({ height: innerHeight, width: innerWidth });
       window.location.reload();
     };
 
@@ -38,11 +38,13 @@ const AboutMe = () => {
           <AboutMeCards slides={AboutMeData} />
         </LazyLoadComponent>
       </div>
+
       <div>
         <LazyLoadComponent>
           <Specialization />
         </LazyLoadComponent>
       </div>
+
       <div>
         <LazyLoadComponent>
           <TechSkills />
