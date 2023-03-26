@@ -59,6 +59,7 @@ export default function PlayGames() {
             height={dimensions.height / 1.5}
             id="myId"
             src="https://mugnificent-coffee-clicker.vercel.app/"
+            style={{ border: 0 }}
             width={dimensions.width / 1.5}
           />
         </div>
@@ -84,6 +85,7 @@ export default function PlayGames() {
             height={dimensions.height / 1.5}
             id="myId"
             src="https://guessing-game-blue.vercel.app/"
+            style={{ border: 0 }}
             width={dimensions.width / 1.5}
           />
         </div>
