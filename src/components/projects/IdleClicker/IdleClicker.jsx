@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import IdleClickerData from './IdleClickerData';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
-
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
-import IdleClickerData from './IdleClickerData';
 
 const IdleClicker = () => {
   const [selection, setSelection] = useState([]);
@@ -57,6 +55,7 @@ const IdleClicker = () => {
               effect="blur"
               onError={handleError}
               src={node.data.avatar}
+              style={{ borderRadius: 25 }}
               width={dimensions.width / 10}
             />
 
@@ -115,6 +114,7 @@ const IdleClicker = () => {
             height={dimensions.height / 2}
             id="myId"
             src="https://mugnificent-coffee-clicker.vercel.app/"
+            style={{ border: 0, borderRadius: 25 }}
             width={dimensions.width / 2}
           />
         </div>
