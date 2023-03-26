@@ -20,7 +20,6 @@ import {
 } from '../../photos/PhotoExports';
 
 const AllProjects = () => {
-  const iframeIndices = [0, 1, 3, 4];
   const handleError = (e) => {
     e.target.src = imageNotFound;
     e.onerror = null;
@@ -121,7 +120,7 @@ const AllProjects = () => {
   const imageBodyTemplate = (rowData) => {
     return (
       <a href={rowData.href} target="_blank">
-        {iframeIndices.includes(rowData.id) ? (
+        {rowData.iframe ? (
           <div>
             <Suspense fallback={<Spinner />}>
               <iframe
@@ -132,6 +131,7 @@ const AllProjects = () => {
                 src={rowData.iframe}
                 style={{
                   backgroundColor: '#cccccc',
+                  border: 0,
                   borderRadius: 25,
                   padding: '5px',
                 }}
