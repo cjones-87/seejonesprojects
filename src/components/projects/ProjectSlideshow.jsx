@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { imageNotFound } from '../../photos/PhotoExports';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/ProjectSlideshow.css';
-import { imageNotFound } from '../../photos/PhotoExports';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 const ProjectSlideshow = ({ slides }) => {
   const [dimensions, setDimensions] = useState({
@@ -11,7 +11,6 @@ const ProjectSlideshow = ({ slides }) => {
     width: innerWidth,
   });
 
-  const iframeIndices = [0, 1, 2, 3];
   const handleError = (e) => {
     e.target.src = imageNotFound;
     e.onerror = null;
@@ -19,17 +18,17 @@ const ProjectSlideshow = ({ slides }) => {
   };
 
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const slidesLength = slides.length;
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === slidesLength - 1 ? 0 : current + 1);
   };
 
   const previousSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? slidesLength - 1 : current - 1);
   };
 
-  const timeoutRef = React.useRef(null);
+  const timeoutRef = useRef(null);
 
   const resetTimeout = () => {
     if (timeoutRef.current) {
@@ -37,7 +36,7 @@ const ProjectSlideshow = ({ slides }) => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () =>
       setDimensions({ height: innerWidth, width: innerWidth });
 
@@ -47,9 +46,9 @@ const ProjectSlideshow = ({ slides }) => {
     timeoutRef.current = setTimeout(
       () =>
         setCurrent((prevIndex) =>
-          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+          prevIndex === slidesLength - 1 ? 0 : prevIndex + 1
         ),
-      4500
+      5000
     );
 
     return () => {
@@ -109,18 +108,18 @@ const ProjectSlideshow = ({ slides }) => {
                 >
                   <a href={slide.href}>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-                      {iframeIndices.includes(index) ? (
+                      {slide.iframe ? (
                         <iframe
                           allow="autoplay"
                           height={dimensions.height / 2}
                           onError={handleError}
                           src={slide.iframe}
                           style={{
+                            border: 0,
                             borderRadius: 25,
-                            padding: 10,
                           }}
                           width={dimensions.width / 2}
-                        ></iframe>
+                        />
                       ) : (
                         <LazyLoadImage
                           className="image"
@@ -146,7 +145,7 @@ const ProjectSlideshow = ({ slides }) => {
                     </a>
                   </a>
                   <h5 style={{ color: 'red' }} className="slideNumber">
-                    {slide.id} of {length}
+                    {slide.id} of {slidesLength}
                   </h5>
                   <div
                     style={{
