@@ -1,16 +1,4 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import './ProjectsCSS/Projects.css';
-import './ProjectsCSS/ProjectSlideshow.css';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { ProjectFunctions } from './ProjectFunctions';
-import { Button } from 'primereact/button';
-import { Rating } from 'primereact/rating';
-import ProjectSlideshow from './ProjectSlideshow';
-import Spinner from '../../misc/Spinner';
-import { ProjectData } from './data/ProjectData';
 import {
   IdleClickerPic,
   GuessingGamePic,
@@ -18,6 +6,17 @@ import {
   portfolioPic,
   imageNotFound,
 } from '../../photos/PhotoExports';
+import ProjectSlideshow from './ProjectSlideshow';
+import Spinner from '../../misc/Spinner';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { Button } from 'primereact/button';
+import { Rating } from 'primereact/rating';
+import { ProjectData } from './data/ProjectData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import './ProjectsCSS/Projects.css';
+import './ProjectsCSS/ProjectSlideshow.css';
 
 const AllProjects = () => {
   const handleError = (e) => {
@@ -31,86 +30,146 @@ const AllProjects = () => {
     width: innerWidth,
   });
 
-  const [projects, setProjects] = useState([
+  const [projects] = useState([
     {
       id: 0,
-      name: 'Hypnotiq 2.0',
+      name: (
+        <a
+          href={'/projects/hypnotiq2'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Hypnotiq 2.0
+        </a>
+      ),
       iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
       category: 'React Native Mobile App',
       difficulty: 10,
       status: 'v3 in progress',
-      href: 'https://www.seejonesengineer.com/projects/hypnotiq2',
+      href: '/projects/hypnotiq2',
     },
     {
       id: 1,
-      name: 'All I Know Is, IYKYK',
+      name: (
+        <a
+          href={'/projects/iykyk'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          All I Know Is, IYKYK
+        </a>
+      ),
       iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
       category: 'React Web App',
       difficulty: 8,
       status: 'complete',
-      href: 'https://www.seejonesengineer.com/projects/iykyk',
+      href: '/projects/iykyk',
     },
     {
       id: 2,
-      name: 'See Jones Engineer',
+      name: (
+        <a
+          href={'/projects/seejonesengineer'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          See Jones Engineer
+        </a>
+      ),
       image: portfolioPic,
       category: 'React Web App',
       difficulty: 9,
       status: 'complete',
-      href: 'https://www.seejonesengineer.com/',
+      href: '/',
     },
     {
       id: 3,
-      name: 'Computer Love',
+      name: (
+        <a
+          href={'/projects/computerlove'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Computer Love
+        </a>
+      ),
       iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       category: 'React Native Mobile App',
       difficulty: 10,
       status: 'complete',
-      href: 'https://www.seejonesengineer.com/projects/computerlove',
+      href: '/projects/computerlove',
     },
     {
       id: 4,
-      name: 'Hypnotiq',
+      name: (
+        <a
+          href={'/projects/hypnotiq'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Hypnotiq
+        </a>
+      ),
       iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       category: 'React Native Mobile App',
       difficulty: 7,
       status: 'v2.0 complete',
-      href: 'https://www.seejonesengineer.com/projects/hypnotiq',
+      href: '/projects/hypnotiq',
     },
     {
       id: 5,
-      name: 'Boundz Bookstore',
+      name: (
+        <a
+          href={'/projects/boundzbookstore'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Boundz Bookstore
+        </a>
+      ),
       image: browseBooks,
       category: 'React Web App',
       difficulty: 10,
       status: 'complete',
-      href: 'https://www.seejonesengineer.com/projects/boundzbookstore',
+      href: '/projects/boundzbookstore',
     },
     {
       id: 6,
-      name: 'Idle Clicker',
+      name: (
+        <a
+          href={'/projects/idleclicker'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Idle Clicker
+        </a>
+      ),
       image: IdleClickerPic,
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 6,
       status: 'v2 in progress',
-      href: 'https://www.seejonesengineer.com/projects/idleclicker',
+      href: '/projects/idleclicker',
     },
     {
       id: 7,
-      name: 'Guessing Game',
+      name: (
+        <a
+          href={'/projects/guessinggame'}
+          style={{ color: 'whitesmoke', textDecoration: 'none' }}
+          target="_blank"
+        >
+          Guessing Game
+        </a>
+      ),
       image: GuessingGamePic,
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 3,
       status: 'complete',
-      href: 'https://www.seejonesengineer.com/projects/guessinggame',
+      href: 'projects/guessinggame',
     },
   ]);
 
-  const projectFunctions = new ProjectFunctions();
-
   useEffect(() => {
-    projectFunctions.getProjectsSmall().then((data) => setProjects(data));
-
     const handleResize = () =>
       setDimensions({ height: innerWidth, width: innerWidth });
 
@@ -171,7 +230,7 @@ const AllProjects = () => {
       <a href="/learningJournal" target="_blank">
         <Button
           icon="pi pi-images"
-          tooltip="view in my learning journal"
+          tooltip="View in my learning journal"
           tooltipOptions={{ position: 'left' }}
         />
       </a>
