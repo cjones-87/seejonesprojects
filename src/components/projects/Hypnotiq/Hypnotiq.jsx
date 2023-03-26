@@ -1,10 +1,10 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
 import Spinner from '../../../misc/Spinner';
 import HypnotiqData from './HypnotiqData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Hypnotiq = () => {
   const [selection, setSelection] = useState([]);
@@ -30,7 +30,6 @@ const Hypnotiq = () => {
   const orgChart = HypnotiqData;
 
   const nodeTemplate = (node) => {
-    console.log(isIframe);
     if (node.type) {
       return (
         <div
@@ -53,14 +52,15 @@ const Hypnotiq = () => {
           </div>
           <div className="node-content">
             <div>{node.data.name}</div>
-            {isIframe.includes(node.label) ? (
+            {node.data.iframe ? (
               <Suspense fallback={<Spinner />}>
                 <iframe
                   allow="autoplay"
                   onError={handleError}
                   src={node.data.iframe}
+                  style={{ border: 0, borderRadius: 25 }}
                   width={dimensions.width / 10}
-                ></iframe>
+                />
               </Suspense>
             ) : (
               <LazyLoadImage
@@ -68,6 +68,9 @@ const Hypnotiq = () => {
                 effect="blur"
                 onError={handleError}
                 src={node.data.avatar}
+                style={{
+                  borderRadius: 25,
+                }}
                 width={dimensions.width / 10}
               />
             )}
@@ -113,10 +116,12 @@ const Hypnotiq = () => {
           onError={handleError}
           src={'https://www.youtube.com/embed/JAFO_AROg34'}
           style={{
+            border: 0,
+            borderRadius: 25,
             display: 'initial',
           }}
           width={dimensions.width / 2}
-        ></iframe>
+        />
 
         <OrganizationChart
           nodeTemplate={nodeTemplate}
