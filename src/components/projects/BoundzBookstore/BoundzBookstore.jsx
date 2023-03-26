@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from './../../../photos/PhotoExports';
-
 import BoundzBookstoreData from './BoundzBookstoreData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const BoundzBookstore = () => {
   const [selection, setSelection] = useState([]);
@@ -56,6 +55,7 @@ const BoundzBookstore = () => {
               effect="blur"
               onError={handleError}
               src={node.data.avatar}
+              style={{ borderRadius: 25 }}
               width={dimensions.width / 10}
             />
 
