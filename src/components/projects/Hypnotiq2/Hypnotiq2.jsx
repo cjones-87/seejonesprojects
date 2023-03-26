@@ -57,11 +57,11 @@ const Hypnotiq2 = () => {
                 onError={handleError}
                 src={node.data.iframe}
                 style={{
+                  border: 0,
                   borderRadius: 25,
-                  padding: 10,
                 }}
                 width={dimensions.width / 10}
-              ></iframe>
+              />
             </Suspense>
 
             <div
