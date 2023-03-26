@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -25,7 +25,7 @@ const AboutMeCards = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  const timeoutRef = React.useRef(null);
+  const timeoutRef = useRef(null);
 
   const resetTimeout = () => {
     if (timeoutRef.current) {
@@ -33,7 +33,7 @@ const AboutMeCards = ({ slides }) => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
