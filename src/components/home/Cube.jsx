@@ -23,12 +23,13 @@ const Cube = () => {
       }}
     >
       <div className="App" style={{ width: dimensions.width }}>
-        <Suspense fallback={<p>Loading....</p>}>
+        <Suspense>
           <iframe
             className="myClassname"
             height={dimensions.height / 2}
             id="myId"
             src="https://3d-box-animation.vercel.app/"
+            style={{ border: 0 }}
             width={dimensions.width}
           />
         </Suspense>
