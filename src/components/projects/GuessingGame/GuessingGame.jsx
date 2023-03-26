@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import GuessingGameData from './GuessingGameData';
 import { OrganizationChart } from 'primereact/organizationchart';
 import { imageNotFound } from '../../../photos/PhotoExports';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
-import GuessingGameData from './GuessingGameData';
 
 const GuessingGame = () => {
   const [selection, setSelection] = useState([]);
@@ -56,6 +55,7 @@ const GuessingGame = () => {
               effect="blur"
               onError={handleError}
               src={node.data.avatar}
+              style={{ borderRadius: 25 }}
               width={dimensions.width / 10}
             />
 
@@ -114,6 +114,7 @@ const GuessingGame = () => {
             height={dimensions.height / 2}
             id="myId"
             src="https://guessing-game-blue.vercel.app/"
+            style={{ border: 0, borderRadius: 25 }}
             width={dimensions.width / 2}
           />
         </div>
