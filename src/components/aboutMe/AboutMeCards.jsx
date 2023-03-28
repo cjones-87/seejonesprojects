@@ -1,19 +1,19 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
+import handleImageFailure from '../../misc/helpers/handleImageFailure';
+import Spinner from '../../misc/Spinner';
+import { Card } from 'primereact/card';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-
-import { Card } from 'primereact/card';
-
-import Spinner from '../../misc/Spinner';
 
 const AboutMeCards = ({ slides }) => {
-  const handleError = (e) => (e.target.src = 'https://i.imgur.com/5rXZ1Fl.png');
-
+  const [dimensions, setDimensions] = useState({
+    height: innerHeight,
+    width: innerWidth,
+  });
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -43,10 +43,15 @@ const AboutMeCards = ({ slides }) => {
       20000
     );
 
+    const handleResize = () =>
+      setDimensions({ height: innerHeight, width: innerWidth });
+
+    window.addEventListener('resize', handleResize);
+
     return () => {
       resetTimeout();
     };
-  }, [current]);
+  }, [current, dimensions.width, dimensions.height]);
 
   return (
     <div
@@ -95,13 +100,13 @@ const AboutMeCards = ({ slides }) => {
                 alt={slide.alt}
                 effect="blur"
                 height={slide.height}
-                onError={handleError}
+                onError={handleImageFailure}
                 src={slide.image}
                 style={{
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={slide.width}
+                width={dimensions.width / 3}
               />
             </Suspense>
           );
@@ -130,7 +135,7 @@ const AboutMeCards = ({ slides }) => {
                           localStorage.getItem('lightMode') === 'true'
                             ? '1px 1px 1px indigo'
                             : '1px 1px 1px whitesmoke',
-                        width: window.innerWidth / 3,
+                        width: dimensions.width / 3,
                       }}
                       header={header}
                     >
