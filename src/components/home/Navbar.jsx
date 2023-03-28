@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
-import { Menubar } from 'primereact/menubar';
-
 import SidePanelMenu from '../menu/SidePanelMenu';
-
-import Typewriter from 'typewriter-effect';
-
-import { Tooltip } from 'primereact/tooltip';
-
-import { NavLink } from 'react-router-dom';
-
 import DarkModeToggle from './DarkModeToggle';
+import Typewriter from 'typewriter-effect';
+import { Menubar } from 'primereact/menubar';
+import { Tooltip } from 'primereact/tooltip';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [dimensions, setDimensions] = useState({
@@ -27,7 +21,7 @@ const Navbar = () => {
 
   const resumeTooltip = 'Right Click to Open in New Window & Download';
 
-  const items = [
+  const menuItems = [
     {
       label: (
         <NavLink
@@ -204,6 +198,8 @@ const Navbar = () => {
   const end = (
     <div
       style={{
+        // display: 'grid',
+        // gridTemplateColumns: '1fr 1fr',
         display: 'flex',
         flexDirection: 'row',
       }}
@@ -222,17 +218,19 @@ const Navbar = () => {
       className="sticky top-0 App bg-black-alpha-90"
       id="navbar"
       style={{
-        color: localStorage.getItem('lightMode') ? 'black' : 'white',
         textShadow: '2px 2px 2px #01020E',
         width: dimensions.width,
       }}
     >
       <div className="card">
         <Menubar
-          model={items}
+          model={menuItems}
           start={start}
           end={end}
-          style={{ backgroundColor: '#1a1a1a', width: dimensions.width }}
+          style={{
+            backgroundColor: '#1a1a1a',
+            width: dimensions.width,
+          }}
         />
       </div>
     </div>
