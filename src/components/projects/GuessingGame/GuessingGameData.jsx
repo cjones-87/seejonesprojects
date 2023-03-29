@@ -1,159 +1,20 @@
-import React from 'react';
-
 import { GuessingGamePic } from '../../../photos/PhotoExports';
-
-import { FaNodeJs } from 'react-icons/fa';
-
-import { ImHtmlFive } from 'react-icons/im';
-
-import { SiCss3 } from 'react-icons/si';
-
-import { DiJavascript1 } from 'react-icons/di';
 
 const GuessingGameData = [
   {
-    label: 'Guessing Game',
-    className: 'title',
-    type: 'title',
-    expanded: true,
-    data: { avatar: GuessingGamePic },
-    children: [
-      {
-        label: 'MVP Goal',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: GuessingGamePic },
-        children: [
-          {
-            label: 'Minimum Viable Product',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <div>
-                  <p>
-                    Guessing Game was a simple "guessing game" in which the user
-                    had limited guesses in which to guess a number between 1 &
-                    100. It included a hint button to assist a user with
-                    guessing, as well as a reset button to restart the game.
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Stretch Goals',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <div>
-                  <p>
-                    There are no future goals for Guessing Game at this time.
-                    Guessing Game was created mainly as an instructional
-                    introduction into DOM manipulation.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Tech Stack',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: GuessingGamePic },
-        children: [
-          {
-            label: 'Technologies',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <span>
-                  <FaNodeJs />
-                  &nbsp;&nbsp;&nbsp;
-                  <ImHtmlFive />
-                  &nbsp; &nbsp;&nbsp;
-                  <SiCss3 />
-                </span>
-              ),
-            },
-          },
-          {
-            label: 'Integration',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <div>
-                  <p>
-                    Guessing Game was constructed & designed using{' '}
-                    <ImHtmlFive /> & <SiCss3 />. The logic and data for gameplay
-                    was implemented using client-side <DiJavascript1 />.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Implementations',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: GuessingGamePic },
-        children: [
-          {
-            label: 'Contributions',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <div>
-                  <p>
-                    This project was completed solely by my. It was my first
-                    successful endeavour into DOM manipulation.
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Challenges',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: GuessingGamePic,
-              info: (
-                <div>
-                  <p>
-                    This project was completed while studying DOM manipulation.
-                    It was a bit challenging to manipulate the DOM while
-                    learning how to manipulate it for the first time.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-    ],
+    alt: 'Idle Clicker Photo',
+    img: GuessingGamePic,
+    paragraph: `I developed a simple Guessing Game application using a combination of HTML, CSS, and client-side JavaScript, with a focus on introducing DOM manipulation. The Minimum Viable Product for this game was a basic guessing game, where the user had limited guesses to guess a number between 1 and 100, with the aid of a hint button and a reset button. This game was designed to be an instructional introduction to DOM manipulation, and as such, no future goals were planned for this application.`,
+  },
+  {
+    alt: 'Idle Clicker Photo',
+    img: GuessingGamePic,
+    paragraph: `To build this game, I integrated HTML5 and CSS3 for the visual design and layout, while client-side JavaScript was utilized to implement the game logic and data for gameplay. I created all the code and design elements myself, from scratch, as a solo project. However, while building this application, Throughout this project, I was learning how to manipulate the DOM for the first time, which was a bit challenging but fun.`,
+  },
+  {
+    alt: 'Idle Clicker Photo',
+    img: GuessingGamePic,
+    paragraph: `Overall, this project helped me gain valuable experience in the DOM manipulation field and gave me a basic understanding of how to develop a small game application. I utilized HTML5, CSS3, and client-side JavaScript to create a minimum viable product that included all necessary game elements while learning the necessary techniques to manipulate the DOM. In conclusion, the Guessing Game application was a successful endeavor, and I am proud to have completed it as my first solo project.`,
   },
 ];
 export default GuessingGameData;
