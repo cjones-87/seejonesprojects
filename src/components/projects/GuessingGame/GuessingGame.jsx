@@ -1,133 +1,114 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
+import Spinner from '../../../misc/Spinner';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import GuessingGameData from './GuessingGameData';
-import { OrganizationChart } from 'primereact/organizationchart';
-import { imageNotFound } from '../../../photos/PhotoExports';
+import { Card } from 'primereact/card';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const GuessingGame = () => {
-  const [selection, setSelection] = useState([]);
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
   });
 
-  const handleError = (event) => {
-    event.target.src = imageNotFound;
-    event.onerror = null;
-  };
-
   useEffect(() => {
     const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
+      setDimensions({
+        height: innerHeight,
+        width: innerWidth,
+      });
 
     window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height, handleError]);
-
-  const orgChart = GuessingGameData;
-
-  const nodeTemplate = (node) => {
-    if (node.type) {
-      return (
-        <div
-          className={
-            localStorage.getItem('lightMode') === 'true'
-              ? 'bg-black-alpha-00'
-              : 'bg-black-alpha-90'
-          }
-          style={{
-            color:
-              localStorage.getItem('lightMode') === 'true'
-                ? 'whitesmoke'
-                : 'rebeccapurple',
-            overflowWrap: 'anywhere',
-            width: dimensions.width / 9,
-          }}
-        >
-          <div className="node-header" style={{ fontSize: '1.5em' }}>
-            {node.label}
-          </div>
-          <div className="node-content">
-            <div>{node.data.name}</div>
-
-            <LazyLoadImage
-              alt={'Guessing Game snapshot'}
-              effect="blur"
-              onError={handleError}
-              src={node.data.avatar}
-              style={{ borderRadius: 25 }}
-              width={dimensions.width / 10}
-            />
-
-            <div
-              style={{
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'whitesmoke'
-                    : 'rebeccapurple',
-              }}
-            >
-              {node.data.info}
-            </div>
-          </div>
-        </div>
-      );
-    }
-  };
+  }, [dimensions.width, dimensions.height]);
 
   return (
-    <div
-      className={
-        localStorage.getItem('lightMode') === 'true'
-          ? 'bg-black-alpha-20'
-          : 'bg-black-alpha-90'
-      }
-      style={{
-        alignItems: 'center',
-        width: dimensions.width,
-      }}
-    >
-      <div
+    <>
+      <iframe
+        id="myId"
+        className="myClassname"
+        height={dimensions.height / 3}
+        onError={handleImageFailure}
+        src={'https://guessing-game-blue.vercel.app/'}
         style={{
-          justifyContent: 'center',
-          textAlign: 'center',
-          width: dimensions.width + 20,
+          border: 0,
+          borderRadius: 25,
+          display: 'initial',
         }}
-      >
-        <a href="https://guessing-game-blue.vercel.app/">
-          <h1
+        width={dimensions.width}
+      />
+      {GuessingGameData.map((item, index) => {
+        const header = (
+          <Suspense fallback={<Spinner />}>
+            {!item.img ? (
+              <iframe
+                height={dimensions.height / 4}
+                onError={handleImageFailure}
+                src={item.iframe}
+                style={{
+                  border: 0,
+                  borderRadius: 25,
+                  padding: 10,
+                }}
+                width={dimensions.width}
+              />
+            ) : (
+              <LazyLoadImage
+                alt={item.alt}
+                effect="blur"
+                height={dimensions.height / 4}
+                onError={handleImageFailure}
+                src={item.img}
+                style={{
+                  borderRadius: 25,
+                  padding: 10,
+                }}
+                width={dimensions.width}
+              />
+            )}
+          </Suspense>
+        );
+
+        return (
+          <div
+            key={index}
             style={{
-              color: 'rebeccapurple',
-              paddingBottom: '1rem',
-              textShadow:
-                localStorage.getItem('lightMode') === 'true'
-                  ? '1px 1px 1px indigo'
-                  : '1px 1px 1px whitesmoke',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              margin: '2rem',
             }}
           >
-            Guessing Game
-          </h1>
-        </a>
-        <div style={{ marginBottom: '1.5rem' }}>
-          <iframe
-            className="myClassname"
-            height={dimensions.height / 2}
-            id="myId"
-            src="https://guessing-game-blue.vercel.app/"
-            style={{ border: 0, borderRadius: 25 }}
-            width={dimensions.width / 2}
-          />
-        </div>
-        <OrganizationChart
-          nodeTemplate={nodeTemplate}
-          onSelectionChange={(event) => setSelection(event.data)}
-          selection={selection}
-          selectionMode="multiple"
-          style={{ overflow: 'scroll' }}
-          value={orgChart}
-        />
-      </div>
-    </div>
+            <Suspense fallback={<Spinner />}>
+              <Card
+                className={
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'bg-black-alpha-20'
+                    : 'bg-black-alpha-90'
+                }
+                style={{
+                  borderRadius: 25,
+                  color:
+                    localStorage.getItem('lightMode') === 'true'
+                      ? 'rebeccapurple'
+                      : 'whitesmoke',
+                  textShadow:
+                    localStorage.getItem('lightMode') === 'true'
+                      ? '1px 1px 1px indigo'
+                      : '1px 1px 1px whitesmoke',
+                }}
+                header={header}
+                width={dimensions.width / 5}
+              >
+                <p className="m-0" style={{ textAlign: 'center' }}>
+                  {item.paragraph}
+                </p>
+              </Card>
+            </Suspense>
+          </div>
+        );
+      })}
+    </>
   );
 };
 
