@@ -34,9 +34,6 @@ const IYKYK = lazy(() => import('../components/projects/IYKYK/IYKYK'));
 const PageNotFound404 = lazy(() =>
   import('../components/error/PageNotFound404')
 );
-const Hypnotiq2ProjectDescription = lazy(() =>
-  import('../components/projects/Hypnotiq2/Hypnotiq2ProjectDescription')
-);
 
 const Routes = () => {
   return (
@@ -61,10 +58,7 @@ const Routes = () => {
         />
         <Route path="/projects/iykyk" element={<IYKYK />} />
         <Route path="/projects/hypnotiq2" element={<Hypnotiq2 />} />
-        <Route
-          path="/projects/hypnotiq2projectdescription"
-          element={<Hypnotiq2ProjectDescription />}
-        />
+
         <Route path="*" element={<PageNotFound404 />} />
       </NavigationRoutes>
     </>
