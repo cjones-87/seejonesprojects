@@ -1,197 +1,27 @@
-import React from 'react';
-import {
-  IYKYKcomics,
-  IYKYKmath,
-  IYKYKquiz,
-} from '../../../photos/PhotoExports';
-import { FaReact } from 'react-icons/fa';
-import { ImHtmlFive } from 'react-icons/im';
-import { DiJavascript1 } from 'react-icons/di';
-import { SiCss3, SiThreedotjs, SiTypescript, SiVercel } from 'react-icons/si';
+import { IYKYKmath } from '../../../photos/PhotoExports';
 
 const IYKYKData = [
   {
-    label: 'All I Know Is, IYKYK',
-    className: 'title',
-    type: 'title',
-    expanded: true,
-    data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
-    children: [
-      {
-        label: 'MVP Goal',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
-        children: [
-          {
-            label: 'Minimum Viable Product',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
-              info: (
-                <div>
-                  <p>
-                    A multiple choice quiz game where users can choose their
-                    quiz categories preference from a menu of options. Each game
-                    has 10 questions with an answer bank of multiple choice
-                    answers. Questions and answers are fetched from an external
-                    api then formatted to meet the design of the game.
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Stretch Goals',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
-              info: (
-                <div>
-                  <p>
-                    Future goals for this game include adding additional quiz
-                    topics and types; I would like to diversify the categories
-                    and add true/false questions. I also plan to implement
-                    multi-nested menus & submenus in the navigation bar.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Tech Stack',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: IYKYKmath },
-        children: [
-          {
-            label: 'Technologies',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: IYKYKquiz,
-              info: (
-                <span>
-                  <SiTypescript />
-                  &nbsp;&nbsp;&nbsp;
-                  <FaReact />
-                  &nbsp;&nbsp;&nbsp;
-                  <ImHtmlFive />
-                  &nbsp;&nbsp;&nbsp;
-                  <SiCss3 />
-                  &nbsp;&nbsp;&nbsp;
-                  <SiThreedotjs />
-                  &nbsp;&nbsp;&nbsp;
-                  <SiVercel />
-                </span>
-              ),
-            },
-          },
-          {
-            label: 'Integration',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: IYKYKcomics,
-              info: (
-                <div>
-                  <p>
-                    IYKYK's front end was constructed & designed
-                    using&nbsp;&nbsp;&nbsp;
-                    <SiTypescript />
-                    &nbsp;&nbsp;&nbsp;
-                    <FaReact />
-                    &nbsp;&nbsp;&nbsp;
-                    <ImHtmlFive />
-                    &nbsp;&nbsp;&nbsp;
-                    <SiCss3 />
-                    &nbsp;&nbsp;&nbsp;
-                    <SiThreedotjs />
-                    &nbsp;&nbsp;&nbsp;
-                    <SiVercel />
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Implementations',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg' },
-        children: [
-          {
-            label: 'Contributions',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
-              info: (
-                <div>
-                  <p>
-                    This website was created solely by me. This was my first
-                    time using Typescript and I had fun learning the nuances of
-                    applying what i know pertaining to <DiJavascript1 /> &
-                    applying that knowledge to my implementation of&nbsp;
-                    <SiTypescript /> as I completed this project.
-                  </p>
-                  <p>
-                    I also used this project to enhance my understanding of 3d
-                    animations and rendering. Using a picture of smoke as my
-                    base, I was able to create, replicate, & animate particles.
-                    I rendered these animated images as backgrounds to my
-                    landing and home pages.
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Challenges',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
-              info: (
-                <div>
-                  <p>
-                    It was a new experience to utilize Typescript for the first
-                    time. Having never used it professionally before, I had fun
-                    learning some of the intricacies of the language. The
-                    syntatical sugar it provides was extremely helpful in
-                    debugging. One of the biggest challenges was learning what
-                    the differences in implementation were between
-                    <DiJavascript1 /> & <SiTypescript />.
-                  </p>
-                  <p>
-                    Rendering and animating the 3d background also proved more
-                    difficult than I initially assumed. Some of the bugs that
-                    arose required some additional research, causing me to learn
-                    a lot more, not just about <SiThreedotjs /> but also about
-                    <FaReact /> & its hooks.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-    ],
+    alt: 'IYKYK Youtube Video',
+    iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+    paragraph: `IYKYK is a multiple choice quiz game that I built using TypeScript, React, HTML5, CSS3, Three.js, and deployed on Vercel. My Minimum Viable Product (MVP) is a quiz game where users can choose their quiz category preferences from a menu of options. Each game has 10 questions with multiple choice answers. Questions and answers are aggregated from an external API then formatted to meet the game's design. My stretch goals include adding additional quiz topics and types, diversifying the categories, and implementing true/false questions. The navigation bar will be updated to include multi-nested menus and submenus.`,
+  },
+  {
+    alt: 'IYKYK Youtube Video',
+    iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+    img: IYKYKmath,
+    paragraph: `For the front-end of IYKYK, I constructed and designed it using TypeScript, React, HTML5, CSS3, and Three.js. My goal was to enhance my understanding of 3D animations and rendering. I used a picture of smoke as a base and created, replicated, and animated particles to render these animated images as backgrounds to my landing and home pages.`,
+  },
+  {
+    alt: 'IYKYK Youtube Video',
+    iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+    paragraph: `The main challenge I faced was learning the intricacies of TypeScript, having never used it professionally before. The syntactical sugar provided by TypeScript was extremely helpful in debugging. Another challenge was learning the differences in implementation between JavaScript and TypeScript. However, I had fun learning these new technologies.`,
+  },
+  {
+    alt: 'IYKYK Youtube Video',
+    iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+    img: IYKYKmath,
+    paragraph: `I created the project solely by myself, making it my first time using TypeScript. I enjoyed learning the nuances of applying my existing knowledge of JavaScript and applying that knowledge to my implementation of TypeScript. IYKYK was created as an experiment to enhance my understanding of Typescript, 3D animations, and rendering.`,
   },
 ];
 
