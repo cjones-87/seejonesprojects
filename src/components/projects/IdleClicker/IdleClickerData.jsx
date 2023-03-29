@@ -1,188 +1,20 @@
-import React from 'react';
-
-import { IdleClickerPic, imageNotFound } from '../../../photos/PhotoExports';
-
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-
-import { ImHtmlFive } from 'react-icons/im';
-
-import { SiCss3 } from 'react-icons/si';
-
-import { DiJavascript1 } from 'react-icons/di';
+import { IdleClickerPic } from '../../../photos/PhotoExports';
 
 const IdleClickerData = [
   {
-    label: 'IdleClicker',
-    className: 'title',
-    type: 'title',
-    expanded: true,
-    data: { avatar: IdleClickerPic },
-    children: [
-      {
-        label: 'MVP Goal',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: IdleClickerPic },
-        children: [
-          {
-            label: 'Minimum Viable Product',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <div>
-                  <p>
-                    Players click a coffee emoji, incrementing a counter that
-                    shows the current quantity of coffee in their possession.
-                    Coffee is used to purchase coffee-producing devices, such as
-                    percolators and espresso machines. Each second, the player
-                    will passively accumulate coffee proportionate to the amount
-                    and type of coffee producers in stock.{' '}
-                  </p>{' '}
-                  <p>
-                    The price (in coffee) of each producer steadily increases,
-                    enabling the game to remain interesting even after coffee
-                    production has been automated. Players must choose purchases
-                    wisely to receive the most ‘Bang for their buck’.
-                  </p>{' '}
-                  <p>
-                    The player will be able to see: current coffee count, y the
-                    game. Producers will only be unlocked successively as the
-                    player accumulates more coffee.
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Stretch Goals',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <div>
-                  <p>
-                    One future plan for this idle clicker game is to incorporate
-                    the ability to save data. A player would then be able to
-                    pause progress, and return to gameplay at a later time.
-                  </p>
-                  <p>
-                    Another goal is to eventually add the ability to be able to
-                    sell back producers for a portion of their original cost.
-                  </p>
-                  <p>
-                    Probably my biggest goal for idle clicker 2.0 is going to be
-                    the addition of unlockable upgrade systems, and
-                    producer/production multipliers.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Tech Stack',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: IdleClickerPic },
-        children: [
-          {
-            label: 'Technologies',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <span>
-                  <FaNodeJs />
-                  &nbsp;&nbsp;&nbsp;
-                  <ImHtmlFive />
-                  &nbsp; &nbsp;&nbsp;
-                  <SiCss3 />
-                </span>
-              ),
-            },
-          },
-          {
-            label: 'Integration',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <div>
-                  <p>
-                    Idle Clicker was constructed & designed using <ImHtmlFive />{' '}
-                    & <SiCss3 />. The logic and data for gameplay was
-                    implemented using client-side <DiJavascript1 />.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-      {
-        label: 'Implementations',
-        className: 'info',
-        type: 'info',
-        expanded: true,
-        data: { avatar: IdleClickerPic },
-        children: [
-          {
-            label: 'Contributions',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: false,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <div>
-                  <p>
-                    {' '}
-                    This idle clicker game was completed solely by me. It was
-                    completed during the early days of understanding of DOM
-                    manipulation. This project provided an excellent
-                    understanding of how to make a website dynamic. It was an
-                    enlightening endeavor, that I'm glad I undertook, as it
-                    paved the way for truly understanding some of the
-                    intricacies of <FaReact />.{' '}
-                  </p>
-                </div>
-              ),
-            },
-          },
-          {
-            label: 'Challenges',
-            className: 'moreInfo',
-            type: 'moreInfo',
-            expanded: true,
-            data: {
-              avatar: IdleClickerPic,
-              info: (
-                <div>
-                  <p>
-                    The biggest challenge i faced in completing this idle
-                    clicker game, was understanding how to update a page
-                    dynamically in real time. Once I broke through that barrier,
-                    it was smooth sailing.
-                  </p>
-                </div>
-              ),
-            },
-          },
-        ],
-      },
-    ],
+    alt: 'Idle Clicker Photo',
+    img: IdleClickerPic,
+    paragraph: `I am proud to present my Idle Clicker game, which was constructed and designed using HTML5 and CSS3. The game logic and data were implemented using client-side JavaScript. The Minimum Viable Product (MVP) goal for this idle clicker game is for players to click on a coffee emoji to increment a counter that displays the quantity of coffee they possess. They can use coffee to purchase coffee-producing devices such as percolators and espresso machines. The player accumulates coffee passively based on the number and type of coffee producers in stock. The price of each producer steadily increases, ensuring that the game remains interesting even after coffee production has been automated. The player can see their current coffee count, and new producers are unlocked successively as they accumulate more coffee.`,
+  },
+  {
+    alt: 'Idle Clicker Photo',
+    img: IdleClickerPic,
+    paragraph: `As for stretch goals, one future plan for this idle clicker game is to incorporate the ability to save data. This would allow players to pause progress and return to gameplay at a later time. Another goal is to add the ability to sell back producers for a portion of their original cost. The most significant goal for Idle Clicker 2.0 is to add unlockable upgrade systems and producer/production multipliers.`,
+  },
+  {
+    alt: 'Idle Clicker Photo',
+    img: IdleClickerPic,
+    paragraph: `I was the sole contributor to this project, completed during the early days of my understanding of DOM manipulation. While it was an enlightening endeavor, understanding how to update a page dynamically in real-time proved to be the biggest challenge I faced in completing this idle clicker game. Nevertheless, it was an excellent opportunity to gain a better understanding of how to make a website dynamic and paved the way for truly understanding some of the intricacies of React. Idle Clicker was an exciting project that provided a great learning opportunity.`,
   },
 ];
 
