@@ -8,25 +8,25 @@ const HypnotiqData = [
   {
     alt: 'Hypnotiq Youtube Video',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
-    paragraph: `Hypnotiq 2.0 is a music player app developed by myself. This app uses the latest industry technologies such as Javascript, React, React Native, Expo, CSS, Firebase, and Cloud Firestore. The app allows users to create, edit, and delete music playlists that persist through app reloads, and load music from their local device storage. Users can also stream audio to help with sleep and study patterns.`,
+    paragraph: `I created a mobile application called Hypnotiq. It is designed and constructed solely by myself, using React Native Expo for the front-end. Hypnotiq's minimum viable product (MVP) presents users with a list of sound categories to choose from, allowing them to select different options within each category to facilitate studying and sleep habits. This app features five related facts for each of the five senses and an additional random fact for each category.`,
   },
   {
     alt: 'Hypnotiq Youtube Video',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     img: BabyJams,
-    paragraph: `In future iterations, I plan to restructure the database design to optimize functionality. The current database structure posed some challenges, but I was able to implement some of the stretch goals from Hypnotiq, such as presenting users with audio from different genres and enabling them to create and manage personal playlists.`,
+    paragraph: `My stretch goals for this app include making it more inclusive by adding more music genres and including the features from Hypnotiq 1.0 in its next release version. Additionally, I plan to give users the option to create, save, and share playlists with others and to allow users to comment directly on shared playlists.`,
   },
   {
     alt: 'Hypnotiq Youtube Video',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     img: ClassicalJams,
-    paragraph: `Another key stretch goal for the upcoming iteration is to provide users with the option to share their playlists with others and comment on shared playlists. The ability to direct message other users will also be added, but only for admins and artists whose work has been shared.`,
+    paragraph: `As the sole developer of this website, I contributed to all aspects of its creation, from concept to deployment. Technologies used in Hypnotiq include React, React Native, Expo, CSS3, and was deployed through Heroku. This project was challenging, as I had no prior experience with React Native Expo. However, I often found mobile features to be more intuitive, and I enjoyed learning about the different ways mobile phones navigate screens and display data compared to web sites & desktop apps.`,
   },
   {
     alt: 'Hypnotiq Youtube Video',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     img: JazzJams,
-    paragraph: `One of the significant challenges in developing Hypnotiq 2.0 was maintaining audio playback state and other related considerations. To achieve seamless audio playback and allow users complete control, I had to keep track of multiple factors such as audio loading, currently playing audio, from playlist or general library, current audio position, last audio position, and more. Hypnotiq 2.0 showcases my expertise and passion for utilizing the latest industry technologies to develop innovative software solutions that enhance user experiences.`,
+    paragraph: `Overall, Hypnotiq was a fun learning experience as I am passionate about mobile technology and its accessibility. As more companies and sites move towards mobile access, I believe mobile technology is essential in our daily lives. The challenges I faced included learning a new technology, but I enjoyed the experience of conceptualizing and implementing mobile features.`,
   },
 ];
 
