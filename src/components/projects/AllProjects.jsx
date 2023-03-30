@@ -4,8 +4,8 @@ import {
   GuessingGamePic,
   browseBooks,
   portfolioPic,
-  imageNotFound,
 } from '../../photos/PhotoExports';
+import handleImageFailure from '../../misc/helpers/handleImageFailure';
 import ProjectSlideshow from './ProjectSlideshow';
 import Spinner from '../../misc/Spinner';
 import { DataTable } from 'primereact/datatable';
@@ -19,18 +19,12 @@ import './ProjectsCSS/Projects.css';
 import './ProjectsCSS/ProjectSlideshow.css';
 
 const AllProjects = () => {
-  const handleError = (e) => {
-    e.target.src = imageNotFound;
-    e.onerror = null;
-    return e;
-  };
-
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
   });
 
-  const [projects] = useState([
+  const projects = [
     {
       id: 0,
       name: (
@@ -167,7 +161,7 @@ const AllProjects = () => {
       status: 'complete',
       href: 'projects/guessinggame',
     },
-  ]);
+  ];
 
   useEffect(() => {
     const handleResize = () =>
@@ -186,7 +180,7 @@ const AllProjects = () => {
                 allow="autoplay"
                 className={'project-image'}
                 height={dimensions.height / 10}
-                onError={handleError}
+                onError={handleImageFailure}
                 src={rowData.iframe}
                 style={{
                   backgroundColor: '#cccccc',
@@ -204,7 +198,7 @@ const AllProjects = () => {
             className={'project-image'}
             effect="blur"
             height={dimensions.height / 10}
-            onError={handleError}
+            onError={handleImageFailure}
             src={rowData.image}
             style={{
               backgroundColor: '#cccccc',
@@ -253,7 +247,7 @@ const AllProjects = () => {
       <div style={{ marginBottom: '2rem' }}>
         <ProjectSlideshow slides={ProjectData} />
       </div>
-      <div className="card">
+      <div className="card" style={{ backgroundColor: '1a1a1a' }}>
         <DataTable
           value={projects}
           header={header}
