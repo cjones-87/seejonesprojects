@@ -17,7 +17,6 @@ import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 
 import smoke from '../../photos/smoke.png';
-import stars from '../../photos/stars.jpeg';
 
 const LandingPage = () => {
   const [dimensions, setDimensions] = useState({
@@ -100,16 +99,6 @@ const LandingPage = () => {
         scene.add(cloud);
       }
     });
-
-    // let textureEffect;
-
-    // loader.load(stars, (texture) => {
-    //   textureEffect = new POSTPROCESSING.TextureEffect({
-    //     blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-    //     texture,
-    //   });
-    //   textureEffect.blendMode.opacity.value = 0.2;
-    // });
 
     const bloomEffect = new POSTPROCESSING.BloomEffect({
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
