@@ -11,6 +11,7 @@ const Navbar = () => {
     height: innerHeight,
     width: innerWidth,
   });
+  console.log(dimensions.width);
 
   useEffect(() => {
     const handleResize = () =>
@@ -185,23 +186,43 @@ const Navbar = () => {
 
   const start = (
     <NavLink to="/">
-      <img
+      {/* <img
         alt="logo"
         src="https://i.imgur.com/zUk8geK.png"
         onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
         height="75vh"
         className="mr-2"
         style={{ borderRadius: '50%' }}
+      /> */}
+      <iframe
+        className="myClassname"
+        height={dimensions.height / 10}
+        id="myId"
+        onError={
+          <img
+            alt="logo"
+            src="https://i.imgur.com/zUk8geK.png"
+            height="75vh"
+            className="mr-2"
+            style={{ borderRadius: '50%' }}
+          />
+        }
+        scrolling="no"
+        src="https://3d-box-animation.vercel.app/"
+        style={{ border: 0, verticalAlign: 'middle' }}
+        width={
+          dimensions.width < 650 ? dimensions.width / 5 : dimensions.width / 20
+        }
       />
     </NavLink>
   );
+
   const end = (
     <div
       style={{
-        // display: 'grid',
-        // gridTemplateColumns: '1fr 1fr',
         display: 'flex',
         flexDirection: 'row',
+        verticalAlign: 'middle',
       }}
     >
       <div style={{ paddingTop: '1.5rem' }}>
@@ -229,6 +250,7 @@ const Navbar = () => {
           end={end}
           style={{
             backgroundColor: '#1a1a1a',
+            verticalAlign: 'middle',
             width: dimensions.width,
           }}
         />
