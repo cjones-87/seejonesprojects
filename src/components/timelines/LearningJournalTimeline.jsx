@@ -5,13 +5,13 @@ import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import Spinner from '../../misc/Spinner';
+import handleImageFailure from '../../misc/helpers/handleImageFailure';
 import {
   IdleClickerPic,
   GuessingGamePic,
   FullstackLogo,
   browseBooks,
   seeJonesEngineer,
-  imageNotFound,
 } from '../../photos/PhotoExports';
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
@@ -33,13 +33,6 @@ import {
 } from 'react-icons/si';
 
 const LearningJournalTimeline = () => {
-  const iframeIndices = [6, 7, 9, 10];
-  const handleError = (e) => {
-    e.target.src = imageNotFound;
-    e.onerror = null;
-    return e;
-  };
-
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
@@ -360,6 +353,7 @@ const LearningJournalTimeline = () => {
           title={item.status}
           subTitle={item.date}
           style={{
+            borderRadius: 25,
             color:
               localStorage.getItem('lightMode') === 'true'
                 ? 'whitesmoke'
@@ -373,14 +367,14 @@ const LearningJournalTimeline = () => {
             paddingTop: '1.5rem',
           }}
         >
-          {iframeIndices.includes(item.id) ? (
+          {item.iframe ? (
             <div>
               <Suspense fallback={<Spinner />}>
                 <iframe
                   allow="autoplay"
                   height={dimensions.height / 3}
                   // frameBorder={0}
-                  onError={handleError}
+                  onError={handleImageFailure}
                   src={item.iframe}
                   style={{
                     border: 0,
@@ -396,7 +390,7 @@ const LearningJournalTimeline = () => {
               className="p-shadow-2"
               effect="blur"
               height={dimensions.height / 3}
-              onError={handleError}
+              onError={handleImageFailure}
               src={item.image}
               style={{
                 borderRadius: 25,
@@ -416,6 +410,7 @@ const LearningJournalTimeline = () => {
             className="p-button-text"
             style={{
               backgroundColor: '#ce93d8',
+              borderRadius: 10,
               color:
                 localStorage.getItem('lightMode') === 'true'
                   ? 'whitesmoke'
