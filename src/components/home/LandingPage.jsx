@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from 'react';
-
 import * as THREE from 'three';
-
 import * as POSTPROCESSING from 'postprocessing';
-
+import Typewriter from 'typewriter-effect';
+import smoke from '../../photos/smoke.png';
+import OpenUp from '../../sounds/OpenUp.mp3';
+import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
+import { Button } from 'primereact/button';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 import './LandingPage.css';
 
-import Typewriter from 'typewriter-effect';
-
-import { Button } from 'primereact/button';
-
-import OpenUp from '../../sounds/OpenUp.mp3';
-import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
-
-import smoke from '../../photos/smoke.png';
-
 const LandingPage = () => {
+  console.log(localStorage);
+
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
