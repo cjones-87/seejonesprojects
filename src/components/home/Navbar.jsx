@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SidePanelMenu from '../menu/SidePanelMenu';
 import DarkModeToggle from './DarkModeToggle';
 import Typewriter from 'typewriter-effect';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { Menubar } from 'primereact/menubar';
 import { Tooltip } from 'primereact/tooltip';
 import { NavLink } from 'react-router-dom';
@@ -194,26 +195,30 @@ const Navbar = () => {
         className="mr-2"
         style={{ borderRadius: '50%' }}
       /> */}
-      <iframe
-        className="myClassname"
-        height={dimensions.height / 10}
-        id="myId"
-        onError={
-          <img
-            alt="logo"
-            src="https://i.imgur.com/zUk8geK.png"
-            height="75vh"
-            className="mr-2"
-            style={{ borderRadius: '50%' }}
-          />
-        }
-        scrolling="no"
-        src="https://3d-box-animation.vercel.app/"
-        style={{ border: 0, verticalAlign: 'middle' }}
-        width={
-          dimensions.width < 650 ? dimensions.width / 5 : dimensions.width / 20
-        }
-      />
+      <LazyLoadComponent>
+        <iframe
+          className="myClassname"
+          height={dimensions.height / 10}
+          id="myId"
+          onError={
+            <img
+              alt="logo"
+              src="https://i.imgur.com/zUk8geK.png"
+              height="75vh"
+              className="mr-2"
+              style={{ borderRadius: '50%' }}
+            />
+          }
+          scrolling="no"
+          src="https://3d-box-animation.vercel.app/"
+          style={{ border: 0, verticalAlign: 'middle' }}
+          width={
+            dimensions.width < 650
+              ? dimensions.width / 5
+              : dimensions.width / 20
+          }
+        />
+      </LazyLoadComponent>
     </NavLink>
   );
 
