@@ -1,7 +1,7 @@
 const footerContent = [
   {
     className: 'fa fa-file-pdf fa-lg white-text mr-md-5 mr-3 fa-2x',
-    href: '/src/CJsSoftwareEngineeringResume.pdf',
+    href: '/CJsSoftwareEngineeringResume.pdf',
     style: { color: 'indigo', textDecoration: 'none' },
     target: '_blank',
   },
