@@ -9,7 +9,6 @@ const Navbar = () => {
     height: innerHeight,
     width: innerWidth,
   });
-  console.log(dimensions.width);
 
   useEffect(() => {
     const handleResize = () =>
@@ -34,7 +33,7 @@ const Navbar = () => {
           height={dimensions.height / 10}
           id="myId"
           scrolling="no"
-          src="https://3d-box-animation.ver.app/"
+          src="https://3d-box-animation.vercel.app/"
           style={{ border: 0, verticalAlign: 'middle' }}
           width={
             dimensions.width < 650
