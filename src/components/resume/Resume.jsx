@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
-import { NavLink } from 'react-router-dom';
-
-import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
 import { Tooltip } from 'primereact/tooltip';
-
+import { NavLink } from 'react-router-dom';
+import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
 import PDF from '../../CJsSoftwareEngineeringResume.pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => {
   const [numPages, setNumPages] = useState(null);
@@ -77,7 +73,11 @@ const Resume = () => {
                 target="#resume-download"
                 position="top"
               />
-              <NavLink id="resume-download" target={'blank'} to={PDF}>
+              <NavLink
+                id="resume-download"
+                target={'blank'}
+                to={'/CJsSoftwareEngineeringResume.pdf'}
+              >
                 <i className="fa fa-file-pdf" />
                 &nbsp; Download PDF &nbsp;
                 <i className="fa fa-file-pdf" />
