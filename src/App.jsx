@@ -3,8 +3,8 @@ import Routes from './navigation/NavigationRoutes';
 import Spinner from './misc/Spinner';
 import './index.css';
 
-const Navbar = lazy(() => import('./components/home/Navbar'));
-const Footer = lazy(() => import('./components/home/Footer'));
+const Navbar = lazy(() => import('./components/navbar/Navbar'));
+const Footer = lazy(() => import('./components/footer/Footer'));
 
 export const Loading = () => (
   <div
