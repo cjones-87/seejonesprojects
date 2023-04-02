@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import footerContent from './FooterContentData';
 
 const Footer = () => {
   const [dimensions, setDimensions] = useState({
@@ -38,47 +39,13 @@ const Footer = () => {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-          <a
-            href="https://www.seejonesengineer.com/assets/CJsSoftwareEngineeringResume.24a34476.pdf#"
-            target="_blank"
-          >
-            <i className="fa fa-file-pdf fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a
-            href="mailto:cj@seejonesengineer.com"
-            style={{ color: 'indigo', textDecoration: 'none' }}
-            target="_blank"
-          >
-            <i className="fa fa-at fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a href="https://www.linkedin.com/in/cjones1827/" target="_blank">
-            <i className="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a href="https://www.instagram.com/seejonesengineer/" target="_blank">
-            <i className="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a href="https://twitter.com/cjonesengineer1" target="_blank">
-            <i className="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a
-            href="https://www.youtube.com/channel/UCIgDLvCc7d6pX1LrhgwLZMw"
-            target="_blank"
-          >
-            <i className="fa fa-youtube fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a href="https://www.tiktok.com/@seejonesengineer" target="_blank">
-            <i className="fab fa-tiktok fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
-
-          <a href="https://www.facebook.com/seejonesengineer/" target="_blank">
-            <i className="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x" />
-          </a>
+          {footerContent.map((item, index) => {
+            return (
+              <a key={index} href={item.href} target={item.target}>
+                <i className={item.className} />
+              </a>
+            );
+          })}
         </div>
 
         <h5
