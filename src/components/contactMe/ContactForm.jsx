@@ -7,6 +7,7 @@ import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { addLocale } from 'primereact/api';
 import { Button } from 'primereact/button';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import BusinessCard from './BusinessCard';
 
 const ContactForm = () => {
@@ -444,7 +445,9 @@ const ContactForm = () => {
           textAlign: 'center',
         }}
       >
-        <BusinessCard />
+        <LazyLoadComponent>
+          <BusinessCard />
+        </LazyLoadComponent>
       </div>
       <div
         style={{
