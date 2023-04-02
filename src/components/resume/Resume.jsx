@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Tooltip } from 'primereact/tooltip';
 import { NavLink } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
-import PDF from '../../CJsSoftwareEngineeringResume.pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => {
@@ -53,7 +52,10 @@ const Resume = () => {
         </h1>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Document file={PDF} onLoadSuccess={onDocumentLoadSuccess}>
+        <Document
+          file={'/CJsSoftwareEngineeringResume.pdf'}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
           <Page
             height={dimensions.height}
             pageNumber={pageNumber}
