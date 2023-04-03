@@ -1,10 +1,9 @@
 import React from 'react';
-
-import { SiExpo } from 'react-icons/si';
-import { DiJavascript1 } from 'react-icons/di';
-import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
-
 import Typewriter from 'typewriter-effect';
+import {
+  MobileDevelopmentData,
+  WebDevelopmentData,
+} from './SpecializationData';
 
 const Specialization = () => {
   return (
@@ -22,7 +21,7 @@ const Specialization = () => {
         paddingTop: 100,
       }}
     >
-      <p style={{ fontSize: '1.25em' }}>
+      <div style={{ fontSize: '1.25em' }}>
         <big>
           <b>
             <Typewriter
@@ -34,78 +33,55 @@ const Specialization = () => {
             />
           </b>
         </big>
-        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-            alt="react"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-            alt="javascript"
-            width="40"
-            height="40"
-          />
-        </a>
+
+        {WebDevelopmentData.map((data, index) => (
+          <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <img
+              alt={data.alt}
+              height="40"
+              key={index}
+              src={data.src}
+              width="40"
+            />
+          </a>
+        ))}
+
         <big>
           <b>
             <Typewriter
               options={{
-                strings: 'for mobile development & ',
+                strings: 'for web development & ',
                 autoStart: true,
                 loop: false,
               }}
             />
           </b>
         </big>
-        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-            alt="react"
-            width="40"
-            height="40"
-          />
-        </a>
-        <a href="https://docs.expo.dev/" target="_blank" rel="noreferrer">
-          <img
-            src="https://i.imgur.com/LNiblbi.png"
-            alt="react native expo"
-            width="40"
-            height="40"
-          />
-        </a>
-        &nbsp;
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-            alt="javascript"
-            width="40"
-            height="40"
-          />
-        </a>
+
+        {MobileDevelopmentData.map((data, index) => (
+          <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <img
+              alt={data.alt}
+              height="40"
+              key={index}
+              src={data.src}
+              width="40"
+            />
+          </a>
+        ))}
+
         <big>
           <b>
             <Typewriter
               options={{
-                strings: 'for web development',
+                strings: 'for mobile development',
                 autoStart: true,
                 loop: false,
               }}
             />
           </b>
         </big>
-      </p>
+      </div>
     </div>
   );
 };
