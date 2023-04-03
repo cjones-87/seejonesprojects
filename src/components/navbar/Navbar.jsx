@@ -19,14 +19,6 @@ const Navbar = () => {
 
   const start = (
     <NavLink to="/">
-      {/* <img
-          alt="logo"
-          src="https://i.imgur.com/zUk8geK.png"
-          onError={(e) => (e.target.src = 'https://i.imgur.com/OIdld69.png')}
-          height="75vh"
-          className="mr-2"
-          style={{ borderRadius: '50%' }}
-        /> */}
       <LazyLoadComponent>
         <iframe
           className="myClassname"
