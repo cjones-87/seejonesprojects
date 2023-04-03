@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import GithubActivityData from './data/GithubActivityData';
 
 const GithubActivity = () => {
   const [dimensions, setDimensions] = useState({
@@ -28,29 +29,15 @@ const GithubActivity = () => {
         justifyContent: 'space-evenly',
       }}
     >
-      <a href="https://skyline.github.com/cjones-87/2021">
-        <iframe
-          height={dimensions.height / 3}
-          src="https://www.youtube.com/embed/BAhz7BLA3rA"
-          width={dimensions.width / 3}
-        ></iframe>
-      </a>
-
-      <a href="https://skyline.github.com/cjones-87/2022">
-        <iframe
-          height={dimensions.height / 3}
-          src="https://www.youtube.com/embed/fwvVifpo93o"
-          width={dimensions.width / 3}
-        ></iframe>
-      </a>
-
-      <a href="https://skyline.github.com/cjones-87/2023">
-        <iframe
-          height={dimensions.height / 3}
-          src="https://www.youtube.com/embed/-jgXmlOViws"
-          width={dimensions.width / 3}
-        ></iframe>
-      </a>
+      {GithubActivityData.map((data, index) => (
+        <a href={data.href}>
+          <iframe
+            height={dimensions.height / 3}
+            src={data.src}
+            width={dimensions.width / 3}
+          />
+        </a>
+      ))}
     </div>
   );
 };
