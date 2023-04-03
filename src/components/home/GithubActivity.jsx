@@ -30,9 +30,10 @@ const GithubActivity = () => {
       }}
     >
       {GithubActivityData.map((data, index) => (
-        <a href={data.href}>
+        <a href={data.href} key={index}>
           <iframe
             height={dimensions.height / 3}
+            key={index}
             src={data.src}
             width={dimensions.width / 3}
           />
