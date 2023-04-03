@@ -139,7 +139,7 @@ const AboutMeCards = ({ slides }) => {
                       }}
                       header={header}
                     >
-                      <p className="m-0">{slide.paragraph}</p>
+                      <div className="m-0">{slide.paragraph}</div>
                     </Card>
                   </Suspense>
                 </div>
