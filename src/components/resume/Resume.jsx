@@ -14,10 +14,8 @@ const Resume = () => {
   });
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = () =>
       setDimensions({ height: innerHeight, width: innerWidth });
-      window.location.reload();
-    };
 
     window.addEventListener('resize', handleResize);
   }, [dimensions.height, dimensions.width]);
