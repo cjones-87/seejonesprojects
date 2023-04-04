@@ -106,7 +106,7 @@ const AboutMeCards = ({ slides }) => {
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={dimensions.width / 3}
+                width={dimensions.width / 2}
               />
             </Suspense>
           );
@@ -135,7 +135,7 @@ const AboutMeCards = ({ slides }) => {
                           localStorage.getItem('lightMode') === 'true'
                             ? '1px 1px 1px indigo'
                             : '1px 1px 1px whitesmoke',
-                        width: dimensions.width / 3,
+                        width: dimensions.width / 2,
                       }}
                       header={header}
                     >
