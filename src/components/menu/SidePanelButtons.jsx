@@ -29,7 +29,7 @@ const SidePanelButtons = () => {
           }}
         >
           {SidePanelButtonData.map((button, index) => (
-            <Button className={button.buttonClassName}>
+            <Button className={button.buttonClassName} key={index}>
               <i className={button.iconClassName} />
               <a href={button.href} target="_blank" rel="noreferrer noopener">
                 <span className="px-3" style={{ color: 'white' }}>
