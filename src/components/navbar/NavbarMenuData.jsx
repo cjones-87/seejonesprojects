@@ -14,7 +14,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }} // classic rose rgb(251,204,231)
         to="/home"
@@ -36,7 +36,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/aboutme"
@@ -58,7 +58,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/learningjournal"
@@ -80,7 +80,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/projects"
@@ -102,7 +102,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/playgames"
@@ -126,7 +126,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/resume"
@@ -150,7 +150,7 @@ export const menuItems = [
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
-              ? '#ce92d8'
+              ? '#ba68c8'
               : 'whitesmoke',
         }}
         to="/hireme"
