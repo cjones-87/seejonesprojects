@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-
-import useLocalStorage from 'use-local-storage';
-
+import React, { useEffect } from 'react';
 import { ToggleButton } from 'primereact/togglebutton';
+import useLocalStorage from 'use-local-storage';
 
 const DarkMode = () => {
   const [lightMode, setLightMode] = useLocalStorage('lightMode', 'true');
