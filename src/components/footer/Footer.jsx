@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import footerContent from './FooterContentData';
+import FooterContent from './FooterContentData';
 
 const Footer = () => {
   const [dimensions, setDimensions] = useState({
@@ -28,7 +28,8 @@ const Footer = () => {
             : 'bg-black-alpha-90 button'
         }
         style={{
-          color: 'indigo',
+          color:
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
               ? '1px 1px 1px #01020E'
@@ -39,10 +40,19 @@ const Footer = () => {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-          {footerContent.map((item, index) => {
+          {FooterContent.map((item, index) => {
             return (
-              <a key={index} href={item.href} target={item.target}>
-                <i className={item.className} />
+              <a key={index} href={item.href} target="_blank">
+                <i
+                  className={item.className}
+                  style={{
+                    color:
+                      localStorage.getItem('lightMode') === 'true'
+                        ? '#ba68c8'
+                        : 'indigo',
+                    textDecoration: 'none',
+                  }}
+                />
               </a>
             );
           })}
