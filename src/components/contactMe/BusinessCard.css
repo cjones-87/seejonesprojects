@@ -58,7 +58,7 @@
   text-decoration: underline;
   text-shadow: 1px 1px 1px #1a1a1a;
   text-underline-offset: 0.3rem;
-  color: #ce92d8;
+  color: #ba68c8;
 }
 
 .business-card-right {
@@ -102,7 +102,7 @@ h4 {
 
 .business-card-back {
   background: linear-gradient(-28.6deg, #502e93 50%, #bebebe 0);
-  color: #ce92d8;
+  color: #ba68c8;
   text-shadow: 2px 2px 2px #1a1a1a;
   transform: rotateY(180deg);
 }
@@ -140,7 +140,7 @@ h4 {
 }
 
 .business-card-back-bottom i {
-  color: #ce92d8;
+  color: #ba68c8;
   left: 50%;
   position: relative;
   transform: translate(-50%, -50%);
