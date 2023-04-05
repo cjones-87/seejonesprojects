@@ -172,7 +172,7 @@ const LandingPage = () => {
             color:
               localStorage.getItem('lightMode') === 'true'
                 ? 'whitesmoke'
-                : '#ce92d8',
+                : '#ba68c8',
             left: '50%',
             position: 'absolute',
             textShadow: '1px 1px 1px black',
