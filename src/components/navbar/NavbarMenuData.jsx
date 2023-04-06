@@ -1,5 +1,5 @@
 import SidePanelMenu from '../menu/SidePanelMenu';
-import DarkModeToggle from '../home/DarkModeToggle';
+import DarkModeToggle from './DarkModeToggle';
 import Typewriter from 'typewriter-effect';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { Tooltip } from 'primereact/tooltip';
