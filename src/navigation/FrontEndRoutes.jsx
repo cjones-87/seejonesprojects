@@ -6,7 +6,7 @@ const LearningJournalTimeline = lazy(() =>
 const AboutMe = lazy(() => import('../components/aboutMe/AboutMe'));
 const ContactForm = lazy(() => import('../components/contactMe/ContactForm'));
 const Resume = lazy(() => import('../components/resume/Resume'));
-const LandingPage = lazy(() => import('../views/home/LandingPage'));
+const LandingPage = lazy(() => import('../components/landingPage/LandingPage'));
 const Home = lazy(() => import('../components/home/Home'));
 const PlayGames = lazy(() => import('../components/games/PlayGames'));
 const GuessingGame = lazy(() =>
