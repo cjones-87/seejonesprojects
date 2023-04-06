@@ -20,7 +20,6 @@ export default defineConfig({
             'react-pdf',
             'three',
             'typewriter-effect',
-            'web-vitals',
           ],
         },
       },
