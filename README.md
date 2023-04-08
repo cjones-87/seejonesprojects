@@ -1,12 +1,15 @@
-# Portfolio Website by CJ Jones
+<div align="center">
+
+# Portfolio Website - Designed & Constructed by CJ Jones
 
 <!-- Header -->
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=0:301D42,10:553373,20:7a49a5,30:6D4194,40:A17FC0,50:C9B6DB,60:A17FC0,70:6D4194,80:7a49a5,90:553373,100:301D42&height=180&text=CJ%20Jones&fontAlignY=35&animation=scaleIn&desc=Software%20Engineer&descAlign=80&descAlignY=59&descSize=30)
 
 <!-- Technologies Used -->
+<br/>
 
-## Made With
+# Technologies Used
 
 <div align="center">  
 <h3>Frameworks, Languages, & Tools</h3>
@@ -29,10 +32,12 @@
     <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/344/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-filled-tal-revivo.png" alt="netlify" width="30" height="25"/> 
   </a>
   </div>
+  <br/>
+  <br/>
 
 <!-- View Here -->
 
-## Check It Out
+# My Portfolio In Action
 
 <div align="center">
   <h3>Personal Website</h3>
@@ -44,13 +49,15 @@
       <a href="https://www.seejonesengineer.com/" target="_blank" ><img align='center' src='src/photos/SeeJonesEngineer/seeJonesEngineer.jpg' alt=`CJ's Portfolio Pic` /></a>
 <div>
 <br/>
-
+<br/>
 <!-- Projects -->
+
+# My Featured Projects
 
 <div align="center">
 <h3> Personal Projects</h3>
  <table style="width: 100%">
-        <tr>
+   <tr>
           <td style="width: 50%; vertical-align: top">
             <h3 align="center" color="white">See Jones Engineer</h3>
             <div align="center">
@@ -229,7 +236,11 @@
         </tr>
       </table>
 </div>
+<br/>
+<br/>
 
 <!-- Footer -->
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=0:301D42,10:553373,20:7a49a5,30:6D4194,40:A17FC0,50:C9B6DB,60:A17FC0,70:6D4194,80:7a49a5,90:553373,100:301D42&height=100&reversal=true&section=footer)
+
+</div>
