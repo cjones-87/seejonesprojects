@@ -4,7 +4,7 @@ const LearningJournalTimeline = lazy(() =>
   import('../components/timelines/LearningJournalTimeline')
 );
 const AboutMe = lazy(() => import('../components/aboutMe/AboutMe'));
-const ContactForm = lazy(() => import('../components/contactMe/ContactForm'));
+const ContactMe = lazy(() => import('../components/contactMe/ContactMe'));
 const Resume = lazy(() => import('../components/resume/Resume'));
 const LandingPage = lazy(() => import('../components/landingPage/LandingPage'));
 const Home = lazy(() => import('../components/home/Home'));
@@ -41,7 +41,7 @@ const FrontEndRoutes = [
   { element: <LearningJournalTimeline />, path: '/learningjournal' },
   { element: <PlayGames />, path: '/playgames' },
   { element: <Resume />, path: '/resume' },
-  { element: <ContactForm />, path: '/hireme' },
+  { element: <ContactMe />, path: '/hireme' },
   { element: <GuessingGame />, path: '/projects/guessinggame' },
   { element: <IdleClicker />, path: '/projects/idleclicker' },
   { element: <BoundzBookstore />, path: '/projects/boundzbookstore' },
