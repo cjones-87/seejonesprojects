@@ -16,7 +16,13 @@ const ContactForm = () => {
   const availability = useRef();
   const preferredContactMethod = useRef();
 
-  const refs = [firstName, lastName, email, phoneNumber, budget];
+  const [minDate, setMinDate] = useState(() => {
+    const today = new Date();
+    const threeDaysFromNow = new Date(today.getTime() + 72 * 60 * 60 * 1000);
+    return threeDaysFromNow.toISOString().split('T')[0];
+  });
+
+  const refs = [firstName, lastName, email, phoneNumber, budget, availability];
 
   useEffect(() => {
     const handleResize = () =>
@@ -56,6 +62,7 @@ const ContactForm = () => {
               &nbsp;{data.labelText}
             </label>
             <input
+              min={minDate}
               ref={refs[index]}
               pattern={data.pattern ? data.pattern : ''}
               placeholder={data.placeholder ? data.placeholder : ''}
@@ -68,52 +75,6 @@ const ContactForm = () => {
             />
           </div>
         ))}
-
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <label
-            style={{
-              display: 'flex',
-              justifySelf: 'left',
-              marginBottom: '.5rem',
-              marginTop: '.5rem',
-            }}
-          >
-            <i className="pi pi-info-circle" />
-            &nbsp;Job Description:
-          </label>
-          <textarea
-            ref={jobDetails}
-            style={{
-              borderRadius: '10px',
-              height: dimensions.height / 20,
-              width: dimensions.width / 2,
-            }}
-            type="text"
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <label
-            style={{
-              display: 'flex',
-              justifySelf: 'left',
-              marginBottom: '.5rem',
-              marginTop: '.5rem',
-            }}
-          >
-            <i className="pi pi-calendar" />
-            &nbsp;Availability:
-          </label>
-          <input
-            ref={availability}
-            style={{
-              borderRadius: '10px',
-              height: dimensions.height / 20,
-              width: dimensions.width / 2,
-            }}
-            type="date"
-          />
-        </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
@@ -141,6 +102,31 @@ const ContactForm = () => {
             <option value="telephone">Telephone</option>
             <option value="zoom">Zoom</option>
           </select>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <label
+            style={{
+              display: 'flex',
+              justifySelf: 'left',
+              marginBottom: '.5rem',
+              marginTop: '.5rem',
+            }}
+          >
+            <i className="pi pi-info-circle" />
+            &nbsp;Job Description:
+          </label>
+          <textarea
+            ref={jobDetails}
+            style={{
+              borderRadius: '10px',
+              height: dimensions.height / 20,
+              overflowX: 'hidden',
+              resize: 'vertical',
+              width: dimensions.width / 2,
+            }}
+            type="text"
+          />
         </div>
       </form>
     </div>
