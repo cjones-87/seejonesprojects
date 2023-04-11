@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Menubar } from 'primereact/menubar';
 import { end, menuItems } from './NavbarMenuData';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [dimensions, setDimensions] = useState({
@@ -18,23 +17,19 @@ const Navbar = () => {
   }, [dimensions.width, dimensions.height]);
 
   const start = (
-    <NavLink to="/">
-      <LazyLoadComponent>
-        <iframe
-          className="myClassname"
-          height={dimensions.height / 10}
-          id="myId"
-          scrolling="no"
-          src="https://3d-box-animation.vercel.app/"
-          style={{ border: 0, verticalAlign: 'middle' }}
-          width={
-            dimensions.width < 650
-              ? dimensions.width / 5
-              : dimensions.width / 20
-          }
-        />
-      </LazyLoadComponent>
-    </NavLink>
+    <LazyLoadComponent>
+      <iframe
+        className="myClassname"
+        height={dimensions.height / 10}
+        id="myId"
+        scrolling="no"
+        src="https://3d-box-animation.vercel.app/"
+        style={{ border: 0, verticalAlign: 'middle' }}
+        width={
+          dimensions.width < 650 ? dimensions.width / 5 : dimensions.width / 20
+        }
+      />
+    </LazyLoadComponent>
   );
 
   return (
