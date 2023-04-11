@@ -26,6 +26,11 @@ const ContactFormData = [
     labelText: 'Budget:',
     type: 'text',
   },
+  {
+    iconClassName: 'pi pi-calendar',
+    labelText: 'Availability:',
+    type: 'date',
+  },
 ];
 
 export default ContactFormData;
