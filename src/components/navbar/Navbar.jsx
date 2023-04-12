@@ -42,16 +42,18 @@ const Navbar = () => {
       }}
     >
       <div className="card">
-        <Menubar
-          model={menuItems}
-          start={start}
-          end={end}
-          style={{
-            backgroundColor: '#1a1a1a',
-            verticalAlign: 'middle',
-            width: dimensions.width,
-          }}
-        />
+        <LazyLoadComponent>
+          <Menubar
+            model={menuItems}
+            start={start}
+            end={end}
+            style={{
+              backgroundColor: '#1a1a1a',
+              verticalAlign: 'middle',
+              width: dimensions.width,
+            }}
+          />
+        </LazyLoadComponent>
       </div>
     </div>
   );
