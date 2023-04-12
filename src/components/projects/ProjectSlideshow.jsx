@@ -106,44 +106,39 @@ const ProjectSlideshow = ({ slides }) => {
                         : '1px 1px 1px whitesmoke',
                   }}
                 >
-                  <a href={slide.href}>
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
-                      {slide.iframe ? (
-                        <iframe
-                          allow="autoplay"
-                          height={dimensions.height / 2}
-                          onError={handleError}
-                          src={slide.iframe}
-                          style={{
-                            border: 0,
-                            borderRadius: 25,
-                          }}
-                          width={dimensions.width / 2}
-                        />
-                      ) : (
-                        <LazyLoadImage
-                          className="image"
-                          alt={slide.caption}
-                          effect="blur"
-                          height={dimensions.height / 2}
-                          onError={handleError}
-                          src={slide.image}
-                          style={{
-                            borderRadius: 25,
-                            padding: 10,
-                          }}
-                          width={dimensions.width / 2}
-                        />
-                      )}
-                    </div>
-                    <a href={slide.href}>
-                      <h3
-                        style={{ textAlign: 'center', color: 'rebeccapurple' }}
-                      >
-                        {slide.caption}
-                      </h3>
-                    </a>
-                  </a>
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    {slide.iframe ? (
+                      <iframe
+                        allow="autoplay"
+                        height={dimensions.height / 2}
+                        onError={handleError}
+                        src={slide.iframe}
+                        style={{
+                          border: 0,
+                          borderRadius: 25,
+                        }}
+                        width={dimensions.width / 2}
+                      />
+                    ) : (
+                      <LazyLoadImage
+                        className="image"
+                        alt={slide.caption}
+                        effect="blur"
+                        height={dimensions.height / 2}
+                        onError={handleError}
+                        src={slide.image}
+                        style={{
+                          borderRadius: 25,
+                          padding: 10,
+                        }}
+                        width={dimensions.width / 2}
+                      />
+                    )}
+                  </div>
+                  <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+                    {slide.caption}
+                  </h3>
+
                   <h5 style={{ color: 'red' }} className="slideNumber">
                     {slide.id} of {slidesLength}
                   </h5>
