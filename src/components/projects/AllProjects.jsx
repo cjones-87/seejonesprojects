@@ -26,12 +26,24 @@ const AllProjects = () => {
     const handleResize = () =>
       setDimensions({ height: innerWidth, width: innerWidth });
 
+    const navigateToLearningJournal = document.getElementById(
+      'navigateToLearningJournal'
+    );
+
+    const handleNavigationToLearningJournal = () =>
+      (window.location.pathname = '/learningjournal');
+
     window.addEventListener('resize', handleResize);
+    navigateToLearningJournal.addEventListener(
+      'click',
+      handleNavigationToLearningJournal
+    );
   }, [dimensions.width, dimensions.height]);
 
   const imageBodyTemplate = (rowData) => {
     return (
-      <a href={rowData.href} target="_blank">
+      // <a href={rowData.href} target="_blank">
+      <>
         {rowData.iframe ? (
           <div>
             <Suspense fallback={<Spinner />}>
@@ -67,7 +79,8 @@ const AllProjects = () => {
             width={dimensions.width / 10}
           />
         )}
-      </a>
+      </>
+      // </a>
     );
   };
 
