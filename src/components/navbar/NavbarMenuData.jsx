@@ -2,22 +2,19 @@ import SidePanelMenu from '../menu/SidePanelMenu';
 import DarkModeToggle from './DarkModeToggle';
 import Typewriter from 'typewriter-effect';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import { Tooltip } from 'primereact/tooltip';
-import { NavLink } from 'react-router-dom';
-
-const resumeTooltip = 'Right Click to Open in New Window & Download';
 
 export const menuItems = [
   {
+    command: () => (window.location.pathname = '/home'),
+    icon: 'pi pi-fw pi-home',
     label: (
-      <NavLink
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
-        }} // classic rose rgb(251,204,231)
-        to="/home"
+        }}
       >
         <Typewriter
           options={{
@@ -25,21 +22,22 @@ export const menuItems = [
             autoStart: true,
             loop: false,
           }}
+          style={{ color: 'red' }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-home',
   },
   {
+    command: () => (window.location.pathname = '/aboutme'),
+    icon: 'pi pi-fw pi-info-circle',
     label: (
-      <NavLink
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/aboutme"
       >
         <Typewriter
           options={{
@@ -48,20 +46,20 @@ export const menuItems = [
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-info-circle',
   },
   {
+    command: () => (window.location.pathname = '/learningjournal'),
+    icon: 'pi pi-fw pi-history',
     label: (
-      <NavLink
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/learningjournal"
       >
         <Typewriter
           options={{
@@ -70,20 +68,20 @@ export const menuItems = [
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-history',
   },
   {
+    command: () => (window.location.pathname = '/projects'),
+    icon: 'pi pi-fw pi-images',
     label: (
-      <NavLink
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/projects"
       >
         <Typewriter
           options={{
@@ -92,20 +90,20 @@ export const menuItems = [
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-images',
   },
   {
+    command: () => (window.location.pathname = '/playgames'),
+    icon: 'pi pi-fw pi-play',
     label: (
-      <NavLink
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/playgames"
       >
         <Typewriter
           options={{
@@ -114,46 +112,55 @@ export const menuItems = [
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-play',
   },
   {
+    icon: 'pi pi-fw pi-file-pdf',
+    items: [
+      {
+        command: () => (window.location.pathname = '/resume'),
+        icon: 'pi pi-fw pi-file-pdf',
+        label: 'View Resumé',
+      },
+      {
+        command: () =>
+          (window.location.pathname = '/CJsSoftwareEngineeringResume.pdf'),
+        icon: 'pi pi-download',
+        label: 'Download Résumé',
+      },
+    ],
     label: (
-      <NavLink
-        className="resume"
-        data-pr-position="bottom"
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/resume"
       >
-        <Tooltip target=".resume" content={`${resumeTooltip}`} />
         <Typewriter
+          className="resume"
           options={{
-            strings: 'Resumé',
+            strings: 'Résumé',
             autoStart: true,
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-file-pdf',
   },
   {
+    command: () => (window.location.pathname = '/hireme'),
+    icon: 'pi pi-fw pi-dollar',
     label: (
-      <NavLink
-        className="hireme"
+      <span
         style={{
           color:
             localStorage.getItem('lightMode') === 'true'
               ? '#ba68c8'
               : 'whitesmoke',
         }}
-        to="/hireme"
       >
         <Typewriter
           options={{
@@ -162,10 +169,10 @@ export const menuItems = [
             loop: false,
           }}
         />
-      </NavLink>
+      </span>
     ),
-    icon: 'pi pi-fw pi-dollar',
-    // target: 'blank',
+
+    target: 'blank',
   },
 ];
 
