@@ -20,6 +20,23 @@
     <title>See Jones Engineer</title>
   </head>
   <body>
+    <form
+      name="contactForm"
+      data-netlify="true"
+      method="post"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input name="firstName" type="text" />
+      <input name="lastName" type="text" />
+      <input name="email" type="email" />
+      <input name="phoneNumber" type="tel" />
+      <input name="budget" type="text" />
+      <input name="availability" type="date" />
+      <select name="preferredContactMethod" type="text"></select>
+      <textarea name="jobDescription" type="text"></textarea>
+    </form>
     <noscript>See Jones Engineer</noscript>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx" defer></script>
