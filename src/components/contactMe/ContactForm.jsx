@@ -56,6 +56,10 @@ const ContactForm = () => {
       >
         <input name="form-name" type="hidden" value="contactForm" />
 
+        <div hidden>
+          <input name="bot-field" />
+        </div>
+
         {ContactFormData.map((data, index) => (
           <div key={index} style={{ display: 'flex', flexDirection: 'column' }}>
             <label
@@ -146,6 +150,7 @@ const ContactForm = () => {
             type="text"
           />
         </div>
+
         <button
           style={{
             backgroundColor: '#ba68c8',
