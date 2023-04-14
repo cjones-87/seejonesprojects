@@ -47,10 +47,19 @@ const ContactForm = () => {
         textAlign: 'center',
       }}
     >
-      <form style={{ marginTop: '2rem' }}>
+      <form
+        data-netlify="true"
+        name="contactForm"
+        method="post"
+        onSubmit="submit"
+        style={{ marginTop: '2rem' }}
+      >
+        <input name="form-name" type="hidden" value="contactForm" />
+
         {ContactFormData.map((data, index) => (
           <div key={index} style={{ display: 'flex', flexDirection: 'column' }}>
             <label
+              htmlFor={data.name}
               style={{
                 display: 'flex',
                 justifySelf: 'left',
@@ -63,6 +72,7 @@ const ContactForm = () => {
             </label>
             <input
               min={minDate}
+              name={data.name}
               ref={refs[index]}
               pattern={data.pattern ? data.pattern : ''}
               placeholder={data.placeholder ? data.placeholder : ''}
@@ -78,6 +88,7 @@ const ContactForm = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
+            htmlFor="preferredContactMethod"
             style={{
               display: 'flex',
               justifySelf: 'left',
@@ -89,6 +100,7 @@ const ContactForm = () => {
             &nbsp;Preferred Contact Method:
           </label>
           <select
+            name="preferredContactMethod"
             ref={preferredContactMethod}
             style={{
               borderRadius: '10px',
@@ -106,6 +118,7 @@ const ContactForm = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
+            htmlFor="jobDescription"
             style={{
               display: 'flex',
               justifySelf: 'left',
@@ -117,6 +130,7 @@ const ContactForm = () => {
             &nbsp;Job Description:
           </label>
           <textarea
+            name="jobDescription"
             ref={jobDetails}
             style={{
               borderRadius: '10px',
@@ -128,6 +142,20 @@ const ContactForm = () => {
             type="text"
           />
         </div>
+        <button
+          // onClick={handleSubmit}
+          style={{
+            backgroundColor: '#ba68c8',
+            color: 'indigo',
+            borderRadius: '10px',
+            height: dimensions.height / 30,
+            marginTop: '1.5rem',
+            width: dimensions.width / 4,
+          }}
+          type="submit"
+        >
+          Send
+        </button>
       </form>
     </div>
   );
