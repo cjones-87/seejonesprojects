@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'primereact/button';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import BusinessCard from './BusinessCard';
+import ContactForm from './ContactForm';
 
 const ContactMe = () => {
   const [dimensions, setDimensions] = useState({
@@ -27,6 +28,24 @@ const ContactMe = () => {
           : 'bg-black-alpha-90 App card'
       }
     >
+      {/* <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginBottom: '2rem',
+        }}
+      >
+        <LazyLoadComponent>
+          <BusinessCard />
+        </LazyLoadComponent>
+      </div> */}
+
+      <div>
+        <LazyLoadComponent>
+          <ContactForm />
+        </LazyLoadComponent>
+      </div>
+
       <div
         style={{
           display: 'flex',
@@ -39,7 +58,7 @@ const ContactMe = () => {
         </LazyLoadComponent>
       </div>
 
-      <div
+      {/* <div
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -62,7 +81,7 @@ const ContactMe = () => {
           // method="POST"
           style={{ borderRadius: '10px', marginBottom: '2rem' }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
