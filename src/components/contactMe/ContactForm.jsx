@@ -16,7 +16,7 @@ const ContactForm = () => {
   const availability = useRef();
   const preferredContactMethod = useRef();
 
-  const [minDate, setMinDate] = useState(() => {
+  const [minDate] = useState(() => {
     const today = new Date();
     const threeDaysFromNow = new Date(today.getTime() + 72 * 60 * 60 * 1000);
     return threeDaysFromNow.toISOString().split('T')[0];
@@ -70,12 +70,12 @@ const ContactForm = () => {
               <i className={data.iconClassName} />
               &nbsp;{data.labelText}
             </label>
+
             <input
               min={minDate}
               name={data.name}
               ref={refs[index]}
-              pattern={data.pattern}
-              placeholder={data.placeholder}
+              required
               style={{
                 borderRadius: '10px',
                 height: dimensions.height / 20,
@@ -99,9 +99,11 @@ const ContactForm = () => {
             <i className="pi pi-at" />
             &nbsp;Preferred Contact Method:
           </label>
+
           <select
             name="preferredContactMethod"
             ref={preferredContactMethod}
+            required
             style={{
               borderRadius: '10px',
               height: dimensions.height / 20,
@@ -119,6 +121,7 @@ const ContactForm = () => {
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
             htmlFor="jobDescription"
+            required
             style={{
               display: 'flex',
               justifySelf: 'left',
@@ -129,6 +132,7 @@ const ContactForm = () => {
             <i className="pi pi-info-circle" />
             &nbsp;Job Description:
           </label>
+
           <textarea
             name="jobDescription"
             ref={jobDetails}
@@ -143,7 +147,6 @@ const ContactForm = () => {
           />
         </div>
         <button
-          // onClick={handleSubmit}
           style={{
             backgroundColor: '#ba68c8',
             color: 'indigo',
@@ -154,7 +157,7 @@ const ContactForm = () => {
           }}
           type="submit"
         >
-          Send
+          Submit
         </button>
       </form>
     </div>

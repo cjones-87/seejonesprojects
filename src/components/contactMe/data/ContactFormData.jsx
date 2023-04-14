@@ -21,8 +21,6 @@ const ContactFormData = [
     iconClassName: 'pi pi-phone',
     labelText: 'Phone Number:',
     name: 'phoneNumber',
-    pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
-    placeholder: '(999) 999-9999',
     type: 'tel',
   },
   {
