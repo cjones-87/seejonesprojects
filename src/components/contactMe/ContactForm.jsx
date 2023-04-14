@@ -74,8 +74,8 @@ const ContactForm = () => {
               min={minDate}
               name={data.name}
               ref={refs[index]}
-              pattern={data.pattern ? data.pattern : ''}
-              placeholder={data.placeholder ? data.placeholder : ''}
+              pattern={data.pattern}
+              placeholder={data.placeholder}
               style={{
                 borderRadius: '10px',
                 height: dimensions.height / 20,
