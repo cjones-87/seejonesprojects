@@ -50,6 +50,7 @@ const Home = () => {
           justifyContent: 'center',
           alignItems: 'center',
           marginBottom: '2rem',
+          marginTop: '2rem',
         }}
       >
         <LazyLoadComponent>
