@@ -20,19 +20,25 @@ const ContactMe = () => {
   }, [dimensions.width, dimensions.height]);
 
   return (
-    <div>
+    <div
+      className={
+        localStorage.getItem('lightMode') === 'true'
+          ? 'bg-black-alpha-20 App card'
+          : 'bg-black-alpha-90 App card'
+      }
+    >
       <div
         style={{
           display: 'flex',
           justifyContent: 'center',
-          marginTop: '-2rem',
-          textAlign: 'center',
+          marginBottom: '2rem',
         }}
       >
         <LazyLoadComponent>
           <BusinessCard />
         </LazyLoadComponent>
       </div>
+
       <div
         style={{
           display: 'flex',
@@ -51,9 +57,10 @@ const ContactMe = () => {
             </a>
           }
           type="submit"
-          action="https:formsubmit.co/el/wenabu"
+          // action="https:formsubmit.co/el/wenabu"
           // action="https:formsubmit.co/ed8588bae0bd9d8669f5533fa84f2957"
-          method="POST"
+          // method="POST"
+          style={{ borderRadius: '10px', marginBottom: '2rem' }}
         />
       </div>
     </div>
