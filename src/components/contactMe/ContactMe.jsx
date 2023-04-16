@@ -29,6 +29,22 @@ const ContactMe = () => {
       }
     >
       <div>
+        <h1
+          style={{
+            color: 'rebeccapurple',
+            paddingTop: '2rem',
+            textAlign: 'center',
+            textShadow:
+              localStorage.getItem('lightMode') === 'true'
+                ? '1px 1px 1px indigo'
+                : '1px 1px 1px whitesmoke',
+          }}
+        >
+          Hire Me
+        </h1>
+      </div>
+
+      <div>
         <LazyLoadComponent>
           <ContactForm />
         </LazyLoadComponent>
