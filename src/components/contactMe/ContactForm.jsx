@@ -52,7 +52,6 @@ const ContactForm = () => {
         name="contactForm"
         method="post"
         onSubmit="submit"
-        style={{ marginTop: '2rem' }}
       >
         <input name="form-name" type="hidden" value="contactForm" />
 
@@ -78,6 +77,7 @@ const ContactForm = () => {
             <input
               min={minDate}
               name={data.name}
+              placeholder={data.placeholder}
               ref={refs[index]}
               required
               style={{
