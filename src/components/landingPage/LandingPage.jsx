@@ -19,11 +19,21 @@ const LandingPageAlt = () => {
     width: innerWidth,
   });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({ height: innerHeight, width: innerWidth });
-      window.location.reload();
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
     };
+  }
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      if (innerWidth !== dimensions.width) {
+        setDimensions({ height: innerHeight, width: innerWidth });
+        window.location.reload();
+      }
+    });
 
     window.addEventListener('resize', handleResize);
 
@@ -43,6 +53,8 @@ const LandingPageAlt = () => {
 
     const siteEntrance = document.getElementById('enterSite');
     siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, [dimensions.height, dimensions.width]);
 
   return (
