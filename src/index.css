@@ -419,3 +419,161 @@ input[type='number']::-webkit-inner-spin-button {
 .App {
   text-align: center;
 }
+
+/* animated background gradient */
+#landingPageContainer {
+  align-items: center;
+  background: radial-gradient(#434343, rgba(0, 0, 0, 0.9));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1vmin;
+  justify-content: center;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+#welcomeText {
+  animation: gradientAnimation 6s linear infinite alternate,
+    hue 6s linear infinite alternate;
+  background-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  font-size: 20em;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.025em transparent;
+  white-space: nowrap;
+}
+
+h1#welcomeText:hover {
+  animation: spinner 12s linear infinite alternate,
+    gradientAnimation 6s linear infinite alternate,
+    hue 6s linear infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  100% {
+    background-position: 864px 0;
+  }
+}
+
+@keyframes hue {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg), drop-shadow(3px 3px 1px 0.9);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg), drop-shadow(3px 3px 1px 0.9);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+/* typewriter text effect */
+.typewriterContainer {
+  display: inline-block;
+}
+
+.typewriterText {
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* landing page css */
+
+.header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#sectionA {
+  background: rgb(75, 0, 130, 0.3);
+  border: groove 0.5rem white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#sectionB {
+  background: rgb(128, 128, 128, 0.3);
+  border: groove 0.5rem white;
+  flex-grow: 1;
+  padding: 1rem;
+  text-align: center;
+}
+
+#sectionC {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+#sectionC div {
+  border: groove 0.5rem white;
+  width: auto;
+}
+
+.sectionC1 {
+  padding: 1rem;
+  background: rgb(128, 128, 128, 0.3);
+  text-align: center;
+}
+
+.sectionC2 {
+  padding: 1rem;
+  background: rgb(75, 0, 130, 0.3);
+  text-align: center;
+}
+
+#sectionD {
+  border: groove 0.5rem white;
+  display: flex;
+  flex-direction: row;
+  font-size: 1vmin;
+  width: auto;
+}
+
+.sectionD1 {
+  background: rgb(128, 128, 128, 0.3);
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.sectionD2 {
+  padding: 1rem;
+  background: rgb(75, 0, 130, 0.3);
+  text-align: center;
+}
