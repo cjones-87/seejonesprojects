@@ -60,7 +60,13 @@ const LandingPageAlt = () => {
   return (
     <div
       id="landingPageContainer"
-      style={{ height: dimensions.height < 900 ? '230vh' : '125vh' }}
+      style={{
+        background:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        height: dimensions.height < 900 ? '230vh' : '125vh',
+      }}
     >
       <h1 id="welcomeText">
         <strong>CJ Jones</strong>
