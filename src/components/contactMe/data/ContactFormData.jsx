@@ -38,4 +38,12 @@ const ContactFormData = [
   },
 ];
 
+export const OptionData = [
+  { content: 'Please choose an option', value: '' },
+  { content: 'Email', value: 'email' },
+  { content: 'SMS', value: 'sms' },
+  { content: 'Telephone', value: 'telephone' },
+  { content: 'Zoom', value: 'zoom' },
+];
+
 export default ContactFormData;
