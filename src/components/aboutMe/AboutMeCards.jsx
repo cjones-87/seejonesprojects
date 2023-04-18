@@ -61,36 +61,35 @@ const AboutMeCards = ({ slides }) => {
         paddingBottom: '2rem',
       }}
     >
-      <h1
-        style={{
-          color: 'rebeccapurple',
-          paddingBottom: '4rem',
-          textShadow:
-            localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px indigo'
-              : '1px 1px 1px whitesmoke',
-        }}
-      >
-        About Me
-      </h1>
       <section className="slider">
-        <div
-          style={{
-            alignItems: 'center',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <FaArrowAltCircleLeft
-            className="previous"
-            onClick={previousSlide}
-            style={{ color: 'rebeccapurple', position: 'static' }}
-          />
-          <FaArrowAltCircleRight
-            className="next"
-            onClick={nextSlide}
-            style={{ color: 'rebeccapurple', position: 'static' }}
-          />
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div
+            style={{ left: '3rem', position: 'absolute', marginTop: '25rem' }}
+          >
+            <FaArrowAltCircleLeft
+              className="previous"
+              onClick={previousSlide}
+              style={{
+                color: 'rebeccapurple',
+                fontSize: '5rem',
+                position: 'sticky',
+              }}
+            />
+          </div>
+
+          <div
+            style={{ right: '2rem', position: 'absolute', marginTop: '25rem' }}
+          >
+            <FaArrowAltCircleRight
+              className="next"
+              onClick={nextSlide}
+              style={{
+                color: 'rebeccapurple',
+                fontSize: '5rem',
+                position: 'sticky',
+              }}
+            />
+          </div>
         </div>
 
         {slides.map((slide, index) => {
