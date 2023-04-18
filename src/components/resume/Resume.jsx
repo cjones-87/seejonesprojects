@@ -33,10 +33,13 @@ const Resume = () => {
             ? 'bg-black-alpha-20 card'
             : 'bg-black-alpha-90 card'
         }
+        style={{ fontSize: '1vmin' }}
       >
         <h1
+          id="welcomeText"
           style={{
             color: 'rebeccapurple',
+            fontSize: '5em',
             paddingBottom: '1rem',
             paddingTop: '1rem',
             textAlign: 'center',
