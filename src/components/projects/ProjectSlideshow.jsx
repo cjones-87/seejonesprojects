@@ -65,14 +65,17 @@ const ProjectSlideshow = ({ slides }) => {
       }
       style={{
         color: 'white',
+        fontSize: '1vmin',
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
       }}
     >
       <h1
+        id="welcomeText"
         style={{
           color: 'rebeccapurple',
-          paddingBottom: '3rem',
+          fontSize: '5em',
+          paddingBottom: '2rem',
           textAlign: 'center',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
@@ -90,6 +93,37 @@ const ProjectSlideshow = ({ slides }) => {
           paddingBottom: '4.5rem',
         }}
       >
+        <div
+          style={{ display: 'flex', flexDirection: 'row', fontSize: '1vmin' }}
+        >
+          <div
+            style={{ left: '3rem', position: 'absolute', marginTop: '20em' }}
+          >
+            <FaArrowAltCircleLeft
+              className="previous"
+              onClick={previousSlide}
+              style={{
+                color: 'rebeccapurple',
+                fontSize: '10em',
+                position: 'sticky',
+              }}
+            />
+          </div>
+
+          <div
+            style={{ right: '2rem', position: 'absolute', marginTop: '20em' }}
+          >
+            <FaArrowAltCircleRight
+              className="next"
+              onClick={nextSlide}
+              style={{
+                color: 'rebeccapurple',
+                fontSize: '10em',
+                position: 'sticky',
+              }}
+            />
+          </div>
+        </div>
         {slides.map((slide, index) => {
           return (
             <div
@@ -142,7 +176,7 @@ const ProjectSlideshow = ({ slides }) => {
                   <h5 style={{ color: 'red' }} className="slideNumber">
                     {slide.id} of {slidesLength}
                   </h5>
-                  <div
+                  {/* <div
                     style={{
                       alignItems: 'center',
                       display: 'flex',
@@ -165,7 +199,7 @@ const ProjectSlideshow = ({ slides }) => {
                         position: 'static',
                       }}
                     />
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
