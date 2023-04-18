@@ -31,6 +31,21 @@ const AboutMe = () => {
         width: innerWidth,
       }}
     >
+      <h1
+        id="welcomeText"
+        style={{
+          color: 'rebeccapurple',
+          fontSize: '5em',
+          paddingTop: '2rem',
+          textShadow:
+            localStorage.getItem('lightMode') === 'true'
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px whitesmoke',
+        }}
+      >
+        About Me
+      </h1>
+
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <LazyLoadComponent>
           <AboutMeCards slides={AboutMeData} />
