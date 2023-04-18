@@ -28,10 +28,12 @@ const ContactMe = () => {
           : 'bg-black-alpha-90 App card'
       }
     >
-      <div>
+      <div style={{ fontSize: '1vmin' }}>
         <h1
+          id="welcomeText"
           style={{
             color: 'rebeccapurple',
+            fontSize: '5em',
             paddingTop: '2rem',
             textAlign: 'center',
             textShadow:
