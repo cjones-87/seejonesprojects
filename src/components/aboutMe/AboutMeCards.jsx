@@ -62,30 +62,32 @@ const AboutMeCards = ({ slides }) => {
       }}
     >
       <section className="slider">
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div
+          style={{ display: 'flex', flexDirection: 'row', fontSize: '1vmin' }}
+        >
           <div
-            style={{ left: '3rem', position: 'absolute', marginTop: '25rem' }}
+            style={{ left: '3rem', position: 'absolute', marginTop: '20rem' }}
           >
             <FaArrowAltCircleLeft
               className="previous"
               onClick={previousSlide}
               style={{
                 color: 'rebeccapurple',
-                fontSize: '5rem',
+                fontSize: '10em',
                 position: 'sticky',
               }}
             />
           </div>
 
           <div
-            style={{ right: '2rem', position: 'absolute', marginTop: '25rem' }}
+            style={{ right: '2rem', position: 'absolute', marginTop: '20rem' }}
           >
             <FaArrowAltCircleRight
               className="next"
               onClick={nextSlide}
               style={{
                 color: 'rebeccapurple',
-                fontSize: '5rem',
+                fontSize: '10em',
                 position: 'sticky',
               }}
             />
