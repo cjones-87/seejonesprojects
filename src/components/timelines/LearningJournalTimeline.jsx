@@ -123,6 +123,7 @@ const LearningJournalTimeline = () => {
       }
       style={{
         color: 'white',
+        fontSize: '1vmin',
         textShadow:
           localStorage.getItem('lightMode') === 'true'
             ? '1px 1px 1px black'
@@ -132,7 +133,9 @@ const LearningJournalTimeline = () => {
       }}
     >
       <h1
+        id="welcomeText"
         style={{
+          fontSize: '5em',
           textAlign: 'center',
           color: 'rebeccapurple',
           paddingBottom: '1.5rem',
