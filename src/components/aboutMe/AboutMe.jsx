@@ -27,6 +27,7 @@ const AboutMe = () => {
       }
       style={{
         color: 'white',
+        fontSize: '1vmin',
         textAlign: 'center',
         width: innerWidth,
       }}
