@@ -37,10 +37,15 @@ export default function PlayGames() {
         }}
       >
         <div>
-          <a href="https://mugnificent-coffee-clicker.vercel.app/">
+          <a
+            href="https://mugnificent-coffee-clicker.vercel.app/"
+            style={{ fontSize: '1vmin' }}
+          >
             <h1
+              id="welcomeText"
               style={{
                 color: 'rebeccapurple',
+                fontSize: '5em',
                 paddingBottom: '1rem',
                 textShadow:
                   localStorage.getItem('lightMode') === 'true'
@@ -63,10 +68,15 @@ export default function PlayGames() {
         </div>
 
         <div>
-          <a href="https://guessing-game-blue.vercel.app/">
+          <a
+            href="https://guessing-game-blue.vercel.app/"
+            style={{ fontSize: '1vmin' }}
+          >
             <h1
+              id="welcomeText"
               style={{
                 color: 'rebeccapurple',
+                fontSize: '5em',
                 paddingBottom: '1rem',
                 textShadow:
                   localStorage.getItem('lightMode') === 'true'
