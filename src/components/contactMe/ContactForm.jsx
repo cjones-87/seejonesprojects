@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ContactFormData from './data/ContactFormData';
+import ContactFormData, { OptionData } from './data/ContactFormData';
 
 const ContactForm = () => {
   const [dimensions, setDimensions] = useState({
@@ -114,11 +114,11 @@ const ContactForm = () => {
               width: dimensions.width / 2,
             }}
           >
-            <option value="">Please choose an option</option>
-            <option value="email">Email</option>
-            <option value="sms">SMS</option>
-            <option value="telephone">Telephone</option>
-            <option value="zoom">Zoom</option>
+            {OptionData.map((data, index) => (
+              <option key={index} value={data.value}>
+                {data.content}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -151,19 +151,22 @@ const ContactForm = () => {
           />
         </div>
 
-        <button
-          style={{
-            backgroundColor: '#ba68c8',
-            color: 'indigo',
-            borderRadius: '10px',
-            height: dimensions.height / 30,
-            marginTop: '1.5rem',
-            width: dimensions.width / 4,
-          }}
-          type="submit"
-        >
-          Submit
-        </button>
+        <div style={{ fontSize: '1vmin' }}>
+          <button
+            style={{
+              backgroundColor: '#ba68c8',
+              color: 'indigo',
+              borderRadius: '10px',
+              fontSize: '2em',
+              height: '2.5em',
+              marginTop: '1.5rem',
+              width: '5em',
+            }}
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
