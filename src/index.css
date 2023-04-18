@@ -423,7 +423,6 @@ input[type='number']::-webkit-inner-spin-button {
 /* animated background gradient */
 #landingPageContainer {
   align-items: center;
-  /* background: radial-gradient(#434343, rgba(0, 0, 0, 0.9)); */
   display: flex;
   flex-direction: column;
   height: 100vh;
