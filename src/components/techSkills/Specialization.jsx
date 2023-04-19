@@ -26,9 +26,10 @@ const Specialization = () => {
           <b>
             <Typewriter
               options={{
-                strings: 'I specialize in',
                 autoStart: true,
+                cursor: '',
                 loop: false,
+                strings: 'I specialize in',
               }}
             />
           </b>
@@ -50,9 +51,10 @@ const Specialization = () => {
           <b>
             <Typewriter
               options={{
-                strings: 'for web development & ',
                 autoStart: true,
+                cursor: '',
                 loop: false,
+                strings: 'for web development & ',
               }}
             />
           </b>
@@ -74,9 +76,10 @@ const Specialization = () => {
           <b>
             <Typewriter
               options={{
-                strings: 'for mobile development',
                 autoStart: true,
+                cursor: '',
                 loop: false,
+                strings: 'for mobile development',
               }}
             />
           </b>
