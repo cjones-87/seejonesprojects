@@ -60,8 +60,9 @@ const SidePanelMenu = () => {
               label={
                 <Typewriter
                   options={{
-                    strings: 'Network With Me',
                     autoStart: true,
+                    cursor: '',
+                    strings: 'Network With Me',
                   }}
                 />
               }
