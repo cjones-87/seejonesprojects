@@ -18,9 +18,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'Home',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Home',
           }}
           style={{ color: 'red' }}
         />
@@ -41,9 +42,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'About Me',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'About Me',
           }}
         />
       </span>
@@ -63,9 +65,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'Learning Journal',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Learning Journal',
           }}
         />
       </span>
@@ -85,9 +88,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'Projects',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Projects',
           }}
         />
       </span>
@@ -107,9 +111,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'Interactive Games',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Interactive Games',
           }}
         />
       </span>
@@ -142,9 +147,10 @@ export const menuItems = [
         <Typewriter
           className="resume"
           options={{
-            strings: 'Résumé',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Résumé',
           }}
         />
       </span>
@@ -164,9 +170,10 @@ export const menuItems = [
       >
         <Typewriter
           options={{
-            strings: 'Hire Me',
             autoStart: true,
+            cursor: '',
             loop: false,
+            strings: 'Hire Me',
           }}
         />
       </span>
