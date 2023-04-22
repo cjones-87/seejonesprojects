@@ -58,13 +58,7 @@ const ProjectSlideshow = ({ slides }) => {
 
   return (
     <div
-      className={
-        localStorage.getItem('lightMode') === 'true'
-          ? 'App bg-black-alpha-20'
-          : 'App bg-black-alpha-90'
-      }
       style={{
-        color: 'white',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
@@ -73,7 +67,7 @@ const ProjectSlideshow = ({ slides }) => {
       <h1
         id="welcomeText"
         style={{
-          color: 'rebeccapurple',
+          color: 'black',
           fontSize: '5em',
           paddingBottom: '2rem',
           textAlign: 'center',
@@ -176,30 +170,6 @@ const ProjectSlideshow = ({ slides }) => {
                   <h5 style={{ color: 'red' }} className="slideNumber">
                     {slide.id} of {slidesLength}
                   </h5>
-                  {/* <div
-                    style={{
-                      alignItems: 'center',
-                      display: 'flex',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <FaArrowAltCircleLeft
-                      className="previous"
-                      onClick={previousSlide}
-                      style={{
-                        color: 'rebeccapurple',
-                        position: 'static',
-                      }}
-                    />
-                    <FaArrowAltCircleRight
-                      className="next"
-                      onClick={nextSlide}
-                      style={{
-                        color: 'rebeccapurple',
-                        position: 'static',
-                      }}
-                    />
-                  </div> */}
                 </div>
               )}
             </div>
