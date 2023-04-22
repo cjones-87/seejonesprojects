@@ -519,7 +519,6 @@ h1#welcomeText:hover {
 }
 
 #sectionA {
-  background: rgb(75, 0, 130, 0.3);
   border: groove 0.5rem white;
   padding: 1rem;
   text-align: center;
