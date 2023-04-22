@@ -27,7 +27,16 @@ const Home = () => {
   }, [dimensions.height, dimensions.width]);
 
   return (
-    <div className="App" style={{ width: dimensions.width }}>
+    <div
+      className="App"
+      style={{
+        background:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        width: dimensions.width,
+      }}
+    >
       <div id="homeFlex">
         <LazyLoadComponent>
           <Cube id="homeCJ" />
