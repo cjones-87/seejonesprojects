@@ -21,20 +21,23 @@ const ContactMe = () => {
   }, [dimensions.width, dimensions.height]);
 
   return (
-    <div
-      className={
-        localStorage.getItem('lightMode') === 'true'
-          ? 'bg-black-alpha-20 App card'
-          : 'bg-black-alpha-90 App card'
-      }
-    >
-      <div style={{ fontSize: '1vmin' }}>
+    <div>
+      <div
+        style={{
+          background:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+          fontSize: '1vmin',
+        }}
+      >
         <h1
           id="welcomeText"
           style={{
-            color: 'rebeccapurple',
+            color: 'black',
             fontSize: '5em',
             paddingTop: '2rem',
+            paddingBottom: '2rem',
             textAlign: 'center',
             textShadow:
               localStorage.getItem('lightMode') === 'true'
