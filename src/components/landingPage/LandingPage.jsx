@@ -66,6 +66,7 @@ const LandingPageAlt = () => {
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         height: dimensions.height < 900 ? '230vh' : '125vh',
+        width: dimensions.width,
       }}
     >
       <h1 id="welcomeText">
@@ -101,7 +102,17 @@ const LandingPageAlt = () => {
         }}
       />
 
-      <div id="sectionA" style={{ fontSize: '4em', width: dimensions.width }}>
+      <div
+        id="sectionA"
+        style={{
+          backgroundColor:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'rgb(75, 0, 130, 0.3)'
+              : 'rgb(128, 128, 128, 0.3)',
+          fontSize: '4em',
+          width: dimensions.width,
+        }}
+      >
         I am a freelance software engineer, passionate about learning &
         implementing new technologies. I am proficient in writing clean,
         efficient, DRY implementations. I am a fastidious engineer and
