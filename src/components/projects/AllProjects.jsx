@@ -42,7 +42,6 @@ const AllProjects = () => {
 
   const imageBodyTemplate = (rowData) => {
     return (
-      // <a href={rowData.href} target="_blank">
       <>
         {rowData.iframe ? (
           <div>
@@ -80,7 +79,6 @@ const AllProjects = () => {
           />
         )}
       </>
-      // </a>
     );
   };
 
@@ -88,7 +86,11 @@ const AllProjects = () => {
     <div
       className="datatable-project"
       style={{
-        color: 'white',
+        background:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
         width: dimensions.width,
@@ -97,7 +99,7 @@ const AllProjects = () => {
       <div style={{ marginBottom: '2rem' }}>
         <ProjectSlideshow slides={ProjectData} />
       </div>
-      <div className="card" style={{ backgroundColor: '1a1a1a' }}>
+      <div>
         <DataTable
           value={projects}
           header={header}
