@@ -1,12 +1,12 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import { Timeline } from 'primereact/timeline';
-import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
 import Spinner from '../../misc/Spinner';
 import handleImageFailure from '../../misc/helpers/handleImageFailure';
 import learningJournalEvents from './LearningJournalEvents';
+import { Timeline } from 'primereact/timeline';
+import { Card } from 'primereact/card';
+import { Button } from 'primereact/button';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LearningJournalTimeline = () => {
   const [dimensions, setDimensions] = useState({
@@ -37,14 +37,14 @@ const LearningJournalTimeline = () => {
     return (
       <Suspense fallback={<Spinner />}>
         <Card
-          className={
-            localStorage.getItem('lightMode') === 'true'
-              ? 'bg-black-alpha-40'
-              : 'bg-gray-alpha-80'
-          }
           title={item.status}
           subTitle={item.date}
           style={{
+            background:
+              localStorage.getItem('lightMode') === 'true'
+                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+
             borderRadius: 25,
             color:
               localStorage.getItem('lightMode') === 'true'
@@ -65,7 +65,6 @@ const LearningJournalTimeline = () => {
                 <iframe
                   allow="autoplay"
                   height={dimensions.height / 3}
-                  // frameBorder={0}
                   onError={handleImageFailure}
                   src={item.iframe}
                   style={{
@@ -116,13 +115,12 @@ const LearningJournalTimeline = () => {
 
   return (
     <div
-      className={
-        localStorage.getItem('lightMode') === 'true'
-          ? 'timeline-demo bg-black-alpha-20'
-          : 'timeline-demo bg-black-alpha-90'
-      }
       style={{
-        color: 'white',
+        background:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+
         fontSize: '1vmin',
         textShadow:
           localStorage.getItem('lightMode') === 'true'
@@ -137,13 +135,12 @@ const LearningJournalTimeline = () => {
         style={{
           fontSize: '5em',
           textAlign: 'center',
-          color: 'rebeccapurple',
           paddingBottom: '1.5rem',
         }}
       >
         Learning Journal
       </h1>
-      <div className="card" style={{ padding: '2rem' }}>
+      <div style={{ padding: '2rem' }}>
         <Timeline
           value={learningJournalEvents}
           align="alternate"
