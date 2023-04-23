@@ -13,7 +13,7 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
-const LandingPageAlt = () => {
+const LandingPage = () => {
   const [dimensions, setDimensions] = useState({
     height: innerHeight,
     width: innerWidth,
@@ -96,6 +96,14 @@ const LandingPageAlt = () => {
         id="enterSite"
         label="See Jones Engineer"
         style={{
+          background:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
           fontSize: '2em',
           margin: '2rem',
           padding: '1em',
@@ -266,4 +274,4 @@ const LandingPageAlt = () => {
   );
 };
 
-export default LandingPageAlt;
+export default LandingPage;
