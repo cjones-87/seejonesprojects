@@ -11,7 +11,7 @@ const SidePanelButtons = () => {
         textShadow: '2px 2px 2px #01020E',
       }}
     >
-      <div className="card bg-black-alpha-90">
+      <div>
         <h5
           style={{
             textAlign: 'center',
