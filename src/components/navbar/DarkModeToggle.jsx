@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ToggleButton } from 'primereact/togglebutton';
+import { Button } from 'primereact/button';
 import useLocalStorage from 'use-local-storage';
 
 const DarkMode = () => {
@@ -17,22 +18,28 @@ const DarkMode = () => {
   }, [lightMode]);
 
   return (
-    <ToggleButton
-      id="lightDarkToggleButton"
-      style={{
-        backgroundColor:
-          localStorage.getItem('lightMode') === 'true' ? '#cccccc' : '#0f0f0f',
-      }}
-      aria-label="Light/Dark Mode Toggle"
-      checked={lightMode}
-      className="w-full sm:w-3rem p-togglebutton"
-      offLabel=""
-      offIcon="pi pi-sun"
-      onIcon="pi pi-moon"
-      onLabel=""
-      tooltip={lightMode ? 'switch to dark mode' : 'switch to light mode'}
-      tooltipOptions={{ position: 'bottom' }}
-    />
+    <div style={{ colorScheme: 'red' }}>
+      <Button
+        className=" p-togglebutton"
+        id="lightDarkToggleButton"
+        style={{
+          background:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          height: '2.5em',
+        }}
+        // label={lightMode ? 'Dark Mode' : 'Light Mode'}
+        icon={lightMode ? 'pi pi-moon' : 'pi pi-sun'}
+        tooltip={lightMode ? 'Switch to dark mode' : 'Switch to light mode'}
+        tooltipOptions={{ position: 'bottom' }}
+        toggleable
+      />
+    </div>
   );
 };
 export default DarkMode;
