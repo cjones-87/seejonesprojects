@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Menubar } from 'primereact/menubar';
 import { end, menuItems } from './NavbarMenuData';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import NavbarLogo from './NavbarLogo';
 
 const Navbar = () => {
   const [dimensions, setDimensions] = useState({
@@ -18,37 +19,34 @@ const Navbar = () => {
 
   const start = (
     <LazyLoadComponent>
-      <iframe
-        className="myClassname"
-        height={dimensions.height / 10}
-        id="myId"
-        scrolling="no"
-        src="https://3d-box-animation.vercel.app/"
-        style={{ border: 0, verticalAlign: 'middle' }}
-        width={
-          dimensions.width < 650 ? dimensions.width / 5 : dimensions.width / 20
-        }
-      />
+      <div id="navbarLogoContainer">
+        <NavbarLogo />
+      </div>
     </LazyLoadComponent>
   );
 
   return (
     <div
-      className="sticky top-0 App bg-black-alpha-90"
+      className="sticky top-0 "
       id="navbar"
       style={{
         textShadow: '2px 2px 2px #01020E',
         width: dimensions.width,
       }}
     >
-      <div className="card">
-        <LazyLoadComponent>
+      <div>
+        <LazyLoadComponent
+          style={{ display: 'flex', justifyContent: 'space-between' }}
+        >
           <Menubar
             model={menuItems}
             start={start}
             end={end}
             style={{
-              backgroundColor: '#1a1a1a',
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               verticalAlign: 'middle',
               width: dimensions.width,
             }}
