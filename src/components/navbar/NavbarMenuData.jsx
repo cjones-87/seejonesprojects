@@ -45,7 +45,7 @@ export const menuItems = [
             autoStart: true,
             cursor: '',
             loop: false,
-            strings: 'About Me',
+            strings: 'About',
           }}
         />
       </span>
@@ -68,7 +68,7 @@ export const menuItems = [
             autoStart: true,
             cursor: '',
             loop: false,
-            strings: 'Learning Journal',
+            strings: 'Timeline',
           }}
         />
       </span>
@@ -114,7 +114,7 @@ export const menuItems = [
             autoStart: true,
             cursor: '',
             loop: false,
-            strings: 'Interactive Games',
+            strings: 'Games',
           }}
         />
       </span>
@@ -173,7 +173,7 @@ export const menuItems = [
             autoStart: true,
             cursor: '',
             loop: false,
-            strings: 'Hire Me',
+            strings: 'Contact',
           }}
         />
       </span>
@@ -185,18 +185,19 @@ export const menuItems = [
 export const end = (
   <div
     style={{
+      alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
       placeContent: 'center',
       verticalAlign: 'middle',
     }}
   >
-    <div style={{ paddingTop: '2rem' }}>
+    <div style={{ paddingLeft: '.5rem', paddingTop: '2rem' }}>
       <LazyLoadComponent>
         <SidePanelMenu />
       </LazyLoadComponent>
     </div>
-    <div style={{ paddingLeft: '1rem', paddingTop: '2rem' }}>
+    <div style={{ paddingLeft: '1rem' }}>
       <LazyLoadComponent>
         <DarkModeToggle />
       </LazyLoadComponent>
