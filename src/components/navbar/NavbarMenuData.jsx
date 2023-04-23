@@ -178,7 +178,6 @@ export const menuItems = [
         />
       </span>
     ),
-
     target: 'blank',
   },
 ];
@@ -188,15 +187,16 @@ export const end = (
     style={{
       display: 'flex',
       flexDirection: 'row',
+      placeContent: 'center',
       verticalAlign: 'middle',
     }}
   >
-    <div style={{ paddingTop: '1.5rem' }}>
+    <div style={{ paddingTop: '2rem' }}>
       <LazyLoadComponent>
         <SidePanelMenu />
       </LazyLoadComponent>
     </div>
-    <div style={{ paddingLeft: '1rem', paddingTop: '1.5rem' }}>
+    <div style={{ paddingLeft: '1rem', paddingTop: '2rem' }}>
       <LazyLoadComponent>
         <DarkModeToggle />
       </LazyLoadComponent>
