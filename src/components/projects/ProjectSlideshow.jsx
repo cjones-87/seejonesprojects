@@ -61,15 +61,15 @@ const ProjectSlideshow = ({ slides }) => {
       style={{
         fontSize: '1vmin',
         textShadow: '2px 2px 2px #01020E',
-        paddingTop: '1rem',
       }}
     >
       <h1
-        id="welcomeText"
+        id="gradientText"
         style={{
-          color: 'black',
-          fontSize: '5em',
-          paddingBottom: '2rem',
+          color:
+            localStorage.getItem('lightMode') === 'true' ? 'black' : '#434343',
+          fontSize: '10em',
+          paddingBottom: '4rem',
           textAlign: 'center',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
