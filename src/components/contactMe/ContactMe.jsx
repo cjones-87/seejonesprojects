@@ -29,13 +29,18 @@ const ContactMe = () => {
               ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
               : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
           fontSize: '1vmin',
+          marginTop: '-1.5rem',
         }}
       >
         <h1
-          id="welcomeText"
+          id="gradientText"
           style={{
-            color: 'black',
-            fontSize: '5em',
+            color:
+              localStorage.getItem('lightMode') === 'true'
+                ? 'black'
+                : '#434343',
+            fontSize: '10em',
+            marginBottom: '0rem',
             paddingTop: '2rem',
             paddingBottom: '2rem',
             textAlign: 'center',
