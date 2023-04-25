@@ -26,14 +26,17 @@ const AboutMe = () => {
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         fontSize: '1vmin',
+        marginTop: '-1.5rem',
         textAlign: 'center',
         width: innerWidth,
       }}
     >
       <h1
-        id="welcomeText"
+        id="gradientText"
         style={{
-          fontSize: '5em',
+          color:
+            localStorage.getItem('lightMode') === 'true' ? 'black' : '#434343',
+          fontSize: '10em',
           paddingTop: '2rem',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
