@@ -11,9 +11,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -23,7 +21,6 @@ export const menuItems = [
             loop: false,
             strings: 'Home',
           }}
-          style={{ color: 'red' }}
         />
       </span>
     ),
@@ -35,9 +32,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -58,9 +53,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -81,9 +74,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -104,9 +95,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -139,9 +128,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -163,9 +150,7 @@ export const menuItems = [
       <span
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
         }}
       >
         <Typewriter
@@ -188,6 +173,7 @@ export const end = (
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
+      paddingRight: '.5em',
       placeContent: 'center',
       verticalAlign: 'middle',
     }}
