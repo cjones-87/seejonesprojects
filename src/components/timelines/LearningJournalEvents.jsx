@@ -29,11 +29,11 @@ const learningJournalEvents = [
   {
     id: 10,
     status: 'Hypnotiq 2.0',
-    date: '2022',
+    date: '2023',
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
     color: '#FF9800',
-    description: 'Frontend Mobile App',
+    description: 'Mobile Music Player',
     link: '/projects/hypnotiq2',
     techStack: (
       <span>
@@ -69,7 +69,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
     color: '#607D8B',
-    description: 'Frontend SPA Multiple Choice Quiz',
+    description: 'Web Quiz App',
     link: '/projects/iykyk',
     techStack: (
       <span>
@@ -98,7 +98,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#9C27B0',
     image: seeJonesEngineer,
-    description: 'Frontend Personal Portfolio Web App',
+    description: 'Personal Portfolio Web App',
     link: '/projects/seejonesengineer',
     techStack: (
       <span>
@@ -127,7 +127,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#673AB7',
     iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
-    description: 'Full Stack Expo Mobile App',
+    description: 'Mobile Dating Networking App',
     link: '/projects/computerlove',
     techStack: (
       <span>
@@ -167,7 +167,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     color: '#FF9800',
-    description: 'Frontend Mobile App',
+    description: 'Mobile Music Player',
     link: '/projects/hypnotiq',
     techStack: (
       <span>
@@ -210,7 +210,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#9C27B0',
     image: browseBooks,
-    description: 'Full Stack Secure eCommerce',
+    description: 'Secure eCommerce Web App',
     link: '/projects/boundzbookstore',
     techStack: (
       <span>
@@ -250,7 +250,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#673AB7',
     image: IdleClickerPic,
-    description: 'Idle click and accrue game.',
+    description: 'Incremental Game Website',
     link: '/projects/idleclicker',
     techStack: (
       <span>
@@ -275,7 +275,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#FF9800',
     image: GuessingGamePic,
-    description: 'Guess the number in 5 guesses or less.',
+    description: 'Guessing Game Website',
     link: '/projects/guessinggame',
     techStack: (
       <span>
