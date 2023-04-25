@@ -42,13 +42,12 @@ const LearningJournalTimeline = () => {
           style={{
             background:
               localStorage.getItem('lightMode') === 'true'
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
             borderRadius: 25,
             color:
               localStorage.getItem('lightMode') === 'true'
-                ? 'whitesmoke'
+                ? '#ba68c8'
                 : 'indigo',
             textShadow:
               localStorage.getItem('lightMode') === 'true'
@@ -94,18 +93,29 @@ const LearningJournalTimeline = () => {
           <p>{item.techStack}</p>
           <Button
             label={
-              <a href={item.link} target="_blank">
+              <a
+                href={item.link}
+                style={{
+                  color:
+                    localStorage.getItem('lightMode') === 'true'
+                      ? 'indigo'
+                      : '#ba68c8',
+                  textShadow:
+                    localStorage.getItem('lightMode') === 'true'
+                      ? '1px 1px 1px #ba68c8'
+                      : '1px 1px 1px indigo',
+                }}
+                target="_blank"
+              >
                 Learn More
               </a>
             }
             className="p-button-text"
             style={{
-              backgroundColor: '#ce93d8',
-              borderRadius: 10,
-              color:
+              background:
                 localStorage.getItem('lightMode') === 'true'
-                  ? 'whitesmoke'
-                  : 'indigo',
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
             }}
           />
         </Card>
@@ -120,7 +130,6 @@ const LearningJournalTimeline = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-
         fontSize: '1vmin',
         textShadow:
           localStorage.getItem('lightMode') === 'true'
@@ -131,9 +140,11 @@ const LearningJournalTimeline = () => {
       }}
     >
       <h1
-        id="welcomeText"
+        id="gradientText"
         style={{
-          fontSize: '5em',
+          color:
+            localStorage.getItem('lightMode') === 'true' ? 'black' : '#434343',
+          fontSize: '10em',
           textAlign: 'center',
           paddingBottom: '1.5rem',
         }}
