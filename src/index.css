@@ -432,7 +432,7 @@ input[type='number']::-webkit-inner-spin-button {
   text-align: center;
 }
 
-#welcomeText {
+#gradientText {
   animation: gradientAnimation 6s linear infinite alternate,
     hue 6s linear infinite alternate;
   background-clip: text;
@@ -453,7 +453,7 @@ input[type='number']::-webkit-inner-spin-button {
   white-space: nowrap;
 }
 
-h1#welcomeText:hover {
+h1#gradientText:hover {
   animation: spinner 12s linear infinite alternate,
     gradientAnimation 6s linear infinite alternate,
     hue 6s linear infinite alternate;
