@@ -21,7 +21,6 @@ export default function PlayGames() {
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         textShadow: '2px 2px 2px #01020E',
-        paddingTop: '1rem',
         width: dimensions.width,
       }}
     >
@@ -31,7 +30,6 @@ export default function PlayGames() {
           flexDirection: 'column',
           justifyContent: 'space-evenly',
           textAlign: 'center',
-          paddingTop: '1rem',
         }}
       >
         <div>
@@ -40,11 +38,14 @@ export default function PlayGames() {
             style={{ fontSize: '1vmin' }}
           >
             <h1
-              id="welcomeText"
+              id="gradientText"
               style={{
-                color: 'black',
-                fontSize: '5em',
-                paddingBottom: '1rem',
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'black'
+                    : '#434343',
+                fontSize: '10em',
+                paddingBottom: '2rem',
                 textShadow:
                   localStorage.getItem('lightMode') === 'true'
                     ? '1px 1px 1px indigo'
@@ -71,7 +72,7 @@ export default function PlayGames() {
             style={{ fontSize: '1vmin' }}
           >
             <h1
-              id="welcomeText"
+              id="gradientText"
               style={{
                 color: 'black',
                 fontSize: '5em',
