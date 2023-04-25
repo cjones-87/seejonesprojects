@@ -69,11 +69,11 @@ const LandingPage = () => {
         width: dimensions.width,
       }}
     >
-      <h1 id="welcomeText">
+      <h1 id="gradientText">
         <strong>CJ Jones</strong>
       </h1>
 
-      <h2 id="welcomeText" style={{ fontSize: '10em' }}>
+      <h2 id="gradientText" style={{ fontSize: '10em' }}>
         <Typewriter
           options={{
             autoStart: true,
