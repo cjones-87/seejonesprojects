@@ -49,6 +49,7 @@ const ContactForm = () => {
         display: 'flex',
         justifyContent: 'center',
         marginBottom: '2rem',
+        paddingBottom: '2rem',
         textAlign: 'center',
       }}
     >
@@ -159,8 +160,14 @@ const ContactForm = () => {
         <div style={{ fontSize: '1vmin' }}>
           <button
             style={{
-              backgroundColor: '#ba68c8',
-              color: 'indigo',
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                  : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? '#ba68c8'
+                  : 'whitesmoke',
               borderRadius: '10px',
               fontSize: '2em',
               height: '2.5em',
