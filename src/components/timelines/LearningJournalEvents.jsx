@@ -127,7 +127,7 @@ const learningJournalEvents = [
     icon: 'pi pi-star',
     color: '#673AB7',
     iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
-    description: 'Mobile Dating Networking App',
+    description: 'Mobile Dating/Networking App',
     link: '/projects/computerlove',
     techStack: (
       <span>
@@ -230,11 +230,12 @@ const learningJournalEvents = [
         &nbsp;&nbsp;&nbsp;
         <SiExpress />
         &nbsp;&nbsp;&nbsp;
-        <SiHeroku />
-        &nbsp;&nbsp;&nbsp;
         <ImHtmlFive />
         &nbsp;&nbsp;&nbsp;
         <SiCss3 />
+        &nbsp;&nbsp;&nbsp; <SiHeroku />
+        &nbsp;&nbsp;&nbsp;
+        <SiVercel />
         &nbsp;&nbsp;&nbsp;Bcrypt&nbsp;&nbsp;&nbsp;JWT
       </span>
     ),
