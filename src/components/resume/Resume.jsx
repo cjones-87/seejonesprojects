@@ -32,15 +32,21 @@ const Resume = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        color: 'black',
+        color:
+          localStorage.getItem('lightMode') === 'true' ? 'black' : 'whitesmoke',
+        marginTop: '-1.5rem',
         width: dimensions.width,
       }}
     >
       <div style={{ fontSize: '1vmin' }}>
         <h1
-          id="welcomeText"
+          id="gradientText"
           style={{
-            fontSize: '5em',
+            color:
+              localStorage.getItem('lightMode') === 'true'
+                ? 'black'
+                : '#434343',
+            fontSize: '10em',
             paddingBottom: '1rem',
             paddingTop: '1rem',
             textAlign: 'center',
