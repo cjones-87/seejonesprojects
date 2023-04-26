@@ -30,11 +30,11 @@ const Footer = () => {
       <div
         style={{
           color:
-            localStorage.getItem('lightMode') === 'true' ? '#ba68c8' : 'indigo',
+            localStorage.getItem('lightMode') === 'true' ? 'indigo' : '#ba68c8',
           textShadow:
             localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px #01020E'
-              : '1px 1px 1px #f5f5f5',
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px black',
           textAlign: 'center',
           marginTop: '2rem',
           paddingTop: '2rem',
@@ -55,8 +55,9 @@ const Footer = () => {
                   style={{
                     color:
                       localStorage.getItem('lightMode') === 'true'
-                        ? '#ba68c8'
-                        : 'indigo',
+                        ? 'indigo'
+                        : '#ba68c8',
+
                     fontSize: '5em',
                     textDecoration: 'none',
                   }}
