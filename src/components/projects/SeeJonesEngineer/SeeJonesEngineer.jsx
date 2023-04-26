@@ -68,17 +68,16 @@ const SeeJonesEngineer = () => {
           >
             <Suspense fallback={<Spinner />}>
               <Card
-                className={
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'bg-black-alpha-20'
-                    : 'bg-black-alpha-90'
-                }
                 style={{
+                  background:
+                    localStorage.getItem('lightMode') === 'true'
+                      ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                      : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                   borderRadius: 25,
                   color:
                     localStorage.getItem('lightMode') === 'true'
-                      ? 'rebeccapurple'
-                      : 'whitesmoke',
+                      ? 'whitesmoke'
+                      : '#ba68c8',
                   textShadow:
                     localStorage.getItem('lightMode') === 'true'
                       ? '1px 1px 1px indigo'
