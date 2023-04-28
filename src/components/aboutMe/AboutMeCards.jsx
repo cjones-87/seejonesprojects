@@ -72,7 +72,10 @@ const AboutMeCards = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color: 'rebeccapurple',
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'indigo'
+                    : '#ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -86,7 +89,10 @@ const AboutMeCards = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color: 'rebeccapurple',
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'indigo'
+                    : '#ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -121,17 +127,16 @@ const AboutMeCards = ({ slides }) => {
                 <div style={{ marginTop: '2rem' }}>
                   <Suspense fallback={<Spinner />}>
                     <Card
-                      className={
-                        localStorage.getItem('lightMode') === 'true'
-                          ? 'bg-black-alpha-20'
-                          : 'bg-black-alpha-40'
-                      }
                       style={{
+                        background:
+                          localStorage.getItem('lightMode') === 'true'
+                            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
                         borderRadius: 25,
                         color:
                           localStorage.getItem('lightMode') === 'true'
-                            ? 'rebeccapurple'
-                            : 'whitesmoke',
+                            ? '#ba68c8'
+                            : 'indigo',
                         textShadow:
                           localStorage.getItem('lightMode') === 'true'
                             ? '1px 1px 1px indigo'
