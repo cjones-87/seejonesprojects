@@ -11,6 +11,7 @@ const Specialization = () => {
       style={{
         color:
           localStorage.getItem('lightMode') === 'true' ? 'indigo' : 'white',
+        fontSize: '1vmin',
         textShadow:
           localStorage.getItem('lightMode') === 'true'
             ? '1px 1px 1px whitesmoke'
@@ -21,7 +22,7 @@ const Specialization = () => {
         paddingTop: 100,
       }}
     >
-      <div style={{ fontSize: '1.25em' }}>
+      <h4 style={{ fontSize: '3em' }}>
         <big>
           <b>
             <Typewriter
@@ -34,19 +35,22 @@ const Specialization = () => {
             />
           </b>
         </big>
+      </h4>
 
+      <div>
         {WebDevelopmentData.map((data, index) => (
           <a href={data.href} key={index} rel="noreferrer" target="_blank">
             <img
               alt={data.alt}
-              height="40"
               key={index}
               src={data.src}
-              width="40"
+              style={{ height: '5em', width: '5em' }}
             />
           </a>
         ))}
+      </div>
 
+      <h4 style={{ fontSize: '3em' }}>
         <big>
           <b>
             <Typewriter
@@ -59,19 +63,23 @@ const Specialization = () => {
             />
           </b>
         </big>
+      </h4>
 
+      <div>
+        {' '}
         {MobileDevelopmentData.map((data, index) => (
           <a href={data.href} key={index} rel="noreferrer" target="_blank">
             <img
               alt={data.alt}
-              height="40"
               key={index}
               src={data.src}
-              width="40"
+              style={{ height: '5em', width: '5em' }}
             />
           </a>
         ))}
+      </div>
 
+      <h4 style={{ fontSize: '3em' }}>
         <big>
           <b>
             <Typewriter
@@ -84,7 +92,7 @@ const Specialization = () => {
             />
           </b>
         </big>
-      </div>
+      </h4>
     </div>
   );
 };
