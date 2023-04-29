@@ -1,21 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { imageNotFound } from '../../photos/PhotoExports';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/ProjectSlideshow.css';
 
 const ProjectSlideshow = ({ slides }) => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  const handleError = (e) => {
-    e.target.src = imageNotFound;
-    e.onerror = null;
-    return e;
-  };
+  const { height, width } = useWindowDimensions();
 
   const [current, setCurrent] = useState(0);
   const slidesLength = slides.length;
@@ -37,11 +29,6 @@ const ProjectSlideshow = ({ slides }) => {
   };
 
   useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerWidth, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
@@ -54,7 +41,7 @@ const ProjectSlideshow = ({ slides }) => {
     return () => {
       resetTimeout();
     };
-  }, [current, dimensions.width, dimensions.height]);
+  });
 
   return (
     <div
@@ -138,28 +125,28 @@ const ProjectSlideshow = ({ slides }) => {
                     {slide.iframe ? (
                       <iframe
                         allow="autoplay"
-                        height={dimensions.height / 2}
-                        onError={handleError}
+                        height={height / 2}
+                        onError={handleImageFailure}
                         src={slide.iframe}
                         style={{
                           border: 0,
                           borderRadius: 25,
                         }}
-                        width={dimensions.width / 2}
+                        width={width / 2}
                       />
                     ) : (
                       <LazyLoadImage
                         className="image"
                         alt={slide.caption}
                         effect="blur"
-                        height={dimensions.height / 2}
-                        onError={handleError}
+                        height={height / 2}
+                        onError={handleImageFailure}
                         src={slide.image}
                         style={{
                           borderRadius: 25,
                           padding: 10,
                         }}
-                        width={dimensions.width / 2}
+                        width={width / 2}
                       />
                     )}
                   </div>
