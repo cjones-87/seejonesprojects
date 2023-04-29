@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import Routes from './navigation/NavigationRoutes';
-import Spinner from './misc/Spinner';
+import Spinner from '../misc/Spinner';
 import './index.css';
 
 const Navbar = lazy(() => import('./components/navbar/Navbar'));
