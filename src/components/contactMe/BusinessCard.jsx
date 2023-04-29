@@ -1,28 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { CJTransparentBackground } from '../../photos/PhotoExports';
-import footerContent from '../footer/FooterContentData';
-import BackLogo from '../../photos/favicon.png';
+import React from 'react';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const BusinessCard = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   return (
     <iframe
-      height={dimensions.height / 2}
+      height={height / 2}
       scrolling="no"
       src="https://3d-business-card.vercel.app/"
       style={{ border: 0 }}
-      width={dimensions.width}
+      width={width}
     />
   );
 };
