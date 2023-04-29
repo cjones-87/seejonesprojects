@@ -1,26 +1,14 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import Spinner from '../../../misc/Spinner';
-import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import React, { Suspense } from 'react';
+import Spinner from '../../../../misc/Spinner';
+import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
+import handleImageFailure from '../../../../misc/helpers/handleImageFailure';
 import Hypnotiq2Data from './Hypnotiq2Data';
 import { Card } from 'primereact/card';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Hypnotiq2 = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({
-        height: innerHeight,
-        width: innerWidth,
-      });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   return (
     <>
@@ -29,7 +17,7 @@ const Hypnotiq2 = () => {
           <Suspense fallback={<Spinner />}>
             {item.iframe ? (
               <iframe
-                height={dimensions.height / 4}
+                height={height / 4}
                 onError={handleImageFailure}
                 src={item.iframe}
                 style={{
@@ -37,20 +25,20 @@ const Hypnotiq2 = () => {
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={dimensions.width}
+                width={width}
               />
             ) : (
               <LazyLoadImage
                 alt={item.alt}
                 effect="blur"
-                height={dimensions.height / 4}
+                height={height / 4}
                 onError={handleImageFailure}
                 src={item.img}
                 style={{
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={dimensions.width}
+                width={width}
               />
             )}
           </Suspense>
@@ -84,7 +72,7 @@ const Hypnotiq2 = () => {
                       : '1px 1px 1px whitesmoke',
                 }}
                 header={header}
-                width={dimensions.width / 5}
+                width={width / 5}
               >
                 <p className="m-0" style={{ textAlign: 'center' }}>
                   {item.paragraph}
