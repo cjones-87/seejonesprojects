@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ContactFormData, { OptionData } from './data/ContactFormData';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const ContactForm = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
+  const { height, width } = useWindowDimensions();
 
   const firstName = useRef();
   const lastName = useRef();
@@ -24,16 +22,6 @@ const ContactForm = () => {
 
   const refs = [firstName, lastName, email, phoneNumber, budget, availability];
 
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({
-        height: innerHeight,
-        width: innerWidth,
-      });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
-
   return (
     <div
       style={{
@@ -51,6 +39,10 @@ const ContactForm = () => {
         marginBottom: '2rem',
         paddingBottom: '2rem',
         textAlign: 'center',
+        textShadow:
+          localStorage.getItem('lightMode') === 'true'
+            ? '1px 1px 1px black'
+            : '1px 1px 1px indigo',
       }}
     >
       <form
@@ -87,9 +79,10 @@ const ContactForm = () => {
               ref={refs[index]}
               required
               style={{
+                backgroundColor: 'gray',
                 borderRadius: '10px',
-                height: dimensions.height / 20,
-                width: dimensions.width / 2,
+                height: height / 20,
+                width: width / 2,
               }}
               type={data.type}
             />
@@ -115,9 +108,10 @@ const ContactForm = () => {
             ref={preferredContactMethod}
             required
             style={{
+              backgroundColor: 'gray',
               borderRadius: '10px',
-              height: dimensions.height / 20,
-              width: dimensions.width / 2,
+              height: height / 20,
+              width: width / 2,
             }}
           >
             {OptionData.map((data, index) => (
@@ -147,11 +141,12 @@ const ContactForm = () => {
             name="jobDescription"
             ref={jobDetails}
             style={{
+              backgroundColor: 'gray',
               borderRadius: '10px',
-              height: dimensions.height / 20,
+              height: height / 20,
               overflowX: 'hidden',
               resize: 'vertical',
-              width: dimensions.width / 2,
+              width: width / 2,
             }}
             type="text"
           />
