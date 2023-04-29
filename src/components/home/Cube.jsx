@@ -1,17 +1,8 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Cube = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -19,18 +10,18 @@ const Cube = () => {
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
         paddingBottom: '2rem',
-        width: dimensions.width,
+        width,
       }}
     >
-      <div className="App" style={{ width: dimensions.width }}>
+      <div className="App">
         <Suspense>
           <iframe
             className="myClassname"
-            height={dimensions.height / 2}
+            height={height / 2}
             id="myId"
             src="https://3d-box-animation.vercel.app/"
             style={{ border: 0 }}
-            width={dimensions.width}
+            width={width}
           />
         </Suspense>
       </div>
