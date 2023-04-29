@@ -1,6 +1,7 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import Spinner from '../../misc/Spinner';
-import handleImageFailure from '../../misc/helpers/handleImageFailure';
+import React, { Suspense } from 'react';
+import Spinner from '../../../misc/Spinner';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import learningJournalEvents from './LearningJournalEvents';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
@@ -9,18 +10,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LearningJournalTimeline = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setDimensions({ height: innerHeight, width: innerWidth });
-    };
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   const customizedMarker = (item) => {
     return (
@@ -63,14 +53,14 @@ const LearningJournalTimeline = () => {
               <Suspense fallback={<Spinner />}>
                 <iframe
                   allow="autoplay"
-                  height={dimensions.height / 3}
+                  height={height / 3}
                   onError={handleImageFailure}
                   src={item.iframe}
                   style={{
                     border: 0,
                     borderRadius: 25,
                   }}
-                  width={dimensions.width / 2.5}
+                  width={width / 2.5}
                 />
               </Suspense>
             </div>
@@ -79,14 +69,14 @@ const LearningJournalTimeline = () => {
               alt={item.name}
               className="p-shadow-2"
               effect="blur"
-              height={dimensions.height / 3}
+              height={height / 3}
               onError={handleImageFailure}
               src={item.image}
               style={{
                 borderRadius: 25,
                 padding: 10,
               }}
-              width={dimensions.width / 2.5}
+              width={width / 2.5}
             />
           )}
           <p>{item.description}</p>
@@ -136,7 +126,7 @@ const LearningJournalTimeline = () => {
             ? '1px 1px 1px black'
             : '1px 1px 1px whitesmoke',
         paddingTop: '1rem',
-        width: dimensions.width,
+        width: width,
       }}
     >
       <h1
