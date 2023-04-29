@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import { Tooltip } from 'primereact/tooltip';
 import { NavLink } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
@@ -8,17 +9,7 @@ const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+  const { height, width } = useWindowDimensions();
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -35,7 +26,7 @@ const Resume = () => {
         color:
           localStorage.getItem('lightMode') === 'true' ? 'black' : 'whitesmoke',
         marginTop: '-1.5rem',
-        width: dimensions.width,
+        width,
       }}
     >
       <div style={{ fontSize: '1vmin' }}>
@@ -64,11 +55,7 @@ const Resume = () => {
           file={'/CJsSoftwareEngineeringResume.pdf'}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page
-            height={dimensions.height}
-            pageNumber={pageNumber}
-            width={dimensions.width}
-          />
+          <Page height={height} pageNumber={pageNumber} width={width} />
           <span
             style={{
               textAlign: 'center',
