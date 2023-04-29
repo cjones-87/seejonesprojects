@@ -1,18 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import GithubActivityData from './data/GithubActivityData';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const GithubActivity = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -30,10 +21,10 @@ const GithubActivity = () => {
       {GithubActivityData.map((data, index) => (
         <a href={data.href} key={index}>
           <iframe
-            height={dimensions.height / 3}
+            height={height / 3}
             key={index}
             src={data.src}
-            width={dimensions.width / 3}
+            width={width / 3}
           />
         </a>
       ))}
