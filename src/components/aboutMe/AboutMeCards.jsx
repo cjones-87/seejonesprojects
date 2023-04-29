@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
-import handleImageFailure from '../../misc/helpers/handleImageFailure';
-import Spinner from '../../misc/Spinner';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import Spinner from '../../../misc/Spinner';
 import { Card } from 'primereact/card';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -10,10 +11,8 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
 const AboutMeCards = ({ slides }) => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
+  const { height, width } = useWindowDimensions();
+
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -43,15 +42,10 @@ const AboutMeCards = ({ slides }) => {
       20000
     );
 
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-
     return () => {
       resetTimeout();
     };
-  }, [current, dimensions.width, dimensions.height]);
+  });
 
   return (
     <div
@@ -113,7 +107,7 @@ const AboutMeCards = ({ slides }) => {
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={dimensions.width / 2}
+                width={width / 2}
               />
             </Suspense>
           );
@@ -141,7 +135,7 @@ const AboutMeCards = ({ slides }) => {
                           localStorage.getItem('lightMode') === 'true'
                             ? '1px 1px 1px indigo'
                             : '1px 1px 1px whitesmoke',
-                        width: dimensions.width / 2,
+                        width: width / 2,
                       }}
                       header={header}
                     >
