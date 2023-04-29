@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { end, menuItems } from './NavbarMenuData';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import NavbarLogo from './NavbarLogo';
 
 const Navbar = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   const start = (
     <LazyLoadComponent>
@@ -31,7 +22,7 @@ const Navbar = () => {
       id="navbar"
       style={{
         textShadow: '2px 2px 2px #01020E',
-        width: dimensions.width,
+        width,
       }}
     >
       <div>
@@ -48,7 +39,7 @@ const Navbar = () => {
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               verticalAlign: 'middle',
-              width: dimensions.width,
+              width,
             }}
           />
         </LazyLoadComponent>
