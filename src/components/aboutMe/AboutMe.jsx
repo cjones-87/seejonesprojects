@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import AboutMeCards from './AboutMeCards';
+import React from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { AboutMeData } from './data/AboutMeData';
+import AboutMeCards from './AboutMeCards';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import Specialization from '../techSkills/Specialization';
 import TechSkills from '../techSkills/TechSkills';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const AboutMe = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+  const { height, width } = useWindowDimensions;
 
   return (
     <div
@@ -28,7 +19,7 @@ const AboutMe = () => {
         fontSize: '1vmin',
         marginTop: '-1.5rem',
         textAlign: 'center',
-        width: innerWidth,
+        width,
       }}
     >
       <h1
