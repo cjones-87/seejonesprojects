@@ -1,27 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from 'primereact/button';
+import React from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import BusinessCard from './BusinessCard';
 import ContactForm from './ContactForm';
 
 const ContactMe = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({
-        height: innerHeight,
-        width: innerWidth,
-      });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   return (
-    <div>
+    <div style={{ width }}>
       <div
         style={{
           background:
