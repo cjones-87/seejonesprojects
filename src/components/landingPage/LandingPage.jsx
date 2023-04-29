@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   BackendData,
   FrontendData,
@@ -7,6 +7,7 @@ import {
 } from '../techSkills/TechSkillsData';
 import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 import 'primeicons/primeicons.css';
@@ -14,29 +15,9 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
 const LandingPage = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  function debounce(func, delay) {
-    let timeoutId;
-    return function (...args) {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func.apply(this, args), delay);
-    };
-  }
+  const { height, width } = useWindowDimensions();
 
   useEffect(() => {
-    const handleResize = debounce(() => {
-      if (innerWidth !== dimensions.width) {
-        setDimensions({ height: innerHeight, width: innerWidth });
-        window.location.reload();
-      }
-    });
-
-    window.addEventListener('resize', handleResize);
-
     const playSoundWhileEnteringSite = () => {
       setTimeout(() => (window.location.href = '/home'), 2000);
       const audio = new Audio(OpenUp);
@@ -53,9 +34,7 @@ const LandingPage = () => {
 
     const siteEntrance = document.getElementById('enterSite');
     siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+  });
 
   return (
     <div
@@ -65,8 +44,8 @@ const LandingPage = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        height: dimensions.height < 900 ? '230vh' : '125vh',
-        width: dimensions.width,
+        height: height < 900 ? '230vh' : '125vh',
+        width,
       }}
     >
       <h1 id="gradientText">
@@ -118,7 +97,7 @@ const LandingPage = () => {
               ? 'rgb(75, 0, 130, 0.3)'
               : 'rgb(128, 128, 128, 0.3)',
           fontSize: '4em',
-          width: dimensions.width,
+          width,
         }}
       >
         I am a freelance software engineer, passionate about learning &
@@ -129,11 +108,7 @@ const LandingPage = () => {
       </div>
 
       <div id="sectionC">
-        <div
-          align="center"
-          id="sectionC1"
-          style={{ width: dimensions.width / 3 }}
-        >
+        <div align="center" id="sectionC1" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Proficient Languages
           </h4>
@@ -150,11 +125,7 @@ const LandingPage = () => {
           ))}
         </div>
 
-        <div
-          align="center"
-          id="sectionC2"
-          style={{ width: dimensions.width / 3 }}
-        >
+        <div align="center" id="sectionC2" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Familiar (Read-Only) Languages
           </h4>
@@ -168,11 +139,7 @@ const LandingPage = () => {
           </a>
         </div>
 
-        <div
-          align="center"
-          id="sectionC1"
-          style={{ width: dimensions.width / 3 }}
-        >
+        <div align="center" id="sectionC1" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Knowledgeable Languages
           </h4>
@@ -191,8 +158,8 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div id="sectionC" style={{ width: dimensions.width }}>
-        <div className="sectionC2" style={{ width: dimensions.width / 3 }}>
+      <div id="sectionC" style={{ width }}>
+        <div className="sectionC2" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Front-End
           </h4>
@@ -209,7 +176,7 @@ const LandingPage = () => {
           ))}
         </div>
 
-        <div className="sectionC1" style={{ width: dimensions.width / 3 }}>
+        <div className="sectionC1" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Tools
           </h4>
@@ -226,7 +193,7 @@ const LandingPage = () => {
             </a>
           ))}
         </div>
-        <div className="sectionC2" style={{ width: dimensions.width / 3 }}>
+        <div className="sectionC2" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Back-End
           </h4>
@@ -248,24 +215,24 @@ const LandingPage = () => {
       <div
         id="sectionC"
         style={{
-          width: dimensions.width,
+          width,
         }}
       >
         <div
           className="sectionC1"
-          style={{ fontSize: '3em', width: dimensions.width / 3 }}
+          style={{ fontSize: '3em', width: width / 3 }}
         >
           Web Apps
         </div>
         <div
           className="sectionC2"
-          style={{ fontSize: '3em', width: dimensions.width / 3 }}
+          style={{ fontSize: '3em', width: width / 3 }}
         >
           Mobile Apps
         </div>
         <div
           className="sectionC1"
-          style={{ fontSize: '3em', width: dimensions.width / 3 }}
+          style={{ fontSize: '3em', width: width / 3 }}
         >
           Websites
         </div>
