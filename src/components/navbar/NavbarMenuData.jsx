@@ -215,6 +215,7 @@ export const end = (
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
+      marginRight: '1rem',
       paddingRight: '.5em',
       placeContent: 'center',
       verticalAlign: 'middle',
