@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
-export default function PlayGames() {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.height, dimensions.width]);
+const PlayGames = () => {
+  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -21,7 +12,7 @@ export default function PlayGames() {
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         textShadow: '2px 2px 2px #01020E',
-        width: dimensions.width,
+        width,
       }}
     >
       <div
@@ -58,11 +49,11 @@ export default function PlayGames() {
 
           <iframe
             className="myClassname"
-            height={dimensions.height / 1.5}
+            height={height / 1.5}
             id="myId"
             src="https://mugnificent-coffee-clicker.vercel.app/"
             style={{ border: 0 }}
-            width={dimensions.width / 1.5}
+            width={width / 1.5}
           />
         </div>
 
@@ -89,14 +80,16 @@ export default function PlayGames() {
 
           <iframe
             className="myClassname"
-            height={dimensions.height / 1.5}
+            height={height / 1.5}
             id="myId"
             src="https://guessing-game-blue.vercel.app/"
             style={{ border: 0 }}
-            width={dimensions.width / 1.5}
+            width={width / 1.5}
           />
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default PlayGames;
