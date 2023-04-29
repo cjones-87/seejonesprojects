@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { ToggleButton } from 'primereact/togglebutton';
 import { Button } from 'primereact/button';
 import useLocalStorage from 'use-local-storage';
 
@@ -8,7 +7,7 @@ const DarkMode = () => {
 
   useEffect(() => {
     const toggleLightDarkMode = () => {
-      setLightMode((current) => (current = !current));
+      setLightMode((current) => !current);
       window.location.reload();
     };
 
@@ -37,7 +36,7 @@ const DarkMode = () => {
         icon={lightMode ? 'pi pi-moon' : 'pi pi-sun'}
         tooltip={lightMode ? 'Switch to dark mode' : 'Switch to light mode'}
         tooltipOptions={{ position: 'bottom' }}
-        toggleable
+        toggleable="true"
       />
     </div>
   );
