@@ -1,7 +1,8 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import handleImageFailure from '../../misc/helpers/handleImageFailure';
+import React, { Suspense, useEffect } from 'react';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import ProjectSlideshow from './ProjectSlideshow';
-import Spinner from '../../misc/Spinner';
+import Spinner from '../../../misc/Spinner';
 import {
   header,
   footer,
@@ -17,15 +18,8 @@ import './ProjectsCSS/Projects.css';
 import './ProjectsCSS/ProjectSlideshow.css';
 
 const AllProjects = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
+  const { height, width } = useWindowDimensions();
   useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerWidth, width: innerWidth });
-
     const navigateToLearningJournal = document.getElementById(
       'navigateToLearningJournal'
     );
@@ -33,12 +27,11 @@ const AllProjects = () => {
     const handleNavigationToLearningJournal = () =>
       (window.location.pathname = '/learningjournal');
 
-    window.addEventListener('resize', handleResize);
     navigateToLearningJournal.addEventListener(
       'click',
       handleNavigationToLearningJournal
     );
-  }, [dimensions.width, dimensions.height]);
+  });
 
   const imageBodyTemplate = (rowData) => {
     return (
@@ -49,7 +42,7 @@ const AllProjects = () => {
               <iframe
                 allow="autoplay"
                 className={'project-image'}
-                height={dimensions.height / 10}
+                height={height / 10}
                 onError={handleImageFailure}
                 src={rowData.iframe}
                 style={{
@@ -58,7 +51,7 @@ const AllProjects = () => {
                   borderRadius: 25,
                   padding: '5px',
                 }}
-                width={dimensions.width / 10}
+                width={width / 10}
               />
             </Suspense>
           </div>
@@ -67,7 +60,7 @@ const AllProjects = () => {
             alt={rowData.image}
             className={'project-image'}
             effect="blur"
-            height={dimensions.height / 10}
+            height={height / 10}
             onError={handleImageFailure}
             src={rowData.image}
             style={{
@@ -75,7 +68,7 @@ const AllProjects = () => {
               borderRadius: 25,
               padding: '5px',
             }}
-            width={dimensions.width / 10}
+            width={width / 10}
           />
         )}
       </>
@@ -93,7 +86,7 @@ const AllProjects = () => {
 
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
-        width: dimensions.width,
+        width: width,
       }}
     >
       <div style={{ marginBottom: '2rem' }}>
