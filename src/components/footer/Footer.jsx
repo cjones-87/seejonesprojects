@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import FooterContent from './FooterContentData';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
-  const [dimensions, setDimensions] = useState({
-    height: innerHeight,
-    width: innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setDimensions({ height: innerHeight, width: innerWidth });
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-  }, [dimensions.width, dimensions.height]);
+  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -24,7 +14,7 @@ const Footer = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        width: dimensions.width,
+        width,
       }}
     >
       <div
