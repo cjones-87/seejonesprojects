@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterContent from './FooterContentData';
+import FooterContentData from './FooterContentData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
             justifyContent: 'space-evenly',
           }}
         >
-          {FooterContent.map((item, index) => {
+          {FooterContentData.map((item, index) => {
             return (
               <a key={index} href={item.href} target="_blank">
                 <i
