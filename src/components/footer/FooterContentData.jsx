@@ -1,4 +1,4 @@
-const FooterContent = [
+const FooterContentData = [
   {
     className: 'fa fa-file-pdf fa-lg white-text mr-md-5 mr-3 fa-2x',
     href: '/CJsSoftwareEngineeringResume.pdf',
@@ -10,6 +10,10 @@ const FooterContent = [
   {
     className: 'fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x',
     href: 'https://www.linkedin.com/in/cjones1827/',
+  },
+  {
+    className: 'fa fa-github fa-lg white-text mr-md-5 mr-3 fa-2x',
+    href: 'https://www.github.com/cjones-87/',
   },
   {
     className: 'fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x',
@@ -33,4 +37,4 @@ const FooterContent = [
   },
 ];
 
-export default FooterContent;
+export default FooterContentData;
