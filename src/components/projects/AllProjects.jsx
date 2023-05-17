@@ -83,7 +83,6 @@ const AllProjects = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-
         textShadow: '2px 2px 2px #01020E',
         paddingTop: '1rem',
         width: width,
@@ -99,17 +98,47 @@ const AllProjects = () => {
           footer={footer}
           responsiveLayout="scroll"
         >
-          <Column field="name" header="Title"></Column>
+          <Column
+            field="name"
+            header="Title"
+            style={{
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            }}
+          ></Column>
           <Column
             header="Image"
             body={imageBodyTemplate}
-            style={{ paddingRight: '4rem' }}
+            style={{
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              paddingRight: '4rem',
+            }}
           ></Column>
-          <Column field="category" header="Category"></Column>
+          <Column
+            field="category"
+            header="Category"
+            style={{
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            }}
+          ></Column>
           <Column
             field="rating"
             header="Difficulty Level"
             body={ratingBodyTemplate}
+            style={{
+              background:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            }}
           ></Column>
         </DataTable>
       </div>
