@@ -106,6 +106,11 @@ const AllProjects = () => {
                 localStorage.getItem('lightMode') === 'true'
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'indigo'
+                  : '#ba68c8',
+              textShadow: '1px 1px 1px whitesmoke',
             }}
           ></Column>
           <Column
@@ -116,7 +121,12 @@ const AllProjects = () => {
                 localStorage.getItem('lightMode') === 'true'
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'indigo'
+                  : '#ba68c8',
               paddingRight: '4rem',
+              textShadow: '1px 1px 1px whitesmoke',
             }}
           ></Column>
           <Column
@@ -127,6 +137,11 @@ const AllProjects = () => {
                 localStorage.getItem('lightMode') === 'true'
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'indigo'
+                  : '#ba68c8',
+              textShadow: '1px 1px 1px whitesmoke',
             }}
           ></Column>
           <Column
@@ -138,6 +153,11 @@ const AllProjects = () => {
                 localStorage.getItem('lightMode') === 'true'
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              color:
+                localStorage.getItem('lightMode') === 'true'
+                  ? 'indigo'
+                  : '#ba68c8',
+              textShadow: '1px 1px 1px whitesmoke',
             }}
           ></Column>
         </DataTable>
