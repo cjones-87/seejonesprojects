@@ -11,7 +11,7 @@ export default function TechSkills() {
     <div
       style={{
         color:
-          localStorage.getItem('lightMode') === 'true' ? 'indigo' : 'white',
+          localStorage.getItem('lightMode') === 'true' ? 'indigo' : '#ba68c8',
         fontSize: '1vmin',
         textShadow:
           localStorage.getItem('lightMode') === 'true'
