@@ -84,7 +84,10 @@ const ProjectSlideshow = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color: 'rebeccapurple',
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'indigo'
+                    : 'ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -98,7 +101,10 @@ const ProjectSlideshow = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color: 'rebeccapurple',
+                color:
+                  localStorage.getItem('lightMode') === 'true'
+                    ? 'indigo'
+                    : 'ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
