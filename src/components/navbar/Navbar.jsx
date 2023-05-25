@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
 import { end, menuItems } from './NavbarMenuData';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
@@ -7,10 +8,15 @@ import NavbarLogo from './NavbarLogo';
 
 const Navbar = () => {
   const { height, width } = useWindowDimensions();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/');
+  };
 
   const start = (
     <LazyLoadComponent>
-      <div id="navbarLogoContainer">
+      <div id="navbarLogoContainer" onClick={handleClick}>
         <NavbarLogo />
       </div>
     </LazyLoadComponent>
@@ -38,7 +44,6 @@ const Navbar = () => {
                 localStorage.getItem('lightMode') === 'true'
                   ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              verticalAlign: 'middle',
               width,
             }}
           />
