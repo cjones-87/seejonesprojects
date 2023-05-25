@@ -83,7 +83,11 @@ const AllProjects = () => {
           localStorage.getItem('lightMode') === 'true'
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        textShadow: '2px 2px 2px #01020E',
+        color:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'whitesmoke'
+            : '#ba68c8',
+        textShadow: '2px 2px 2px indigo',
         paddingTop: '1rem',
         width: width,
       }}
@@ -108,9 +112,9 @@ const AllProjects = () => {
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               color:
                 localStorage.getItem('lightMode') === 'true'
-                  ? 'indigo'
+                  ? 'whitesmoke'
                   : '#ba68c8',
-              textShadow: '1px 1px 1px whitesmoke',
+              textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
           <Column
@@ -123,10 +127,10 @@ const AllProjects = () => {
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               color:
                 localStorage.getItem('lightMode') === 'true'
-                  ? 'indigo'
+                  ? 'whitesmoke'
                   : '#ba68c8',
               paddingRight: '4rem',
-              textShadow: '1px 1px 1px whitesmoke',
+              textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
           <Column
@@ -139,9 +143,9 @@ const AllProjects = () => {
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               color:
                 localStorage.getItem('lightMode') === 'true'
-                  ? 'indigo'
+                  ? 'whitesmoke'
                   : '#ba68c8',
-              textShadow: '1px 1px 1px whitesmoke',
+              textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
           <Column
@@ -155,9 +159,9 @@ const AllProjects = () => {
                   : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
               color:
                 localStorage.getItem('lightMode') === 'true'
-                  ? 'indigo'
+                  ? 'whitesmoke'
                   : '#ba68c8',
-              textShadow: '1px 1px 1px whitesmoke',
+              textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
         </DataTable>
