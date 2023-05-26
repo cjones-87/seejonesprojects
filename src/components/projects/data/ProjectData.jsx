@@ -51,7 +51,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/hypnotiq2'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Hypnotiq 2.0
@@ -68,7 +74,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/iykyk'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         All I Know Is, IYKYK
@@ -85,7 +97,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/seejonesengineer'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         See Jones Engineer
@@ -102,7 +120,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/computerlove'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Computer Love
@@ -119,7 +143,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/hypnotiq'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Hypnotiq
@@ -136,7 +166,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/boundzbookstore'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Boundz Bookstore
@@ -153,7 +189,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/idleclicker'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Idle Clicker
@@ -170,7 +212,13 @@ export const projects = [
     name: (
       <a
         href={'/projects/guessinggame'}
-        style={{ color: 'whitesmoke', textDecoration: 'none' }}
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? 'whitesmoke'
+              : '#ba68c8',
+          textDecoration: 'none',
+        }}
         target="_blank"
       >
         Guessing Game
@@ -191,17 +239,55 @@ export const ratingBodyTemplate = (rowData) => {
 };
 
 export const header = (
-  <div className="table-header">
+  <div
+    className="table-header"
+    style={{
+      background:
+        localStorage.getItem('lightMode') === 'true'
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+      borderRadius: '5px',
+      color:
+        localStorage.getItem('lightMode') === 'true' ? 'whitesmoke' : '#ba68c8',
+      padding: '5px',
+      textShadow: '1px 1px 1px indigo',
+    }}
+  >
     See Jones Projects
     <Button
       id="navigateToLearningJournal"
       icon="pi pi-images"
+      style={{
+        background:
+          localStorage.getItem('lightMode') === 'true'
+            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+        color:
+          localStorage.getItem('lightMode') === 'true'
+            ? '#ba68c8'
+            : 'whitesmoke',
+      }}
       tooltip="View in my learning journal"
       tooltipOptions={{ position: 'left' }}
     />
   </div>
 );
 
-export const footer = `In total there are ${
-  projects ? projects.length : 0
-} projects.`;
+export const footer = (
+  <div
+    style={{
+      background:
+        localStorage.getItem('lightMode') === 'true'
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+      borderRadius: '5px',
+      color:
+        localStorage.getItem('lightMode') === 'true' ? 'whitesmoke' : '#ba68c8',
+      padding: '10px',
+      textShadow: '1px 1px 1px indigo',
+    }}
+  >
+    {' '}
+    In total there are {projects ? projects.length : 0} projects.
+  </div>
+);
