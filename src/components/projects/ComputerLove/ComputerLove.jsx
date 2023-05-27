@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import ComputerLoveData from './ComputerLoveData';
+import ComputerLoveData from '../data/ComputerLoveData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const ComputerLove = () => {
