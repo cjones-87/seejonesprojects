@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterContentData from './FooterContentData';
+import FooterContentData from './data/FooterContentData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
