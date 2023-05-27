@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import GuessingGameData from './GuessingGameData';
+import GuessingGameData from '../data/GuessingGameData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const GuessingGame = () => {
