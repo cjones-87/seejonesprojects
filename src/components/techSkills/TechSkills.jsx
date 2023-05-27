@@ -4,19 +4,18 @@ import {
   FrontendData,
   LanguagesData,
   ToolsData,
-} from './TechSkillsData';
+} from './data/TechSkillsData';
 
 export default function TechSkills() {
   return (
     <div
       style={{
         color:
-          localStorage.getItem('lightMode') === 'true' ? 'indigo' : '#ba68c8',
-        fontSize: '1vmin',
-        textShadow:
           localStorage.getItem('lightMode') === 'true'
-            ? '2px 2px 2px whitesmoke'
-            : '2px 2px 2px indigo',
+            ? 'whitesmoke'
+            : '#ba68c8',
+        fontSize: '1vmin',
+        textShadow: '2px 2px 2px indigo',
         paddingBottom: '2rem',
         paddingTop: '1rem',
       }}
