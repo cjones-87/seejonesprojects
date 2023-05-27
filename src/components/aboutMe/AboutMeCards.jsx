@@ -130,11 +130,8 @@ const AboutMeCards = ({ slides }) => {
                         color:
                           localStorage.getItem('lightMode') === 'true'
                             ? '#ba68c8'
-                            : 'indigo',
-                        textShadow:
-                          localStorage.getItem('lightMode') === 'true'
-                            ? '1px 1px 1px indigo'
-                            : '1px 1px 1px whitesmoke',
+                            : 'whitesmoke',
+                        textShadow: '2px 2px 2px indigo',
                         width: width / 2,
                       }}
                       header={header}
