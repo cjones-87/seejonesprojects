@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import HypnotiqData from './HypnotiqData';
+import HypnotiqData from '../data/HypnotiqData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const Hypnotiq = () => {
