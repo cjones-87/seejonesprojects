@@ -8,10 +8,10 @@ import {
   footer,
   projects,
   ratingBodyTemplate,
-} from './data/ProjectData';
+  ProjectData,
+} from './data/AllProjectData';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { ProjectData } from './data/ProjectData';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/Projects.css';
