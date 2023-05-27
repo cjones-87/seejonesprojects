@@ -3,19 +3,18 @@ import Typewriter from 'typewriter-effect';
 import {
   MobileDevelopmentData,
   WebDevelopmentData,
-} from './SpecializationData';
+} from './data/SpecializationData';
 
 const Specialization = () => {
   return (
     <div
       style={{
         color:
-          localStorage.getItem('lightMode') === 'true' ? 'indigo' : '#ba68c8',
-        fontSize: '1vmin',
-        textShadow:
           localStorage.getItem('lightMode') === 'true'
-            ? '1px 1px 1px whitesmoke'
-            : '1px 1px 1px indigo',
+            ? 'whitesmoke'
+            : '#ba68c8',
+        fontSize: '1vmin',
+        textShadow: '2px 2px 2px indigo',
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
