@@ -11,9 +11,8 @@ const IndividualProject = ({ data, height, width }) => {
       style={{
         display: 'grid',
         margin: 'auto',
-        placeItems: 'center',
-        margin: 'auto',
         maxWidth: width < 768 ? width : width / 2,
+        placeItems: 'center',
       }}
     >
       {data.map((item, index) => {
