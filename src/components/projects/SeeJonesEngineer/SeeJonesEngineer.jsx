@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import SeeJonesEngineerData from './SeeJonesEngineerData';
+import SeeJonesEngineerData from '../data/SeeJonesEngineerData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const SeeJonesEngineer = () => {
