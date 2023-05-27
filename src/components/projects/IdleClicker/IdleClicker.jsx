@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import IdleClickerData from './IdleClickerData';
+import IdleClickerData from '../data/IdleClickerData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const IdleClicker = () => {
