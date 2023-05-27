@@ -4,7 +4,7 @@ import {
   FrontendData,
   LanguagesData,
   ToolsData,
-} from '../techSkills/TechSkillsData';
+} from '../techSkills/data/TechSkillsData';
 import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
