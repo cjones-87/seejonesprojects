@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import IYKYKData from './IYKYKData';
+import IYKYKData from '../data/IYKYKData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const IYKYK = () => {
