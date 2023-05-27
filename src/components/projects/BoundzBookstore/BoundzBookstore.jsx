@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualProject from '../IndividualProject';
-import BoundzBookstoreData from './BoundzBookstoreData';
+import BoundzBookstoreData from '../data/BoundzBookstoreData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
 const BoundzBookstore = () => {
