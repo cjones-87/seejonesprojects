@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'primereact/button';
-import SidePanelButtonData from './SidePanelButtonData';
+import SidePanelButtonData from './data/SidePanelButtonData';
 
 const SidePanelButtons = () => {
   return (
