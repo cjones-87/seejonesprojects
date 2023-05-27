@@ -8,7 +8,7 @@ import Cube from './Cube';
 import GithubActivity from './GithubActivity';
 import BusinessCard from '../contactMe/BusinessCard';
 import ProjectSlideshow from '../projects/ProjectSlideshow';
-import { ProjectData } from '.././projects/data/ProjectData';
+import { ProjectData } from '.././projects/data/AllProjectData';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
