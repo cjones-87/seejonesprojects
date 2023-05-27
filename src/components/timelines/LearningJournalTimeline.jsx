@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import Spinner from '../../../misc/Spinner';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
-import learningJournalEvents from './LearningJournalEvents';
+import LearningJournalEventsData from './data/LearningJournalEventsData';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
@@ -143,7 +143,7 @@ const LearningJournalTimeline = () => {
       </h1>
       <div style={{ padding: '2rem' }}>
         <Timeline
-          value={learningJournalEvents}
+          value={LearningJournalEventsData}
           align="alternate"
           className="customized-timeline"
           marker={customizedMarker}
