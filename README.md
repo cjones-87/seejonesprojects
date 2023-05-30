@@ -127,7 +127,7 @@ I strive to ensure a highly accessible website experience. The following accessi
       <h3 align="center" color="white">Hypnotiq Musiq 2.0</h3>
       <div align="center">
         <img
-          src=""
+          src="https://i.imgur.com/modvRWr.gif"
           alt="Hypnotiq Musiq 2.0 gif"
           height="100%"
         />
@@ -237,7 +237,7 @@ I strive to ensure a highly accessible website experience. The following accessi
     <td width="50%" valign="top">
       <h3 align="center" color="white">Computer Love</h3>
       <div align="center">
-        <img src="" alt="Computer Love gif" height="100%" />
+        <img src="https://i.imgur.com/2IkB1A9.gif" alt="Computer Love gif" height="100%" />
         <br />
         <br />
         <p>
