@@ -118,7 +118,7 @@ I strive to ensure a highly accessible website experience. The following accessi
             Javascript, React, Express, Node, PostgreSQL/Sequelize, CSS3, HTML5
           </strong>
         </p>
-        <p></p>
+        <p>Versatile Full-Stack eCommerce Boilerplate with pre-built CRUD functionalities for products/users, authentication, and optimized guest/logged-in experiences. It includes secure login/registration forms. This eCommerce boilerplate serves as a compelling starting point for developers, providing them with a powerful and technically advanced foundation to accelerate the development of innovative and feature-rich eCommerce applications.</p>
       </div>
     </td>
   </tr>
@@ -162,7 +162,7 @@ I strive to ensure a highly accessible website experience. The following accessi
       <h3 align="center" color="white">Hypnotiq Musiq 1.0</h3>
       <div align="center">
         <img
-          src=""
+          src="https://i.imgur.com/HjTbdr9.gif"
           alt="Hypnotiq Musiq 1.0 gif"
           height="100%"
         />
