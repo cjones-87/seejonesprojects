@@ -28,12 +28,48 @@ import {
 const LearningJournalEventsData = [
   {
     id: 10,
-    status: 'Hypnotiq 2.0',
-    date: '2023',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Hypnotiq 2.0
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2023
+      </span>
+    ),
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
     color: '#FF9800',
-    description: 'Mobile Music Player',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Mobile Music Player
+      </span>
+    ),
     link: '/projects/hypnotiq2',
     techStack: (
       <span>
@@ -64,12 +100,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 9,
-    status: `All I Know Is, IYKYK`,
-    date: '2022',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        All I Know Is, IYKYK
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2022
+      </span>
+    ),
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
     color: '#607D8B',
-    description: 'Web Quiz App',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Web Quiz App
+      </span>
+    ),
     link: '/projects/iykyk',
     techStack: (
       <span>
@@ -93,12 +165,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 8,
-    status: 'See Jones Engineer',
-    date: 'Present',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        See Jones Engineer
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021 - Present
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#9C27B0',
     image: seeJonesEngineer,
-    description: 'Personal Portfolio Web App',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Personal Portfolio Web App
+      </span>
+    ),
     link: '/projects/seejonesengineer',
     techStack: (
       <span>
@@ -122,12 +230,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 7,
-    status: 'Computer love',
-    date: '2022',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Computer Love
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2022
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#673AB7',
     iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
-    description: 'Mobile Dating/Networking App',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Mobile Dating/Networking App
+      </span>
+    ),
     link: '/projects/computerlove',
     techStack: (
       <span>
@@ -162,12 +306,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 6,
-    status: 'Hypnotiq',
-    date: '2022',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Hypnotiq
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2022
+      </span>
+    ),
     icon: 'pi pi-star',
     iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
     color: '#FF9800',
-    description: 'Mobile Music Player',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Mobile Music Player
+      </span>
+    ),
     link: '/projects/hypnotiq',
     techStack: (
       <span>
@@ -191,12 +371,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 5,
-    status: 'Graduated Fullstack Academy',
-    date: '2021',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Graduated Fullstack Academy
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#607D8B',
     image: FullstackLogo,
-    description: 'Graduated Coding Bootcamp',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Graduated Coding Bootcamp
+      </span>
+    ),
     link: 'https://www.fullstackacademy.com/',
     moreInfo: '',
     command: (event) => {
@@ -205,12 +421,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 4,
-    status: 'Boundz eCommerce',
-    date: '2021',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Boundz eCommerce
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#9C27B0',
     image: browseBooks,
-    description: 'Secure eCommerce Web App',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Secure eCommerce Web App
+      </span>
+    ),
     link: '/projects/boundzbookstore',
     techStack: (
       <span>
@@ -246,12 +498,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 3,
-    status: 'Idle Clicker',
-    date: '2021',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Idle Clicker
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#673AB7',
     image: IdleClickerPic,
-    description: 'Incremental Game Website',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Incremental Game Website
+      </span>
+    ),
     link: '/projects/idleclicker',
     techStack: (
       <span>
@@ -271,12 +559,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 2,
-    status: 'Guessing Game',
-    date: '2021',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Guessing Game
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#FF9800',
     image: GuessingGamePic,
-    description: 'Guessing Game Website',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Guessing Game Website
+      </span>
+    ),
     link: '/projects/guessinggame',
     techStack: (
       <span>
@@ -296,12 +620,48 @@ const LearningJournalEventsData = [
   },
   {
     id: 1,
-    status: 'Enrolled Fullstack Academy',
-    date: '2021',
+    status: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Enrolled Fullstack Academy
+      </span>
+    ),
+    date: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        2021
+      </span>
+    ),
     icon: 'pi pi-star',
     color: '#607D8B',
     image: FullstackLogo,
-    description: 'Enrolled Coding Bootcamp',
+    description: (
+      <span
+        style={{
+          color:
+            localStorage.getItem('lightMode') === 'true'
+              ? '#ba68c8'
+              : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Enrolled Coding Bootcamp
+      </span>
+    ),
     link: 'https://www.fullstackacademy.com/',
     moreInfo: '',
     command: (event) => {
