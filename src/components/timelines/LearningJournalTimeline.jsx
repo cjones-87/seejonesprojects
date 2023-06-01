@@ -88,12 +88,9 @@ const LearningJournalTimeline = () => {
                 style={{
                   color:
                     localStorage.getItem('lightMode') === 'true'
-                      ? 'indigo'
+                      ? 'whitesmoke'
                       : '#ba68c8',
-                  textShadow:
-                    localStorage.getItem('lightMode') === 'true'
-                      ? '1px 1px 1px #ba68c8'
-                      : '1px 1px 1px indigo',
+                  textShadow: '2px 2px 2px indigo',
                 }}
                 target="_blank"
               >
