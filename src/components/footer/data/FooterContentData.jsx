@@ -1,7 +1,7 @@
 const FooterContentData = [
   {
     className: 'fa fa-file-pdf fa-lg white-text mr-md-5 mr-3 fa-2x',
-    href: '/CJsSoftwareEngineeringResume.pdf',
+    href: '/01CJsSWEPortfolioResume.pdf',
   },
   {
     className: 'fa fa-at fa-lg white-text mr-md-5 mr-3 fa-2x',
