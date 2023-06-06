@@ -52,7 +52,7 @@ const Resume = () => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Document
-          file={'/CJsSoftwareEngineeringResume.pdf'}
+          file={'/01CJsSWEPortfolioResume.pdf'}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page height={height} pageNumber={pageNumber} width={width} />
@@ -73,7 +73,7 @@ const Resume = () => {
               <NavLink
                 id="resume-download"
                 target={'blank'}
-                to={'/CJsSoftwareEngineeringResume.pdf'}
+                to={'/01CJsSWEPortfolioResume.pdf'}
               >
                 <i className="fa fa-file-pdf" />
                 &nbsp; Download PDF &nbsp;
