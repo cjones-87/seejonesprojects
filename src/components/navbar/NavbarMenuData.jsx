@@ -149,7 +149,7 @@ export const menuItems = [
       },
       {
         command: () =>
-          (window.location.pathname = '/CJsSoftwareEngineeringResume.pdf'),
+          (window.location.pathname = '/01CJsSWEPortfolioResume.pdf'),
         icon: 'pi pi-download',
         label: 'Download Résumé',
       },
