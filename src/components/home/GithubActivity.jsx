@@ -1,16 +1,16 @@
-import React from 'react';
+import { useContext } from 'react';
 import GithubActivityData from './data/GithubActivityData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const GithubActivity = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   return (
     <div
       className={
-        localStorage.getItem('lightMode') === 'true'
-          ? 'bg-black-alpha-20 App card'
-          : 'bg-black-alpha-90 App card'
+        !darkTheme ? 'bg-black-alpha-20 App card' : 'bg-black-alpha-90 App card'
       }
       style={{
         marginTop: '2rem',
