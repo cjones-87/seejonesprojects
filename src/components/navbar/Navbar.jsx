@@ -1,55 +1,62 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Menubar } from 'primereact/menubar';
-import { end, menuItems } from './NavbarMenuData';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { useCallback, useContext, useState } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
-import NavbarLogo from './NavbarLogo';
 
-const Navbar = () => {
+const Navbar = ({ navLinks, start, end }) => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
-  const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate('/');
-  };
+  const handleItemClick = useCallback((item) => {
+    setBurgerActive(false);
+  }, []);
 
-  const start = (
-    <LazyLoadComponent>
-      <div id="navbarLogoContainer" onClick={handleClick}>
-        <NavbarLogo />
-      </div>
-    </LazyLoadComponent>
-  );
+  const [burgerActive, setBurgerActive] = useState(false);
+
+  const handleBurgerClick = useCallback(() => {
+    setBurgerActive((current) => !current);
+  }, []);
 
   return (
-    <div
-      className="sticky top-0 "
+    <nav
+      className="navbar"
       id="navbar"
       style={{
-        textShadow: '2px 2px 2px #01020E',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         width,
       }}
     >
-      <div>
-        <LazyLoadComponent
-          style={{ display: 'flex', justifyContent: 'space-between' }}
+      <div className="start">
+        {start}
+        <ul
+          className={`navMenu ${
+            burgerActive ? (!darkTheme ? 'active' : 'active dark') : ''
+          }`}
         >
-          <Menubar
-            model={menuItems}
-            start={start}
-            end={end}
-            style={{
-              background:
-                localStorage.getItem('lightMode') === 'true'
-                  ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                  : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              width,
-            }}
-          />
-        </LazyLoadComponent>
+          {navLinks.map((item, index) => (
+            <li
+              className={`menuItem ${burgerActive ? 'active' : ''}`}
+              key={index}
+              onClick={() => handleItemClick(item)}
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+        <div
+          className={`navBurger ${burgerActive ? 'active' : ''}`}
+          onClick={handleBurgerClick}
+        >
+          <div className="barGroup">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="end">{end}</div>
+    </nav>
   );
 };
 
