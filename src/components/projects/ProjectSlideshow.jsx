@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/ProjectSlideshow.css';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const ProjectSlideshow = ({ slides }) => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   const [current, setCurrent] = useState(0);
@@ -53,15 +55,13 @@ const ProjectSlideshow = ({ slides }) => {
       <h1
         id="gradientText"
         style={{
-          color:
-            localStorage.getItem('lightMode') === 'true' ? 'black' : '#434343',
+          color: !darkTheme ? 'black' : '#434343',
           fontSize: '10em',
           paddingBottom: '4rem',
           textAlign: 'center',
-          textShadow:
-            localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px indigo'
-              : '1px 1px 1px whitesmoke',
+          textShadow: !darkTheme
+            ? '1px 1px 1px indigo'
+            : '1px 1px 1px whitesmoke',
         }}
       >
         Projects
@@ -84,10 +84,7 @@ const ProjectSlideshow = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'indigo'
-                    : 'ba68c8',
+                color: !darkTheme ? 'indigo' : 'ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -101,10 +98,7 @@ const ProjectSlideshow = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'indigo'
-                    : 'ba68c8',
+                color: !darkTheme ? 'indigo' : 'ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -121,10 +115,9 @@ const ProjectSlideshow = ({ slides }) => {
                 <div
                   style={{
                     color: 'white',
-                    textShadow:
-                      localStorage.getItem('lightMode') === 'true'
-                        ? '1px 1px 1px indigo'
-                        : '1px 1px 1px whitesmoke',
+                    textShadow: !darkTheme
+                      ? '1px 1px 1px indigo'
+                      : '1px 1px 1px whitesmoke',
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -161,7 +154,7 @@ const ProjectSlideshow = ({ slides }) => {
                   </h3>
 
                   <h5 style={{ color: 'red' }} className="slideNumber">
-                    {slide.id} of {slidesLength}
+                    {index + 1} of {slidesLength}
                   </h5>
                 </div>
               )}
