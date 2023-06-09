@@ -1,8 +1,10 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import FooterContentData from './data/FooterContentData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   return (
@@ -10,21 +12,16 @@ const Footer = () => {
       className="sticky bottom-0"
       id="footer"
       style={{
-        background:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         width,
       }}
     >
       <div
         style={{
-          color:
-            localStorage.getItem('lightMode') === 'true' ? 'indigo' : '#ba68c8',
-          textShadow:
-            localStorage.getItem('lightMode') === 'true'
-              ? '1px 1px 1px indigo'
-              : '1px 1px 1px black',
+          color: !darkTheme ? 'indigo' : '#ba68c8',
+          textShadow: !darkTheme ? '1px 1px 1px indigo' : '1px 1px 1px black',
           textAlign: 'center',
           marginTop: '2rem',
           paddingTop: '2rem',
@@ -43,10 +40,7 @@ const Footer = () => {
                 <i
                   className={item.className}
                   style={{
-                    color:
-                      localStorage.getItem('lightMode') === 'true'
-                        ? 'indigo'
-                        : '#ba68c8',
+                    color: !darkTheme ? 'indigo' : '#ba68c8',
 
                     fontSize: '5em',
                     textDecoration: 'none',
@@ -59,10 +53,9 @@ const Footer = () => {
 
         <h5
           style={{
-            background:
-              localStorage.getItem('lightMode') === 'true'
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            background: !darkTheme
+              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
           }}
         >
           Designed & Built by CJ Jones <br></br> © 2021&nbsp;-&nbsp;
