@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+import { useContext, Suspense } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import Spinner from '../../../misc/Spinner';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { Card } from 'primereact/card';
@@ -6,6 +7,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const IndividualProject = ({ data, height, width }) => {
+  const { darkTheme } = useContext(ThemeContext);
+
   return (
     <div
       style={{
@@ -62,15 +65,11 @@ const IndividualProject = ({ data, height, width }) => {
             <Suspense fallback={<Spinner />}>
               <Card
                 style={{
-                  background:
-                    localStorage.getItem('lightMode') === 'true'
-                      ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                      : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+                  background: !darkTheme
+                    ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                    : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                   borderRadius: 25,
-                  color:
-                    localStorage.getItem('lightMode') === 'true'
-                      ? 'whitesmoke'
-                      : '#ba68c8',
+                  color: !darkTheme ? 'whitesmoke' : '#ba68c8',
                   textShadow: '1px 1px 1px indigo',
                 }}
                 header={header}
