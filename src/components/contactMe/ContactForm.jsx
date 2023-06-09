@@ -1,8 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import ContactFormData, { OptionData } from './data/ContactFormData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const ContactForm = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   const firstName = useRef();
@@ -25,24 +27,17 @@ const ContactForm = () => {
   return (
     <div
       style={{
-        background:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
 
-        color:
-          localStorage.getItem('lightMode') === 'true'
-            ? '#ba68c8'
-            : 'whitesmoke',
+        color: !darkTheme ? '#ba68c8' : 'whitesmoke',
         display: 'flex',
         justifyContent: 'center',
         marginBottom: '2rem',
         paddingBottom: '2rem',
         textAlign: 'center',
-        textShadow:
-          localStorage.getItem('lightMode') === 'true'
-            ? '1px 1px 1px black'
-            : '1px 1px 1px indigo',
+        textShadow: !darkTheme ? '1px 1px 1px black' : '1px 1px 1px indigo',
       }}
     >
       <form
@@ -155,14 +150,10 @@ const ContactForm = () => {
         <div style={{ fontSize: '1vmin' }}>
           <button
             style={{
-              background:
-                localStorage.getItem('lightMode') === 'true'
-                  ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-                  : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color:
-                localStorage.getItem('lightMode') === 'true'
-                  ? '#ba68c8'
-                  : 'whitesmoke',
+              background: !darkTheme
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: !darkTheme ? '#ba68c8' : 'whitesmoke',
               borderRadius: '10px',
               fontSize: '2em',
               height: '2.5em',
