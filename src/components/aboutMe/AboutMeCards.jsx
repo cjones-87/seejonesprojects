@@ -1,9 +1,10 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useContext, useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import Spinner from '../../../misc/Spinner';
 import { Card } from 'primereact/card';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'primeicons/primeicons.css';
@@ -11,6 +12,7 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
 const AboutMeCards = ({ slides }) => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   const [current, setCurrent] = useState(0);
@@ -66,10 +68,7 @@ const AboutMeCards = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'indigo'
-                    : '#ba68c8',
+                color: !darkTheme ? 'indigo' : '#ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -83,10 +82,7 @@ const AboutMeCards = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'indigo'
-                    : '#ba68c8',
+                color: !darkTheme ? 'indigo' : '#ba68c8',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -122,15 +118,11 @@ const AboutMeCards = ({ slides }) => {
                   <Suspense fallback={<Spinner />}>
                     <Card
                       style={{
-                        background:
-                          localStorage.getItem('lightMode') === 'true'
-                            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-                            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+                        background: !darkTheme
+                          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
                         borderRadius: 25,
-                        color:
-                          localStorage.getItem('lightMode') === 'true'
-                            ? '#ba68c8'
-                            : 'whitesmoke',
+                        color: !darkTheme ? '#ba68c8' : 'whitesmoke',
                         textShadow: '2px 2px 2px indigo',
                         width: width / 2,
                       }}
