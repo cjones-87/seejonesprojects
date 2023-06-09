@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import { Tooltip } from 'primereact/tooltip';
 import { NavLink } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -19,12 +21,10 @@ const Resume = () => {
   return (
     <div
       style={{
-        background:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        color:
-          localStorage.getItem('lightMode') === 'true' ? 'black' : 'whitesmoke',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        color: !darkTheme ? 'black' : 'whitesmoke',
         marginTop: '-1.5rem',
         width,
       }}
@@ -33,18 +33,14 @@ const Resume = () => {
         <h1
           id="gradientText"
           style={{
-            color:
-              localStorage.getItem('lightMode') === 'true'
-                ? 'black'
-                : '#434343',
+            color: !darkTheme ? 'black' : '#434343',
             fontSize: '10em',
             paddingBottom: '1rem',
             paddingTop: '1rem',
             textAlign: 'center',
-            textShadow:
-              localStorage.getItem('lightMode') === 'true'
-                ? '1px 1px 1px indigo'
-                : '1px 1px 1px whitesmoke',
+            textShadow: !darkTheme
+              ? '1px 1px 1px indigo'
+              : '1px 1px 1px whitesmoke',
           }}
         >
           Resume
