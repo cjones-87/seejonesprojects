@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   BackendData,
   FrontendData,
@@ -13,8 +13,10 @@ import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const LandingPage = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
@@ -40,10 +42,9 @@ const LandingPage = () => {
     <div
       id="landingPageContainer"
       style={{
-        background:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         height: height < 900 ? '230vh' : '125vh',
         width,
       }}
@@ -75,27 +76,23 @@ const LandingPage = () => {
         id="enterSite"
         label="See Jones Engineer"
         style={{
-          background:
-            localStorage.getItem('lightMode') === 'true'
-              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-          color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+          background: !darkTheme
+            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+          color: !darkTheme ? '#ba68c8' : 'whitesmoke',
           fontSize: '2em',
           margin: '2rem',
           padding: '1em',
+          textShadow: '2px 2px 2px indigo',
         }}
       />
 
       <div
         id="sectionA"
         style={{
-          backgroundColor:
-            localStorage.getItem('lightMode') === 'true'
-              ? 'rgb(75, 0, 130, 0.3)'
-              : 'rgb(128, 128, 128, 0.3)',
+          backgroundColor: !darkTheme
+            ? 'rgb(75, 0, 130, 0.3)'
+            : 'rgb(128, 128, 128, 0.3)',
           fontSize: '4em',
           width,
         }}
