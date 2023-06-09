@@ -1,30 +1,67 @@
-import React from 'react';
+import { useContext } from 'react';
 import {
-  LazyLoadComponent,
-  LazyLoadImage,
-} from 'react-lazy-load-image-component';
+  IdleClickerPic,
+  GuessingGamePic,
+  browseBooks,
+  portfolioPic,
+} from '../../photos/PhotoExports';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import Cube from './Cube';
 import GithubActivity from './GithubActivity';
 import BusinessCard from '../contactMe/BusinessCard';
 import ProjectSlideshow from '../projects/ProjectSlideshow';
-import { ProjectData } from '.././projects/data/AllProjectData';
+import {
+  LazyLoadComponent,
+  LazyLoadImage,
+} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
 import '../contactMe/BusinessCard.css';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const Home = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
+
+  const ProjectData = [
+    {
+      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
+      caption: 'Hypnotiq 2.0',
+    },
+    {
+      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      caption: 'IYKYK',
+    },
+    {
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
+      caption: 'Computer Love',
+    },
+    {
+      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
+      caption: 'Hypnotiq',
+    },
+    {
+      image: browseBooks,
+      caption: 'Boundz Bookstore',
+    },
+    {
+      image: IdleClickerPic,
+      caption: 'Idle Clicker',
+    },
+    {
+      image: GuessingGamePic,
+      caption: 'Guessing Game',
+    },
+  ];
 
   return (
     <div
       className="App"
       style={{
-        background:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         width,
       }}
     >
