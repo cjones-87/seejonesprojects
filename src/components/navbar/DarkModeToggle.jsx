@@ -1,44 +1,32 @@
-import React, { useEffect } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Button } from 'primereact/button';
-import useLocalStorage from 'use-local-storage';
 
-const DarkMode = () => {
-  const [lightMode, setLightMode] = useLocalStorage('lightMode', 'true');
-
-  useEffect(() => {
-    const toggleLightDarkMode = () => {
-      setLightMode((current) => !current);
-      window.location.reload();
-    };
-
-    const toggleButton = document.getElementById('lightDarkToggleButton');
-
-    toggleButton.addEventListener('click', toggleLightDarkMode);
-  }, [lightMode]);
+const DarkModeToggle = () => {
+  const { darkTheme, toggleDarkTheme } = useContext(ThemeContext);
 
   return (
-    <div style={{ colorScheme: 'red' }}>
+    <div>
       <Button
         className=" p-togglebutton"
         id="lightDarkToggleButton"
         style={{
-          background:
-            localStorage.getItem('lightMode') === 'true'
-              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-          color:
-            localStorage.getItem('lightMode') === 'true'
-              ? '#ba68c8'
-              : 'whitesmoke',
+          background: !darkTheme
+            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+          color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+          filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
           height: '2.5em',
+          textShadow: '2px 2px 2px indigo',
         }}
         // label={lightMode ? 'Dark Mode' : 'Light Mode'}
-        icon={lightMode ? 'pi pi-moon' : 'pi pi-sun'}
-        tooltip={lightMode ? 'Switch to dark mode' : 'Switch to light mode'}
+        icon={!darkTheme ? 'pi pi-moon' : 'pi pi-sun'}
+        onClick={toggleDarkTheme}
+        tooltip={!darkTheme ? 'Switch to dark mode' : 'Switch to light mode'}
         tooltipOptions={{ position: 'bottom' }}
         toggleable="true"
       />
     </div>
   );
 };
-export default DarkMode;
+export default DarkModeToggle;
