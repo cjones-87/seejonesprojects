@@ -33,9 +33,11 @@ a {
 .button .p-buttonset .p-button {
   margin-right: 0;
 }
+
 .button .template .p-button i {
   line-height: 2.25rem;
 }
+
 .button .template .p-button.google {
   background: linear-gradient(
     to left,
@@ -48,15 +50,19 @@ a {
   color: #fff;
   border-color: var(--blue-700);
 }
+
 .button .template .p-button.google:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.google i {
   background-color: var(--blue-700);
 }
+
 .button .template .p-button.google:focus {
   box-shadow: 0 0 0 1px var(--blue-400);
 }
+
 .button .template .p-button.youtube {
   background: linear-gradient(
     to left,
@@ -69,15 +75,19 @@ a {
   color: #fff;
   border-color: var(--pink-700);
 }
+
 .button .template .p-button.youtube:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.youtube i {
   background-color: var(--pink-700);
 }
+
 .button .template .p-button.youtube:focus {
   box-shadow: 0 0 0 1px var(--pink-400);
 }
+
 .button .template .p-button.vimeo {
   background: linear-gradient(
     to left,
@@ -90,15 +100,19 @@ a {
   color: #000;
   border-color: var(-cyan-300);
 }
+
 .button .template .p-button.vimeo:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.vimeo i {
   background-color: var(-cyan-300);
 }
+
 .button .template .p-button.vimeo:focus {
   box-shadow: 0 0 0 1px var(-cyan-400);
 }
+
 .button .template .p-button.facebook {
   background: linear-gradient(
     to left,
@@ -111,15 +125,19 @@ a {
   color: #fff;
   border-color: var(--indigo-700);
 }
+
 .button .template .p-button.facebook:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.facebook i {
   background-color: var(--indigo-700);
 }
+
 .button .template .p-button.facebook:focus {
   box-shadow: 0 0 0 1px var(--indigo-400);
 }
+
 .button .template .p-button.twitter {
   background: linear-gradient(
     to left,
@@ -132,15 +150,19 @@ a {
   color: #fff;
   border-color: var(--blue-500);
 }
+
 .button .template .p-button.twitter:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.twitter i {
   background-color: var(--blue-500);
 }
+
 .button .template .p-button.twitter:focus {
   box-shadow: 0 0 0 1px var(--blue-200);
 }
+
 .button .template .p-button.slack {
   background: linear-gradient(
     to left,
@@ -153,15 +175,19 @@ a {
   color: #fff;
   border-color: var(--pink-500);
 }
+
 .button .template .p-button.slack:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.slack i {
   background-color: var(--pink-500);
 }
+
 .button .template .p-button.slack:focus {
   box-shadow: 0 0 0 1px var(--pink-200);
 }
+
 .button .template .p-button.github {
   background: linear-gradient(
     to left,
@@ -174,15 +200,19 @@ a {
   color: #000;
   border-color: var(--pink-500);
 }
+
 .button .template .p-button.github:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.github i {
   background-color: var(--pink-500);
 }
+
 .button .template .p-button.github:focus {
   box-shadow: 0 0 0 1px var(--pink-200);
 }
+
 .button .template .p-button.discord {
   background: linear-gradient(
     to left,
@@ -195,15 +225,19 @@ a {
   color: #fff;
   border-color: var(--bluegray-800);
 }
+
 .button .template .p-button.discord:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.discord i {
   background-color: var(--bluegray-800);
 }
+
 .button .template .p-button.discord:focus {
   box-shadow: 0 0 0 1px var(--bluegray-500);
 }
+
 /*  */
 .button .template .p-button.whatsapp {
   background: linear-gradient(
@@ -217,15 +251,19 @@ a {
   color: #fff;
   border-color: var(--green-700);
 }
+
 .button .template .p-button.whatsapp:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.whatsapp i {
   background-color: var(--green-700);
 }
+
 .button .template .p-button.whatsapp:focus {
   box-shadow: 0 0 0 1px var(--green-400);
 }
+
 /*  */
 .button .template .p-button.instagram {
   background: linear-gradient(
@@ -239,15 +277,19 @@ a {
   color: #fff;
   border-color: var(--purple-700);
 }
+
 .button .template .p-button.instagram:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.instagram i {
   background-color: var(--purple-700);
 }
+
 .button .template .p-button.instagram:focus {
   box-shadow: 0 0 0 1px var(--purple-400);
 }
+
 /*  */
 /*  */
 .button .template .p-button.tiktok {
@@ -262,15 +304,19 @@ a {
   color: #fff;
   border-color: var(--teal-600);
 }
+
 .button .template .p-button.tiktok:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.tiktok i {
   background-color: var(--teal-600);
 }
+
 .button .template .p-button.tiktok:focus {
   box-shadow: 0 0 0 1px var(--teal-600);
 }
+
 /*  */
 .button .template .p-button.coffee {
   background: linear-gradient(
@@ -284,15 +330,19 @@ a {
   color: #fff;
   border-color: var(--yellow-700);
 }
+
 .button .template .p-button.coffee:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.coffee i {
   background-color: var(--yellow-700);
 }
+
 .button .template .p-button.coffee:focus {
   box-shadow: 0 0 0 1px var(--yellow-400);
 }
+
 /*  */
 .button .template .p-button.linkedin {
   background: linear-gradient(
@@ -306,38 +356,177 @@ a {
   color: #fff;
   border-color: var(--cyan-700);
 }
+
 .button .template .p-button.linkedin:hover {
   background-position: left bottom;
 }
+
 .button .template .p-button.linkedin i {
   background-color: var(--cyan-700);
 }
+
 .button .template .p-button.linkedin:focus {
   box-shadow: 0 0 0 1px var(--cyan-400);
 }
+
 /*  */
 
 @media screen and (max-width: 960px) {
   .button .p-button {
     margin-bottom: 0.5rem;
   }
+
   .button .p-button:not(.p-button-icon-only) {
     display: flex;
     width: 100%;
   }
+
   .button .p-buttonset .p-button {
     margin-bottom: 0;
   }
 }
 
-/* App & Home */
+/* navbar */
+
 #navbar {
-  z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-#footer {
-  z-index: 1000;
+.navbar {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  margin: 0 auto;
 }
+
+.start,
+.end {
+  align-items: center;
+  display: flex;
+  margin: 0 1rem;
+}
+
+.end {
+  margin-left: auto;
+}
+
+.navMenu {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.menuItem:hover {
+  color: red;
+}
+
+.navIconContainer {
+  display: inline-block;
+  position: relative;
+}
+
+.navIcon {
+  filter: drop-shadow(0px 2px 4px rgba(75, 0, 130, 1));
+}
+
+.navBurger {
+  cursor: pointer;
+  display: none;
+  padding-right: 1.5em;
+}
+
+.barGroup:hover .bar {
+  background-color: #ba68c8;
+}
+
+.bar {
+  background-color: indigo;
+  display: block;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  width: 25px;
+  -webkit-transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1130px) {
+  .navbar {
+    align-items: flex-start;
+  }
+  .menuItem {
+    display: none;
+  }
+
+  .navMenu {
+    gap: 0;
+    left: 0%;
+    padding-top: 1rem;
+    position: absolute;
+    text-align: center;
+    top: 7.36rem;
+    transition: 0.3s;
+    width: 100%;
+  }
+
+  .navMenu.active {
+    background: radial-gradient(#434343, rgba(0, 0, 0, 1));
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    z-index: 100;
+  }
+
+  .navMenu.active.dark {
+    background: radial-gradient(#1a1a1a, rgba(163, 163, 163, 1));
+    flex-direction: column;
+    margin-bottom: 1rem;
+    z-index: 100;
+  }
+
+  .menuItem.active {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .navBurger {
+    display: block;
+  }
+
+  .navBurger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navBurger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navBurger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* footer */
+
+#footer {
+  bottom: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+/* home  */
 
 #homeFlex {
   display: flex;
@@ -361,21 +550,27 @@ h6 {
 h1 {
   font-size: 2.5rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.75rem;
 }
+
 h4 {
   font-size: 1.5rem;
 }
+
 h5 {
   font-size: 1.25rem;
 }
+
 h6 {
   font-size: 1rem;
 }
+
 p {
   line-height: 1.5;
   margin: 0 0 1rem 0;
@@ -395,6 +590,7 @@ textarea {
 }
 
 input[type='number'] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -408,9 +604,11 @@ input[type='number']::-webkit-inner-spin-button {
   0% {
     background-color: rgba(165, 165, 165, 0.1);
   }
+
   50% {
     background-color: rgba(165, 165, 165, 0.3);
   }
+
   100% {
     background-color: rgba(165, 165, 165, 0.1);
   }
@@ -444,6 +642,7 @@ input[type='number']::-webkit-inner-spin-button {
     #fec837 75%,
     #fd1892 100%
   );
+  filter: drop-shadow(0px 2px 4px rgba(75, 0, 130, 1));
   font-size: 20em;
   letter-spacing: 1px;
   text-align: center;
@@ -470,6 +669,7 @@ h1#gradientText:hover {
   100% {
     -webkit-filter: hue-rotate(0deg), drop-shadow(3px 3px 1px 0.9);
   }
+
   50% {
     -webkit-filter: hue-rotate(360deg), drop-shadow(3px 3px 1px 0.9);
   }
@@ -479,6 +679,7 @@ h1#gradientText:hover {
   from {
     transform: rotateY(0deg);
   }
+
   to {
     transform: rotateY(-360deg);
   }
@@ -489,6 +690,7 @@ h1#gradientText:hover {
   display: inline-block;
 }
 
+
 .typewriterText {
   border-right: 5px solid;
   width: 100%;
@@ -497,17 +699,22 @@ h1#gradientText:hover {
   animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
 }
 
+
 @keyframes cursor {
   50% {
     border-color: transparent;
   }
+  
 }
+
 
 @keyframes typing {
   from {
     width: 0;
   }
-} */
+  
+}
+ */
 
 /* landing page css */
 
