@@ -3,7 +3,8 @@ import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
-import React, { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
@@ -13,19 +14,15 @@ import PowerDown from '../../sounds/PowerDown.mp3';
 import Typewriter from 'typewriter-effect';
 
 const SidePanelMenu = () => {
+  const { darkTheme } = useContext(ThemeContext);
   const [showSidebar, setShowSidebar] = useState(false);
 
-  useEffect(() => {
-    const onOpen = (event) => {
-      const audio = new Audio(TheLittleDwarf);
-      setShowSidebar((current) => !current);
-      let playAudio = (event) => audio.play();
-      playAudio();
-    };
-
-    const networkWithMeButton = document.getElementById('networkWithMe');
-    networkWithMeButton.addEventListener('click', onOpen);
-  });
+  const onOpen = (event) => {
+    const audio = new Audio(TheLittleDwarf);
+    setShowSidebar((current) => !current);
+    let playAudio = (event) => audio.play();
+    playAudio();
+  };
 
   const onHide = (event) => {
     const audio = new Audio(PowerDown);
@@ -37,24 +34,29 @@ const SidePanelMenu = () => {
   return (
     <div
       style={{
-        color: 'white',
-        textShadow: '2px 2px 2px #01020E',
+        color: 'whitesmoke',
         textAlign: 'center',
+        textShadow: '2px 2px 2px indigo',
       }}
     >
       <div className="card">
         <Sidebar
-          visible={showSidebar}
-          onHide={onHide}
           icons={''}
+          onHide={onHide}
           style={{
-            background:
-              localStorage.getItem('lightMode') === 'true'
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            background: !darkTheme
+              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
           }}
+          visible={showSidebar}
         >
-          <h3 style={{ textAlign: 'center', color: 'white' }}>
+          <h3
+            style={{
+              color: 'whitesmoke',
+              textAlign: 'center',
+              textShadow: '2px 2px 2px indigo',
+            }}
+          >
             See Jones Engineer
           </h3>
           <LazyLoadComponent>
@@ -76,16 +78,15 @@ const SidePanelMenu = () => {
                   }}
                 />
               }
+              onClick={onOpen}
               style={{
-                background:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-                    : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-                color:
-                  localStorage.getItem('lightMode') === 'true'
-                    ? '#ba68c8'
-                    : 'whitesmoke',
+                background: !darkTheme
+                  ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                  : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+                color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+                filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
                 height: '2.5em',
+                textShadow: '2px 2px 2px indigo',
                 width: '8em',
               }}
               tooltip="like what you see? network with me!"
