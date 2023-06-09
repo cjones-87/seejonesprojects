@@ -1,4 +1,5 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import {
   BackendData,
   FrontendData,
@@ -6,14 +7,13 @@ import {
   ToolsData,
 } from './data/TechSkillsData';
 
-export default function TechSkills() {
+const TechSkills = () => {
+  const { darkTheme } = useContext(ThemeContext);
+
   return (
     <div
       style={{
-        color:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'whitesmoke'
-            : '#ba68c8',
+        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
         paddingBottom: '2rem',
@@ -79,4 +79,6 @@ export default function TechSkills() {
       </div>
     </div>
   );
-}
+};
+
+export default TechSkills;
