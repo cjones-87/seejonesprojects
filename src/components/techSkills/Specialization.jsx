@@ -1,4 +1,5 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import Typewriter from 'typewriter-effect';
 import {
   MobileDevelopmentData,
@@ -6,13 +7,11 @@ import {
 } from './data/SpecializationData';
 
 const Specialization = () => {
+  const { darkTheme } = useContext(ThemeContext);
   return (
     <div
       style={{
-        color:
-          localStorage.getItem('lightMode') === 'true'
-            ? 'whitesmoke'
-            : '#ba68c8',
+        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
         textAlign: 'center',
