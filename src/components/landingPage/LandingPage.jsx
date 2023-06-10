@@ -46,7 +46,7 @@ const LandingPage = () => {
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         height: height < 900 ? '230vh' : '125vh',
-        width,
+        width: '100vw',
       }}
     >
       <h1 id="gradientText">
@@ -94,7 +94,7 @@ const LandingPage = () => {
             ? 'rgb(75, 0, 130, 0.3)'
             : 'rgb(128, 128, 128, 0.3)',
           fontSize: '4em',
-          width,
+          width: '100vw',
         }}
       >
         I am a freelance software engineer, passionate about learning &
@@ -155,7 +155,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div id="sectionC" style={{ width }}>
+      <div id="sectionC" style={{ width: '100vw' }}>
         <div className="sectionC2" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Front-End
@@ -212,7 +212,7 @@ const LandingPage = () => {
       <div
         id="sectionC"
         style={{
-          width,
+          width: '100vw',
         }}
       >
         <div
