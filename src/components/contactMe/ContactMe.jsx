@@ -1,21 +1,23 @@
 import React, { useContext } from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import BusinessCard from './BusinessCard';
 import ContactForm from './ContactForm';
 
 const ContactMe = () => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
 
   return (
-    <div style={{ width }}>
+    <div
+      style={{
+        background: !darkTheme
+          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        width: '100vw',
+      }}
+    >
       <div
         style={{
-          background: !darkTheme
-            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
           fontSize: '1vmin',
           marginTop: '-1.5rem',
         }}
