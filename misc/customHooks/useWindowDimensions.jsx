@@ -8,13 +8,15 @@ const useWindowDimensions = () => {
   });
 
   useEffect(() => {
-    const handleResize = debounce(
-      () => setDimensions({ height: innerHeight, width: innerWidth }),
-      100
-    );
+    const handleResize =
+      dimensions.width < 768
+        ? debounce(
+            () => setDimensions({ height: innerHeight, width: innerWidth }),
+            100
+          )
+        : setDimensions({ height: innerHeight, width: innerWidth });
 
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, [dimensions.height, dimensions.width]);
 
