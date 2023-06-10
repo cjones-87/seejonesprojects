@@ -1,11 +1,9 @@
 import React, { useContext, useRef, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import ContactFormData, { OptionData } from './data/ContactFormData';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const ContactForm = () => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
 
   const firstName = useRef();
   const lastName = useRef();
@@ -27,17 +25,13 @@ const ContactForm = () => {
   return (
     <div
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-
         color: !darkTheme ? '#ba68c8' : 'whitesmoke',
         display: 'flex',
         justifyContent: 'center',
         marginBottom: '2rem',
         paddingBottom: '2rem',
         textAlign: 'center',
-        textShadow: !darkTheme ? '1px 1px 1px black' : '1px 1px 1px indigo',
+        textShadow: '2px 2px 2px indigo',
       }}
     >
       <form
@@ -76,8 +70,8 @@ const ContactForm = () => {
               style={{
                 backgroundColor: 'gray',
                 borderRadius: '10px',
-                height: height / 20,
-                width: width / 2,
+                height: '5vh',
+                width: '50vw',
               }}
               type={data.type}
             />
@@ -105,8 +99,8 @@ const ContactForm = () => {
             style={{
               backgroundColor: 'gray',
               borderRadius: '10px',
-              height: height / 20,
-              width: width / 2,
+              height: '5vh',
+              width: '50vw',
             }}
           >
             {OptionData.map((data, index) => (
@@ -138,10 +132,10 @@ const ContactForm = () => {
             style={{
               backgroundColor: 'gray',
               borderRadius: '10px',
-              height: height / 20,
+              height: '5vh',
               overflowX: 'hidden',
               resize: 'vertical',
-              width: width / 2,
+              width: '50vw',
             }}
             type="text"
           />
@@ -158,6 +152,7 @@ const ContactForm = () => {
               fontSize: '2em',
               height: '2.5em',
               marginTop: '1.5rem',
+              textShadow: '2px 2px 2px indigo',
               width: '5em',
             }}
             type="submit"
