@@ -3,13 +3,11 @@ import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { AboutMeData } from './data/AboutMeData';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import AboutMeCards from './AboutMeCards';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import Specialization from '../techSkills/Specialization';
 import TechSkills from '../techSkills/TechSkills';
 
 const AboutMe = () => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -20,7 +18,7 @@ const AboutMe = () => {
         fontSize: '1vmin',
         marginTop: '-1.5rem',
         textAlign: 'center',
-        width,
+        width: '100vw',
       }}
     >
       <h1
@@ -29,9 +27,7 @@ const AboutMe = () => {
           color: !darkTheme ? 'black' : '#434343',
           fontSize: '10em',
           paddingTop: '2rem',
-          textShadow: !darkTheme
-            ? '1px 1px 1px indigo'
-            : '1px 1px 1px whitesmoke',
+          textShadow: '2px 2px 2px indigo',
         }}
       >
         About Me
