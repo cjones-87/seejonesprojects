@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import debounce from '../helpers/debounce';
 
 const useWindowDimensions = () => {
@@ -8,10 +8,15 @@ const useWindowDimensions = () => {
   });
 
   useEffect(() => {
-    const handleResize = debounce(
-      () => setDimensions({ height: innerHeight, width: innerWidth }),
-      100
-    );
+    const handleResize =
+      dimensions.width < 768
+        ? debounce(
+            () => setDimensions({ height: innerHeight, width: innerWidth }),
+            100
+          )
+        : debounce(() =>
+            setDimensions({ height: innerHeight, width: innerWidth })
+          );
 
     window.addEventListener('resize', handleResize);
 
