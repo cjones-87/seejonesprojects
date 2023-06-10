@@ -18,7 +18,24 @@ a {
 }
 
 /* 404 error css */
-#FourOhFour {
+#text404 {
+  align-items: center;
+  background-color: transparent;
+  color: indigo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  text-shadow: 2px 2px 2px indigo;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+#image404 {
   background-attachment: fixed;
   background-image: url('../src/photos/404.jpg');
   background-color: #cccccc;
@@ -28,7 +45,6 @@ a {
   height: 100vh;
   width: 100vw;
 }
-
 /* Side panel buttons */
 .button .p-buttonset .p-button {
   margin-right: 0;
