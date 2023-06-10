@@ -211,10 +211,7 @@ const App = () => {
         },
       ],
       label: (
-        <span
-          onClick={() => window.open('/01CJsSWEPortfolioResume.pdf', '_blank')}
-          style={navMenuStyle}
-        >
+        <span onClick={() => navigate('/resume')} style={navMenuStyle}>
           <div className="navIconContainer">
             <FaFilePdf
               className="navIcon"
