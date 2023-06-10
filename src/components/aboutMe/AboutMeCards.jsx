@@ -103,7 +103,7 @@ const AboutMeCards = ({ slides }) => {
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width={width / 2}
+                width="50vw"
               />
             </Suspense>
           );
@@ -124,7 +124,7 @@ const AboutMeCards = ({ slides }) => {
                         borderRadius: 25,
                         color: !darkTheme ? '#ba68c8' : 'whitesmoke',
                         textShadow: '2px 2px 2px indigo',
-                        width: width / 2,
+                        width: '50vw',
                       }}
                       header={header}
                     >
