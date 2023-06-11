@@ -1,17 +1,17 @@
 import IndividualProject from '../IndividualProject';
-import BluepringBoilerplateData from '../data/BluepringBoilerplateData';
+import BlueprintBoilerplateData from '../data/BlueprintBoilerplateData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
 
-const BluepringBoilerplate = () => {
+const BlueprintBoilerplate = () => {
   const { height, width } = useWindowDimensions();
   return (
     <IndividualProject
-      data={BluepringBoilerplateData}
+      data={BlueprintBoilerplateData}
       height={height}
-      title="Bluepring Boilerplate"
+      title="Blueprint Boilerplate"
       width={width}
     />
   );
 };
 
-export default BluepringBoilerplate;
+export default BlueprintBoilerplate;
