@@ -1,4 +1,3 @@
-import React from 'react';
 import IndividualProject from '../IndividualProject';
 import HypnotiqData from '../data/HypnotiqData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
@@ -6,7 +5,12 @@ import useWindowDimensions from '../../../../misc/customHooks/useWindowDimension
 const Hypnotiq = () => {
   const { height, width } = useWindowDimensions();
   return (
-    <IndividualProject data={HypnotiqData} height={height} width={width} />
+    <IndividualProject
+      data={HypnotiqData}
+      height={height}
+      title="Hypnotiq Musiq"
+      width={width}
+    />
   );
 };
 
