@@ -42,20 +42,34 @@ const LandingPage = () => {
     <div
       id="landingPageContainer"
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         height: height < 900 ? '230vh' : '125vh',
         width: '100vw',
       }}
     >
-      <h1 id="gradientText" style={{ color: !darkTheme ? 'black' : '#434343' }}>
+      <h1
+        id="gradientText"
+        style={{
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+        }}
+      >
         <strong>CJ Jones</strong>
       </h1>
 
       <h2
         id="gradientText"
-        style={{ color: !darkTheme ? 'black' : '#434343', fontSize: '10em' }}
+        style={{
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+          fontSize: '10em',
+        }}
       >
         <Typewriter
           options={{
@@ -79,10 +93,10 @@ const LandingPage = () => {
         id="enterSite"
         label="See Jones Engineer"
         style={{
-          background: !darkTheme
-            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-          color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+          background: darkTheme
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+          color: darkTheme ? 'whitesmoke' : '#ba68c8',
           fontSize: '2em',
           margin: '2rem',
           padding: '1em',
@@ -93,9 +107,9 @@ const LandingPage = () => {
       <div
         id="sectionA"
         style={{
-          backgroundColor: !darkTheme
-            ? 'rgb(75, 0, 130, 0.3)'
-            : 'rgb(128, 128, 128, 0.3)',
+          backgroundColor: darkTheme
+            ? 'rgb(128, 128, 128, 0.3)'
+            : 'rgb(75, 0, 130, 0.3)',
           fontSize: '4em',
           width: '100vw',
         }}
