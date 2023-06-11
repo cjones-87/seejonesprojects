@@ -1,4 +1,3 @@
-import React from 'react';
 import IndividualProject from '../IndividualProject';
 import SeeJonesEngineerData from '../data/SeeJonesEngineerData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
@@ -9,6 +8,7 @@ const SeeJonesEngineer = () => {
     <IndividualProject
       data={SeeJonesEngineerData}
       height={height}
+      title="See Jones Engineer"
       width={width}
     />
   );
