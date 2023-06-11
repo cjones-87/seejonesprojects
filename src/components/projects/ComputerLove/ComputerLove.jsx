@@ -1,4 +1,3 @@
-import React from 'react';
 import IndividualProject from '../IndividualProject';
 import ComputerLoveData from '../data/ComputerLoveData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
@@ -6,7 +5,12 @@ import useWindowDimensions from '../../../../misc/customHooks/useWindowDimension
 const ComputerLove = () => {
   const { height, width } = useWindowDimensions();
   return (
-    <IndividualProject data={ComputerLoveData} height={height} width={width} />
+    <IndividualProject
+      data={ComputerLoveData}
+      height={height}
+      title="Computer Love"
+      width={width}
+    />
   );
 };
 
