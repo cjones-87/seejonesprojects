@@ -54,7 +54,6 @@ const FrontEndRoutes = [
   { element: <IYKYK />, path: '/projects/iykyk' },
   { element: <Hypnotiq2 />, path: '/projects/hypnotiq2' },
   { element: <BlueprintBoilerplate />, path: '/projects/blueprintboilerplate' },
-
   { element: <PageNotFound404 />, path: '*' },
 ];
 export default FrontEndRoutes;
