@@ -8,7 +8,7 @@ const DarkModeToggle = () => {
   return (
     <div>
       <Button
-        className=" p-togglebutton"
+        className="p-togglebutton"
         id="lightDarkToggleButton"
         style={{
           background: !darkTheme
