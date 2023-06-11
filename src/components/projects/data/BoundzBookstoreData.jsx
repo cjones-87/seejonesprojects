@@ -9,7 +9,7 @@ const BoundzBookstoreData = [
   {
     alt: 'Boundz Bookstore Photo',
     img: home,
-    paragraph: `I developed Boundz Bookstore, an eCommerce bookstore using JavaScript and technologies such as React, Redux, Node.js, PostgreSQL, Sequelize, Express, Material UI, HTML5, and CSS3. The Minimum Viable Product (MVP) allowed users and administrators to purchase books with or without a registered account. This site made use of a persistent cart feature and users could modify only their own purchase information. I also implemented administrative access to user information and order history.`,
+    paragraph: `My team developed Boundz Bookstore, an eCommerce bookstore using JavaScript and technologies such as React, Redux, Node.js, PostgreSQL, Sequelize, Express, Material UI, HTML5, and CSS3. The Minimum Viable Product (MVP) allowed users and administrators to purchase books with or without a registered account. This site made use of a persistent cart feature and users could modify only their own purchase information. I also implemented administrative access to user information and order history.`,
   },
   {
     alt: 'Boundz Bookstore Photo',
