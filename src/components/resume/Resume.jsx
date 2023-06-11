@@ -1,13 +1,14 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
-import { NavLink } from 'react-router-dom';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Resume = () => {
   const { darkTheme } = useContext(ThemeContext);
+
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -35,16 +36,45 @@ const Resume = () => {
           style={{
             color: !darkTheme ? 'black' : '#434343',
             fontSize: '10em',
-            paddingBottom: '1rem',
             paddingTop: '1rem',
             textAlign: 'center',
-            textShadow: !darkTheme
-              ? '1px 1px 1px indigo'
-              : '1px 1px 1px whitesmoke',
+            textShadow: '2px 2px 2px indigo',
           }}
         >
           Resume
         </h1>
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          paddingBottom: '2rem',
+        }}
+      >
+        <Tooltip
+          content="download today!"
+          target="#resume-download"
+          position="top"
+        />
+
+        <Button
+          className="lightDarkToggleButton"
+          onClick={() => {
+            window.open('/01CJsSWEPortfolioResume.pdf', '_blank');
+            location.reload();
+          }}
+          style={{
+            background: !darkTheme
+              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+            color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+            textShadow: '2px 2px 2px indigo',
+            width: '20%',
+          }}
+        >
+          <i style={{ marginRight: '1rem' }} className="fa fa-file-pdf" />
+          Download PDF
+        </Button>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Document
@@ -59,22 +89,6 @@ const Resume = () => {
           >
             <p>
               Page {pageNumber} of {numPages}
-            </p>
-            <p>
-              <Tooltip
-                content="download today!"
-                target="#resume-download"
-                position="top"
-              />
-              <NavLink
-                id="resume-download"
-                target={'blank'}
-                to={'/01CJsSWEPortfolioResume.pdf'}
-              >
-                <i className="fa fa-file-pdf" />
-                &nbsp; Download PDF &nbsp;
-                <i className="fa fa-file-pdf" />
-              </NavLink>
             </p>
           </span>
         </Document>
