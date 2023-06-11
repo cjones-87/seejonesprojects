@@ -18,8 +18,8 @@ const Footer = () => {
     >
       <div
         style={{
-          color: !darkTheme ? 'indigo' : '#ba68c8',
-          textShadow: !darkTheme ? '1px 1px 1px indigo' : '1px 1px 1px black',
+          color: darkTheme ? '#ba68c8' : 'whitesmoke',
+          textShadow: '2px 2px 2px indigo',
           textAlign: 'center',
           marginTop: '2rem',
           paddingTop: '2rem',
@@ -38,8 +38,10 @@ const Footer = () => {
                 <i
                   className={item.className}
                   style={{
-                    color: !darkTheme ? 'indigo' : '#ba68c8',
-
+                    color: darkTheme ? '#ba68c8' : 'white',
+                    filter: darkTheme
+                      ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+                      : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                     fontSize: '5em',
                     textDecoration: 'none',
                   }}
@@ -51,13 +53,21 @@ const Footer = () => {
 
         <h5
           style={{
-            background: !darkTheme
-              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            background: darkTheme
+              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
           }}
         >
-          Designed & Built by CJ Jones <br></br> © 2021&nbsp;-&nbsp;
-          {new Date().getFullYear()}
+          <span
+            style={{
+              filter: darkTheme
+                ? 'drop-shadow(0px 2px 4px rgba(186, 104, 200, 1))'
+                : 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
+            }}
+          >
+            Designed & Built by CJ Jones <br></br> © 2021&nbsp;-&nbsp;
+            {new Date().getFullYear()}
+          </span>
         </h5>
       </div>
     </div>
