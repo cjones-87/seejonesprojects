@@ -1,4 +1,3 @@
-import React from 'react';
 import IndividualProject from '../IndividualProject';
 import GuessingGameData from '../data/GuessingGameData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
@@ -6,7 +5,12 @@ import useWindowDimensions from '../../../../misc/customHooks/useWindowDimension
 const GuessingGame = () => {
   const { height, width } = useWindowDimensions();
   return (
-    <IndividualProject data={GuessingGameData} height={height} width={width} />
+    <IndividualProject
+      data={GuessingGameData}
+      height={height}
+      title="Guessing Game"
+      width={width}
+    />
   );
 };
 
