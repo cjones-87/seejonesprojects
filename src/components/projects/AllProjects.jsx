@@ -308,7 +308,7 @@ const AllProjects = () => {
                   borderRadius: 25,
                   padding: '5px',
                 }}
-                width={width / 10}
+                width="10vw"
               />
             </Suspense>
           </div>
