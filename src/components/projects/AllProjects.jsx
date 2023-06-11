@@ -1,4 +1,5 @@
-import { Suspense, useContext, useEffect } from 'react';
+import { Suspense, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
@@ -16,25 +17,28 @@ import './ProjectsCSS/ProjectSlideshow.css';
 const AllProjects = () => {
   const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
+  const navigate = useNavigate();
+  const navigateToLearningJournal = () => navigate('/learningjournal');
+
+  const projectNameStyle = {
+    color: darkTheme ? '#ba68c8' : 'whitesmoke',
+    cursor: 'pointer',
+    textDecoration: 'none',
+  };
 
   const projects = [
     {
       caption: 'SeeJonesEngineer.com',
       category: 'React Web App',
       difficulty: 9,
-      href: '/',
       image: 'https://i.imgur.com/PVEBzQJ.gif',
       name: (
-        <a
-          href={'/projects/seejonesengineer'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/seejonesengineer')}
+          style={projectNameStyle}
         >
           See Jones Engineer
-        </a>
+        </div>
       ),
       status: 'complete',
     },
@@ -42,19 +46,14 @@ const AllProjects = () => {
       caption: 'Blueprint Boilerplate',
       category: 'React Web App',
       difficulty: 8,
-      href: '/projects/blueprintboilerplate',
       image: 'https://i.imgur.com/HOiTb5v.gif',
       name: (
-        <a
-          href={'/projects/blueprintboilerplate'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/blueprintboilerplate')}
+          style={projectNameStyle}
         >
           Blueprint Boilerplate
-        </a>
+        </div>
       ),
       status: 'complete',
     },
@@ -62,20 +61,15 @@ const AllProjects = () => {
       caption: 'Hypnotiq Musiq 2.0',
       category: 'React Native Mobile App',
       difficulty: 10,
-      href: '/projects/hypnotiq2',
       iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
       image: 'https://i.imgur.com/modvRWr.gif',
       name: (
-        <a
-          href={'/projects/hypnotiq2'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/hypnotiq2')}
+          style={projectNameStyle}
         >
           Hypnotiq 2.0
-        </a>
+        </div>
       ),
       status: 'v3 in progress',
     },
@@ -83,20 +77,15 @@ const AllProjects = () => {
       caption: 'IYKYK Quiz',
       category: 'React Web App',
       difficulty: 8,
-      href: '/projects/iykyk',
       iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
       image: 'https://i.imgur.com/mYnBu3I.gif',
       name: (
-        <a
-          href={'/projects/iykyk'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/iykyk')}
+          style={projectNameStyle}
         >
           All I Know Is, IYKYK
-        </a>
+        </div>
       ),
       status: 'complete',
     },
@@ -105,20 +94,15 @@ const AllProjects = () => {
       caption: 'Computer Love Dating',
       category: 'React Native Mobile App',
       difficulty: 10,
-      href: '/projects/computerlove',
       iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       image: 'https://i.imgur.com/2IkB1A9.gif',
       name: (
-        <a
-          href={'/projects/computerlove'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/computerlove')}
+          style={projectNameStyle}
         >
           Computer Love
-        </a>
+        </div>
       ),
 
       status: 'complete',
@@ -127,20 +111,15 @@ const AllProjects = () => {
       caption: 'Hypnotiq Musiq 1.0',
       category: 'React Native Mobile App',
       difficulty: 7,
-      href: '/projects/hypnotiq',
       iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       image: 'https://i.imgur.com/HjTbdr9.gif',
       name: (
-        <a
-          href={'/projects/hypnotiq'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/hypnotiq')}
+          style={projectNameStyle}
         >
           Hypnotiq
-        </a>
+        </div>
       ),
 
       status: 'v2.0 complete',
@@ -149,19 +128,14 @@ const AllProjects = () => {
       caption: 'Boundz Bookstore',
       category: 'React Web App',
       difficulty: 10,
-      href: '/projects/boundzbookstore',
       image: 'https://i.imgur.com/XV1sfOI.gif',
       name: (
-        <a
-          href={'/projects/boundzbookstore'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/boundzbookstore')}
+          style={projectNameStyle}
         >
           Boundz Bookstore
-        </a>
+        </div>
       ),
       status: 'complete',
     },
@@ -169,19 +143,14 @@ const AllProjects = () => {
       caption: 'Idle Clicker',
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 6,
-      href: '/projects/idleclicker',
       image: 'https://i.imgur.com/KfVcjhN.gif',
       name: (
-        <a
-          href={'/projects/idleclicker'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/idleclicker')}
+          style={projectNameStyle}
         >
           Idle Clicker
-        </a>
+        </div>
       ),
 
       status: 'v2 in progress',
@@ -190,19 +159,14 @@ const AllProjects = () => {
       caption: 'Guessing Game',
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 3,
-      href: 'projects/guessinggame',
       image: 'https://i.imgur.com/EGYVB8e.gif',
       name: (
-        <a
-          href={'/projects/guessinggame'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
+        <div
+          onClick={() => navigate('/projects/guessinggame')}
+          style={projectNameStyle}
         >
           Guessing Game
-        </a>
+        </div>
       ),
       status: 'complete',
     },
@@ -212,24 +176,24 @@ const AllProjects = () => {
     <div
       className="table-header"
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         borderRadius: '5px',
-        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+        color: darkTheme ? '#ba68c8' : 'whitesmoke',
         padding: '5px',
         textShadow: '1px 1px 1px indigo',
       }}
     >
       See Jones Projects
       <Button
-        id="navigateToLearningJournal"
         icon="pi pi-images"
+        onClick={navigateToLearningJournal}
         style={{
-          background: !darkTheme
-            ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-            : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-          color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+          background: darkTheme
+            ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+            : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+          color: darkTheme ? 'whitesmoke' : '#ba68c8',
         }}
         tooltip="View in my learning journal"
         tooltipOptions={{ position: 'left' }}
@@ -240,16 +204,15 @@ const AllProjects = () => {
   const footer = (
     <div
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         borderRadius: '5px',
-        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+        color: darkTheme ? '#ba68c8' : 'whitesmoke',
         padding: '10px',
         textShadow: '1px 1px 1px indigo',
       }}
     >
-      {' '}
       In total there are {projects ? projects.length : 0} projects.
     </div>
   );
@@ -259,20 +222,6 @@ const AllProjects = () => {
       <Rating value={rowData.difficulty} readOnly cancel={false} stars={10} />
     );
   };
-
-  useEffect(() => {
-    const navigateToLearningJournal = document.getElementById(
-      'navigateToLearningJournal'
-    );
-
-    const handleNavigationToLearningJournal = () =>
-      (window.location.pathname = '/learningjournal');
-
-    navigateToLearningJournal.addEventListener(
-      'click',
-      handleNavigationToLearningJournal
-    );
-  });
 
   const imageBodyTemplate = (rowData) => {
     return (
@@ -320,10 +269,10 @@ const AllProjects = () => {
     <div
       className="datatable-project"
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+        color: darkTheme ? '#ba68c8' : 'whitesmoke',
         textShadow: '2px 2px 2px indigo',
         paddingTop: '1rem',
         width: width,
@@ -343,10 +292,10 @@ const AllProjects = () => {
             field="name"
             header="Title"
             style={{
-              background: !darkTheme
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+              background: darkTheme
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: darkTheme ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
@@ -354,10 +303,10 @@ const AllProjects = () => {
             header="Image"
             body={imageBodyTemplate}
             style={{
-              background: !darkTheme
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+              background: darkTheme
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: darkTheme ? '#ba68c8' : 'whitesmoke',
               paddingRight: '4rem',
               textShadow: '1px 1px 1px indigo',
             }}
@@ -366,10 +315,10 @@ const AllProjects = () => {
             field="category"
             header="Category"
             style={{
-              background: !darkTheme
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+              background: darkTheme
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: darkTheme ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
@@ -378,10 +327,10 @@ const AllProjects = () => {
             header="Difficulty Level"
             body={ratingBodyTemplate}
             style={{
-              background: !darkTheme
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+              background: darkTheme
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: darkTheme ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
