@@ -1,5 +1,4 @@
 import { Suspense, useContext, useEffect, useRef, useState } from 'react';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import Spinner from '../../../misc/Spinner';
 import { Card } from 'primereact/card';
@@ -13,7 +12,6 @@ import 'primereact/resources/primereact.css';
 
 const AboutMeCards = ({ slides }) => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
 
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -68,7 +66,10 @@ const AboutMeCards = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color: !darkTheme ? 'indigo' : '#ba68c8',
+                color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                filter: darkTheme
+                  ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+                  : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -82,7 +83,10 @@ const AboutMeCards = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color: !darkTheme ? 'indigo' : '#ba68c8',
+                color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                filter: darkTheme
+                  ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+                  : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
                 position: 'sticky',
               }}
@@ -118,11 +122,11 @@ const AboutMeCards = ({ slides }) => {
                   <Suspense fallback={<Spinner />}>
                     <Card
                       style={{
-                        background: !darkTheme
-                          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-                          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+                        background: darkTheme
+                          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                         borderRadius: 25,
-                        color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+                        color: darkTheme ? 'whitesmoke' : '#ba68c8',
                         textShadow: '2px 2px 2px indigo',
                         width: '50vw',
                       }}
