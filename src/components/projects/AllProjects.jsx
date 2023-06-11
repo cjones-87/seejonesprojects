@@ -4,12 +4,6 @@ import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import ProjectSlideshow from './ProjectSlideshow';
 import Spinner from '../../../misc/Spinner';
-import {
-  IdleClickerPic,
-  GuessingGamePic,
-  browseBooks,
-  portfolioPic,
-} from '../../photos/PhotoExports';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
 import { DataTable } from 'primereact/datatable';
@@ -23,87 +17,13 @@ const AllProjects = () => {
   const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
 
-  const ProjectData = [
-    {
-      id: 1,
-      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
-      caption: 'Hypnotiq 2.0',
-    },
-    {
-      id: 2,
-      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
-      caption: 'IYKYK',
-    },
-    {
-      id: 3,
-      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
-      caption: 'Computer Love',
-    },
-    {
-      id: 4,
-      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
-      caption: 'Hypnotiq',
-    },
-    {
-      id: 5,
-      image: browseBooks,
-      caption: 'Boundz Bookstore',
-    },
-    {
-      id: 6,
-      image: IdleClickerPic,
-      caption: 'Idle Clicker',
-    },
-    {
-      id: 7,
-      image: GuessingGamePic,
-      caption: 'Guessing Game',
-    },
-  ];
-
   const projects = [
     {
-      id: 0,
-      name: (
-        <a
-          href={'/projects/hypnotiq2'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
-        >
-          Hypnotiq 2.0
-        </a>
-      ),
-      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
-      category: 'React Native Mobile App',
-      difficulty: 10,
-      status: 'v3 in progress',
-      href: '/projects/hypnotiq2',
-    },
-    {
-      id: 1,
-      name: (
-        <a
-          href={'/projects/iykyk'}
-          style={{
-            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
-            textDecoration: 'none',
-          }}
-          target="_blank"
-        >
-          All I Know Is, IYKYK
-        </a>
-      ),
-      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      caption: 'SeeJonesEngineer.com',
       category: 'React Web App',
-      difficulty: 8,
-      status: 'complete',
-      href: '/projects/iykyk',
-    },
-    {
-      id: 2,
+      difficulty: 9,
+      href: '/',
+      image: 'https://i.imgur.com/PVEBzQJ.gif',
       name: (
         <a
           href={'/projects/seejonesengineer'}
@@ -116,14 +36,78 @@ const AllProjects = () => {
           See Jones Engineer
         </a>
       ),
-      image: portfolioPic,
-      category: 'React Web App',
-      difficulty: 9,
       status: 'complete',
-      href: '/',
     },
     {
-      id: 3,
+      caption: 'Blueprint Boilerplate',
+      category: 'React Web App',
+      difficulty: 8,
+      href: '/projects/blueprintboilerplate',
+      image: 'https://i.imgur.com/HOiTb5v.gif',
+      name: (
+        <a
+          href={'/projects/blueprintboilerplate'}
+          style={{
+            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+            textDecoration: 'none',
+          }}
+          target="_blank"
+        >
+          Blueprint Boilerplate
+        </a>
+      ),
+      status: 'complete',
+    },
+    {
+      caption: 'Hypnotiq Musiq 2.0',
+      category: 'React Native Mobile App',
+      difficulty: 10,
+      href: '/projects/hypnotiq2',
+      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
+      image: 'https://i.imgur.com/modvRWr.gif',
+      name: (
+        <a
+          href={'/projects/hypnotiq2'}
+          style={{
+            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+            textDecoration: 'none',
+          }}
+          target="_blank"
+        >
+          Hypnotiq 2.0
+        </a>
+      ),
+      status: 'v3 in progress',
+    },
+    {
+      caption: 'IYKYK Quiz',
+      category: 'React Web App',
+      difficulty: 8,
+      href: '/projects/iykyk',
+      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      image: 'https://i.imgur.com/mYnBu3I.gif',
+      name: (
+        <a
+          href={'/projects/iykyk'}
+          style={{
+            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+            textDecoration: 'none',
+          }}
+          target="_blank"
+        >
+          All I Know Is, IYKYK
+        </a>
+      ),
+      status: 'complete',
+    },
+
+    {
+      caption: 'Computer Love Dating',
+      category: 'React Native Mobile App',
+      difficulty: 10,
+      href: '/projects/computerlove',
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
+      image: 'https://i.imgur.com/2IkB1A9.gif',
       name: (
         <a
           href={'/projects/computerlove'}
@@ -136,14 +120,16 @@ const AllProjects = () => {
           Computer Love
         </a>
       ),
-      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
-      category: 'React Native Mobile App',
-      difficulty: 10,
+
       status: 'complete',
-      href: '/projects/computerlove',
     },
     {
-      id: 4,
+      caption: 'Hypnotiq Musiq 1.0',
+      category: 'React Native Mobile App',
+      difficulty: 7,
+      href: '/projects/hypnotiq',
+      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
+      image: 'https://i.imgur.com/HjTbdr9.gif',
       name: (
         <a
           href={'/projects/hypnotiq'}
@@ -156,14 +142,15 @@ const AllProjects = () => {
           Hypnotiq
         </a>
       ),
-      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
-      category: 'React Native Mobile App',
-      difficulty: 7,
+
       status: 'v2.0 complete',
-      href: '/projects/hypnotiq',
     },
     {
-      id: 5,
+      caption: 'Boundz Bookstore',
+      category: 'React Web App',
+      difficulty: 10,
+      href: '/projects/boundzbookstore',
+      image: 'https://i.imgur.com/XV1sfOI.gif',
       name: (
         <a
           href={'/projects/boundzbookstore'}
@@ -176,14 +163,14 @@ const AllProjects = () => {
           Boundz Bookstore
         </a>
       ),
-      image: browseBooks,
-      category: 'React Web App',
-      difficulty: 10,
       status: 'complete',
-      href: '/projects/boundzbookstore',
     },
     {
-      id: 6,
+      caption: 'Idle Clicker',
+      category: 'Vanilla JS, HTML, CSS',
+      difficulty: 6,
+      href: '/projects/idleclicker',
+      image: 'https://i.imgur.com/KfVcjhN.gif',
       name: (
         <a
           href={'/projects/idleclicker'}
@@ -196,14 +183,15 @@ const AllProjects = () => {
           Idle Clicker
         </a>
       ),
-      image: IdleClickerPic,
-      category: 'Vanilla JS, HTML, CSS',
-      difficulty: 6,
+
       status: 'v2 in progress',
-      href: '/projects/idleclicker',
     },
     {
-      id: 7,
+      caption: 'Guessing Game',
+      category: 'Vanilla JS, HTML, CSS',
+      difficulty: 3,
+      href: 'projects/guessinggame',
+      image: 'https://i.imgur.com/EGYVB8e.gif',
       name: (
         <a
           href={'/projects/guessinggame'}
@@ -216,11 +204,7 @@ const AllProjects = () => {
           Guessing Game
         </a>
       ),
-      image: GuessingGamePic,
-      category: 'Vanilla JS, HTML, CSS',
-      difficulty: 3,
       status: 'complete',
-      href: 'projects/guessinggame',
     },
   ];
 
@@ -293,7 +277,7 @@ const AllProjects = () => {
   const imageBodyTemplate = (rowData) => {
     return (
       <>
-        {rowData.iframe ? (
+        {!rowData.image ? (
           <div>
             <Suspense fallback={<Spinner />}>
               <iframe
@@ -314,7 +298,7 @@ const AllProjects = () => {
           </div>
         ) : (
           <LazyLoadImage
-            alt={rowData.image}
+            alt={rowData.caption}
             className={'project-image'}
             effect="blur"
             height={height / 10}
@@ -346,7 +330,7 @@ const AllProjects = () => {
       }}
     >
       <div style={{ marginBottom: '2rem' }}>
-        <ProjectSlideshow slides={ProjectData} />
+        <ProjectSlideshow slides={projects} />
       </div>
       <div>
         <DataTable
