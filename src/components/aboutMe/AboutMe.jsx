@@ -12,9 +12,9 @@ const AboutMe = () => {
   return (
     <div
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
         marginTop: '-1.5rem',
         textAlign: 'center',
@@ -24,7 +24,10 @@ const AboutMe = () => {
       <h1
         id="gradientText"
         style={{
-          color: !darkTheme ? 'black' : '#434343',
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
           paddingTop: '2rem',
           textShadow: '2px 2px 2px indigo',
