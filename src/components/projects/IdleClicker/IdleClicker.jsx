@@ -1,4 +1,3 @@
-import React from 'react';
 import IndividualProject from '../IndividualProject';
 import IdleClickerData from '../data/IdleClickerData';
 import useWindowDimensions from '../../../../misc/customHooks/useWindowDimensions';
@@ -6,7 +5,12 @@ import useWindowDimensions from '../../../../misc/customHooks/useWindowDimension
 const IdleClicker = () => {
   const { height, width } = useWindowDimensions();
   return (
-    <IndividualProject data={IdleClickerData} height={height} width={width} />
+    <IndividualProject
+      data={IdleClickerData}
+      height={height}
+      title="Idle Clicker"
+      width={width}
+    />
   );
 };
 
