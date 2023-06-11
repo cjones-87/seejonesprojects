@@ -37,7 +37,7 @@ const ProjectSlideshow = ({ slides }) => {
         setCurrent((prevIndex) =>
           prevIndex === slidesLength - 1 ? 0 : prevIndex + 1
         ),
-      5000
+      10000
     );
 
     return () => {
@@ -122,7 +122,7 @@ const ProjectSlideshow = ({ slides }) => {
               {index === current && (
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    {slide.iframe ? (
+                    {!slide.image ? (
                       <iframe
                         allow="autoplay"
                         height={height / 2}
