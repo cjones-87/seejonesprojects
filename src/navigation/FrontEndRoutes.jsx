@@ -29,6 +29,9 @@ const SeeJonesEngineer = lazy(() =>
   import('../components/projects/SeeJonesEngineer/SeeJonesEngineer')
 );
 const IYKYK = lazy(() => import('../components/projects/IYKYK/IYKYK'));
+const BlueprintBoilerplate = lazy(() =>
+  import('../components/projects/BlueprintBoilerplate/BlueprintBoilerplate')
+);
 const PageNotFound404 = lazy(() =>
   import('../components/error/PageNotFound404')
 );
@@ -50,6 +53,8 @@ const FrontEndRoutes = [
   { element: <SeeJonesEngineer />, path: '/projects/seejonesengineer' },
   { element: <IYKYK />, path: '/projects/iykyk' },
   { element: <Hypnotiq2 />, path: '/projects/hypnotiq2' },
+  { element: <BlueprintBoilerplate />, path: '/projects/blueprintboilerplate' },
+
   { element: <PageNotFound404 />, path: '*' },
 ];
 export default FrontEndRoutes;
