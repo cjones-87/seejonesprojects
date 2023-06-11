@@ -12,9 +12,9 @@ const IndividualProject = ({ data, height, title, width }) => {
   return (
     <div
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
         marginTop: 0,
         paddingTop: '1rem',
@@ -23,7 +23,10 @@ const IndividualProject = ({ data, height, title, width }) => {
       <h1
         id="gradientText"
         style={{
-          color: !darkTheme ? 'black' : '#434343',
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '7em',
           marginBottom: 0,
           textShadow: '2px 2px 2px indigo',
@@ -87,11 +90,11 @@ const IndividualProject = ({ data, height, title, width }) => {
               <Suspense fallback={<Spinner />}>
                 <Card
                   style={{
-                    background: !darkTheme
+                    background: darkTheme
                       ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                       : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                     borderRadius: 25,
-                    color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+                    color: darkTheme ? 'whitesmoke' : '#ba68c8',
                     textShadow: '1px 1px 1px indigo',
                   }}
                   header={header}
