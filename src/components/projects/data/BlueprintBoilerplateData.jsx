@@ -2,17 +2,12 @@ const BlueprintBoilerplateData = [
   {
     alt: 'Blueprint Boilerplate Photo',
     img: 'https://i.imgur.com/HOiTb5v.gif',
-    paragraph: `I developed Blueprint Boilerplate, an eCommerce Boilerplate using JavaScript and technologies such as React, Redux, Node.js, PostgreSQL, Sequelize, Express, Material UI, HTML5, and CSS3. The Minimum Viable Product (MVP) is a versatile Full-Stack eCommerce Boilerplate with pre-built CRUD functionalities for products/users, authentication, and optimized guest/logged-in experiences. It includes secure login/registration forms. This eCommerce boilerplate serves as a compelling starting point for developers, providing them with a powerful and technically advanced foundation to accelerate the development of innovative and feature-rich eCommerce applications.`,
+    paragraph: `I developed Blueprint Boilerplate, an eCommerce boilerplate using JavaScript and technologies including React, Redux, Node.js, PostgreSQL, Sequelize, Express, HTML5, and CSS3. The Minimum Viable Product (MVP) is a versatile Full-Stack eCommerce Boilerplate with pre-built CRUD functionalities for products/users, authentication, and optimized guest/logged-in experiences. It includes secure login/registration forms. This eCommerce boilerplate serves as a compelling starting point for developers, providing them with a powerful and technically advanced foundation to accelerate the development of innovative and feature-rich eCommerce applications.`,
   },
   {
     alt: 'Blueprint Boilerplate Photo',
     img: 'https://i.imgur.com/HOiTb5v.gif',
-    paragraph: `A challenge I faced was protecting routes to ensure that only authorized access would be allowed. Users can only access their own personal accounts. Another challenge was ensuring that the site was responsive and easy to use across a variety of devices.`,
-  },
-  {
-    alt: 'Blueprint Boilerplate Photo',
-    img: 'https://i.imgur.com/HOiTb5v.gif',
-    paragraph: `Blueprint Boilerplate was constructed using React, Redux, HTML5, and CSS3 for the frontend, and Node.js, PostgreSQL, Sequelize, and Express for the backend. The site is deployed on Vercel.`,
+    paragraph: `The Blueprint Boilerplate provides a robust foundation for developing full-stack web applications. With its pre-configured CRUD routes, authenticated routes, and connected forms, The Blueprint Boilerplate saves development time and provides a structured starting point for building feature-rich applications. It incorporates modern front-end technologies like React and Redux, enabling efficient state management and dynamic UI updates. On the back-end, Express.js and Sequelize simplify server-side development and interaction with the PostgreSQL database.`,
   },
 ];
 
