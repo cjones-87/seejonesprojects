@@ -3,7 +3,7 @@ import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
@@ -17,17 +17,17 @@ const SidePanelMenu = () => {
   const { darkTheme } = useContext(ThemeContext);
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const onOpen = (event) => {
+  const onOpen = () => {
     const audio = new Audio(TheLittleDwarf);
     setShowSidebar((current) => !current);
-    let playAudio = (event) => audio.play();
+    let playAudio = () => audio.play();
     playAudio();
   };
 
-  const onHide = (event) => {
+  const onHide = () => {
     const audio = new Audio(PowerDown);
     setShowSidebar((current) => !current);
-    let playAudio = (event) => audio.play();
+    let playAudio = () => audio.play();
     playAudio();
   };
 
@@ -52,7 +52,7 @@ const SidePanelMenu = () => {
         >
           <h3
             style={{
-              color: 'whitesmoke',
+              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
               textAlign: 'center',
               textShadow: '2px 2px 2px indigo',
             }}
