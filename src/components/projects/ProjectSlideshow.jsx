@@ -55,13 +55,14 @@ const ProjectSlideshow = ({ slides }) => {
       <h1
         id="gradientText"
         style={{
-          color: !darkTheme ? 'black' : '#434343',
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
           paddingBottom: '4rem',
           textAlign: 'center',
-          textShadow: !darkTheme
-            ? '1px 1px 1px indigo'
-            : '1px 1px 1px whitesmoke',
+          textShadow: '2px 2px 2px indigo',
         }}
       >
         Projects
