@@ -1,14 +1,17 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Button } from 'primereact/button';
 import SidePanelButtonData from './data/SidePanelButtonData';
 
 const SidePanelButtons = () => {
+  const { darkTheme } = useContext(ThemeContext);
+
   return (
     <div
       className="button"
       style={{
         color: 'white',
-        textShadow: '2px 2px 2px #01020E',
+        textShadow: '2px 2px 2px indigo',
       }}
     >
       <div>
@@ -16,7 +19,7 @@ const SidePanelButtons = () => {
           style={{
             textAlign: 'center',
             paddingTop: 10,
-            color: 'rebeccapurple',
+            color: !darkTheme ? 'whitesmoke' : '#ba68c8',
           }}
         >
           Stay connected with me & my work by following me on:
