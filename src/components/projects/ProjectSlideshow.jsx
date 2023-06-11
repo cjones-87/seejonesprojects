@@ -49,7 +49,7 @@ const ProjectSlideshow = ({ slides }) => {
     <div
       style={{
         fontSize: '1vmin',
-        textShadow: '2px 2px 2px #01020E',
+        textShadow: '2px 2px 2px indigo',
       }}
     >
       <h1
@@ -84,9 +84,13 @@ const ProjectSlideshow = ({ slides }) => {
               className="previous"
               onClick={previousSlide}
               style={{
-                color: !darkTheme ? 'indigo' : 'ba68c8',
+                color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                filter: darkTheme
+                  ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+                  : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
                 position: 'sticky',
+                textShadow: '2px 2px 2px indigo',
               }}
             />
           </div>
@@ -98,9 +102,13 @@ const ProjectSlideshow = ({ slides }) => {
               className="next"
               onClick={nextSlide}
               style={{
-                color: !darkTheme ? 'indigo' : 'ba68c8',
+                color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                filter: darkTheme
+                  ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+                  : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
                 position: 'sticky',
+                textShadow: '2px 2px 2px indigo',
               }}
             />
           </div>
@@ -112,14 +120,7 @@ const ProjectSlideshow = ({ slides }) => {
               key={index}
             >
               {index === current && (
-                <div
-                  style={{
-                    color: 'white',
-                    textShadow: !darkTheme
-                      ? '1px 1px 1px indigo'
-                      : '1px 1px 1px whitesmoke',
-                  }}
-                >
+                <div>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
                     {slide.iframe ? (
                       <iframe
@@ -149,11 +150,25 @@ const ProjectSlideshow = ({ slides }) => {
                       />
                     )}
                   </div>
-                  <h3 style={{ textAlign: 'center', color: 'rebeccapurple' }}>
+                  <h3
+                    style={{
+                      color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                      filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
+                      textAlign: 'center',
+                      textShadow: '2px 2px 2px indigo',
+                    }}
+                  >
                     {slide.caption}
                   </h3>
 
-                  <h5 style={{ color: 'red' }} className="slideNumber">
+                  <h5
+                    style={{
+                      color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                      filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
+                      textShadow: '2px 2px 2px indigo',
+                    }}
+                    className="slideNumber"
+                  >
                     {index + 1} of {slidesLength}
                   </h5>
                 </div>
