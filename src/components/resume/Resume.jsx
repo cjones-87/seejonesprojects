@@ -22,10 +22,10 @@ const Resume = () => {
   return (
     <div
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        color: !darkTheme ? 'black' : 'whitesmoke',
+        background: darkTheme
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+        color: darkTheme ? 'whitesmoke' : 'black',
         marginTop: '-1.5rem',
         width,
       }}
@@ -34,7 +34,10 @@ const Resume = () => {
         <h1
           id="gradientText"
           style={{
-            color: !darkTheme ? 'black' : '#434343',
+            color: darkTheme ? '#434343' : 'black',
+            filter: darkTheme
+              ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+              : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
             fontSize: '10em',
             paddingTop: '1rem',
             textAlign: 'center',
@@ -46,6 +49,7 @@ const Resume = () => {
       </div>
       <div
         style={{
+          alignItems: 'center',
           display: 'flex',
           justifyContent: 'center',
           paddingBottom: '2rem',
@@ -64,10 +68,13 @@ const Resume = () => {
             location.reload();
           }}
           style={{
-            background: !darkTheme
-              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-            color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            background: darkTheme
+              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+            color: darkTheme ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
             width: '20%',
           }}
