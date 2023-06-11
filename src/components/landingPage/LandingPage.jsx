@@ -49,11 +49,14 @@ const LandingPage = () => {
         width: '100vw',
       }}
     >
-      <h1 id="gradientText">
+      <h1 id="gradientText" style={{ color: !darkTheme ? 'black' : '#434343' }}>
         <strong>CJ Jones</strong>
       </h1>
 
-      <h2 id="gradientText" style={{ fontSize: '10em' }}>
+      <h2
+        id="gradientText"
+        style={{ color: !darkTheme ? 'black' : '#434343', fontSize: '10em' }}
+      >
         <Typewriter
           options={{
             autoStart: true,
