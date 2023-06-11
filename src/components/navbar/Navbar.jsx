@@ -1,10 +1,8 @@
 import { useCallback, useContext, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Navbar = ({ navLinks, start, end }) => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
 
   const handleItemClick = useCallback((item) => {
     setBurgerActive(false);
@@ -24,7 +22,7 @@ const Navbar = ({ navLinks, start, end }) => {
         background: !darkTheme
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        width,
+        width: '100vw',
       }}
     >
       <div className="start">
