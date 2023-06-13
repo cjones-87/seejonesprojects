@@ -66,9 +66,9 @@ const NavbarLogo = () => {
     controls.enableZoom = false;
 
     const animate = () => {
+      controls.update();
       boxMesh.rotation.x += 0.008;
       boxMesh.rotation.y += 0.008;
-      controls.update();
       renderer.render(scene, camera);
       window.requestAnimationFrame(animate);
     };
