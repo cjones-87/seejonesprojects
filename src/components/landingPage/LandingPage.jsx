@@ -110,6 +110,7 @@ const LandingPage = () => {
           backgroundColor: darkTheme
             ? 'rgb(128, 128, 128, 0.3)'
             : 'rgb(75, 0, 130, 0.3)',
+          color: 'whitesmoke',
           fontSize: '4em',
           width: '100vw',
         }}
@@ -121,7 +122,7 @@ const LandingPage = () => {
         to.
       </div>
 
-      <div id="sectionC">
+      <div id="sectionC" style={{ color: 'whitesmoke' }}>
         <div align="center" id="sectionC1" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Proficient Languages
@@ -172,7 +173,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div id="sectionC" style={{ width: '100vw' }}>
+      <div id="sectionC" style={{ color: 'whitesmoke', width: '100vw' }}>
         <div className="sectionC2" style={{ width: width / 3 }}>
           <h4 align="center" style={{ fontSize: '3em' }}>
             Front-End
