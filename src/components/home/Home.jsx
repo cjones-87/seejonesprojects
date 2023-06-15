@@ -1,18 +1,10 @@
-import { useContext } from 'react';
-import {
-  IdleClickerPic,
-  GuessingGamePic,
-  browseBooks,
-} from '../../photos/PhotoExports';
+import { useContext, Suspense } from 'react';
+import Spinner from '../../../misc/Spinner';
 import Cube from './Cube';
 import GithubActivity from './GithubActivity';
 import BusinessCard from '../contactMe/BusinessCard';
 import ProjectSlideshow from '../projects/ProjectSlideshow';
-import {
-  LazyLoadComponent,
-  LazyLoadImage,
-} from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
 import '../contactMe/BusinessCard.css';
@@ -23,32 +15,44 @@ const Home = () => {
 
   const ProjectData = [
     {
-      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
+      caption: 'SeeJonesEngineer.com',
+      image: 'https://i.imgur.com/PVEBzQJ.gif',
+    },
+    {
       caption: 'Hypnotiq 2.0',
+      iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
+      image: 'https://i.imgur.com/modvRWr.gif',
     },
     {
-      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      caption: 'Blueprint Boilerplate',
+      image: 'https://i.imgur.com/HOiTb5v.gif',
+    },
+    {
       caption: 'IYKYK',
+      iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      image: 'https://i.imgur.com/mYnBu3I.gif',
     },
     {
-      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       caption: 'Computer Love',
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
+      image: 'https://i.imgur.com/2IkB1A9.gif',
     },
     {
-      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       caption: 'Hypnotiq',
+      iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
+      image: 'https://i.imgur.com/HjTbdr9.gif',
     },
     {
-      image: browseBooks,
       caption: 'Boundz Bookstore',
+      image: 'https://i.imgur.com/XV1sfOI.gif',
     },
     {
-      image: IdleClickerPic,
       caption: 'Idle Clicker',
+      image: 'https://i.imgur.com/KfVcjhN.gif',
     },
     {
-      image: GuessingGamePic,
       caption: 'Guessing Game',
+      image: 'https://i.imgur.com/EGYVB8e.gif',
     },
   ];
 
@@ -63,17 +67,17 @@ const Home = () => {
       }}
     >
       <div id="homeFlex">
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <Cube id="homeCJ" />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
 
-      <LazyLoadComponent>
+      <Suspense fallback={<Spinner />}>
         <ProjectSlideshow slides={ProjectData} />
-      </LazyLoadComponent>
+      </Suspense>
 
       <LazyLoadImage
-        effect="blur"
+        alt="Codewars Algo & DSA Activity"
         src="https://www.codewars.com/users/cjones-87/badges/large"
         style={{ marginTop: '2rem' }}
       />
@@ -87,9 +91,9 @@ const Home = () => {
           marginTop: '2rem',
         }}
       >
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <BusinessCard />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
 
       <GithubActivity />
