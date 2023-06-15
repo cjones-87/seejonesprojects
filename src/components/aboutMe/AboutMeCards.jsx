@@ -1,11 +1,10 @@
 import { Suspense, useContext, useEffect, useRef, useState } from 'react';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import Spinner from '../../../misc/Spinner';
 import { Card } from 'primereact/card';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
@@ -99,7 +98,6 @@ const AboutMeCards = ({ slides }) => {
             <Suspense fallback={<Spinner />}>
               <LazyLoadImage
                 alt={slide.alt}
-                effect="blur"
                 height={slide.height}
                 onError={handleImageFailure}
                 src={slide.image}

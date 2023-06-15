@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import {
   BackendData,
   FrontendData,
@@ -6,6 +6,7 @@ import {
   ToolsData,
 } from '../techSkills/data/TechSkillsData';
 import { Button } from 'primereact/button';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import Typewriter from 'typewriter-effect';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import OpenUp from '../../sounds/OpenUp.mp3';
@@ -129,7 +130,7 @@ const LandingPage = () => {
           </h4>
           {LanguagesData.map((data, index) => (
             <a href={data.href} key={index} rel="noreferrer" target="_blank">
-              <img
+              <LazyLoadImage
                 alt={data.alt}
                 height="40"
                 key={index}
@@ -145,7 +146,7 @@ const LandingPage = () => {
             Familiar (Read-Only) Languages
           </h4>
           <a href="https://www.python.org" target="_blank" rel="noreferrer">
-            <img
+            <LazyLoadImage
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
               alt="python"
               width="40"
@@ -163,7 +164,7 @@ const LandingPage = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
+            <LazyLoadImage
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
               alt="typescript"
               width="40"
@@ -180,7 +181,7 @@ const LandingPage = () => {
           </h4>
           {FrontendData.map((data, index) => (
             <a href={data.href} key={index} rel="noreferrer" target="_blank">
-              <img
+              <LazyLoadImage
                 alt={data.alt}
                 height="40"
                 key={index}
@@ -198,7 +199,7 @@ const LandingPage = () => {
 
           {ToolsData.map((data, index) => (
             <a href={data.href} key={index} rel="noreferrer" target="_blank">
-              <img
+              <LazyLoadImage
                 alt={data.alt}
                 height="40"
                 key={index}
@@ -215,7 +216,7 @@ const LandingPage = () => {
 
           {BackendData.map((data, index) => (
             <a href={data.href} key={index} rel="noreferrer" target="_blank">
-              <img
+              <LazyLoadImage
                 alt={data.alt}
                 height="40"
                 key={index}
