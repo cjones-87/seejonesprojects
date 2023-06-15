@@ -1,5 +1,6 @@
 import React, { useContext, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import Spinner from '../../../misc/Spinner';
 import BusinessCard from './BusinessCard';
 import ContactForm from './ContactForm';
 
