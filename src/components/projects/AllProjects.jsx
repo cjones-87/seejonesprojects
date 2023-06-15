@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import ProjectSlideshow from './ProjectSlideshow';
 import Spinner from '../../../misc/Spinner';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import './ProjectsCSS/Projects.css';
 import './ProjectsCSS/ProjectSlideshow.css';
 
@@ -249,7 +249,6 @@ const AllProjects = () => {
           <LazyLoadImage
             alt={rowData.caption}
             className={'project-image'}
-            effect="blur"
             height={height / 10}
             onError={handleImageFailure}
             src={rowData.image}
