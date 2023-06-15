@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import GithubActivityData from './data/GithubActivityData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 
 const GithubActivity = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -23,7 +23,7 @@ const GithubActivity = () => {
         <a href={data.href} key={index}>
           {data.image ? (
             <LazyLoadImage
-              effect="blur"
+              alt={data.alt}
               height={height / 3}
               src={data.image}
               width={width / 3}
