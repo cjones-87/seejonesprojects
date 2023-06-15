@@ -1,10 +1,9 @@
 import { useContext, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import Spinner from '../../../misc/Spinner';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { Card } from 'primereact/card';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const IndividualProject = ({ data, height, title, width }) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -62,7 +61,6 @@ const IndividualProject = ({ data, height, title, width }) => {
                 ) : (
                   <LazyLoadImage
                     alt={item.alt}
-                    effect="blur"
                     height={height / 4}
                     onError={handleImageFailure}
                     src={item.img}
