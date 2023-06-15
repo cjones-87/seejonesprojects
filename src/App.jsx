@@ -1,7 +1,6 @@
 import React, { lazy, useContext, Suspense } from 'react';
 import { ThemeContext } from '../misc/context/LightDarkThemeContext';
 import { useNavigate } from 'react-router-dom';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import {
   FaFilePdf,
   FaHistory,
@@ -46,11 +45,11 @@ const App = () => {
   };
 
   const start = (
-    <LazyLoadComponent>
+    <Suspense fallback={<Spinner />}>
       <div id="navbarLogoContainer" onClick={handleClick}>
         <NavbarLogo />
       </div>
-    </LazyLoadComponent>
+    </Suspense>
   );
 
   const end = (
@@ -66,14 +65,14 @@ const App = () => {
       }}
     >
       <div style={{ paddingLeft: '.5rem', paddingTop: '2rem' }}>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <SidePanelMenu />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
       <div style={{ paddingLeft: '1rem' }}>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <DarkModeToggle />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
     </div>
   );
