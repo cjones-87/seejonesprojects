@@ -2,12 +2,11 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/vela-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
-
-import { useContext, useState } from 'react';
+import { useContext, useState, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import Spinner from '../../../misc/Spinner';
 import SidePanelButtons from './SidePanelButtons';
 import TheLittleDwarf from '../../sounds/TheLittleDwarf.mp3';
 import PowerDown from '../../sounds/PowerDown.mp3';
@@ -59,9 +58,9 @@ const SidePanelMenu = () => {
           >
             See Jones Engineer
           </h3>
-          <LazyLoadComponent>
+          <Suspense fallback={<Spinner />}>
             <SidePanelButtons />
-          </LazyLoadComponent>
+          </Suspense>
         </Sidebar>
 
         <div>
