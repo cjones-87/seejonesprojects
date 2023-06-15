@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import LazyLoadImage from '../lazy/LazyLoadImage';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import './ProjectsCSS/ProjectSlideshow.css';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
@@ -139,7 +138,6 @@ const ProjectSlideshow = ({ slides }) => {
                       <LazyLoadImage
                         className="image"
                         alt={slide.caption}
-                        effect="blur"
                         height={height / 2}
                         onError={handleImageFailure}
                         src={slide.image}
