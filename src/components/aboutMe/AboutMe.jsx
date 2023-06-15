@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { useContext, Suspense } from 'react';
 import { AboutMeData } from './data/AboutMeData';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import Spinner from '../../../misc/Spinner';
 import AboutMeCards from './AboutMeCards';
 import Specialization from '../techSkills/Specialization';
 import TechSkills from '../techSkills/TechSkills';
@@ -37,21 +37,21 @@ const AboutMe = () => {
       </h1>
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <AboutMeCards slides={AboutMeData} />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
 
       <div>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <Specialization />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
 
       <div>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <TechSkills />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
     </div>
   );
