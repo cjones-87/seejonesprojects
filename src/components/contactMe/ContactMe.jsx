@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import React, { useContext, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import BusinessCard from './BusinessCard';
 import ContactForm from './ContactForm';
@@ -42,9 +41,9 @@ const ContactMe = () => {
       </div>
 
       <div>
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <ContactForm />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
 
       <div
@@ -54,9 +53,9 @@ const ContactMe = () => {
           marginBottom: '2rem',
         }}
       >
-        <LazyLoadComponent>
+        <Suspense fallback={<Spinner />}>
           <BusinessCard />
-        </LazyLoadComponent>
+        </Suspense>
       </div>
     </div>
   );
