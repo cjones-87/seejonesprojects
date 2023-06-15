@@ -4,13 +4,8 @@ import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import Spinner from '../../../misc/Spinner';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
-import {
-  IdleClickerPic,
-  GuessingGamePic,
-  FullstackLogo,
-  browseBooks,
-  seeJonesEngineer,
-} from '../../photos/PhotoExports';
+import LazyLoadImage from '../lazy/LazyLoadImage';
+import { FullstackLogo } from '../../photos/PhotoExports';
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
 import { DiJavascript1 } from 'react-icons/di';
@@ -32,8 +27,6 @@ import {
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const LearningJournalTimeline = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -41,6 +34,67 @@ const LearningJournalTimeline = () => {
   const navigate = useNavigate();
 
   const LearningJournalEventsData = [
+    {
+      status: (
+        <span
+          style={{
+            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            textShadow: '2px 2px 2px indigo',
+          }}
+        >
+          Boilerplate Template
+        </span>
+      ),
+      date: (
+        <span
+          style={{
+            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            textShadow: '2px 2px 2px indigo',
+          }}
+        >
+          2023
+        </span>
+      ),
+      icon: 'pi pi-star',
+      color: '#673AB7',
+      iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
+      image: 'https://i.imgur.com/HOiTb5v.gif',
+
+      description: (
+        <span
+          style={{
+            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            textShadow: '2px 2px 2px indigo',
+          }}
+        >
+          eCommerce Boilerplate Template
+        </span>
+      ),
+      link: '/projects/blueprintboilerplate',
+      techStack: (
+        <span>
+          <DiJavascript1 />
+          &nbsp;&nbsp;&nbsp;
+          <FaNodeJs />
+          &nbsp;&nbsp;&nbsp;
+          <FaReact />
+          &nbsp;&nbsp;&nbsp;
+          <SiRedux />
+          &nbsp;&nbsp;&nbsp;
+          <SiPostgresql />
+          &nbsp;&nbsp;&nbsp;
+          <SiSequelize />
+          &nbsp;&nbsp;&nbsp;
+          <SiExpress />
+          &nbsp;&nbsp;&nbsp;
+          <ImHtmlFive />
+          &nbsp;&nbsp;&nbsp;
+          <SiCss3 />
+          &nbsp;&nbsp;&nbsp;Bcrypt&nbsp;&nbsp;&nbsp;JWT
+        </span>
+      ),
+      moreInfo: '',
+    },
     {
       status: (
         <span
@@ -64,6 +118,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
+      image: 'https://i.imgur.com/modvRWr.gif',
       color: '#FF9800',
       description: (
         <span
@@ -123,6 +178,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
+      image: 'https://i.imgur.com/mYnBu3I.gif',
       color: '#607D8B',
       description: (
         <span
@@ -175,7 +231,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       color: '#9C27B0',
-      image: seeJonesEngineer,
+      image: 'https://i.imgur.com/PVEBzQJ.gif',
       description: (
         <span
           style={{
@@ -228,6 +284,7 @@ const LearningJournalTimeline = () => {
       icon: 'pi pi-star',
       color: '#673AB7',
       iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
+      image: 'https://i.imgur.com/2IkB1A9.gif',
       description: (
         <span
           style={{
@@ -290,6 +347,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
+      image: 'https://i.imgur.com/HjTbdr9.gif',
       color: '#FF9800',
       description: (
         <span
@@ -379,7 +437,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       color: '#9C27B0',
-      image: browseBooks,
+      image: 'https://i.imgur.com/XV1sfOI.gif',
       description: (
         <span
           style={{
@@ -443,7 +501,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       color: '#673AB7',
-      image: IdleClickerPic,
+      image: 'https://i.imgur.com/KfVcjhN.gif',
       description: (
         <span
           style={{
@@ -491,7 +549,7 @@ const LearningJournalTimeline = () => {
       ),
       icon: 'pi pi-star',
       color: '#FF9800',
-      image: GuessingGamePic,
+      image: 'https://i.imgur.com/EGYVB8e.gif',
       description: (
         <span
           style={{
@@ -586,7 +644,7 @@ const LearningJournalTimeline = () => {
             paddingTop: '1.5rem',
           }}
         >
-          {item.iframe ? (
+          {!item.image ? (
             <div>
               <Suspense fallback={<Spinner />}>
                 <iframe
@@ -606,7 +664,6 @@ const LearningJournalTimeline = () => {
             <LazyLoadImage
               alt={item.name}
               className="p-shadow-2"
-              effect="blur"
               height={height / 3}
               onError={handleImageFailure}
               src={item.image}
