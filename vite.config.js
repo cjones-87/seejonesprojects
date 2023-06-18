@@ -16,7 +16,6 @@ export default defineConfig({
             'react-dom',
             'react-router-dom',
             'react-icons',
-            'react-lazy-load-image-component',
             'react-pdf',
             'three',
             'typewriter-effect',
