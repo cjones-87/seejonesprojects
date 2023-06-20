@@ -4,10 +4,9 @@
 
 # Portfolio Website - Designed & Constructed by CJ Jones
 
-Welcome to my personal portfolio website! This website showcases my skills, projects, and experience as a front-end developer. It is an original concept created solely by me, and I have dedicated close to two years to its development. The website has been in production for nearly a year and a half, with regular updates being made on a weekly to monthly basis. Throughout its development, I have overhauled the UI multiple times to ensure an intuitive and visually appealing user experience while keeping up with the latest technologies.
+## Table of Contents
 
-# Table of Contents
-
+- [About](#about)
 - [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Site Features](#site-features)
@@ -15,7 +14,9 @@ Welcome to my personal portfolio website! This website showcases my skills, proj
 - [Featured Projects](#featured-projects)
 - [Contact](#contact)
 
-## Demo
+## About
+
+Welcome to my personal portfolio website! This website showcases my skills, projects, and experience as a front-end developer. It is an original concept created solely by me, and I have dedicated close to two years to its development. The website has been in production for nearly a year and a half, with regular updates being made on a weekly to monthly basis. Throughout its development, I have overhauled the UI multiple times to ensure an intuitive and visually appealing user experience while keeping up with the latest technologies.
 
 ![PortfolioLoop](https://i.imgur.com/PVEBzQJ.gif)
 
