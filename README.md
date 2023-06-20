@@ -4,14 +4,41 @@
 
 # Portfolio Website - Designed & Constructed by CJ Jones
 
-Welcome to my personal portfolio website! This website showcases my skills, projects, and experience as a front-end developer. It is an original concept created solely by me, and I have dedicated close to two years to its development. The website has been in production for nearly a year and a half, with regular updates being made on a weekly to monthly basis. Throughout its development, I have overhauled the UI multiple times to ensure an intuitive and visually appealing user experience.
+Welcome to my personal portfolio website! This website showcases my skills, projects, and experience as a front-end developer. It is an original concept created solely by me, and I have dedicated close to two years to its development. The website has been in production for nearly a year and a half, with regular updates being made on a weekly to monthly basis. Throughout its development, I have overhauled the UI multiple times to ensure an intuitive and visually appealing user experience while keeping up with the latest technologies.
 
 # Table of Contents
 
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
 - [Site Features](#site-features)
 - [Accessibility Features](#accessibility-features)
 - [Featured Projects](#featured-projects)
 - [Contact](#contact)
+
+## Demo
+
+![PortfolioLoop](https://i.imgur.com/PVEBzQJ.gif)
+
+## Technologies Used
+
+### Front-end
+
+- Postprocessing (v6.29.1) - for post-processing WebGL renders.
+- Primeflex (v3.1.3) - CSS utility library for PrimeReact
+- Primeicons (v5.0.0) - icon library for PrimeReact
+- Primereact (v7.2.1) - for rendering prebuilt UI components
+- React (v17.0.2) - for building user interfaces
+- React-dom (v17.0.2) - for DOM-specific methods for rendering React components
+- React-icons (v4.6.0) - for rendering React icons
+- React-pdf (v5.7.2) - for rendering PDF files as React components
+- React-router-dom (v6.2.1) - for declarative routing for React
+- Three (v0.144.0) - for creating and displaying animated 3D computer graphics
+- Typewriter-effect (v2.19.0) - for creating a typewriter text effect
+
+### Development
+
+- @vitejs/plugin-react (v2.0.1) - for seamless React integration
+- vite (v3.0.7) - for fast and optimized development with hot module replacement (HMR) support
 
 ## Site Features
 
