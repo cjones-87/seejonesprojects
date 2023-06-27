@@ -9,7 +9,6 @@ const Cube = () => {
       style={{
         color: 'white',
         textShadow: '2px 2px 2px #01020E',
-        paddingBottom: '2rem',
         width,
       }}
     >
