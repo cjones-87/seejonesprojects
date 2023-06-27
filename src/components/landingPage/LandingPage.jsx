@@ -11,7 +11,7 @@ import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const LandingPage = () => {
   const { darkTheme } = useContext(ThemeContext);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const playSoundWhileEnteringSite = () => {
