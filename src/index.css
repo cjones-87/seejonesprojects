@@ -646,7 +646,6 @@ input[type='number']::-webkit-inner-spin-button {
   height: 100vh;
   font-size: 1vmin;
   justify-content: center;
-  margin-bottom: 8rem;
   text-align: center;
 }
 
