@@ -413,7 +413,9 @@ I strive to ensure a highly accessible website experience. The following accessi
 
 ## Contact
 
-You can reach out to me via email at cj@seejonesengineer.com.
+You can reach out to me via email at cj@seejonesengineer.com
+
+Connect with me on LinkedIn: https://www.linkedin.com/in/cjones1827/
 
 Visit my portfolio website: https://www.seejonesengineer.com/
 
