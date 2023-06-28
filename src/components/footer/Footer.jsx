@@ -1,9 +1,11 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import FooterContentData from './data/FooterContentData';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
   const { darkTheme } = useContext(ThemeContext);
+  const { height, width } = useWindowDimensions();
 
   return (
     <div
@@ -13,7 +15,7 @@ const Footer = () => {
         background: !darkTheme
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-        width: '100vw',
+        width,
       }}
     >
       <div
