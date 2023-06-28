@@ -544,12 +544,6 @@ a {
 
 /* home  */
 
-#homeFlex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 h1,
 h2,
 h3,
@@ -634,16 +628,11 @@ input[type='number']::-webkit-inner-spin-button {
   }
 }
 
-.App {
-  text-align: center;
-}
-
 /* animated background gradient */
 #landingPageContainer {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   font-size: 1vmin;
   justify-content: center;
   text-align: center;
