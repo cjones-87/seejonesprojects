@@ -75,11 +75,11 @@ const Home = () => {
         width,
       }}
     >
-      <div id="homeFlex">
-        <Suspense fallback={<Spinner />}>
-          <Cube id="homeCJ" />
-        </Suspense>
-      </div>
+      <Suspense fallback={<Spinner />}>
+        <ProjectSlideshow slides={ProjectData} />
+      </Suspense>
+
+      <GithubActivity />
 
       <div
         id="sectionA"
@@ -230,32 +230,6 @@ const Home = () => {
           Websites
         </div>
       </div>
-
-      <Suspense fallback={<Spinner />}>
-        <ProjectSlideshow slides={ProjectData} />
-      </Suspense>
-
-      <LazyLoadImage
-        alt="Codewars Algo & DSA Activity"
-        src="https://www.codewars.com/users/cjones-87/badges/large"
-        style={{ marginTop: '2rem' }}
-      />
-
-      <div
-        style={{
-          display: 'grid',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginBottom: '2rem',
-          marginTop: '2rem',
-        }}
-      >
-        <Suspense fallback={<Spinner />}>
-          <BusinessCard />
-        </Suspense>
-      </div>
-
-      <GithubActivity />
     </div>
   );
 };
