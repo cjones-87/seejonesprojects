@@ -8,10 +8,11 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import LandingPageLogo from './LandingPageLogo';
 
 const LandingPage = () => {
   const { darkTheme } = useContext(ThemeContext);
-  const { width } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
 
   useEffect(() => {
     const playSoundWhileEnteringSite = () => {
@@ -39,7 +40,9 @@ const LandingPage = () => {
         background: darkTheme
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+        height: height * 0.9,
         width,
+        zIndex: '1',
       }}
     >
       <h1
@@ -49,6 +52,7 @@ const LandingPage = () => {
           filter: darkTheme
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+          zIndex: '1',
         }}
       >
         <strong>CJ Jones</strong>
@@ -62,6 +66,7 @@ const LandingPage = () => {
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
+          zIndex: '1',
         }}
       >
         <Typewriter
@@ -94,8 +99,11 @@ const LandingPage = () => {
           margin: '2rem',
           padding: '1em',
           textShadow: '2px 2px 2px indigo',
+          zIndex: '1',
         }}
       />
+
+      <LandingPageLogo />
     </div>
   );
 };
