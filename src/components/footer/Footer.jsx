@@ -23,7 +23,6 @@ const Footer = () => {
           color: darkTheme ? '#ba68c8' : 'whitesmoke',
           textShadow: '2px 2px 2px indigo',
           textAlign: 'center',
-          marginTop: '2rem',
           paddingTop: '2rem',
         }}
       >
