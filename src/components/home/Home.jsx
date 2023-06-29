@@ -7,14 +7,10 @@ import {
 } from '../techSkills/data/TechSkillsData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import Spinner from '../../../misc/Spinner';
-import Cube from './Cube';
 import GithubActivity from './GithubActivity';
-import BusinessCard from '../contactMe/BusinessCard';
 import ProjectSlideshow from '../projects/ProjectSlideshow';
 import LazyLoadImage from '../lazy/LazyLoadImage';
-import '.././projects/ProjectsCSS/ProjectSlideshow.css';
 import '../../App.css';
-import '../contactMe/BusinessCard.css';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const Home = () => {
@@ -66,15 +62,32 @@ const Home = () => {
 
   return (
     <div
-      className="App"
       style={{
         background: !darkTheme
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         fontSize: '1vmin',
+        marginTop: '-1.5rem',
         width,
       }}
     >
+      <h1
+        id="gradientText"
+        style={{
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+          fontSize: '10em',
+          paddingBottom: '2rem',
+          paddingTop: '2rem',
+          textAlign: 'center',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Home
+      </h1>
+
       <Suspense fallback={<Spinner />}>
         <ProjectSlideshow slides={ProjectData} />
       </Suspense>
