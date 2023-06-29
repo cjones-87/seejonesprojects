@@ -11,9 +11,6 @@ import { Rating } from 'primereact/rating';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-import './ProjectsCSS/Projects.css';
-import './ProjectsCSS/ProjectSlideshow.css';
-
 const AllProjects = () => {
   const { darkTheme } = useContext(ThemeContext);
   const { height, width } = useWindowDimensions();
@@ -272,14 +269,32 @@ const AllProjects = () => {
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         color: darkTheme ? '#ba68c8' : 'whitesmoke',
+        fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
         paddingTop: '1rem',
         width: width,
       }}
     >
+      <h1
+        id="gradientText"
+        style={{
+          color: darkTheme ? '#434343' : 'black',
+          filter: darkTheme
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+          fontSize: '10em',
+          paddingBottom: '4rem',
+          textAlign: 'center',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Projects
+      </h1>
+
       <div style={{ marginBottom: '2rem' }}>
         <ProjectSlideshow slides={projects} />
       </div>
+
       <div>
         <DataTable
           value={projects}
