@@ -3,7 +3,6 @@ import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import LazyLoadImage from '../lazy/LazyLoadImage';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-import './ProjectsCSS/ProjectSlideshow.css';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const ProjectSlideshow = ({ slides }) => {
@@ -51,27 +50,12 @@ const ProjectSlideshow = ({ slides }) => {
         textShadow: '2px 2px 2px indigo',
       }}
     >
-      <h1
-        id="gradientText"
-        style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
-            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
-            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
-          fontSize: '10em',
-          paddingBottom: '4rem',
-          textAlign: 'center',
-          textShadow: '2px 2px 2px indigo',
-        }}
-      >
-        Projects
-      </h1>
       <section
         className="slider"
         style={{
           display: 'flex',
           justifyContent: 'center',
-          paddingBottom: '4.5rem',
+          paddingBottom: '2rem',
         }}
       >
         <div
@@ -114,6 +98,7 @@ const ProjectSlideshow = ({ slides }) => {
           </div>
         </div>
         {slides.map((slide, index) => {
+          console.log(width);
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -121,7 +106,7 @@ const ProjectSlideshow = ({ slides }) => {
             >
               {index === current && (
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <div style={{ justifyContent: 'center' }}>
                     {!slide.image ? (
                       <iframe
                         allow="autoplay"
@@ -149,27 +134,36 @@ const ProjectSlideshow = ({ slides }) => {
                       />
                     )}
                   </div>
-                  <h3
+                  <div
                     style={{
-                      color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                      filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
-                      textAlign: 'center',
-                      textShadow: '2px 2px 2px indigo',
+                      alignItems: 'center',
+                      display: 'flex',
+                      flexDirection: width < 768 ? 'column' : 'row',
+                      justifyContent: width < 768 ? 'center' : 'space-between',
                     }}
                   >
-                    {slide.caption}
-                  </h3>
+                    <h3
+                      style={{
+                        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                        filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
+                        textAlign: 'center',
+                        textShadow: '2px 2px 2px indigo',
+                      }}
+                    >
+                      {slide.caption}
+                    </h3>
 
-                  <h5
-                    style={{
-                      color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                      filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
-                      textShadow: '2px 2px 2px indigo',
-                    }}
-                    className="slideNumber"
-                  >
-                    {index + 1} of {slidesLength}
-                  </h5>
+                    <h5
+                      style={{
+                        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                        filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
+                        textShadow: '2px 2px 2px indigo',
+                      }}
+                      className="slideNumber"
+                    >
+                      {index + 1} of {slidesLength}
+                    </h5>
+                  </div>
                 </div>
               )}
             </div>
