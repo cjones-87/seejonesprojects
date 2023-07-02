@@ -76,7 +76,7 @@ const Resume = () => {
               : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
             color: darkTheme ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
-            width: '20%',
+            width: width < 960 ? width / 2 : width / 6,
           }}
         >
           <i style={{ marginRight: '1rem' }} className="fa fa-file-pdf" />
