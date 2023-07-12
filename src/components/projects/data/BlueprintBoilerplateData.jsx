@@ -7,7 +7,7 @@ const BlueprintBoilerplateData = [
   {
     alt: 'Blueprint Boilerplate Photo',
     img: 'https://i.imgur.com/HOiTb5v.gif',
-    paragraph: `The Blueprint Boilerplate provides a robust foundation for developing full-stack web applications. With its pre-configured CRUD routes, authenticated routes, predefined models, integrated light/dark mode, and connected forms, The Blueprint Boilerplate saves development time and provides a structured starting point for building feature-rich applications. It incorporates modern front-end technologies like React and Redux, enabling efficient state management and dynamic UI updates. On the back-end, Express.js and Sequelize simplify server-side development and interaction with the PostgreSQL database.`,
+    paragraph: `The Blueprint Boilerplate provides a robust foundation for developing full-stack web applications. With its pre-configured CRUD routes, authenticated routes, predefined models, integrated light/dark mode, and connected forms, The Blueprint Boilerplate saves development time and provides a structured starting point for building feature-rich applications. It incorporates modern front-end technologies like React and Redux, enabling efficient state management and dynamic UI updates, with Vite for lightning fast development with hot module reloading. On the back-end, Express.js and Sequelize simplify server-side development and interaction with the PostgreSQL database with an Express server pipeline.`,
   },
 ];
 
