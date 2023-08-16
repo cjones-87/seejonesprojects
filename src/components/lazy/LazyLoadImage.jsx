@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 
-const LazyLoadImage = ({ alt, height, onError, src, style, width }) => {
+const LazyLoadImage = ({
+  alt,
+  className,
+  height,
+  id,
+  onClick,
+  onError,
+  src,
+  style,
+  width,
+}) => {
   const [isLoaded, setIsLoaded] = useState(null);
   const imageRef = useRef(null);
 
@@ -24,7 +34,10 @@ const LazyLoadImage = ({ alt, height, onError, src, style, width }) => {
   return (
     <img
       alt={alt}
+      className={className}
       height={height}
+      id={id}
+      onClick={onClick}
       onError={onError}
       onLoad={handleImageLoad}
       ref={imageRef}
