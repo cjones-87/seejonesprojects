@@ -25,14 +25,15 @@ const GithubActivity = () => {
             <LazyLoadImage
               alt={data.alt}
               height={height / 3}
-              src={data.image}
+              src={data.imageSrc}
               width={width / 3}
             />
           ) : (
             <iframe
+              alt={data.alt}
               height={height / 3}
               key={index}
-              src={data.src}
+              src={data.iframeSrc}
               width={width / 3}
             />
           )}
