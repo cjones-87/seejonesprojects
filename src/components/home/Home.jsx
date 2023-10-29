@@ -1,4 +1,4 @@
-import { useContext, Suspense } from 'react';
+import { lazy, useContext, Suspense } from 'react';
 import {
   BackendData,
   FrontendData,
@@ -6,12 +6,14 @@ import {
   ToolsData,
 } from '../techSkills/data/TechSkillsData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
-import Spinner from '../../../misc/Spinner';
-import GithubActivity from './GithubActivity';
-import ProjectSlideshow from '../projects/ProjectSlideshow';
-import LazyLoadImage from '../lazy/LazyLoadImage';
 import '../../App.css';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+
+const Spinner = lazy(() => import('../../../misc/Spinner'));
+const GithubActivity = lazy(() => import('./GithubActivity'));
+const ProjectSlideshow = lazy(() => import('../projects/ProjectSlideshow'));
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const Home = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -71,8 +73,13 @@ const Home = () => {
         width,
       }}
     >
+      <Head
+        title='Elevating Experiences: CJ Jones, Software Engineer'
+        description={`Elevating user experiences through intuitive design and powerful functionality. Explore the fusion of cutting-edge technology and user-friendly interfaces with CJ, your expert in software engineering excellence.`}
+      />
+
       <h1
-        id="gradientText"
+        id='gradientText'
         style={{
           color: darkTheme ? '#434343' : 'black',
           filter: darkTheme
@@ -95,7 +102,7 @@ const Home = () => {
       <GithubActivity />
 
       <div
-        id="sectionA"
+        id='sectionA'
         style={{
           backgroundColor: darkTheme
             ? 'rgb(128, 128, 128, 0.3)'
@@ -112,105 +119,105 @@ const Home = () => {
         challenge that comes my way.
       </div>
 
-      <div id="sectionC" style={{ color: 'whitesmoke' }}>
-        <div align="center" id="sectionC1" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+      <div id='sectionC' style={{ color: 'whitesmoke' }}>
+        <div align='center' id='sectionC1' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Proficient Languages
           </h4>
           {LanguagesData.map((data, index) => (
-            <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <a href={data.href} key={index} rel='noreferrer' target='_blank'>
               <LazyLoadImage
                 alt={data.alt}
-                height="40"
+                height='40'
                 key={index}
                 src={data.src}
-                width="40"
+                width='40'
               />
             </a>
           ))}
         </div>
 
-        <div align="center" id="sectionC2" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+        <div align='center' id='sectionC2' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Familiar (Read-Only) Languages
           </h4>
-          <a href="https://www.python.org" target="_blank" rel="noreferrer">
+          <a href='https://www.python.org' target='_blank' rel='noreferrer'>
             <LazyLoadImage
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-              alt="python"
-              width="40"
-              height="40"
+              src='https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg'
+              alt='python'
+              width='40'
+              height='40'
             />
           </a>
         </div>
 
-        <div align="center" id="sectionC1" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+        <div align='center' id='sectionC1' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Knowledgeable Languages
           </h4>
           <a
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.typescriptlang.org/'
+            target='_blank'
+            rel='noreferrer'
           >
             <LazyLoadImage
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript"
-              width="40"
-              height="40"
+              src='https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
+              alt='typescript'
+              width='40'
+              height='40'
             />
           </a>
         </div>
       </div>
 
-      <div id="sectionC" style={{ color: 'whitesmoke', width }}>
-        <div className="sectionC2" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+      <div id='sectionC' style={{ color: 'whitesmoke', width }}>
+        <div className='sectionC2' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Front-End
           </h4>
           {FrontendData.map((data, index) => (
-            <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <a href={data.href} key={index} rel='noreferrer' target='_blank'>
               <LazyLoadImage
                 alt={data.alt}
-                height="40"
+                height='40'
                 key={index}
                 src={data.src}
-                width="40"
+                width='40'
               />
             </a>
           ))}
         </div>
 
-        <div className="sectionC1" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+        <div className='sectionC1' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Tools
           </h4>
 
           {ToolsData.map((data, index) => (
-            <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <a href={data.href} key={index} rel='noreferrer' target='_blank'>
               <LazyLoadImage
                 alt={data.alt}
-                height="40"
+                height='40'
                 key={index}
                 src={data.src}
-                width="40"
+                width='40'
               />
             </a>
           ))}
         </div>
-        <div className="sectionC2" style={{ width: width / 3 }}>
-          <h4 align="center" style={{ fontSize: '3em' }}>
+        <div className='sectionC2' style={{ width: width / 3 }}>
+          <h4 align='center' style={{ fontSize: '3em' }}>
             Back-End
           </h4>
 
           {BackendData.map((data, index) => (
-            <a href={data.href} key={index} rel="noreferrer" target="_blank">
+            <a href={data.href} key={index} rel='noreferrer' target='_blank'>
               <LazyLoadImage
                 alt={data.alt}
-                height="40"
+                height='40'
                 key={index}
                 src={data.src}
-                width="40"
+                width='40'
               />
             </a>
           ))}
@@ -218,26 +225,26 @@ const Home = () => {
       </div>
 
       <div
-        id="sectionC"
+        id='sectionC'
         style={{
           color: 'whitesmoke',
           width,
         }}
       >
         <div
-          className="sectionC1"
+          className='sectionC1'
           style={{ fontSize: '3em', width: width / 3 }}
         >
           Web Apps
         </div>
         <div
-          className="sectionC2"
+          className='sectionC2'
           style={{ fontSize: '3em', width: width / 3 }}
         >
           Mobile Apps
         </div>
         <div
-          className="sectionC1"
+          className='sectionC1'
           style={{ fontSize: '3em', width: width / 3 }}
         >
           Websites
