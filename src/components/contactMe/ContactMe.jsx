@@ -1,8 +1,10 @@
-import React, { useContext, Suspense } from 'react';
+import { lazy, useContext, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import Spinner from '../../../misc/Spinner';
-import BusinessCard from './BusinessCard';
-import ContactForm from './ContactForm';
+
+const Spinner = lazy(() => import('../../../misc/Spinner'));
+const BusinessCard = lazy(() => import('./BusinessCard'));
+const ContactForm = lazy(() => import('./ContactForm'));
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const ContactMe = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -16,6 +18,11 @@ const ContactMe = () => {
         width: '100vw',
       }}
     >
+      <Head
+        title='Collaborate with Excellence: Hire CJ Jones, Software Engineer'
+        description={`Discover the expertise of CJ Jones, a seasoned software engineer ready to elevate your projects to new heights. From full-time positions to contract work, tutoring, mentoring, and consulting, explore a range of collaboration opportunities tailored to meet your unique needs. CJ brings a wealth of experience in creating intuitive, powerful software solutions. Reach out today to discuss how CJ Jones can contribute to your success. Let's build something extraordinary together.`}
+      />
+
       <div
         style={{
           fontSize: '1vmin',
@@ -23,7 +30,7 @@ const ContactMe = () => {
         }}
       >
         <h1
-          id="gradientText"
+          id='gradientText'
           style={{
             color: darkTheme ? '#434343' : 'black',
             filter: darkTheme
