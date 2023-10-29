@@ -1,14 +1,16 @@
-import { useContext, useEffect } from 'react';
+import { lazy, useContext, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import LandingPageLogo from './LandingPageLogo';
+
+const LandingPageLogo = lazy(() => import('./LandingPageLogo'));
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LandingPage = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -35,7 +37,7 @@ const LandingPage = () => {
 
   return (
     <div
-      id="landingPageContainer"
+      id='landingPageContainer'
       style={{
         background: darkTheme
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
@@ -45,8 +47,13 @@ const LandingPage = () => {
         zIndex: '1',
       }}
     >
+      <Head
+        title='Crafting User-Centric Excellence: CJ Jones, Software Engineer'
+        description={`CJ Jones, a seasoned software engineer, excels in crafting user-centric software solutions that seamlessly blend intuitive design with powerful functionality. With a focus on creating visually captivating user experiences, CJ specializes in developing sophisticated logic systems that elevate the overall usability of applications. Explore the intersection of cutting-edge technology and user-friendly design with CJ Jones, your go-to expert for software engineering excellence.`}
+      />
+
       <h1
-        id="gradientText"
+        id='gradientText'
         style={{
           color: darkTheme ? '#434343' : 'black',
           filter: darkTheme
@@ -59,7 +66,7 @@ const LandingPage = () => {
       </h1>
 
       <h2
-        id="gradientText"
+        id='gradientText'
         style={{
           color: darkTheme ? '#434343' : 'black',
           filter: darkTheme
@@ -88,8 +95,8 @@ const LandingPage = () => {
       </h2>
 
       <Button
-        id="enterSite"
-        label="See Jones Engineer"
+        id='enterSite'
+        label='See Jones Engineer'
         style={{
           background: darkTheme
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
