@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { lazy, useContext } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const PlayGames = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -17,6 +19,11 @@ const PlayGames = () => {
         width,
       }}
     >
+      <Head
+        title='Game Zone: Immerse Yourself in Interactive Adventures'
+        description={`Welcome to the Game Zone, where entertainment meets innovation! Explore a collection of interactive games meticulously crafted by CJ Jones, your gateway to thrilling digital adventures. Immerse yourself in engaging challenges and captivating experiences that showcase the seamless fusion of creativity and technology. Whether you're a casual gamer or a seasoned player, embark on a journey of fun and discovery in this interactive playground. Let the games begin!`}
+      />
+
       <div
         style={{
           display: 'flex',
@@ -26,9 +33,9 @@ const PlayGames = () => {
         }}
       >
         <div>
-          <a href="https://iykyk-two.vercel.app/" style={{ fontSize: '1vmin' }}>
+          <a href='https://iykyk-two.vercel.app/' style={{ fontSize: '1vmin' }}>
             <h1
-              id="gradientText"
+              id='gradientText'
               style={{
                 color: darkTheme ? '#434343' : 'black',
                 filter: darkTheme
@@ -43,10 +50,10 @@ const PlayGames = () => {
           </a>
 
           <iframe
-            className="myClassname"
+            className='myClassname'
             height={height / 1.5}
-            id="myId"
-            src="https://iykyk-two.vercel.app/"
+            id='myId'
+            src='https://iykyk-two.vercel.app/'
             style={{ border: 0 }}
             width={width / 1.5}
           />
@@ -54,11 +61,11 @@ const PlayGames = () => {
 
         <div>
           <a
-            href="https://mugnificent-coffee-clicker.vercel.app/"
+            href='https://mugnificent-coffee-clicker.vercel.app/'
             style={{ fontSize: '1vmin' }}
           >
             <h1
-              id="gradientText"
+              id='gradientText'
               style={{
                 color: darkTheme ? '#434343' : 'black',
                 filter: darkTheme
@@ -73,10 +80,10 @@ const PlayGames = () => {
           </a>
 
           <iframe
-            className="myClassname"
+            className='myClassname'
             height={height / 1.5}
-            id="myId"
-            src="https://mugnificent-coffee-clicker.vercel.app/"
+            id='myId'
+            src='https://mugnificent-coffee-clicker.vercel.app/'
             style={{ border: 0 }}
             width={width / 1.5}
           />
@@ -84,11 +91,11 @@ const PlayGames = () => {
 
         <div>
           <a
-            href="https://guessing-game-blue.vercel.app/"
+            href='https://guessing-game-blue.vercel.app/'
             style={{ fontSize: '1vmin' }}
           >
             <h1
-              id="gradientText"
+              id='gradientText'
               style={{
                 color: 'black',
                 filter: darkTheme
@@ -103,10 +110,10 @@ const PlayGames = () => {
           </a>
 
           <iframe
-            className="myClassname"
+            className='myClassname'
             height={height / 1.5}
-            id="myId"
-            src="https://guessing-game-blue.vercel.app/"
+            id='myId'
+            src='https://guessing-game-blue.vercel.app/'
             style={{ border: 0 }}
             width={width / 1.5}
           />
