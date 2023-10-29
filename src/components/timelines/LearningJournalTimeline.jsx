@@ -1,10 +1,8 @@
-import { useContext, Suspense } from 'react';
+import { lazy, useContext, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import Spinner from '../../../misc/Spinner';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
-import LazyLoadImage from '../lazy/LazyLoadImage';
 import { FullstackLogo } from '../../photos/PhotoExports';
 import { FaMobileAlt, FaNodeJs, FaReact } from 'react-icons/fa';
 import { ImHtmlFive } from 'react-icons/im';
@@ -27,6 +25,10 @@ import {
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+
+const Spinner = lazy(() => import('../../../misc/Spinner'));
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LearningJournalTimeline = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -146,8 +148,8 @@ const LearningJournalTimeline = () => {
           <SiFirebase />
           &nbsp;&nbsp;&nbsp;
           <img
-            src="https://img.icons8.com/color/2x/cloud-firestore.png"
-            alt="firestore"
+            src='https://img.icons8.com/color/2x/cloud-firestore.png'
+            alt='firestore'
             height={'12rem'}
             width={'12rem'}
           />
@@ -253,7 +255,7 @@ const LearningJournalTimeline = () => {
           &nbsp;&nbsp;&nbsp;
           <SiCss3 />
           &nbsp;&nbsp;&nbsp;
-          <i className="pi pi-prime" style={{ fontSize: '1em' }} />
+          <i className='pi pi-prime' style={{ fontSize: '1em' }} />
           &nbsp;&nbsp;&nbsp;
           <SiNetlify />
         </span>
@@ -616,7 +618,7 @@ const LearningJournalTimeline = () => {
   const customizedMarker = (item) => {
     return (
       <span
-        className="custom-marker p-shadow-2"
+        className='custom-marker p-shadow-2'
         style={{ backgroundColor: item.color }}
       >
         <i className={item.icon}></i>
@@ -648,7 +650,7 @@ const LearningJournalTimeline = () => {
             <div>
               <Suspense fallback={<Spinner />}>
                 <iframe
-                  allow="autoplay"
+                  allow='autoplay'
                   height={height / 3}
                   onError={handleImageFailure}
                   src={item.iframe}
@@ -663,7 +665,7 @@ const LearningJournalTimeline = () => {
           ) : (
             <LazyLoadImage
               alt={item.name}
-              className="p-shadow-2"
+              className='p-shadow-2'
               height={height / 3}
               onError={handleImageFailure}
               src={item.image}
@@ -678,8 +680,8 @@ const LearningJournalTimeline = () => {
           <p>{item.techStack}</p>
 
           <Button
-            className="p-button-text"
-            label="Learn More"
+            className='p-button-text'
+            label='Learn More'
             onClick={() =>
               item.link[0] === 'h'
                 ? window.open(item.link, '_blank')
@@ -710,8 +712,13 @@ const LearningJournalTimeline = () => {
         width: width,
       }}
     >
+      <Head
+        title='Coding Chronicles: A Journey in Software Engineering'
+        description={`Dive into the evolution of my skills and experiences in the world of software engineering. This timeline serves as a dynamic learning journal, chronicling each project undertaken and the educational milestones achieved on the path to becoming a proficient software engineer. Join me in this digital diary, where each entry unveils the challenges, triumphs, and invaluable lessons learned. From coding projects to educational pursuits, witness the growth and development that shape my journey in the ever-evolving realm of software engineering.`}
+      />
+
       <h1
-        id="gradientText"
+        id='gradientText'
         style={{
           color: !darkTheme ? 'black' : '#434343',
           filter: darkTheme
@@ -727,8 +734,8 @@ const LearningJournalTimeline = () => {
       <div style={{ padding: '2rem' }}>
         <Timeline
           value={LearningJournalEventsData}
-          align="alternate"
-          className="customized-timeline"
+          align='alternate'
+          className='customized-timeline'
           marker={customizedMarker}
           content={customizedContent}
         />
