@@ -1,10 +1,12 @@
-import { useContext, useState } from 'react';
+import { lazy, useContext, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
+
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const Resume = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -30,9 +32,14 @@ const Resume = () => {
         width,
       }}
     >
+      <Head
+        title='Professional Profile: CJ Jones, Software Engineer'
+        description={`Unlock a comprehensive overview of CJ Jones's professional journey in the realm of software engineering. This page serves as a gateway to CJ's expertise, experience, and accomplishments. Explore a detailed resume that highlights key skills, notable projects, and educational background. From coding proficiency to project management, delve into the qualifications that define CJ Jones as a seasoned software engineer. Navigate through the pages of a dynamic career, where passion meets proficiency in the world of technology.`}
+      />
+
       <div style={{ fontSize: '1vmin' }}>
         <h1
-          id="gradientText"
+          id='gradientText'
           style={{
             color: darkTheme ? '#434343' : 'black',
             filter: darkTheme
@@ -56,13 +63,13 @@ const Resume = () => {
         }}
       >
         <Tooltip
-          content="download today!"
-          target="#resume-download"
-          position="top"
+          content='download today!'
+          target='#resume-download'
+          position='top'
         />
 
         <Button
-          className="lightDarkToggleButton"
+          className='lightDarkToggleButton'
           onClick={() => {
             window.open('/01CJsSWEPortfolioResume.pdf', '_blank');
             location.reload();
@@ -79,7 +86,7 @@ const Resume = () => {
             width: width < 960 ? width / 2 : width / 6,
           }}
         >
-          <i style={{ marginRight: '1rem' }} className="fa fa-file-pdf" />
+          <i style={{ marginRight: '1rem' }} className='fa fa-file-pdf' />
           Download PDF
         </Button>
       </div>
