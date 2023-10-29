@@ -51,7 +51,7 @@ const ProjectSlideshow = ({ slides }) => {
       }}
     >
       <section
-        className="slider"
+        className='slider'
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -65,7 +65,7 @@ const ProjectSlideshow = ({ slides }) => {
             style={{ left: '3rem', position: 'absolute', marginTop: '20em' }}
           >
             <FaArrowAltCircleLeft
-              className="previous"
+              className='previous'
               onClick={previousSlide}
               style={{
                 color: darkTheme ? '#ba68c8' : 'whitesmoke',
@@ -83,7 +83,7 @@ const ProjectSlideshow = ({ slides }) => {
             style={{ right: '2rem', position: 'absolute', marginTop: '20em' }}
           >
             <FaArrowAltCircleRight
-              className="next"
+              className='next'
               onClick={nextSlide}
               style={{
                 color: darkTheme ? '#ba68c8' : 'whitesmoke',
@@ -98,7 +98,6 @@ const ProjectSlideshow = ({ slides }) => {
           </div>
         </div>
         {slides.map((slide, index) => {
-          console.log(width);
           return (
             <div
               className={index === current ? 'slide active' : 'slide'}
@@ -109,7 +108,7 @@ const ProjectSlideshow = ({ slides }) => {
                   <div style={{ justifyContent: 'center' }}>
                     {!slide.image ? (
                       <iframe
-                        allow="autoplay"
+                        allow='autoplay'
                         height={height / 2}
                         onError={handleImageFailure}
                         src={slide.iframe}
@@ -121,7 +120,7 @@ const ProjectSlideshow = ({ slides }) => {
                       />
                     ) : (
                       <LazyLoadImage
-                        className="image"
+                        className='image'
                         alt={slide.caption}
                         height={height / 2}
                         onError={handleImageFailure}
@@ -159,7 +158,7 @@ const ProjectSlideshow = ({ slides }) => {
                         filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
                         textShadow: '2px 2px 2px indigo',
                       }}
-                      className="slideNumber"
+                      className='slideNumber'
                     >
                       {index + 1} of {slidesLength}
                     </h5>
