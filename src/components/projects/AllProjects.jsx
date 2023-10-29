@@ -1,15 +1,17 @@
-import { Suspense, useContext } from 'react';
+import { lazy, Suspense, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
-import LazyLoadImage from '../lazy/LazyLoadImage';
-import ProjectSlideshow from './ProjectSlideshow';
-import Spinner from '../../../misc/Spinner';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const ProjectSlideshow = lazy(() => import('./ProjectSlideshow'));
+const Spinner = lazy(() => import('../../../misc/Spinner'));
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const AllProjects = () => {
   const { darkTheme } = useContext(ThemeContext);
@@ -171,7 +173,7 @@ const AllProjects = () => {
 
   const header = (
     <div
-      className="table-header"
+      className='table-header'
       style={{
         background: darkTheme
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
@@ -184,7 +186,7 @@ const AllProjects = () => {
     >
       See Jones Projects
       <Button
-        icon="pi pi-images"
+        icon='pi pi-images'
         onClick={navigateToLearningJournal}
         style={{
           background: darkTheme
@@ -192,7 +194,7 @@ const AllProjects = () => {
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
           color: darkTheme ? 'whitesmoke' : '#ba68c8',
         }}
-        tooltip="View in my learning journal"
+        tooltip='View in my learning journal'
         tooltipOptions={{ position: 'left' }}
       />
     </div>
@@ -227,7 +229,7 @@ const AllProjects = () => {
           <div>
             <Suspense fallback={<Spinner />}>
               <iframe
-                allow="autoplay"
+                allow='autoplay'
                 className={'project-image'}
                 height={height / 10}
                 onError={handleImageFailure}
@@ -238,7 +240,7 @@ const AllProjects = () => {
                   borderRadius: 25,
                   padding: '5px',
                 }}
-                width="10vw"
+                width='10vw'
               />
             </Suspense>
           </div>
@@ -263,7 +265,7 @@ const AllProjects = () => {
 
   return (
     <div
-      className="datatable-project"
+      className='datatable-project'
       style={{
         background: darkTheme
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
@@ -275,8 +277,13 @@ const AllProjects = () => {
         width: width,
       }}
     >
+      <Head
+        title='Portfolio Showcase: CJ Jones, Software Engineer'
+        description={`Dive into the showcase of CJ Jones's software engineering excellence. Explore a collection of meticulously crafted projects and client work, where intuitive design meets powerful functionality. Witness firsthand the intersection of cutting-edge technology and user-friendly interfaces.`}
+      />
+
       <h1
-        id="gradientText"
+        id='gradientText'
         style={{
           color: darkTheme ? '#434343' : 'black',
           filter: darkTheme
@@ -300,11 +307,11 @@ const AllProjects = () => {
           value={projects}
           header={header}
           footer={footer}
-          responsiveLayout="scroll"
+          responsiveLayout='scroll'
         >
           <Column
-            field="name"
-            header="Title"
+            field='name'
+            header='Title'
             style={{
               background: darkTheme
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
@@ -314,7 +321,7 @@ const AllProjects = () => {
             }}
           ></Column>
           <Column
-            header="Image"
+            header='Image'
             body={imageBodyTemplate}
             style={{
               background: darkTheme
@@ -326,8 +333,8 @@ const AllProjects = () => {
             }}
           ></Column>
           <Column
-            field="category"
-            header="Category"
+            field='category'
+            header='Category'
             style={{
               background: darkTheme
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
@@ -337,8 +344,8 @@ const AllProjects = () => {
             }}
           ></Column>
           <Column
-            field="rating"
-            header="Difficulty Level"
+            field='rating'
+            header='Difficulty Level'
             body={ratingBodyTemplate}
             style={{
               background: darkTheme
