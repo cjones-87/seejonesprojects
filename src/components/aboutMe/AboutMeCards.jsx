@@ -1,13 +1,14 @@
-import { Suspense, useContext, useEffect, useRef, useState } from 'react';
-import LazyLoadImage from '../lazy/LazyLoadImage';
+import { lazy, Suspense, useContext, useEffect, useRef, useState } from 'react';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
-import Spinner from '../../../misc/Spinner';
 import { Card } from 'primereact/card';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
+
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const Spinner = lazy(() => import('../../../misc/Spinner'));
 
 const AboutMeCards = ({ slides }) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -54,7 +55,7 @@ const AboutMeCards = ({ slides }) => {
         paddingBottom: '2rem',
       }}
     >
-      <section className="slider">
+      <section className='slider'>
         <div
           style={{ display: 'flex', flexDirection: 'row', fontSize: '1vmin' }}
         >
@@ -62,7 +63,7 @@ const AboutMeCards = ({ slides }) => {
             style={{ left: '3rem', position: 'absolute', marginTop: '20rem' }}
           >
             <FaArrowAltCircleLeft
-              className="previous"
+              className='previous'
               onClick={previousSlide}
               style={{
                 color: darkTheme ? '#ba68c8' : 'whitesmoke',
@@ -79,7 +80,7 @@ const AboutMeCards = ({ slides }) => {
             style={{ right: '2rem', position: 'absolute', marginTop: '20rem' }}
           >
             <FaArrowAltCircleRight
-              className="next"
+              className='next'
               onClick={nextSlide}
               style={{
                 color: darkTheme ? '#ba68c8' : 'whitesmoke',
@@ -105,7 +106,7 @@ const AboutMeCards = ({ slides }) => {
                   borderRadius: 25,
                   padding: 10,
                 }}
-                width="50vw"
+                width='50vw'
               />
             </Suspense>
           );
@@ -130,7 +131,7 @@ const AboutMeCards = ({ slides }) => {
                       }}
                       header={header}
                     >
-                      <div className="m-0">{slide.paragraph}</div>
+                      <div className='m-0'>{slide.paragraph}</div>
                     </Card>
                   </Suspense>
                 </div>
