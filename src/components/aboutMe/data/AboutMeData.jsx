@@ -1,8 +1,8 @@
-import React from 'react';
 import { MainLogo, BlueShirtSmile, LogoCJ } from '../../../photos/PhotoExports';
 
 export const AboutMeData = [
   {
+    alt: 'CJ Jones, Software Engineer logo',
     id: 1,
     image: MainLogo,
     paragraph: (
@@ -16,6 +16,7 @@ export const AboutMeData = [
     ),
   },
   {
+    alt: 'CJ Jones, Software Engineer',
     id: 2,
     image: BlueShirtSmile,
     paragraph: (
@@ -29,6 +30,7 @@ export const AboutMeData = [
     ),
   },
   {
+    alt: 'CJ Jones, Software Engineer logo',
     id: 3,
     image: LogoCJ,
     paragraph: (
@@ -43,6 +45,7 @@ export const AboutMeData = [
     ),
   },
   {
+    alt: 'CJ Jones, Software Engineer',
     id: 4,
     image: BlueShirtSmile,
     paragraph: (
