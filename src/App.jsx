@@ -1,4 +1,4 @@
-import React, { lazy, useContext, Suspense } from 'react';
+import { lazy, useContext, Suspense } from 'react';
 import { ThemeContext } from '../misc/context/LightDarkThemeContext';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -12,15 +12,15 @@ import {
 import { IoGameController } from 'react-icons/io5';
 import Typewriter from 'typewriter-effect';
 import useWindowDimensions from '../misc/customHooks/useWindowDimensions';
-import SidePanelMenu from './components/menu/SidePanelMenu';
-import DarkModeToggle from './components/navbar/DarkModeToggle';
-import NavbarLogo from './components/navbar/NavbarLogo';
 import Routes from './navigation/NavigationRoutes';
-import Spinner from '../misc/Spinner';
 import './index.css';
 
 const Navbar = lazy(() => import('./components/navbar/Navbar'));
 const Footer = lazy(() => import('./components/footer/Footer'));
+const SidePanelMenu = lazy(() => import('./components/menu/SidePanelMenu'));
+const DarkModeToggle = lazy(() => import('./components/navbar/DarkModeToggle'));
+const NavbarLogo = lazy(() => import('./components/navbar/NavbarLogo'));
+const Spinner = lazy(() => import('../misc/Spinner'));
 
 export const Loading = () => (
   <div
@@ -31,7 +31,9 @@ export const Loading = () => (
       transform: 'translate(-50%, -50%)',
     }}
   >
-    <Spinner />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Spinner />
+    </Suspense>
   </div>
 );
 
@@ -46,7 +48,7 @@ const App = () => {
 
   const start = (
     <Suspense fallback={<Spinner />}>
-      <div id="navbarLogoContainer" onClick={handleClick}>
+      <div id='navbarLogoContainer' onClick={handleClick}>
         <NavbarLogo />
       </div>
     </Suspense>
@@ -94,9 +96,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/home')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaHome
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
@@ -115,9 +117,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/aboutme')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaInfoCircle
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
@@ -136,9 +138,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/learningjournal')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaHistory
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
@@ -157,9 +159,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/projects')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaImages
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
@@ -178,9 +180,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/playgames')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <IoGameController
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
@@ -211,15 +213,15 @@ const App = () => {
       ],
       label: (
         <span onClick={() => navigate('/resume')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaFilePdf
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
           <Typewriter
-            className="resume"
+            className='resume'
             options={{
               autoStart: true,
               cursor: '',
@@ -233,9 +235,9 @@ const App = () => {
     {
       label: (
         <span onClick={() => navigate('/hireme')} style={navMenuStyle}>
-          <div className="navIconContainer">
+          <div className='navIconContainer'>
             <FaMoneyCheckAlt
-              className="navIcon"
+              className='navIcon'
               color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
