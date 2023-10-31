@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import ContactFormData, { OptionData } from './data/ContactFormData';
 
@@ -23,27 +23,29 @@ const ContactForm = () => {
   const refs = [firstName, lastName, email, phoneNumber, budget, availability];
 
   return (
-    <div
+    <fieldset
       style={{
         color: !darkTheme ? '#ba68c8' : 'whitesmoke',
         display: 'flex',
         justifyContent: 'center',
-        marginBottom: '2rem',
-        paddingBottom: '2rem',
         textAlign: 'center',
         textShadow: '2px 2px 2px indigo',
       }}
     >
+      <legend>
+        <h1>Let's work together!</h1>
+      </legend>
+
       <form
-        data-netlify="true"
-        name="contactForm"
-        method="post"
-        onSubmit="submit"
+        data-netlify='true'
+        name='contactForm'
+        method='post'
+        onSubmit='submit'
       >
-        <input name="form-name" type="hidden" value="contactForm" />
+        <input name='form-name' type='hidden' value='contactForm' />
 
         <div hidden>
-          <input name="bot-field" />
+          <input name='bot-field' />
         </div>
 
         {ContactFormData.map((data, index) => (
@@ -80,7 +82,7 @@ const ContactForm = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
-            htmlFor="preferredContactMethod"
+            htmlFor='preferredContactMethod'
             style={{
               display: 'flex',
               justifySelf: 'left',
@@ -88,12 +90,12 @@ const ContactForm = () => {
               marginTop: '.5rem',
             }}
           >
-            <i className="pi pi-at" />
+            <i className='pi pi-at' />
             &nbsp;Preferred Contact Method:
           </label>
 
           <select
-            name="preferredContactMethod"
+            name='preferredContactMethod'
             ref={preferredContactMethod}
             required
             style={{
@@ -113,7 +115,7 @@ const ContactForm = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <label
-            htmlFor="jobDescription"
+            htmlFor='jobDescription'
             required
             style={{
               display: 'flex',
@@ -122,12 +124,12 @@ const ContactForm = () => {
               marginTop: '.5rem',
             }}
           >
-            <i className="pi pi-info-circle" />
+            <i className='pi pi-info-circle' />
             &nbsp;Job Description:
           </label>
 
           <textarea
-            name="jobDescription"
+            name='jobDescription'
             ref={jobDetails}
             style={{
               backgroundColor: 'gray',
@@ -137,7 +139,7 @@ const ContactForm = () => {
               resize: 'vertical',
               width: '50vw',
             }}
-            type="text"
+            type='text'
           />
         </div>
 
@@ -155,13 +157,13 @@ const ContactForm = () => {
               textShadow: '2px 2px 2px indigo',
               width: '5em',
             }}
-            type="submit"
+            type='submit'
           >
             Submit
           </button>
         </div>
       </form>
-    </div>
+    </fieldset>
   );
 };
 
