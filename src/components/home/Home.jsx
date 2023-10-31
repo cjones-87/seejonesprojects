@@ -1,4 +1,5 @@
 import { lazy, useContext, Suspense } from 'react';
+import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import {
   BackendData,
   FrontendData,
@@ -7,7 +8,6 @@ import {
 } from '../techSkills/data/TechSkillsData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import '../../App.css';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 const GithubActivity = lazy(() => import('./GithubActivity'));
@@ -21,42 +21,51 @@ const Home = () => {
 
   const ProjectData = [
     {
+      alt: 'See Jones Engineer Portfolio Screenshot - CJ Jones - Software Engineer',
       caption: 'SeeJonesEngineer.com',
       image: 'https://i.imgur.com/PVEBzQJ.gif',
     },
     {
+      alt: 'Hypnotiq 2.0 Music Player Screenshot - CJ Jones - Software Engineer',
       caption: 'Hypnotiq 2.0',
       iframe: 'https://www.youtube.com/embed/GFI7VYjWjaY',
       image: 'https://i.imgur.com/modvRWr.gif',
     },
     {
+      alt: 'Blueprint eCommerce Boilerplate Screenshot - CJ Jones - Software Engineer',
       caption: 'Blueprint Boilerplate',
       image: 'https://i.imgur.com/HOiTb5v.gif',
     },
     {
+      alt: 'IYKYK Multiple Choice Quiz Game Screenshot - CJ Jones - Software Engineer',
       caption: 'IYKYK',
       iframe: 'https://www.youtube.com/embed/dRMjRk_XCQg',
       image: 'https://i.imgur.com/mYnBu3I.gif',
     },
     {
+      alt: 'Computer Love Dating/Networking App Screenshot - CJ Jones - Software Engineer',
       caption: 'Computer Love',
       iframe: 'https://www.youtube.com/embed/r6beMntr7nQ',
       image: 'https://i.imgur.com/2IkB1A9.gif',
     },
     {
+      alt: 'Hypnotiq 1.0 Music Player Screenshot - CJ Jones - Software Engineer',
       caption: 'Hypnotiq',
       iframe: 'https://www.youtube.com/embed/Z-RTFL_FYu8',
       image: 'https://i.imgur.com/HjTbdr9.gif',
     },
     {
+      alt: 'Boundz Bookstore eCommerce Website Screenshot - CJ Jones - Software Engineer',
       caption: 'Boundz Bookstore',
       image: 'https://i.imgur.com/XV1sfOI.gif',
     },
     {
+      alt: 'Idle Coffee Clicker Game Screenshot - CJ Jones - Software Engineer',
       caption: 'Idle Clicker',
       image: 'https://i.imgur.com/KfVcjhN.gif',
     },
     {
+      alt: 'Guessing Game Screenshot - CJ Jones - Software Engineer',
       caption: 'Guessing Game',
       image: 'https://i.imgur.com/EGYVB8e.gif',
     },
