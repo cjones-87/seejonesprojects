@@ -1,4 +1,3 @@
-import React from 'react';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const BusinessCard = () => {
@@ -7,8 +6,8 @@ const BusinessCard = () => {
   return (
     <iframe
       height={height / 2}
-      scrolling="no"
-      src="https://3d-business-card.vercel.app/"
+      scrolling='no'
+      src='https://3d-business-card.vercel.app/'
       style={{ border: 0 }}
       width={width}
     />
