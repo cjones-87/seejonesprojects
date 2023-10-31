@@ -1,8 +1,9 @@
-import { useContext } from 'react';
+import { lazy, useContext } from 'react';
 import GithubActivityData from './data/GithubActivityData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import LazyLoadImage from '../lazy/LazyLoadImage';
+
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 
 const GithubActivity = () => {
   const { darkTheme } = useContext(ThemeContext);
