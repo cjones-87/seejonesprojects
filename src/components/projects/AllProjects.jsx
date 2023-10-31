@@ -27,6 +27,7 @@ const AllProjects = () => {
 
   const projects = [
     {
+      alt: 'See Jones Engineer Portfolio Screenshot - CJ Jones - Software Engineer',
       caption: 'SeeJonesEngineer.com',
       category: 'React Web App',
       difficulty: 9,
@@ -42,6 +43,7 @@ const AllProjects = () => {
       status: 'complete',
     },
     {
+      alt: 'Blueprint eCommerce Boilerplate Screenshot - CJ Jones - Software Engineer',
       caption: 'Blueprint Boilerplate',
       category: 'React Web App',
       difficulty: 8,
@@ -57,6 +59,7 @@ const AllProjects = () => {
       status: 'complete',
     },
     {
+      alt: 'Hypnotiq 2.0 Music Player Screenshot - CJ Jones - Software Engineer',
       caption: 'Hypnotiq Musiq 2.0',
       category: 'React Native Mobile App',
       difficulty: 10,
@@ -73,6 +76,7 @@ const AllProjects = () => {
       status: 'v3 in progress',
     },
     {
+      alt: 'IYKYK Multiple Choice Quiz Game Screenshot - CJ Jones - Software Engineer',
       caption: 'IYKYK Quiz',
       category: 'React Web App',
       difficulty: 8,
@@ -90,6 +94,7 @@ const AllProjects = () => {
     },
 
     {
+      alt: 'Computer Love Dating/Networking App Screenshot - CJ Jones - Software Engineer',
       caption: 'Computer Love Dating',
       category: 'React Native Mobile App',
       difficulty: 10,
@@ -107,6 +112,7 @@ const AllProjects = () => {
       status: 'complete',
     },
     {
+      alt: 'Hypnotiq 1.0 Music Player Screenshot - CJ Jones - Software Engineer',
       caption: 'Hypnotiq Musiq 1.0',
       category: 'React Native Mobile App',
       difficulty: 7,
@@ -124,6 +130,7 @@ const AllProjects = () => {
       status: 'v2.0 complete',
     },
     {
+      alt: 'Boundz Bookstore eCommerce Website Screenshot - CJ Jones - Software Engineer',
       caption: 'Boundz Bookstore',
       category: 'React Web App',
       difficulty: 10,
@@ -139,6 +146,7 @@ const AllProjects = () => {
       status: 'complete',
     },
     {
+      alt: 'Idle Coffee Clicker Game Screenshot - CJ Jones - Software Engineer',
       caption: 'Idle Clicker',
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 6,
@@ -155,6 +163,7 @@ const AllProjects = () => {
       status: 'v2 in progress',
     },
     {
+      alt: 'Guessing Game Screenshot - CJ Jones - Software Engineer',
       caption: 'Guessing Game',
       category: 'Vanilla JS, HTML, CSS',
       difficulty: 3,
