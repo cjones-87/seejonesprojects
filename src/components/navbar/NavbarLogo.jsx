@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import logo from '../../photos/logoCJ.png';
@@ -77,7 +77,7 @@ const NavbarLogo = () => {
 
   return (
     <div>
-      <canvas id="navbarLogo" />
+      <canvas id='navbarLogo' />
     </div>
   );
 };
