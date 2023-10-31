@@ -1,9 +1,10 @@
-import { useContext, Suspense } from 'react';
+import { lazy, useContext, Suspense } from 'react';
 import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
-import Spinner from '../../../misc/Spinner';
-import LazyLoadImage from '../lazy/LazyLoadImage';
-import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { Card } from 'primereact/card';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+
+const Spinner = lazy(() => import('../../../misc/Spinner'));
+const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 
 const IndividualProject = ({ data, height, title, width }) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -20,7 +21,7 @@ const IndividualProject = ({ data, height, title, width }) => {
       }}
     >
       <h1
-        id="gradientText"
+        id='gradientText'
         style={{
           color: darkTheme ? '#434343' : 'black',
           filter: darkTheme
@@ -97,7 +98,7 @@ const IndividualProject = ({ data, height, title, width }) => {
                   }}
                   header={header}
                 >
-                  <p className="m-0" style={{ textAlign: 'center' }}>
+                  <p className='m-0' style={{ textAlign: 'center' }}>
                     {item.paragraph}
                   </p>
                 </Card>
