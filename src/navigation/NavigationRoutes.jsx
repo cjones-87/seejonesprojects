@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes as NavigationRoutes } from 'react-router-dom';
 import FrontEndRoutes from './FrontEndRoutes';
 
