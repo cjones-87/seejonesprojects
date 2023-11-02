@@ -1,5 +1,5 @@
-import { lazy, useContext, Suspense } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import { lazy, Suspense } from 'react';
+import useTheme from '../../../misc/customHooks/useTheme';
 import { Card } from 'primereact/card';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 
@@ -7,12 +7,12 @@ const Spinner = lazy(() => import('../../../misc/Spinner'));
 const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 
 const IndividualProject = ({ data, height, title, width }) => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
 
   return (
     <div
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
@@ -23,8 +23,8 @@ const IndividualProject = ({ data, height, title, width }) => {
       <h1
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '7em',
@@ -89,11 +89,11 @@ const IndividualProject = ({ data, height, title, width }) => {
               <Suspense fallback={<Spinner />}>
                 <Card
                   style={{
-                    background: darkTheme
+                    background: darkMode
                       ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                       : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                     borderRadius: 25,
-                    color: darkTheme ? 'whitesmoke' : '#ba68c8',
+                    color: darkMode ? 'whitesmoke' : '#ba68c8',
                     textShadow: '1px 1px 1px indigo',
                   }}
                   header={header}
