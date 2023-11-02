@@ -1,9 +1,9 @@
-import { useCallback, useContext, useState } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import { useCallback, useState } from 'react';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Navbar = ({ navLinks, start, end }) => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   const handleItemClick = useCallback((item) => {
@@ -18,20 +18,20 @@ const Navbar = ({ navLinks, start, end }) => {
 
   return (
     <nav
-      className="navbar"
-      id="navbar"
+      className='navbar'
+      id='navbar'
       style={{
-        background: !darkTheme
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkMode
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         width,
       }}
     >
-      <div className="start">
+      <div className='start'>
         {start}
         <ul
           className={`navMenu ${
-            burgerActive ? (!darkTheme ? 'active' : 'active dark') : ''
+            burgerActive ? (darkMode ? 'active dark' : 'active') : ''
           }`}
         >
           {navLinks.map((item, index) => (
@@ -48,14 +48,14 @@ const Navbar = ({ navLinks, start, end }) => {
           className={`navBurger ${burgerActive ? 'active' : ''}`}
           onClick={handleBurgerClick}
         >
-          <div className="barGroup">
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+          <div className='barGroup'>
+            <span className='bar'></span>
+            <span className='bar'></span>
+            <span className='bar'></span>
           </div>
         </div>
       </div>
-      <div className="end">{end}</div>
+      <div className='end'>{end}</div>
     </nav>
   );
 };
