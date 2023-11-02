@@ -1,5 +1,5 @@
-import { lazy, useContext, useState } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import { lazy, useState } from 'react';
+import useTheme from '../../../misc/customHooks/useTheme';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 import { Document, Page, pdfjs } from 'react-pdf/dist/esm/entry.webpack5';
@@ -9,7 +9,7 @@ import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const Resume = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
 
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -24,10 +24,10 @@ const Resume = () => {
   return (
     <div
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-        color: darkTheme ? 'whitesmoke' : 'black',
+        color: darkMode ? 'whitesmoke' : 'black',
         marginTop: '-1.5rem',
         width,
       }}
@@ -41,8 +41,8 @@ const Resume = () => {
         <h1
           id='gradientText'
           style={{
-            color: darkTheme ? '#434343' : 'black',
-            filter: darkTheme
+            color: darkMode ? '#434343' : 'black',
+            filter: darkMode
               ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
               : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
             fontSize: '10em',
@@ -78,10 +78,10 @@ const Resume = () => {
             alignItems: 'center',
             display: 'flex',
             justifyContent: 'center',
-            background: darkTheme
+            background: darkMode
               ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
               : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
             width: width < 960 ? width / 2 : width / 6,
           }}
