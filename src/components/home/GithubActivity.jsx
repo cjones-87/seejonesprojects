@@ -1,18 +1,18 @@
-import { lazy, useContext } from 'react';
-import GithubActivityData from './data/GithubActivityData';
+import { lazy } from 'react';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
+import GithubActivityData from './data/GithubActivityData';
 
 const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 
 const GithubActivity = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   return (
     <div
       className={
-        !darkTheme ? 'bg-black-alpha-20 App card' : 'bg-black-alpha-90 App card'
+        !darkMode ? 'bg-black-alpha-20 App card' : 'bg-black-alpha-90 App card'
       }
       style={{
         marginTop: '2rem',
