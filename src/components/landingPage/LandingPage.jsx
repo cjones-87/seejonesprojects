@@ -1,10 +1,10 @@
-import { lazy, useContext, useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
@@ -13,7 +13,7 @@ const LandingPageLogo = lazy(() => import('./LandingPageLogo'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LandingPage = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const LandingPage = () => {
     <div
       id='landingPageContainer'
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         height: height * 0.9,
@@ -55,8 +55,8 @@ const LandingPage = () => {
       <h1
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           zIndex: '1',
@@ -68,8 +68,8 @@ const LandingPage = () => {
       <h2
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
@@ -98,10 +98,10 @@ const LandingPage = () => {
         id='enterSite'
         label='See Jones Engineer'
         style={{
-          background: darkTheme
+          background: darkMode
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-          color: darkTheme ? 'whitesmoke' : '#ba68c8',
+          color: darkMode ? 'whitesmoke' : '#ba68c8',
           fontSize: '2em',
           margin: '2rem',
           padding: '1em',
