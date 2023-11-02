@@ -3,26 +3,23 @@ import { createContext, useEffect, useState } from 'react';
 export const ThemeContext = createContext(null);
 
 const LightDarkThemeContext = ({ children }) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkTheme = () => setDarkTheme((current) => !current);
+  const toggleDarkMode = () => setDarkMode((current) => !current);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('seeJonesEngineerColorTheme');
+    const storedTheme = localStorage.getItem('SeeJonesEngineerDarkMode');
     if (storedTheme) {
-      setDarkTheme(JSON.parse(storedTheme));
+      setDarkMode(JSON.parse(storedTheme));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(
-      'seeJonesEngineerColorTheme',
-      JSON.stringify(darkTheme)
-    );
-  }, [darkTheme]);
+    localStorage.setItem('SeeJonesEngineerDarkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
 
   return (
-    <ThemeContext.Provider value={{ darkTheme, toggleDarkTheme }}>
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
