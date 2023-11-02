@@ -1,5 +1,5 @@
-import { lazy, useContext, Suspense } from 'react';
-import { ThemeContext } from '../misc/context/LightDarkThemeContext';
+import { lazy, Suspense } from 'react';
+import useTheme from '../misc/customHooks/useTheme';
 import { useNavigate } from 'react-router-dom';
 import {
   FaFilePdf,
@@ -38,7 +38,7 @@ export const Loading = () => (
 );
 
 const App = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
   const navigate = useNavigate();
 
@@ -81,7 +81,7 @@ const App = () => {
 
   const navMenuStyle = {
     alignItems: 'center',
-    color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+    color: !darkMode ? 'whitesmoke' : '#ba68c8',
     display: 'flex',
     fontSize: '1rem',
     marginRight: '1rem',
@@ -99,7 +99,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaHome
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -120,7 +120,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaInfoCircle
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -141,7 +141,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaHistory
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -162,7 +162,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaImages
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -183,7 +183,7 @@ const App = () => {
           <div className='navIconContainer'>
             <IoGameController
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -216,7 +216,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaFilePdf
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
@@ -238,7 +238,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaMoneyCheckAlt
               className='navIcon'
-              color={!darkTheme ? 'whitesmoke' : '#ba68c8'}
+              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
               style={navIconStyle}
             />
           </div>
