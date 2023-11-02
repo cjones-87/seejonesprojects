@@ -1,8 +1,8 @@
-import { lazy, Suspense, useContext, useEffect, useRef, useState } from 'react';
-import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Card } from 'primereact/card';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import handleImageFailure from '../../../misc/helpers/handleImageFailure';
+import useTheme from '../../../misc/customHooks/useTheme';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
@@ -11,7 +11,7 @@ const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 
 const AboutMeCards = ({ slides }) => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
 
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -66,8 +66,8 @@ const AboutMeCards = ({ slides }) => {
               className='previous'
               onClick={previousSlide}
               style={{
-                color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                filter: darkTheme
+                color: darkMode ? '#ba68c8' : 'whitesmoke',
+                filter: darkMode
                   ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                   : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
@@ -83,8 +83,8 @@ const AboutMeCards = ({ slides }) => {
               className='next'
               onClick={nextSlide}
               style={{
-                color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                filter: darkTheme
+                color: darkMode ? '#ba68c8' : 'whitesmoke',
+                filter: darkMode
                   ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                   : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
@@ -121,11 +121,11 @@ const AboutMeCards = ({ slides }) => {
                   <Suspense fallback={<Spinner />}>
                     <Card
                       style={{
-                        background: darkTheme
+                        background: darkMode
                           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
                         borderRadius: 25,
-                        color: darkTheme ? 'whitesmoke' : '#ba68c8',
+                        color: darkMode ? 'whitesmoke' : '#ba68c8',
                         textShadow: '2px 2px 2px indigo',
                         width: '50vw',
                       }}
