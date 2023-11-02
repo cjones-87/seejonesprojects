@@ -2,7 +2,7 @@ import useTheme from '../../../misc/customHooks/useTheme';
 import { Button } from 'primereact/button';
 
 const DarkModeToggle = () => {
-  const { darkMode, toggleDarkTheme } = useTheme();
+  const { darkMode, toggleDarkMode } = useTheme();
 
   return (
     <div>
@@ -19,7 +19,7 @@ const DarkModeToggle = () => {
           textShadow: '2px 2px 2px indigo',
         }}
         icon={darkMode ? 'pi pi-sun' : 'pi pi-moon'}
-        onClick={toggleDarkTheme}
+        onClick={toggleDarkMode}
         tooltip={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         tooltipOptions={{ position: 'bottom' }}
         toggleable='true'
