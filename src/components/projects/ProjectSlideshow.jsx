@@ -1,13 +1,13 @@
-import { lazy, useContext, useEffect, useRef, useState } from 'react';
+import { lazy, useEffect, useRef, useState } from 'react';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
 
 const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 
 const ProjectSlideshow = ({ slides }) => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   const [current, setCurrent] = useState(0);
@@ -69,8 +69,8 @@ const ProjectSlideshow = ({ slides }) => {
               className='previous'
               onClick={previousSlide}
               style={{
-                color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                filter: darkTheme
+                color: darkMode ? '#ba68c8' : 'whitesmoke',
+                filter: darkMode
                   ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                   : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
@@ -87,8 +87,8 @@ const ProjectSlideshow = ({ slides }) => {
               className='next'
               onClick={nextSlide}
               style={{
-                color: darkTheme ? '#ba68c8' : 'whitesmoke',
-                filter: darkTheme
+                color: darkMode ? '#ba68c8' : 'whitesmoke',
+                filter: darkMode
                   ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                   : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                 fontSize: '10em',
@@ -144,7 +144,7 @@ const ProjectSlideshow = ({ slides }) => {
                   >
                     <h3
                       style={{
-                        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                        color: darkMode ? '#ba68c8' : 'whitesmoke',
                         filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
                         textAlign: 'center',
                         textShadow: '2px 2px 2px indigo',
@@ -155,7 +155,7 @@ const ProjectSlideshow = ({ slides }) => {
 
                     <h5
                       style={{
-                        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+                        color: darkMode ? '#ba68c8' : 'whitesmoke',
                         filter: 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
                         textShadow: '2px 2px 2px indigo',
                       }}
