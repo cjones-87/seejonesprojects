@@ -1,6 +1,6 @@
-import { lazy, useContext, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { AboutMeData } from './data/AboutMeData';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
 
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 const AboutMeCards = lazy(() => import('./AboutMeCards'));
@@ -9,12 +9,12 @@ const TechSkills = lazy(() => import('../techSkills/TechSkills'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const AboutMe = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
 
   return (
     <div
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
@@ -31,8 +31,8 @@ const AboutMe = () => {
       <h1
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
