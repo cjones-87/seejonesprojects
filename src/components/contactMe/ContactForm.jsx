@@ -1,9 +1,9 @@
-import { useContext, useRef, useState } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import { useRef, useState } from 'react';
+import useTheme from '../../../misc/customHooks/useTheme';
 import ContactFormData, { OptionData } from './data/ContactFormData';
 
 const ContactForm = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
 
   const firstName = useRef();
   const lastName = useRef();
@@ -25,7 +25,7 @@ const ContactForm = () => {
   return (
     <fieldset
       style={{
-        color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+        color: !darkMode ? '#ba68c8' : 'whitesmoke',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
@@ -146,10 +146,10 @@ const ContactForm = () => {
         <div style={{ fontSize: '1vmin' }}>
           <button
             style={{
-              background: !darkTheme
+              background: !darkMode
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
                 : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: !darkTheme ? '#ba68c8' : 'whitesmoke',
+              color: !darkMode ? '#ba68c8' : 'whitesmoke',
               borderRadius: '10px',
               fontSize: '2em',
               height: '2.5em',
