@@ -1,11 +1,11 @@
-import { lazy, useContext, Suspense } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import { lazy, Suspense } from 'react';
 import {
   BackendData,
   FrontendData,
   LanguagesData,
   ToolsData,
 } from '../techSkills/data/TechSkillsData';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import '../../App.css';
 
@@ -16,7 +16,7 @@ const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const Home = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { width } = useWindowDimensions();
 
   const ProjectData = [
@@ -74,7 +74,7 @@ const Home = () => {
   return (
     <div
       style={{
-        background: !darkTheme
+        background: !darkMode
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         fontSize: '1vmin',
@@ -90,8 +90,8 @@ const Home = () => {
       <h1
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
@@ -113,7 +113,7 @@ const Home = () => {
       <div
         id='sectionA'
         style={{
-          backgroundColor: darkTheme
+          backgroundColor: darkMode
             ? 'rgb(128, 128, 128, 0.3)'
             : 'rgb(75, 0, 130, 0.3)',
           color: 'whitesmoke',
