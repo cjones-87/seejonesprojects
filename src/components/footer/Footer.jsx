@@ -1,18 +1,17 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
 import FooterContentData from './data/FooterContentData';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 
 const Footer = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   return (
     <div
-      className="sticky bottom-0"
-      id="footer"
+      className='sticky bottom-0'
+      id='footer'
       style={{
-        background: !darkTheme
+        background: !darkMode
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         width,
@@ -20,7 +19,7 @@ const Footer = () => {
     >
       <div
         style={{
-          color: darkTheme ? '#ba68c8' : 'whitesmoke',
+          color: darkMode ? '#ba68c8' : 'whitesmoke',
           textShadow: '2px 2px 2px indigo',
           textAlign: 'center',
           paddingTop: '2rem',
@@ -35,12 +34,12 @@ const Footer = () => {
         >
           {FooterContentData.map((item, index) => {
             return (
-              <a key={index} href={item.href} target="_blank">
+              <a key={index} href={item.href} target='_blank'>
                 <i
                   className={item.className}
                   style={{
-                    color: darkTheme ? '#ba68c8' : 'white',
-                    filter: darkTheme
+                    color: darkMode ? '#ba68c8' : 'white',
+                    filter: darkMode
                       ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                       : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
                     fontSize: '5em',
@@ -54,14 +53,14 @@ const Footer = () => {
 
         <h5
           style={{
-            background: darkTheme
+            background: darkMode
               ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
               : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
           }}
         >
           <span
             style={{
-              filter: darkTheme
+              filter: darkMode
                 ? 'drop-shadow(0px 2px 4px rgba(186, 104, 200, 1))'
                 : 'drop-shadow(0px 2px 4px rgba(75, 0, 130, 1))',
             }}
