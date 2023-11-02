@@ -1,6 +1,6 @@
-import { lazy, useContext, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { FullstackLogo } from '../../photos/PhotoExports';
@@ -31,16 +31,17 @@ const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LearningJournalTimeline = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
   const navigate = useNavigate();
 
   const LearningJournalEventsData = [
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -50,7 +51,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -65,7 +66,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -98,10 +99,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -111,7 +113,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -125,7 +127,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -158,10 +160,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -171,7 +174,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -185,7 +188,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -211,10 +214,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -224,7 +228,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -237,7 +241,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -263,10 +267,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -276,7 +281,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -290,7 +295,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -327,10 +332,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -340,7 +346,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -354,7 +360,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -380,10 +386,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -393,7 +400,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -406,7 +413,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -417,10 +424,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -430,7 +438,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -443,7 +451,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -481,10 +489,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -494,7 +503,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -507,7 +516,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -529,10 +538,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -542,7 +552,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -555,7 +565,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -577,10 +587,11 @@ const LearningJournalTimeline = () => {
       moreInfo: '',
     },
     {
+      alt: '',
       status: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -590,7 +601,7 @@ const LearningJournalTimeline = () => {
       date: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -603,7 +614,7 @@ const LearningJournalTimeline = () => {
       description: (
         <span
           style={{
-            color: darkTheme ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? 'whitesmoke' : '#ba68c8',
             textShadow: '2px 2px 2px indigo',
           }}
         >
@@ -633,12 +644,12 @@ const LearningJournalTimeline = () => {
           title={item.status}
           subTitle={item.date}
           style={{
-            background: !darkTheme
+            background: !darkMode
               ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
               : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
             borderRadius: 25,
-            color: !darkTheme ? '#ba68c8' : 'indigo',
-            textShadow: !darkTheme
+            color: !darkMode ? '#ba68c8' : 'indigo',
+            textShadow: !darkMode
               ? '1px 1px 1px black'
               : '1px 1px 1px whitesmoke',
             justifyContent: 'space-evenly',
@@ -688,10 +699,10 @@ const LearningJournalTimeline = () => {
                 : navigate(item.link)
             }
             style={{
-              background: !darkTheme
+              background: !darkMode
                 ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
                 : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+              color: !darkMode ? 'whitesmoke' : '#ba68c8',
               textShadow: '2px 2px 2px indigo',
             }}
           />
@@ -703,11 +714,11 @@ const LearningJournalTimeline = () => {
   return (
     <div
       style={{
-        background: !darkTheme
+        background: !darkMode
           ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
           : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
         fontSize: '1vmin',
-        textShadow: !darkTheme ? '1px 1px 1px black' : '1px 1px 1px whitesmoke',
+        textShadow: !darkMode ? '1px 1px 1px black' : '1px 1px 1px whitesmoke',
         paddingTop: '1rem',
         width: width,
       }}
@@ -720,8 +731,8 @@ const LearningJournalTimeline = () => {
       <h1
         id='gradientText'
         style={{
-          color: !darkTheme ? 'black' : '#434343',
-          filter: darkTheme
+          color: !darkMode ? 'black' : '#434343',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
