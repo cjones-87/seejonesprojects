@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
 import Typewriter from 'typewriter-effect';
 import {
   MobileDevelopmentData,
@@ -7,11 +6,11 @@ import {
 } from './data/SpecializationData';
 
 const Specialization = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   return (
     <div
       style={{
-        color: !darkTheme ? 'whitesmoke' : '#ba68c8',
+        color: darkMode ? '#ba68c8' : 'whitesmoke',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
         textAlign: 'center',
@@ -37,7 +36,7 @@ const Specialization = () => {
 
       <div>
         {WebDevelopmentData.map((data, index) => (
-          <a href={data.href} key={index} rel="noreferrer" target="_blank">
+          <a href={data.href} key={index} rel='noreferrer' target='_blank'>
             <img
               alt={data.alt}
               key={index}
@@ -64,9 +63,8 @@ const Specialization = () => {
       </h4>
 
       <div>
-        {' '}
         {MobileDevelopmentData.map((data, index) => (
-          <a href={data.href} key={index} rel="noreferrer" target="_blank">
+          <a href={data.href} key={index} rel='noreferrer' target='_blank'>
             <img
               alt={data.alt}
               key={index}
