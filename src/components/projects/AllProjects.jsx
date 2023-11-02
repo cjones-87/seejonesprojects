@@ -1,6 +1,6 @@
-import { lazy, Suspense, useContext } from 'react';
+import { lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ThemeContext } from '../../../misc/context/LightDarkThemeContext';
+import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { Button } from 'primereact/button';
@@ -14,13 +14,13 @@ const Spinner = lazy(() => import('../../../misc/Spinner'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const AllProjects = () => {
-  const { darkTheme } = useContext(ThemeContext);
+  const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
   const navigate = useNavigate();
   const navigateToLearningJournal = () => navigate('/learningjournal');
 
   const projectNameStyle = {
-    color: darkTheme ? '#ba68c8' : 'whitesmoke',
+    color: darkMode ? '#ba68c8' : 'whitesmoke',
     cursor: 'pointer',
     textDecoration: 'none',
   };
@@ -184,11 +184,11 @@ const AllProjects = () => {
     <div
       className='table-header'
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         borderRadius: '5px',
-        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+        color: darkMode ? '#ba68c8' : 'whitesmoke',
         padding: '5px',
         textShadow: '1px 1px 1px indigo',
       }}
@@ -198,10 +198,10 @@ const AllProjects = () => {
         icon='pi pi-images'
         onClick={navigateToLearningJournal}
         style={{
-          background: darkTheme
+          background: darkMode
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
             : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-          color: darkTheme ? 'whitesmoke' : '#ba68c8',
+          color: darkMode ? 'whitesmoke' : '#ba68c8',
         }}
         tooltip='View in my learning journal'
         tooltipOptions={{ position: 'left' }}
@@ -212,11 +212,11 @@ const AllProjects = () => {
   const footer = (
     <div
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         borderRadius: '5px',
-        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+        color: darkMode ? '#ba68c8' : 'whitesmoke',
         padding: '10px',
         textShadow: '1px 1px 1px indigo',
       }}
@@ -276,10 +276,10 @@ const AllProjects = () => {
     <div
       className='datatable-project'
       style={{
-        background: darkTheme
+        background: darkMode
           ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-        color: darkTheme ? '#ba68c8' : 'whitesmoke',
+        color: darkMode ? '#ba68c8' : 'whitesmoke',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
         paddingTop: '1rem',
@@ -294,8 +294,8 @@ const AllProjects = () => {
       <h1
         id='gradientText'
         style={{
-          color: darkTheme ? '#434343' : 'black',
-          filter: darkTheme
+          color: darkMode ? '#434343' : 'black',
+          filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
@@ -322,10 +322,10 @@ const AllProjects = () => {
             field='name'
             header='Title'
             style={{
-              background: darkTheme
+              background: darkMode
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
                 : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: darkTheme ? '#ba68c8' : 'whitesmoke',
+              color: darkMode ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
@@ -333,10 +333,10 @@ const AllProjects = () => {
             header='Image'
             body={imageBodyTemplate}
             style={{
-              background: darkTheme
+              background: darkMode
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
                 : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: darkTheme ? '#ba68c8' : 'whitesmoke',
+              color: darkMode ? '#ba68c8' : 'whitesmoke',
               paddingRight: '4rem',
               textShadow: '1px 1px 1px indigo',
             }}
@@ -345,10 +345,10 @@ const AllProjects = () => {
             field='category'
             header='Category'
             style={{
-              background: darkTheme
+              background: darkMode
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
                 : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: darkTheme ? '#ba68c8' : 'whitesmoke',
+              color: darkMode ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
@@ -357,10 +357,10 @@ const AllProjects = () => {
             header='Difficulty Level'
             body={ratingBodyTemplate}
             style={{
-              background: darkTheme
+              background: darkMode
                 ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
                 : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: darkTheme ? '#ba68c8' : 'whitesmoke',
+              color: darkMode ? '#ba68c8' : 'whitesmoke',
               textShadow: '1px 1px 1px indigo',
             }}
           ></Column>
