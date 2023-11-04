@@ -81,7 +81,7 @@ const App = () => {
 
   const navMenuStyle = {
     alignItems: 'center',
-    color: !darkMode ? 'whitesmoke' : '#ba68c8',
+    color: darkMode ? '#ba68c8' : 'whitesmoke',
     display: 'flex',
     fontSize: '1rem',
     marginRight: '1rem',
@@ -99,7 +99,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaHome
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -120,7 +120,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaInfoCircle
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -141,7 +141,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaHistory
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -162,7 +162,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaImages
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -183,7 +183,7 @@ const App = () => {
           <div className='navIconContainer'>
             <IoGameController
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -216,7 +216,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaFilePdf
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
@@ -238,7 +238,7 @@ const App = () => {
           <div className='navIconContainer'>
             <FaMoneyCheckAlt
               className='navIcon'
-              color={!darkMode ? 'whitesmoke' : '#ba68c8'}
+              color={darkMode ? '#ba68c8' : 'whitesmoke'}
               style={navIconStyle}
             />
           </div>
