@@ -12,7 +12,7 @@ const GithubActivity = () => {
   return (
     <div
       className={
-        !darkMode ? 'bg-black-alpha-20 App card' : 'bg-black-alpha-90 App card'
+        darkMode ? 'bg-black-alpha-90 App card' : 'bg-black-alpha-20 App card'
       }
       style={{
         marginTop: '2rem',
