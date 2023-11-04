@@ -644,14 +644,14 @@ const LearningJournalTimeline = () => {
           title={item.status}
           subTitle={item.date}
           style={{
-            background: !darkMode
-              ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-              : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+            background: darkMode
+              ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+              : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
             borderRadius: 25,
-            color: !darkMode ? '#ba68c8' : 'indigo',
-            textShadow: !darkMode
-              ? '1px 1px 1px black'
-              : '1px 1px 1px whitesmoke',
+            color: darkMode ? 'indigo' : '#ba68c8',
+            textShadow: darkMode
+              ? '1px 1px 1px whitesmoke'
+              : '1px 1px 1px black',
             justifyContent: 'space-evenly',
             textAlign: 'center',
             paddingTop: '1.5rem',
@@ -699,10 +699,10 @@ const LearningJournalTimeline = () => {
                 : navigate(item.link)
             }
             style={{
-              background: !darkMode
-                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
-              color: !darkMode ? 'whitesmoke' : '#ba68c8',
+              background: darkMode
+                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
+              color: darkMode ? '#ba68c8' : 'whitesmoke',
               textShadow: '2px 2px 2px indigo',
             }}
           />
@@ -714,11 +714,11 @@ const LearningJournalTimeline = () => {
   return (
     <div
       style={{
-        background: !darkMode
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkMode
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
-        textShadow: !darkMode ? '1px 1px 1px black' : '1px 1px 1px whitesmoke',
+        textShadow: darkMode ? '1px 1px 1px whitesmoke' : '1px 1px 1px black',
         paddingTop: '1rem',
         width: width,
       }}
@@ -731,7 +731,7 @@ const LearningJournalTimeline = () => {
       <h1
         id='gradientText'
         style={{
-          color: !darkMode ? 'black' : '#434343',
+          color: darkMode ? '#434343' : 'black',
           filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
