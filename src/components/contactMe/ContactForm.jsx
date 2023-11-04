@@ -25,7 +25,7 @@ const ContactForm = () => {
   return (
     <fieldset
       style={{
-        color: !darkMode ? '#ba68c8' : 'whitesmoke',
+        color: darkMode ? 'whitesmoke' : '#ba68c8',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
@@ -146,10 +146,10 @@ const ContactForm = () => {
         <div style={{ fontSize: '1vmin' }}>
           <button
             style={{
-              background: !darkMode
-                ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
-                : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
-              color: !darkMode ? '#ba68c8' : 'whitesmoke',
+              background: darkMode
+                ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
+                : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+              color: darkMode ? 'whitesmoke' : '#ba68c8',
               borderRadius: '10px',
               fontSize: '2em',
               height: '2.5em',
