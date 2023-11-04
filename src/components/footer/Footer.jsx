@@ -11,9 +11,9 @@ const Footer = () => {
       className='sticky bottom-0'
       id='footer'
       style={{
-        background: !darkMode
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkMode
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         width,
       }}
     >
