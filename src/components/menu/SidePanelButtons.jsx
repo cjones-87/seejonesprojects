@@ -18,7 +18,7 @@ const SidePanelButtons = () => {
           style={{
             textAlign: 'center',
             paddingTop: 10,
-            color: !darkMode ? 'whitesmoke' : '#ba68c8',
+            color: darkMode ? '#ba68c8' : 'whitesmoke',
           }}
         >
           Stay connected with me & my work by following me on:
