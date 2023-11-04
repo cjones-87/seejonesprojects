@@ -74,9 +74,9 @@ const Home = () => {
   return (
     <div
       style={{
-        background: !darkMode
-          ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
-          : 'radial-gradient(#434343, rgba(0, 0, 0, 1))',
+        background: darkMode
+          ? 'radial-gradient(#434343, rgba(0, 0, 0, 1))'
+          : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
         marginTop: '-1.5rem',
         width,
