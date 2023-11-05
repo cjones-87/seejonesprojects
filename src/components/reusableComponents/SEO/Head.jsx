@@ -38,6 +38,11 @@ const Head = ({ description, image, title }) => {
       <meta name='twitter:title' content={seo.title} />
       <meta name='twitter:description' content={seo.description} />
       <meta name='twitter:image' content={seo.image} />
+
+      <meta
+        name='google-site-verification'
+        content='jFJd82F5SX_oV9IZHIGlTRGBEKAmJoXT1cjjoxBDzpc'
+      />
     </Helmet>
   );
 };
