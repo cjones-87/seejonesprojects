@@ -33,7 +33,7 @@ const Resume = () => {
       }}
     >
       <Head
-        title='Professional Profile: CJ Jones, Software Engineer'
+        title='Professional Profile: CJ Jones - Software Engineer'
         description={`Unlock a comprehensive overview of CJ Jones's professional journey in the realm of software engineering. This page serves as a gateway to CJ's expertise, experience, and accomplishments. Explore a detailed resume that highlights key skills, notable projects, and educational background. From coding proficiency to project management, delve into the qualifications that define CJ Jones as a seasoned software engineer. Navigate through the pages of a dynamic career, where passion meets proficiency in the world of technology.`}
       />
 
