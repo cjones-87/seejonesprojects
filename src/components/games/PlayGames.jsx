@@ -20,7 +20,7 @@ const PlayGames = () => {
       }}
     >
       <Head
-        title='Game Zone: Immerse Yourself in Interactive Adventures'
+        title='Free Online Games: CJ Jones - SeeJonesEngineer'
         description={`Welcome to the Game Zone, where entertainment meets innovation! Explore a collection of interactive games meticulously crafted by CJ Jones, your gateway to thrilling digital adventures. Immerse yourself in engaging challenges and captivating experiences that showcase the seamless fusion of creativity and technology. Whether you're a casual gamer or a seasoned player, embark on a journey of fun and discovery in this interactive playground. Let the games begin!`}
       />
 
