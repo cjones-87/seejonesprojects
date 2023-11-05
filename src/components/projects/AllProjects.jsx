@@ -247,6 +247,7 @@ const AllProjects = () => {
                   backgroundColor: '#cccccc',
                   border: 0,
                   borderRadius: 25,
+                  cursor: 'pointer',
                   padding: '5px',
                 }}
                 width='10vw'
@@ -263,6 +264,7 @@ const AllProjects = () => {
             style={{
               backgroundColor: '#cccccc',
               borderRadius: 25,
+              cursor: 'pointer',
               padding: '5px',
             }}
             width={width / 10}
