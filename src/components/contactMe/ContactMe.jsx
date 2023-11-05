@@ -19,7 +19,7 @@ const ContactMe = () => {
       }}
     >
       <Head
-        title='Collaborate with Excellence: Hire CJ Jones, Software Engineer'
+        title='Software Engineer For Hire: CJ Jones - SeeJonesEngineer'
         description={`Discover the expertise of CJ Jones, a seasoned software engineer ready to elevate your projects to new heights. From full-time positions to contract work, tutoring, mentoring, and consulting, explore a range of collaboration opportunities tailored to meet your unique needs. CJ brings a wealth of experience in creating intuitive, powerful software solutions. Reach out today to discuss how CJ Jones can contribute to your success. Let's build something extraordinary together.`}
       />
 
