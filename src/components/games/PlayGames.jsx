@@ -97,7 +97,7 @@ const PlayGames = () => {
             <h1
               id='gradientText'
               style={{
-                color: 'black',
+                color: darkMode ? '#434343' : 'black',
                 filter: darkMode
                   ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
                   : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
