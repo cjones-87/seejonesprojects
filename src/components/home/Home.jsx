@@ -12,7 +12,9 @@ import '../../App.css';
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 const GithubActivity = lazy(() => import('./GithubActivity'));
 const ProjectSlideshow = lazy(() => import('../projects/ProjectSlideshow'));
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const Home = () => {
