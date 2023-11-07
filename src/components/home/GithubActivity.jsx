@@ -3,7 +3,9 @@ import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import useTheme from '../../../misc/customHooks/useTheme';
 import GithubActivityData from './data/GithubActivityData';
 
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 
 const GithubActivity = () => {
   const { darkMode } = useTheme();
