@@ -8,7 +8,9 @@ import { Rating } from 'primereact/rating';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 const ProjectSlideshow = lazy(() => import('./ProjectSlideshow'));
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
@@ -289,7 +291,7 @@ const AllProjects = () => {
       }}
     >
       <Head
-        title='Portfolio Showcase: CJ Jones, Software Engineer'
+        title='Project Portfolio: CJ Jones - Software Engineer'
         description={`Dive into the showcase of CJ Jones's software engineering excellence. Explore a collection of meticulously crafted projects and client work, where intuitive design meets powerful functionality. Witness firsthand the intersection of cutting-edge technology and user-friendly interfaces.`}
       />
 
