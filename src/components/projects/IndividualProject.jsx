@@ -1,12 +1,22 @@
 import { lazy, Suspense } from 'react';
-import useTheme from '../../../misc/customHooks/useTheme';
 import { Card } from 'primereact/card';
+import useTheme from '../../../misc/customHooks/useTheme';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 
 const Spinner = lazy(() => import('../../../misc/Spinner'));
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
+const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
-const IndividualProject = ({ data, height, title, width }) => {
+const IndividualProject = ({
+  data,
+  headTitle,
+  headDescription,
+  height,
+  title,
+  width,
+}) => {
   const { darkMode } = useTheme();
 
   return (
@@ -20,6 +30,8 @@ const IndividualProject = ({ data, height, title, width }) => {
         paddingTop: '1rem',
       }}
     >
+      <Head title={headTitle} description={headDescription} />
+
       <h1
         id='gradientText'
         style={{
