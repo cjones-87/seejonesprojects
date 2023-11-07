@@ -4,7 +4,9 @@ import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import handleImageFailure from '../../../misc/helpers/handleImageFailure';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 
 const ProjectSlideshow = ({ slides }) => {
   const { darkMode } = useTheme();
