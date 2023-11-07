@@ -27,7 +27,9 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 
 const Spinner = lazy(() => import('../../../misc/Spinner'));
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LearningJournalTimeline = () => {
@@ -724,7 +726,7 @@ const LearningJournalTimeline = () => {
       }}
     >
       <Head
-        title='Coding Chronicles: A Journey in Software Engineering'
+        title='How to Learn How to Code: CJ Jones - Software Engineer'
         description={`Dive into the evolution of my skills and experiences in the world of software engineering. This timeline serves as a dynamic learning journal, chronicling each project undertaken and the educational milestones achieved on the path to becoming a proficient software engineer. Join me in this digital diary, where each entry unveils the challenges, triumphs, and invaluable lessons learned. From coding projects to educational pursuits, witness the growth and development that shape my journey in the ever-evolving realm of software engineering.`}
       />
 
