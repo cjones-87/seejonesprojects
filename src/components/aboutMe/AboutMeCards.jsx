@@ -7,7 +7,9 @@ import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
-const LazyLoadImage = lazy(() => import('../lazy/LazyLoadImage'));
+const LazyLoadImage = lazy(() =>
+  import('../reusableComponents/lazy/LazyLoadImage')
+);
 const Spinner = lazy(() => import('../../../misc/Spinner'));
 
 const AboutMeCards = ({ slides }) => {
