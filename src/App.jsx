@@ -95,7 +95,7 @@ const App = () => {
   const navLinks = [
     {
       label: (
-        <span onClick={() => navigate('/home')} style={navMenuStyle}>
+        <span onClick={() => navigate('/')} style={navMenuStyle}>
           <div className='navIconContainer'>
             <FaHome
               className='navIcon'
