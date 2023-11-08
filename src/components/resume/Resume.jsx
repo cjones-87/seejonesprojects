@@ -71,7 +71,7 @@ const Resume = () => {
         <Button
           className='lightDarkToggleButton'
           onClick={() => {
-            window.open('/01CJsSWEPortfolioResume.pdf', '_blank');
+            window.open('/CJonesSWEPortfolioResume2023.pdf', '_blank');
             location.reload();
           }}
           style={{
@@ -92,19 +92,29 @@ const Resume = () => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Document
-          file={'/01CJsSWEPortfolioResume.pdf'}
+          file={'/CJonesSWEPortfolioResume2023.pdf'}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page height={height} pageNumber={pageNumber} width={width} />
-          <span
+
+          <div
             style={{
+              color: 'whitesmoke',
               textAlign: 'center',
             }}
           >
             <p>
               Page {pageNumber} of {numPages}
             </p>
-          </span>
+          </div>
+
+          <Page height={height} pageNumber={pageNumber + 1} width={width} />
+
+          <div style={{ color: 'whitesmoke', textAlign: 'center' }}>
+            <p>
+              Page {pageNumber + 1} of {numPages}
+            </p>
+          </div>
         </Document>
       </div>
     </div>
