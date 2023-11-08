@@ -6,8 +6,7 @@ const LearningJournalTimeline = lazy(() =>
 const AboutMe = lazy(() => import('../components/aboutMe/AboutMe'));
 const ContactMe = lazy(() => import('../components/contactMe/ContactMe'));
 const Resume = lazy(() => import('../components/resume/Resume'));
-const LandingPage = lazy(() => import('../components/landingPage/LandingPage'));
-const Home = lazy(() => import('../components/home/Home'));
+const Home = lazy(() => import('../views/Home/HomePage'));
 const PlayGames = lazy(() => import('../components/games/PlayGames'));
 const GuessingGame = lazy(() =>
   import('../components/projects/GuessingGame/GuessingGame')
@@ -37,8 +36,7 @@ const PageNotFound404 = lazy(() =>
 );
 
 const FrontEndRoutes = [
-  { element: <LandingPage />, path: '/' },
-  { element: <Home />, path: '/home' },
+  { element: <Home />, path: '/' },
   { element: <AboutMe />, path: '/aboutme' },
   { element: <AllProjects />, path: '/projects' },
   { element: <LearningJournalTimeline />, path: '/learningjournal' },
