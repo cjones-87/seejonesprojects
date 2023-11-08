@@ -15,8 +15,6 @@ const ProjectSlideshow = lazy(() => import('../projects/ProjectSlideshow'));
 const LazyLoadImage = lazy(() =>
   import('../reusableComponents/lazy/LazyLoadImage')
 );
-const Head = lazy(() => import('../reusableComponents/SEO/Head'));
-
 const Home = () => {
   const { darkMode } = useTheme();
   const { width } = useWindowDimensions();
@@ -84,33 +82,41 @@ const Home = () => {
         width,
       }}
     >
-      <Head
-        title='Elevating Experiences: CJ Jones, Software Engineer'
-        description={`Elevating user experiences through intuitive design and powerful functionality. Explore the fusion of cutting-edge technology and user-friendly interfaces with CJ, your expert in software engineering excellence.`}
-      />
-
       <h1
         id='gradientText'
         style={{
           color: darkMode ? '#434343' : 'black',
+          display: 'flex',
+          flexDirection: 'column',
           filter: darkMode
             ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
             : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
           fontSize: '10em',
-          paddingBottom: '2rem',
           paddingTop: '2rem',
           textAlign: 'center',
           textShadow: '2px 2px 2px indigo',
         }}
       >
-        Home
+        CJ Jones
       </h1>
 
-      <Suspense fallback={<Spinner />}>
-        <ProjectSlideshow slides={ProjectData} />
-      </Suspense>
-
-      <GithubActivity />
+      <h2
+        id='gradientText'
+        style={{
+          color: darkMode ? '#434343' : 'black',
+          display: 'flex',
+          flexDirection: 'column',
+          filter: darkMode
+            ? 'drop-shadow(0px 2px 16px rgba(186, 104, 200, 1))'
+            : 'drop-shadow(0px 2px 16px rgba(75, 0, 130, 1))',
+          fontSize: '8em',
+          paddingBottom: '2rem',
+          textAlign: 'center',
+          textShadow: '2px 2px 2px indigo',
+        }}
+      >
+        Software Engineer
+      </h2>
 
       <div
         id='sectionA'
@@ -261,6 +267,15 @@ const Home = () => {
           Websites
         </div>
       </div>
+
+      <div style={{ marginTop: '5rem' }}>
+        <Suspense fallback={<Spinner />}>
+          <ProjectSlideshow slides={ProjectData} />
+        </Suspense>
+      </div>
+      <Suspense fallback={<Spinner />}>
+        <GithubActivity />
+      </Suspense>
     </div>
   );
 };
