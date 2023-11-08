@@ -1,6 +1,6 @@
 import { lazy, useEffect } from 'react';
 import { Button } from 'primereact/button';
-import Typewriter from 'typewriter-effect';
+import TypewriterComponent from 'typewriter-effect';
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 import useTheme from '../../../misc/customHooks/useTheme';
@@ -10,7 +10,6 @@ import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
 const LandingPageLogo = lazy(() => import('./LandingPageLogo'));
-const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
 const LandingPage = ({ handleEntranceClick }) => {
   const { darkMode } = useTheme();
@@ -82,7 +81,7 @@ const LandingPage = ({ handleEntranceClick }) => {
           zIndex: '1',
         }}
       >
-        <Typewriter
+        <TypewriterComponent
           options={{
             autoStart: true,
             cursor: '',
@@ -102,7 +101,7 @@ const LandingPage = ({ handleEntranceClick }) => {
 
       <Button
         id='enterSite'
-        label='Enter See Jones Engineer'
+        label='See Jones Engineer'
         style={{
           background: darkMode
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
