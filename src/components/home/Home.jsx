@@ -5,6 +5,7 @@ import {
   LanguagesData,
   ToolsData,
 } from '../techSkills/data/TechSkillsData';
+import TypewriterComponent from 'typewriter-effect';
 import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import '../../App.css';
@@ -115,7 +116,22 @@ const Home = () => {
           textShadow: '2px 2px 2px indigo',
         }}
       >
-        Software Engineer
+        <TypewriterComponent
+          options={{
+            autoStart: true,
+            cursor: '',
+            delay: 125,
+            loop: true,
+            strings: [
+              'Software Engineer',
+              'Mobile Developer',
+              'Web Developer',
+              'Consultant',
+              'Mentor',
+              'Tutor',
+            ],
+          }}
+        />
       </h2>
 
       <div
