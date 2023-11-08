@@ -1,10 +1,10 @@
 import { lazy, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';
-import useTheme from '../../../misc/customHooks/useTheme';
-import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import OpenUp from '../../sounds/OpenUp.mp3';
 import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
+import useTheme from '../../../misc/customHooks/useTheme';
+import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
@@ -12,13 +12,12 @@ import 'primereact/resources/primereact.css';
 const LandingPageLogo = lazy(() => import('./LandingPageLogo'));
 const Head = lazy(() => import('../reusableComponents/SEO/Head'));
 
-const LandingPage = () => {
+const LandingPage = ({ handleEntranceClick }) => {
   const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
     const playSoundWhileEnteringSite = () => {
-      setTimeout(() => (window.location.href = '/home'), 2000);
       const audio = new Audio(OpenUp);
       const audio2 = new Audio(AccessGrantedComputerVoice);
       let playAudio = () => {
@@ -29,11 +28,23 @@ const LandingPage = () => {
       };
       playAudio();
       playAudio2();
+
+      handleEntranceClick();
     };
 
     const siteEntrance = document.getElementById('enterSite');
-    siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
-  });
+    console.log();
+    if (siteEntrance) {
+      siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
+    }
+
+    return () => {
+      const siteEntrance = document.getElementById('enterSite');
+      if (siteEntrance) {
+        siteEntrance.removeEventListener('click', playSoundWhileEnteringSite);
+      }
+    };
+  }, []);
 
   return (
     <div
@@ -47,11 +58,6 @@ const LandingPage = () => {
         zIndex: '1',
       }}
     >
-      <Head
-        title='Crafting User-Centric Excellence: CJ Jones, Software Engineer'
-        description={`CJ Jones, a seasoned software engineer, excels in crafting user-centric software solutions that seamlessly blend intuitive design with powerful functionality. With a focus on creating visually captivating user experiences, CJ specializes in developing sophisticated logic systems that elevate the overall usability of applications. Explore the intersection of cutting-edge technology and user-friendly design with CJ Jones, your go-to expert for software engineering excellence.`}
-      />
-
       <h1
         id='gradientText'
         style={{
@@ -96,7 +102,7 @@ const LandingPage = () => {
 
       <Button
         id='enterSite'
-        label='See Jones Engineer'
+        label='Enter See Jones Engineer'
         style={{
           background: darkMode
             ? 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))'
