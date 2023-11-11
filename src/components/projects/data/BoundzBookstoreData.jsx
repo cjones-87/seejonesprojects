@@ -1,30 +1,42 @@
 import {
   home,
   browseBooks,
+  editBooks,
   shoppingCart,
   checkout1,
+  checkout2,
 } from '../../../photos/PhotoExports';
 
 const BoundzBookstoreData = [
   {
     alt: 'Boundz Bookstore Photo',
     img: home,
-    paragraph: `My team developed Boundz Bookstore, an eCommerce bookstore using JavaScript and technologies such as React, Redux, Node.js, PostgreSQL, Sequelize, Express, Material UI, HTML5, and CSS3. The Minimum Viable Product (MVP) allowed users and administrators to purchase books with or without a registered account. This site made use of a persistent cart feature and users could modify only their own purchase information. I also implemented administrative access to user information and order history.`,
+    paragraph: `Introducing Boundz Bookstore, an eCommerce platform strategically engineered to address practical challenges within online book retail using a comprehensive technology stack encompassing JavaScript, React, Redux, Node.js, PostgreSQL, Sequelize, Express, Material UI, HTML5, and CSS3. The primary objective was to provide an intuitive and efficient eCommerce solution that caters to both end-users and administrators.`,
   },
   {
     alt: 'Boundz Bookstore Photo',
     img: browseBooks,
-    paragraph: `My contributions included designing the view for all products, constructing the site’s homepage, engineering new user registration functionality, and creating user and administrative account CRUD abilities. Additionally, I orchestrated user/admin dashboard menus and their respective authorized site navigation access.`,
+    paragraph: `The Minimum Viable Product (MVP) ensured a seamless purchasing experience for users, irrespective of whether they opted to register. By incorporating a persistent cart feature, users could modify their personal purchase information, enhancing flexibility. The implementation extended to administrative access, allowing oversight into user information and order history.`,
+  },
+  {
+    alt: 'Boundz Bookstore Photo',
+    img: editBooks,
+    paragraph: `My contributions encompassed pivotal aspects of the project, involving the conceptualization and implementation of key functionalities. This included shaping the product view design, crafting the homepage structure, implementing user registration features, and establishing comprehensive CRUD capabilities for both user and administrative accounts. Additionally, I played a significant role in orchestrating the design and functionality of user and admin dashboard menus, ensuring seamless and authorized site navigation.`,
   },
   {
     alt: 'Boundz Bookstore Photo',
     img: shoppingCart,
-    paragraph: `A challenge I faced was protecting routes to ensure that only authorized access would be allowed. Administrators had complete access to personal accounts, as well as the accounts of all other users, while users could only access their own personal accounts. Another challenge was ensuring that the site was responsive and easy to use across a variety of devices.`,
+    paragraph: `A critical focus was placed on securing routes to ensure authorized access. Administrators were granted comprehensive access to personal and other user accounts, contrasting with users who retained access only to their personal accounts. Furthermore, a paramount consideration was the optimization of the site's responsiveness across a diverse array of devices.`,
   },
   {
     alt: 'Boundz Bookstore Photo',
     img: checkout1,
-    paragraph: `Boundz Bookstore was constructed using React, Redux, Material UI, HTML5, and CSS3 for the frontend, and Node.js, PostgreSQL, Sequelize, and Express for the backend. The site is deployed on Heroku. Overall, Boundz Bookstore was a challenging but rewarding project that improved my skills in JavaScript technologies and web development.`,
+    paragraph: `Boundz Bookstore's frontend architecture leverages React, Redux, Material UI, HTML5, and CSS3 for a dynamic and visually appealing interface. On the backend, the combination of Node.js, PostgreSQL, Sequelize, and Express facilitates seamless interactions. The deployment infrastructure is hosted on Heroku.`,
+  },
+  {
+    alt: 'Boundz Bookstore Photo',
+    img: checkout2,
+    paragraph: `In essence, Boundz Bookstore is a solution to the inherent complexities of user interaction and administrative control within the eCommerce book retail landscape. It streamlines the purchasing process for users while affording administrators comprehensive oversight. This project stands as a testament to the application of JavaScript technologies and web development skills to address tangible challenges in the real-world context of online book retail.`,
   },
 ];
 
