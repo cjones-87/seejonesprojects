@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <div
-      className='sticky bottom-0'
+      className='fixed bottom-0'
       id='footer'
       style={{
         background: darkMode
