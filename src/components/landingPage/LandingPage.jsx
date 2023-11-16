@@ -1,46 +1,27 @@
-import { lazy, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Button } from 'primereact/button';
 import TypewriterComponent from 'typewriter-effect';
-import OpenUp from '../../sounds/OpenUp.mp3';
-import AccessGrantedComputerVoice from '../../sounds/AccessGrantedComputerVoice.mp3';
 import useTheme from '../../../misc/customHooks/useTheme';
 import useWindowDimensions from '../../../misc/customHooks/useWindowDimensions';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/mdc-dark-deeppurple/theme.css';
 import 'primereact/resources/primereact.css';
 
-const LandingPageLogo = lazy(() => import('./LandingPageLogo'));
-
 const LandingPage = ({ handleEntranceClick }) => {
   const { darkMode } = useTheme();
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
-    const playSoundWhileEnteringSite = () => {
-      const audio = new Audio(OpenUp);
-      const audio2 = new Audio(AccessGrantedComputerVoice);
-      let playAudio = () => {
-        audio.play();
-      };
-      let playAudio2 = () => {
-        setTimeout(() => audio2.play(), 500);
-      };
-      playAudio();
-      playAudio2();
-
-      handleEntranceClick();
-    };
-
     const siteEntrance = document.getElementById('enterSite');
     console.log();
     if (siteEntrance) {
-      siteEntrance.addEventListener('click', playSoundWhileEnteringSite);
+      siteEntrance.addEventListener('click', handleEntranceClick);
     }
 
     return () => {
       const siteEntrance = document.getElementById('enterSite');
       if (siteEntrance) {
-        siteEntrance.removeEventListener('click', playSoundWhileEnteringSite);
+        siteEntrance.removeEventListener('click', handleEntranceClick);
       }
     };
   }, []);
@@ -114,8 +95,6 @@ const LandingPage = ({ handleEntranceClick }) => {
           zIndex: '1',
         }}
       />
-
-      <LandingPageLogo />
     </div>
   );
 };
