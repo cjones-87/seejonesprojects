@@ -129,7 +129,7 @@ const App = () => {
               autoStart: true,
               cursor: '',
               loop: false,
-              strings: 'AboutMe',
+              strings: 'About Me',
             }}
           />
         </span>
@@ -206,7 +206,8 @@ const App = () => {
           label: 'View Resumé',
         },
         {
-          command: () => window.open('/01CJsSWEPortfolioResume.pdf', '_blank'),
+          command: () =>
+            window.open('/CJonesSWEPortfolioResume2023.pdf', '_blank'),
           icon: 'pi pi-download',
           label: 'Download Résumé',
         },
@@ -247,7 +248,7 @@ const App = () => {
               autoStart: true,
               cursor: '',
               loop: false,
-              strings: 'HireMe',
+              strings: 'Hire Me',
             }}
           />
         </span>
