@@ -721,6 +721,7 @@ const LearningJournalTimeline = () => {
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
         textShadow: darkMode ? '1px 1px 1px whitesmoke' : '1px 1px 1px black',
+        paddingBottom: '6rem',
         paddingTop: '1rem',
         width: width,
       }}

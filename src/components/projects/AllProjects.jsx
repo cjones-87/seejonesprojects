@@ -286,6 +286,7 @@ const AllProjects = () => {
         color: darkMode ? '#ba68c8' : 'whitesmoke',
         fontSize: '1vmin',
         textShadow: '2px 2px 2px indigo',
+        paddingBottom: '7rem',
         paddingTop: '1rem',
         width: width,
       }}
