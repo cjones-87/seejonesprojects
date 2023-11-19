@@ -19,6 +19,7 @@ const AboutMe = () => {
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         fontSize: '1vmin',
         marginTop: '-1.5rem',
+        paddingBottom: '5rem',
         textAlign: 'center',
         width: '100vw',
       }}
