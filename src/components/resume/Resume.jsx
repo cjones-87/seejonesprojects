@@ -29,6 +29,7 @@ const Resume = () => {
           : 'radial-gradient(#1a1a1a, rgba(163, 163, 163, 1))',
         color: darkMode ? 'whitesmoke' : 'black',
         marginTop: '-1.5rem',
+        paddingBottom: '8rem',
         width,
       }}
     >
@@ -90,30 +91,36 @@ const Resume = () => {
           Download PDF
         </Button>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Document
           file={'/CJonesSWEPortfolioResume2023.pdf'}
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page height={height} pageNumber={pageNumber} width={width} />
-
           <div
             style={{
               color: 'whitesmoke',
               textAlign: 'center',
             }}
           >
-            <p>
+            <div style={{ paddingBottom: '2rem' }}>
               Page {pageNumber} of {numPages}
-            </p>
+            </div>
+
+            <Page height={height} pageNumber={pageNumber} width={width} />
           </div>
 
-          <Page height={height} pageNumber={pageNumber + 1} width={width} />
-
           <div style={{ color: 'whitesmoke', textAlign: 'center' }}>
-            <p>
+            <div style={{ paddingBottom: '2rem' }}>
               Page {pageNumber + 1} of {numPages}
-            </p>
+            </div>
+
+            <Page height={height} pageNumber={pageNumber + 1} width={width} />
           </div>
         </Document>
       </div>
