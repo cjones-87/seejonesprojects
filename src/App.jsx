@@ -207,7 +207,7 @@ const App = () => {
         },
         {
           command: () =>
-            window.open('/CJonesSWEPortfolioResume2023.pdf', '_blank'),
+            window.open('/CJ_Jones_II_Portfolio_SWE_2024.pdf', '_blank'),
           icon: 'pi pi-download',
           label: 'Download Résumé',
         },

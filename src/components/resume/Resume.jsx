@@ -72,7 +72,7 @@ const Resume = () => {
         <Button
           className='lightDarkToggleButton'
           onClick={() => {
-            window.open('/CJonesSWEPortfolioResume2023.pdf', '_blank');
+            window.open('/CJ_Jones_II_Portfolio_SWE_2024.pdf', '_blank');
             location.reload();
           }}
           style={{
@@ -99,7 +99,7 @@ const Resume = () => {
         }}
       >
         <Document
-          file={'/CJonesSWEPortfolioResume2023.pdf'}
+          file={'/CJ_Jones_II_Portfolio_SWE_2024.pdf'}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <div

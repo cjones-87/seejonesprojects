@@ -1,7 +1,7 @@
 const FooterContentData = [
   {
     className: 'pi pi-file-pdf',
-    href: '/CJonesSWEPortfolioResume2023.pdf',
+    href: '/CJ_Jones_II_Portfolio_SWE_2024.pdf',
   },
   {
     className: 'pi pi-at',
