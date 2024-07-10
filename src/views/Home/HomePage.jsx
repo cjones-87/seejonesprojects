@@ -19,7 +19,7 @@ const HomePage = () => {
       />
 
       {showHomePage ? (
-        <Home />
+        <Home showHomePage={showHomePage} />
       ) : (
         <LandingPage handleEntranceClick={handleEntranceClick} />
       )}
